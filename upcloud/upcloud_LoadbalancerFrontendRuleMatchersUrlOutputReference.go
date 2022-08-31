@@ -222,6 +222,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) ValueInpu
 func NewLoadbalancerFrontendRuleMatchersUrlOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) LoadbalancerFrontendRuleMatchersUrlOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerFrontendRuleMatchersUrlOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference{}
 
 	_jsii_.Create(
@@ -243,7 +246,10 @@ func NewLoadbalancerFrontendRuleMatchersUrlOutputReference_Override(l Loadbalanc
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -251,7 +257,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetComple
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -259,7 +268,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetComple
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetIgnoreCase(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetIgnoreCase(val interface{}) {
+	if err := j.validateSetIgnoreCaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ignoreCase",
@@ -267,7 +279,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetIgnore
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -275,7 +290,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetIntern
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetMethod(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetMethod(val *string) {
+	if err := j.validateSetMethodParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"method",
@@ -283,7 +301,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetMethod
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -291,7 +312,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetTerraf
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -299,7 +323,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetTerraf
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) SetValue(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference)SetValue(val *string) {
+	if err := j.validateSetValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"value",
@@ -321,6 +348,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) ComputeFq
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := l.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -334,6 +364,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetAnyMap
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := l.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -347,6 +380,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetBoolea
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := l.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -360,6 +396,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetBoolea
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := l.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -373,6 +412,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetListAt
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := l.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -386,6 +428,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetNumber
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := l.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -399,6 +444,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetNumber
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := l.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -412,6 +460,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetNumber
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := l.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -425,6 +476,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetString
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := l.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -451,6 +505,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) Interpola
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := l.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -480,6 +537,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) ResetValu
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

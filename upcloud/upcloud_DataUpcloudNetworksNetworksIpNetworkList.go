@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) WrapsSet() *bool {
 func NewDataUpcloudNetworksNetworksIpNetworkList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataUpcloudNetworksNetworksIpNetworkList {
 	_init_.Initialize()
 
+	if err := validateNewDataUpcloudNetworksNetworksIpNetworkListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataUpcloudNetworksNetworksIpNetworkList_Override(d DataUpcloudNetworksN
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) SetTerraformAttribu
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) SetTerraformResourc
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) ComputeFqn() *strin
 }
 
 func (d *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) Get(index *float64) DataUpcloudNetworksNetworksIpNetworkOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataUpcloudNetworksNetworksIpNetworkOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) Get(index *float64)
 }
 
 func (d *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

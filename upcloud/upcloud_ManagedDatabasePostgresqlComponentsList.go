@@ -99,6 +99,9 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList) WrapsSet() *bool {
 func NewManagedDatabasePostgresqlComponentsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ManagedDatabasePostgresqlComponentsList {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabasePostgresqlComponentsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabasePostgresqlComponentsList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewManagedDatabasePostgresqlComponentsList_Override(m ManagedDatabasePostgr
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList) SetTerraformAttribut
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList) SetTerraformResource
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlComponentsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlComponentsList) ComputeFqn() *string
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlComponentsList) Get(index *float64) ManagedDatabasePostgresqlComponentsOutputReference {
+	if err := m.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ManagedDatabasePostgresqlComponentsOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlComponentsList) Get(index *float64) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlComponentsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -220,6 +220,9 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) TimeInput() *string 
 func NewServerTemplateBackupRuleOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ServerTemplateBackupRuleOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewServerTemplateBackupRuleOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ServerTemplateBackupRuleOutputReference{}
 
 	_jsii_.Create(
@@ -241,7 +244,10 @@ func NewServerTemplateBackupRuleOutputReference_Override(s ServerTemplateBackupR
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -249,7 +255,10 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetComplexObjectInde
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -257,7 +266,10 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetComplexObjectIsFr
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetInternalValue(val *ServerTemplateBackupRule) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetInternalValue(val *ServerTemplateBackupRule) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -265,7 +277,10 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetInternalValue(val
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetInterval(val *string) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetInterval(val *string) {
+	if err := j.validateSetIntervalParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"interval",
@@ -273,7 +288,10 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetInterval(val *str
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetRetention(val *float64) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetRetention(val *float64) {
+	if err := j.validateSetRetentionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"retention",
@@ -281,7 +299,10 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetRetention(val *fl
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -289,7 +310,10 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetTerraformAttribut
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -297,7 +321,10 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetTerraformResource
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) SetTime(val *string) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetTime(val *string) {
+	if err := j.validateSetTimeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"time",
@@ -319,6 +346,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) ComputeFqn() *string
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := s.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -332,6 +362,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetAnyMapAttribute(t
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -345,6 +378,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetBooleanAttribute(
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := s.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -358,6 +394,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetBooleanMapAttribu
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := s.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -371,6 +410,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetListAttribute(ter
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := s.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -384,6 +426,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetNumberAttribute(t
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := s.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -397,6 +442,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetNumberListAttribu
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := s.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -410,6 +458,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetNumberMapAttribut
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := s.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -423,6 +474,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetStringAttribute(t
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := s.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -449,6 +503,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) InterpolationAsList(
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := s.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -462,6 +519,9 @@ func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) InterpolationForAttr
 }
 
 func (s *jsiiProxy_ServerTemplateBackupRuleOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -367,6 +367,9 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 func NewManagedDatabasePostgresqlPropertiesPgbouncerOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabasePostgresqlPropertiesPgbouncerOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference{}
 
 	_jsii_.Create(
@@ -388,7 +391,10 @@ func NewManagedDatabasePostgresqlPropertiesPgbouncerOutputReference_Override(m M
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetAutodbIdleTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetAutodbIdleTimeout(val *float64) {
+	if err := j.validateSetAutodbIdleTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autodbIdleTimeout",
@@ -396,7 +402,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetAutodbMaxDbConnections(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetAutodbMaxDbConnections(val *float64) {
+	if err := j.validateSetAutodbMaxDbConnectionsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autodbMaxDbConnections",
@@ -404,7 +413,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetAutodbPoolMode(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetAutodbPoolMode(val *string) {
+	if err := j.validateSetAutodbPoolModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autodbPoolMode",
@@ -412,7 +424,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetAutodbPoolSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetAutodbPoolSize(val *float64) {
+	if err := j.validateSetAutodbPoolSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autodbPoolSize",
@@ -420,7 +435,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -428,7 +446,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -436,7 +457,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetIgnoreStartupParameters(val *[]*string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetIgnoreStartupParameters(val *[]*string) {
+	if err := j.validateSetIgnoreStartupParametersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ignoreStartupParameters",
@@ -444,7 +468,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetInternalValue(val *ManagedDatabasePostgresqlPropertiesPgbouncer) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetInternalValue(val *ManagedDatabasePostgresqlPropertiesPgbouncer) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -452,7 +479,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetMinPoolSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetMinPoolSize(val *float64) {
+	if err := j.validateSetMinPoolSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"minPoolSize",
@@ -460,7 +490,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetServerIdleTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetServerIdleTimeout(val *float64) {
+	if err := j.validateSetServerIdleTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"serverIdleTimeout",
@@ -468,7 +501,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetServerLifetime(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetServerLifetime(val *float64) {
+	if err := j.validateSetServerLifetimeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"serverLifetime",
@@ -476,7 +512,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetServerResetQueryAlways(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetServerResetQueryAlways(val interface{}) {
+	if err := j.validateSetServerResetQueryAlwaysParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"serverResetQueryAlways",
@@ -484,7 +523,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -492,7 +534,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -514,6 +559,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -527,6 +575,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -540,6 +591,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -553,6 +607,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -566,6 +623,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -579,6 +639,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -592,6 +655,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -605,6 +671,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -618,6 +687,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -644,6 +716,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -729,6 +804,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

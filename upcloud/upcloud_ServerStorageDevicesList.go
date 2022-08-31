@@ -111,6 +111,9 @@ func (j *jsiiProxy_ServerStorageDevicesList) WrapsSet() *bool {
 func NewServerStorageDevicesList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServerStorageDevicesList {
 	_init_.Initialize()
 
+	if err := validateNewServerStorageDevicesListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ServerStorageDevicesList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewServerStorageDevicesList_Override(s ServerStorageDevicesList, terraformR
 	)
 }
 
-func (j *jsiiProxy_ServerStorageDevicesList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ServerStorageDevicesList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ServerStorageDevicesList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ServerStorageDevicesList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ServerStorageDevicesList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ServerStorageDevicesList) SetTerraformAttribute(val *string) 
 	)
 }
 
-func (j *jsiiProxy_ServerStorageDevicesList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ServerStorageDevicesList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ServerStorageDevicesList) SetTerraformResource(val cdktf.IInt
 	)
 }
 
-func (j *jsiiProxy_ServerStorageDevicesList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ServerStorageDevicesList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (s *jsiiProxy_ServerStorageDevicesList) ComputeFqn() *string {
 }
 
 func (s *jsiiProxy_ServerStorageDevicesList) Get(index *float64) ServerStorageDevicesOutputReference {
+	if err := s.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ServerStorageDevicesOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (s *jsiiProxy_ServerStorageDevicesList) Get(index *float64) ServerStorageDe
 }
 
 func (s *jsiiProxy_ServerStorageDevicesList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

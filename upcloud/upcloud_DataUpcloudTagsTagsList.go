@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataUpcloudTagsTagsList) WrapsSet() *bool {
 func NewDataUpcloudTagsTagsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataUpcloudTagsTagsList {
 	_init_.Initialize()
 
+	if err := validateNewDataUpcloudTagsTagsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataUpcloudTagsTagsList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataUpcloudTagsTagsList_Override(d DataUpcloudTagsTagsList, terraformRes
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudTagsTagsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataUpcloudTagsTagsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataUpcloudTagsTagsList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudTagsTagsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataUpcloudTagsTagsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataUpcloudTagsTagsList) SetTerraformResource(val cdktf.IInte
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudTagsTagsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataUpcloudTagsTagsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataUpcloudTagsTagsList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataUpcloudTagsTagsList) Get(index *float64) DataUpcloudTagsTagsOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataUpcloudTagsTagsOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataUpcloudTagsTagsList) Get(index *float64) DataUpcloudTagsT
 }
 
 func (d *jsiiProxy_DataUpcloudTagsTagsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

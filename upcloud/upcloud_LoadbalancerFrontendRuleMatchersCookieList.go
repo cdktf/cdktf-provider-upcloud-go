@@ -111,6 +111,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) WrapsSet() *bool 
 func NewLoadbalancerFrontendRuleMatchersCookieList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoadbalancerFrontendRuleMatchersCookieList {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerFrontendRuleMatchersCookieListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewLoadbalancerFrontendRuleMatchersCookieList_Override(l LoadbalancerFronte
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) SetInternalValue(
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) SetTerraformAttri
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) SetTerraformResou
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) ComputeFqn() *str
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) Get(index *float64) LoadbalancerFrontendRuleMatchersCookieOutputReference {
+	if err := l.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns LoadbalancerFrontendRuleMatchersCookieOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) Get(index *float6
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

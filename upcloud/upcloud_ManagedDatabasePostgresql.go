@@ -601,6 +601,9 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) ZoneInput() *string {
 func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) ManagedDatabasePostgresql {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabasePostgresqlParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabasePostgresql{}
 
 	_jsii_.Create(
@@ -623,7 +626,10 @@ func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope co
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetConnection(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -631,7 +637,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetCount(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -639,7 +645,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -647,7 +653,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -655,7 +661,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetForEach(val cdktf.ITerraformIte
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetId(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -663,7 +672,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -671,7 +683,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetLifecycle(val *cdktf.TerraformR
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetMaintenanceWindowDow(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetMaintenanceWindowDow(val *string) {
+	if err := j.validateSetMaintenanceWindowDowParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maintenanceWindowDow",
@@ -679,7 +694,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetMaintenanceWindowDow(val *strin
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetMaintenanceWindowTime(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetMaintenanceWindowTime(val *string) {
+	if err := j.validateSetMaintenanceWindowTimeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maintenanceWindowTime",
@@ -687,7 +705,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetMaintenanceWindowTime(val *stri
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetName(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -695,7 +716,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetPlan(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetPlan(val *string) {
+	if err := j.validateSetPlanParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"plan",
@@ -703,7 +727,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetPlan(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetPowered(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetPowered(val interface{}) {
+	if err := j.validateSetPoweredParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"powered",
@@ -711,7 +738,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetPowered(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -719,7 +746,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetProvider(val cdktf.TerraformPro
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -727,7 +757,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetProvisioners(val *[]interface{}
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetTitle(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetTitle(val *string) {
+	if err := j.validateSetTitleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"title",
@@ -735,7 +768,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetTitle(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresql) SetZone(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetZone(val *string) {
+	if err := j.validateSetZoneParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"zone",
@@ -763,6 +799,9 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) SetZone(val *string) {
 func ManagedDatabasePostgresql_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateManagedDatabasePostgresql_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -787,6 +826,9 @@ func ManagedDatabasePostgresql_TfResourceType() *string {
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) AddOverride(path *string, value interface{}) {
+	if err := m.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"addOverride",
@@ -795,6 +837,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) AddOverride(path *string, value in
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -808,6 +853,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetAnyMapAttribute(terraformAttrib
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -821,6 +869,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetBooleanAttribute(terraformAttri
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -834,6 +885,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetBooleanMapAttribute(terraformAt
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -847,6 +901,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetListAttribute(terraformAttribut
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -860,6 +917,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetNumberAttribute(terraformAttrib
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -873,6 +933,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetNumberListAttribute(terraformAt
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -886,6 +949,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetNumberMapAttribute(terraformAtt
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -899,6 +965,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetStringAttribute(terraformAttrib
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -912,6 +981,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetStringMapAttribute(terraformAtt
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -925,6 +997,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) InterpolationForAttribute(terrafor
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) OverrideLogicalId(newLogicalId *string) {
+	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"overrideLogicalId",
@@ -933,6 +1008,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) OverrideLogicalId(newLogicalId *st
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) PutProperties(value *ManagedDatabasePostgresqlProperties) {
+	if err := m.validatePutPropertiesParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putProperties",

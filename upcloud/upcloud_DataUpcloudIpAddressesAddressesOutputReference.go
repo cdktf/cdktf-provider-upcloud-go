@@ -250,6 +250,9 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) Zone() *strin
 func NewDataUpcloudIpAddressesAddressesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) DataUpcloudIpAddressesAddressesOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewDataUpcloudIpAddressesAddressesOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference{}
 
 	_jsii_.Create(
@@ -271,7 +274,10 @@ func NewDataUpcloudIpAddressesAddressesOutputReference_Override(d DataUpcloudIpA
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -279,7 +285,10 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetComplexObj
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -287,7 +296,10 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetComplexObj
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetInternalValue(val *DataUpcloudIpAddressesAddresses) {
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetInternalValue(val *DataUpcloudIpAddressesAddresses) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -295,7 +307,10 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetInternalVa
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -303,7 +318,10 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetTerraformA
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -325,6 +343,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) ComputeFqn() 
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -338,6 +359,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetAnyMapAttr
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -351,6 +375,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetBooleanAtt
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -364,6 +391,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetBooleanMap
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -377,6 +407,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetListAttrib
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -390,6 +423,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetNumberAttr
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -403,6 +439,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetNumberList
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -416,6 +455,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetNumberMapA
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -429,6 +471,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetStringAttr
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -455,6 +500,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) Interpolation
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -468,6 +516,9 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) Interpolation
 }
 
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

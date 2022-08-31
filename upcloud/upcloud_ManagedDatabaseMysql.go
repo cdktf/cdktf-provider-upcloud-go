@@ -590,6 +590,9 @@ func (j *jsiiProxy_ManagedDatabaseMysql) ZoneInput() *string {
 func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) ManagedDatabaseMysql {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabaseMysqlParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabaseMysql{}
 
 	_jsii_.Create(
@@ -612,7 +615,10 @@ func NewManagedDatabaseMysql_Override(m ManagedDatabaseMysql, scope constructs.C
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetConnection(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -620,7 +626,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetCount(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -628,7 +634,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -636,7 +642,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -644,7 +650,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetForEach(val cdktf.ITerraformIterator
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetId(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -652,7 +661,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -660,7 +672,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetLifecycle(val *cdktf.TerraformResour
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetMaintenanceWindowDow(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetMaintenanceWindowDow(val *string) {
+	if err := j.validateSetMaintenanceWindowDowParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maintenanceWindowDow",
@@ -668,7 +683,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetMaintenanceWindowDow(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetMaintenanceWindowTime(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetMaintenanceWindowTime(val *string) {
+	if err := j.validateSetMaintenanceWindowTimeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maintenanceWindowTime",
@@ -676,7 +694,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetMaintenanceWindowTime(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetName(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -684,7 +705,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetPlan(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetPlan(val *string) {
+	if err := j.validateSetPlanParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"plan",
@@ -692,7 +716,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetPlan(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetPowered(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetPowered(val interface{}) {
+	if err := j.validateSetPoweredParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"powered",
@@ -700,7 +727,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetPowered(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -708,7 +735,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetProvider(val cdktf.TerraformProvider
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -716,7 +746,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetTitle(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetTitle(val *string) {
+	if err := j.validateSetTitleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"title",
@@ -724,7 +757,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetTitle(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysql) SetZone(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysql)SetZone(val *string) {
+	if err := j.validateSetZoneParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"zone",
@@ -752,6 +788,9 @@ func (j *jsiiProxy_ManagedDatabaseMysql) SetZone(val *string) {
 func ManagedDatabaseMysql_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateManagedDatabaseMysql_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -776,6 +815,9 @@ func ManagedDatabaseMysql_TfResourceType() *string {
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) AddOverride(path *string, value interface{}) {
+	if err := m.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"addOverride",
@@ -784,6 +826,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) AddOverride(path *string, value interfa
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -797,6 +842,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetAnyMapAttribute(terraformAttribute *
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -810,6 +858,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetBooleanAttribute(terraformAttribute 
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -823,6 +874,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetBooleanMapAttribute(terraformAttribu
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -836,6 +890,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetListAttribute(terraformAttribute *st
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -849,6 +906,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetNumberAttribute(terraformAttribute *
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -862,6 +922,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetNumberListAttribute(terraformAttribu
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -875,6 +938,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetNumberMapAttribute(terraformAttribut
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -888,6 +954,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetStringAttribute(terraformAttribute *
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -901,6 +970,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) GetStringMapAttribute(terraformAttribut
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -914,6 +986,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) InterpolationForAttribute(terraformAttr
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) OverrideLogicalId(newLogicalId *string) {
+	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"overrideLogicalId",
@@ -922,6 +997,9 @@ func (m *jsiiProxy_ManagedDatabaseMysql) OverrideLogicalId(newLogicalId *string)
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysql) PutProperties(value *ManagedDatabaseMysqlProperties) {
+	if err := m.validatePutPropertiesParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putProperties",

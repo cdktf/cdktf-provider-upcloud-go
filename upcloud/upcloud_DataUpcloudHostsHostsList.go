@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataUpcloudHostsHostsList) WrapsSet() *bool {
 func NewDataUpcloudHostsHostsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataUpcloudHostsHostsList {
 	_init_.Initialize()
 
+	if err := validateNewDataUpcloudHostsHostsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataUpcloudHostsHostsList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataUpcloudHostsHostsList_Override(d DataUpcloudHostsHostsList, terrafor
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudHostsHostsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataUpcloudHostsHostsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataUpcloudHostsHostsList) SetTerraformAttribute(val *string)
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudHostsHostsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataUpcloudHostsHostsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataUpcloudHostsHostsList) SetTerraformResource(val cdktf.IIn
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudHostsHostsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataUpcloudHostsHostsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataUpcloudHostsHostsList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataUpcloudHostsHostsList) Get(index *float64) DataUpcloudHostsHostsOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataUpcloudHostsHostsOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataUpcloudHostsHostsList) Get(index *float64) DataUpcloudHos
 }
 
 func (d *jsiiProxy_DataUpcloudHostsHostsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

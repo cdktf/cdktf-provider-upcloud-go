@@ -1639,6 +1639,9 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) WorkMemIn
 func NewManagedDatabasePostgresqlPropertiesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ManagedDatabasePostgresqlPropertiesOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabasePostgresqlPropertiesOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference{}
 
 	_jsii_.Create(
@@ -1660,7 +1663,10 @@ func NewManagedDatabasePostgresqlPropertiesOutputReference_Override(m ManagedDat
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAdminPassword(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAdminPassword(val *string) {
+	if err := j.validateSetAdminPasswordParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"adminPassword",
@@ -1668,7 +1674,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAdminP
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAdminUsername(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAdminUsername(val *string) {
+	if err := j.validateSetAdminUsernameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"adminUsername",
@@ -1676,7 +1685,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAdminU
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutomaticUtilityNetworkIpFilter(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutomaticUtilityNetworkIpFilter(val interface{}) {
+	if err := j.validateSetAutomaticUtilityNetworkIpFilterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"automaticUtilityNetworkIpFilter",
@@ -1684,7 +1696,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutoma
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumAnalyzeScaleFactor(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumAnalyzeScaleFactor(val *float64) {
+	if err := j.validateSetAutovacuumAnalyzeScaleFactorParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumAnalyzeScaleFactor",
@@ -1692,7 +1707,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumAnalyzeThreshold(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumAnalyzeThreshold(val *float64) {
+	if err := j.validateSetAutovacuumAnalyzeThresholdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumAnalyzeThreshold",
@@ -1700,7 +1718,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumFreezeMaxAge(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumFreezeMaxAge(val *float64) {
+	if err := j.validateSetAutovacuumFreezeMaxAgeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumFreezeMaxAge",
@@ -1708,7 +1729,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumMaxWorkers(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumMaxWorkers(val *float64) {
+	if err := j.validateSetAutovacuumMaxWorkersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumMaxWorkers",
@@ -1716,7 +1740,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumNaptime(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumNaptime(val *float64) {
+	if err := j.validateSetAutovacuumNaptimeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumNaptime",
@@ -1724,7 +1751,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumVacuumCostDelay(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumVacuumCostDelay(val *float64) {
+	if err := j.validateSetAutovacuumVacuumCostDelayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumVacuumCostDelay",
@@ -1732,7 +1762,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumVacuumCostLimit(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumVacuumCostLimit(val *float64) {
+	if err := j.validateSetAutovacuumVacuumCostLimitParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumVacuumCostLimit",
@@ -1740,7 +1773,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumVacuumScaleFactor(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumVacuumScaleFactor(val *float64) {
+	if err := j.validateSetAutovacuumVacuumScaleFactorParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumVacuumScaleFactor",
@@ -1748,7 +1784,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutovacuumVacuumThreshold(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetAutovacuumVacuumThreshold(val *float64) {
+	if err := j.validateSetAutovacuumVacuumThresholdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autovacuumVacuumThreshold",
@@ -1756,7 +1795,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetAutova
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBackupHour(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetBackupHour(val *float64) {
+	if err := j.validateSetBackupHourParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"backupHour",
@@ -1764,7 +1806,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBackup
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBackupMinute(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetBackupMinute(val *float64) {
+	if err := j.validateSetBackupMinuteParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"backupMinute",
@@ -1772,7 +1817,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBackup
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwriterDelay(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetBgwriterDelay(val *float64) {
+	if err := j.validateSetBgwriterDelayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"bgwriterDelay",
@@ -1780,7 +1828,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwrit
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwriterFlushAfter(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetBgwriterFlushAfter(val *float64) {
+	if err := j.validateSetBgwriterFlushAfterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"bgwriterFlushAfter",
@@ -1788,7 +1839,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwrit
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwriterLruMaxpages(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetBgwriterLruMaxpages(val *float64) {
+	if err := j.validateSetBgwriterLruMaxpagesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"bgwriterLruMaxpages",
@@ -1796,7 +1850,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwrit
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwriterLruMultiplier(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetBgwriterLruMultiplier(val *float64) {
+	if err := j.validateSetBgwriterLruMultiplierParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"bgwriterLruMultiplier",
@@ -1804,7 +1861,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetBgwrit
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -1812,7 +1872,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetComple
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -1820,7 +1883,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetComple
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetDeadlockTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetDeadlockTimeout(val *float64) {
+	if err := j.validateSetDeadlockTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"deadlockTimeout",
@@ -1828,7 +1894,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetDeadlo
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetIdleInTransactionSessionTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIdleInTransactionSessionTimeout(val *float64) {
+	if err := j.validateSetIdleInTransactionSessionTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"idleInTransactionSessionTimeout",
@@ -1836,7 +1905,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetIdleIn
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetInternalValue(val *ManagedDatabasePostgresqlProperties) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetInternalValue(val *ManagedDatabasePostgresqlProperties) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -1844,7 +1916,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetIntern
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetIpFilter(val *[]*string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIpFilter(val *[]*string) {
+	if err := j.validateSetIpFilterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ipFilter",
@@ -1852,7 +1927,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetIpFilt
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetJit(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetJit(val interface{}) {
+	if err := j.validateSetJitParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"jit",
@@ -1860,7 +1938,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetJit(va
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogAutovacuumMinDuration(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetLogAutovacuumMinDuration(val *float64) {
+	if err := j.validateSetLogAutovacuumMinDurationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"logAutovacuumMinDuration",
@@ -1868,7 +1949,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogAut
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogErrorVerbosity(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetLogErrorVerbosity(val *string) {
+	if err := j.validateSetLogErrorVerbosityParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"logErrorVerbosity",
@@ -1876,7 +1960,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogErr
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogLinePrefix(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetLogLinePrefix(val *string) {
+	if err := j.validateSetLogLinePrefixParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"logLinePrefix",
@@ -1884,7 +1971,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogLin
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogMinDurationStatement(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetLogMinDurationStatement(val *float64) {
+	if err := j.validateSetLogMinDurationStatementParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"logMinDurationStatement",
@@ -1892,7 +1982,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetLogMin
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxFilesPerProcess(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxFilesPerProcess(val *float64) {
+	if err := j.validateSetMaxFilesPerProcessParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxFilesPerProcess",
@@ -1900,7 +1993,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxFil
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxLocksPerTransaction(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxLocksPerTransaction(val *float64) {
+	if err := j.validateSetMaxLocksPerTransactionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxLocksPerTransaction",
@@ -1908,7 +2004,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxLoc
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxLogicalReplicationWorkers(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxLogicalReplicationWorkers(val *float64) {
+	if err := j.validateSetMaxLogicalReplicationWorkersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxLogicalReplicationWorkers",
@@ -1916,7 +2015,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxLog
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxParallelWorkers(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxParallelWorkers(val *float64) {
+	if err := j.validateSetMaxParallelWorkersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxParallelWorkers",
@@ -1924,7 +2026,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxPar
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxParallelWorkersPerGather(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxParallelWorkersPerGather(val *float64) {
+	if err := j.validateSetMaxParallelWorkersPerGatherParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxParallelWorkersPerGather",
@@ -1932,7 +2037,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxPar
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxPredLocksPerTransaction(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxPredLocksPerTransaction(val *float64) {
+	if err := j.validateSetMaxPredLocksPerTransactionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxPredLocksPerTransaction",
@@ -1940,7 +2048,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxPre
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxPreparedTransactions(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxPreparedTransactions(val *float64) {
+	if err := j.validateSetMaxPreparedTransactionsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxPreparedTransactions",
@@ -1948,7 +2059,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxPre
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxReplicationSlots(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxReplicationSlots(val *float64) {
+	if err := j.validateSetMaxReplicationSlotsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxReplicationSlots",
@@ -1956,7 +2070,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxRep
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxStackDepth(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxStackDepth(val *float64) {
+	if err := j.validateSetMaxStackDepthParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxStackDepth",
@@ -1964,7 +2081,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxSta
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxStandbyArchiveDelay(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxStandbyArchiveDelay(val *float64) {
+	if err := j.validateSetMaxStandbyArchiveDelayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxStandbyArchiveDelay",
@@ -1972,7 +2092,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxSta
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxStandbyStreamingDelay(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxStandbyStreamingDelay(val *float64) {
+	if err := j.validateSetMaxStandbyStreamingDelayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxStandbyStreamingDelay",
@@ -1980,7 +2103,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxSta
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxWalSenders(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxWalSenders(val *float64) {
+	if err := j.validateSetMaxWalSendersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxWalSenders",
@@ -1988,7 +2114,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxWal
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxWorkerProcesses(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxWorkerProcesses(val *float64) {
+	if err := j.validateSetMaxWorkerProcessesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxWorkerProcesses",
@@ -1996,7 +2125,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetMaxWor
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgPartmanBgwInterval(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgPartmanBgwInterval(val *float64) {
+	if err := j.validateSetPgPartmanBgwIntervalParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pgPartmanBgwInterval",
@@ -2004,7 +2136,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgPart
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgPartmanBgwRole(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgPartmanBgwRole(val *string) {
+	if err := j.validateSetPgPartmanBgwRoleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pgPartmanBgwRole",
@@ -2012,7 +2147,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgPart
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgReadReplica(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgReadReplica(val interface{}) {
+	if err := j.validateSetPgReadReplicaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pgReadReplica",
@@ -2020,7 +2158,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgRead
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgServiceToForkFrom(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgServiceToForkFrom(val *string) {
+	if err := j.validateSetPgServiceToForkFromParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pgServiceToForkFrom",
@@ -2028,7 +2169,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgServ
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgStatStatementsTrack(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgStatStatementsTrack(val *string) {
+	if err := j.validateSetPgStatStatementsTrackParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pgStatStatementsTrack",
@@ -2036,7 +2180,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPgStat
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPublicAccess(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPublicAccess(val interface{}) {
+	if err := j.validateSetPublicAccessParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"publicAccess",
@@ -2044,7 +2191,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetPublic
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetSharedBuffersPercentage(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetSharedBuffersPercentage(val *float64) {
+	if err := j.validateSetSharedBuffersPercentageParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sharedBuffersPercentage",
@@ -2052,7 +2202,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetShared
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetSynchronousReplication(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetSynchronousReplication(val *string) {
+	if err := j.validateSetSynchronousReplicationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"synchronousReplication",
@@ -2060,7 +2213,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetSynchr
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTempFileLimit(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTempFileLimit(val *float64) {
+	if err := j.validateSetTempFileLimitParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tempFileLimit",
@@ -2068,7 +2224,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTempFi
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -2076,7 +2235,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTerraf
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -2084,7 +2246,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTerraf
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTimezone(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTimezone(val *string) {
+	if err := j.validateSetTimezoneParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timezone",
@@ -2092,7 +2257,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTimezo
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackActivityQuerySize(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTrackActivityQuerySize(val *float64) {
+	if err := j.validateSetTrackActivityQuerySizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"trackActivityQuerySize",
@@ -2100,7 +2268,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackA
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackCommitTimestamp(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTrackCommitTimestamp(val *string) {
+	if err := j.validateSetTrackCommitTimestampParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"trackCommitTimestamp",
@@ -2108,7 +2279,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackC
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackFunctions(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTrackFunctions(val *string) {
+	if err := j.validateSetTrackFunctionsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"trackFunctions",
@@ -2116,7 +2290,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackF
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackIoTiming(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetTrackIoTiming(val *string) {
+	if err := j.validateSetTrackIoTimingParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"trackIoTiming",
@@ -2124,7 +2301,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetTrackI
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetVariant(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetVariant(val *string) {
+	if err := j.validateSetVariantParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"variant",
@@ -2132,7 +2312,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetVarian
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetVersion(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetVersion(val *string) {
+	if err := j.validateSetVersionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"version",
@@ -2140,7 +2323,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetVersio
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetWalSenderTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetWalSenderTimeout(val *float64) {
+	if err := j.validateSetWalSenderTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"walSenderTimeout",
@@ -2148,7 +2334,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetWalSen
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetWalWriterDelay(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetWalWriterDelay(val *float64) {
+	if err := j.validateSetWalWriterDelayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"walWriterDelay",
@@ -2156,7 +2345,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetWalWri
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SetWorkMem(val *float64) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetWorkMem(val *float64) {
+	if err := j.validateSetWorkMemParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"workMem",
@@ -2178,6 +2370,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ComputeFq
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -2191,6 +2386,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetAnyMap
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -2204,6 +2402,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetBoolea
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -2217,6 +2418,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetBoolea
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -2230,6 +2434,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetListAt
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -2243,6 +2450,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetNumber
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -2256,6 +2466,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetNumber
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -2269,6 +2482,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetNumber
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -2282,6 +2498,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetString
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -2308,6 +2527,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Interpola
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -2321,6 +2543,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Interpola
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutMigration(value *ManagedDatabasePostgresqlPropertiesMigration) {
+	if err := m.validatePutMigrationParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putMigration",
@@ -2329,6 +2554,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutMigrat
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutPgbouncer(value *ManagedDatabasePostgresqlPropertiesPgbouncer) {
+	if err := m.validatePutPgbouncerParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putPgbouncer",
@@ -2337,6 +2565,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutPgboun
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutPglookout(value *ManagedDatabasePostgresqlPropertiesPglookout) {
+	if err := m.validatePutPglookoutParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putPglookout",
@@ -2345,6 +2576,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutPglook
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutTimescaledb(value *ManagedDatabasePostgresqlPropertiesTimescaledb) {
+	if err := m.validatePutTimescaledbParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putTimescaledb",
@@ -2849,6 +3083,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetWork
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

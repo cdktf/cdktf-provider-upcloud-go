@@ -111,6 +111,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) WrapsSet() *bool 
 func NewLoadbalancerFrontendRuleMatchersHeaderList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoadbalancerFrontendRuleMatchersHeaderList {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerFrontendRuleMatchersHeaderListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewLoadbalancerFrontendRuleMatchersHeaderList_Override(l LoadbalancerFronte
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) SetInternalValue(
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) SetTerraformAttri
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) SetTerraformResou
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) ComputeFqn() *str
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) Get(index *float64) LoadbalancerFrontendRuleMatchersHeaderOutputReference {
+	if err := l.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns LoadbalancerFrontendRuleMatchersHeaderOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) Get(index *float6
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersHeaderList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

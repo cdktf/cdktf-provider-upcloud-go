@@ -111,6 +111,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) WrapsSet() *boo
 func NewLoadbalancerFrontendRuleActionsTcpRejectList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoadbalancerFrontendRuleActionsTcpRejectList {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerFrontendRuleActionsTcpRejectListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewLoadbalancerFrontendRuleActionsTcpRejectList_Override(l LoadbalancerFron
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) SetInternalValu
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) SetTerraformAtt
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) SetTerraformRes
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) ComputeFqn() *s
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) Get(index *float64) LoadbalancerFrontendRuleActionsTcpRejectOutputReference {
+	if err := l.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns LoadbalancerFrontendRuleActionsTcpRejectOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) Get(index *floa
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

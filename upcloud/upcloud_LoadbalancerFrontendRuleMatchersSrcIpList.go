@@ -111,6 +111,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) WrapsSet() *bool {
 func NewLoadbalancerFrontendRuleMatchersSrcIpList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoadbalancerFrontendRuleMatchersSrcIpList {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerFrontendRuleMatchersSrcIpListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewLoadbalancerFrontendRuleMatchersSrcIpList_Override(l LoadbalancerFronten
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) SetInternalValue(v
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) SetTerraformAttrib
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) SetTerraformResour
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) ComputeFqn() *stri
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) Get(index *float64) LoadbalancerFrontendRuleMatchersSrcIpOutputReference {
+	if err := l.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns LoadbalancerFrontendRuleMatchersSrcIpOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) Get(index *float64
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcIpList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

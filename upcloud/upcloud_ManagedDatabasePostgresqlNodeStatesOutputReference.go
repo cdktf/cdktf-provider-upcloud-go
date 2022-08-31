@@ -184,6 +184,9 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) Terraform
 func NewManagedDatabasePostgresqlNodeStatesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ManagedDatabasePostgresqlNodeStatesOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabasePostgresqlNodeStatesOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference{}
 
 	_jsii_.Create(
@@ -205,7 +208,10 @@ func NewManagedDatabasePostgresqlNodeStatesOutputReference_Override(m ManagedDat
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -213,7 +219,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetComple
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -221,7 +230,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetComple
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetInternalValue(val *ManagedDatabasePostgresqlNodeStates) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference)SetInternalValue(val *ManagedDatabasePostgresqlNodeStates) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -229,7 +241,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetIntern
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -237,7 +252,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetTerraf
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -259,6 +277,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) ComputeFq
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -272,6 +293,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetAnyMap
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -285,6 +309,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetBoolea
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -298,6 +325,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetBoolea
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -311,6 +341,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetListAt
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -324,6 +357,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetNumber
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -337,6 +373,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetNumber
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -350,6 +389,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetNumber
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -363,6 +405,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetString
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -389,6 +434,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) Interpola
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -402,6 +450,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) Interpola
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

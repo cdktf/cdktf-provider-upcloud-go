@@ -967,6 +967,9 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) WaitTimeoutInp
 func NewManagedDatabaseMysqlPropertiesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ManagedDatabaseMysqlPropertiesOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabaseMysqlPropertiesOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference{}
 
 	_jsii_.Create(
@@ -988,7 +991,10 @@ func NewManagedDatabaseMysqlPropertiesOutputReference_Override(m ManagedDatabase
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetAdminPassword(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetAdminPassword(val *string) {
+	if err := j.validateSetAdminPasswordParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"adminPassword",
@@ -996,7 +1002,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetAdminPasswo
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetAdminUsername(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetAdminUsername(val *string) {
+	if err := j.validateSetAdminUsernameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"adminUsername",
@@ -1004,7 +1013,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetAdminUserna
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetAutomaticUtilityNetworkIpFilter(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetAutomaticUtilityNetworkIpFilter(val interface{}) {
+	if err := j.validateSetAutomaticUtilityNetworkIpFilterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"automaticUtilityNetworkIpFilter",
@@ -1012,7 +1024,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetAutomaticUt
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetBackupHour(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetBackupHour(val *float64) {
+	if err := j.validateSetBackupHourParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"backupHour",
@@ -1020,7 +1035,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetBackupHour(
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetBackupMinute(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetBackupMinute(val *float64) {
+	if err := j.validateSetBackupMinuteParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"backupMinute",
@@ -1028,7 +1046,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetBackupMinut
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetBinlogRetentionPeriod(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetBinlogRetentionPeriod(val *float64) {
+	if err := j.validateSetBinlogRetentionPeriodParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"binlogRetentionPeriod",
@@ -1036,7 +1057,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetBinlogReten
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -1044,7 +1068,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -1052,7 +1079,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetConnectTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetConnectTimeout(val *float64) {
+	if err := j.validateSetConnectTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connectTimeout",
@@ -1060,7 +1090,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetConnectTime
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetDefaultTimeZone(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetDefaultTimeZone(val *string) {
+	if err := j.validateSetDefaultTimeZoneParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"defaultTimeZone",
@@ -1068,7 +1101,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetDefaultTime
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetGroupConcatMaxLen(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetGroupConcatMaxLen(val *float64) {
+	if err := j.validateSetGroupConcatMaxLenParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"groupConcatMaxLen",
@@ -1076,7 +1112,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetGroupConcat
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInformationSchemaStatsExpiry(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInformationSchemaStatsExpiry(val *float64) {
+	if err := j.validateSetInformationSchemaStatsExpiryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"informationSchemaStatsExpiry",
@@ -1084,7 +1123,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInformation
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbFtMinTokenSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbFtMinTokenSize(val *float64) {
+	if err := j.validateSetInnodbFtMinTokenSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"innodbFtMinTokenSize",
@@ -1092,7 +1134,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbFtMin
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbFtServerStopwordTable(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbFtServerStopwordTable(val *string) {
+	if err := j.validateSetInnodbFtServerStopwordTableParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"innodbFtServerStopwordTable",
@@ -1100,7 +1145,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbFtSer
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbLockWaitTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbLockWaitTimeout(val *float64) {
+	if err := j.validateSetInnodbLockWaitTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"innodbLockWaitTimeout",
@@ -1108,7 +1156,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbLockW
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbLogBufferSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbLogBufferSize(val *float64) {
+	if err := j.validateSetInnodbLogBufferSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"innodbLogBufferSize",
@@ -1116,7 +1167,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbLogBu
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbOnlineAlterLogMaxSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbOnlineAlterLogMaxSize(val *float64) {
+	if err := j.validateSetInnodbOnlineAlterLogMaxSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"innodbOnlineAlterLogMaxSize",
@@ -1124,7 +1178,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbOnlin
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbPrintAllDeadlocks(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbPrintAllDeadlocks(val interface{}) {
+	if err := j.validateSetInnodbPrintAllDeadlocksParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"innodbPrintAllDeadlocks",
@@ -1132,7 +1189,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbPrint
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbRollbackOnTimeout(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbRollbackOnTimeout(val interface{}) {
+	if err := j.validateSetInnodbRollbackOnTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"innodbRollbackOnTimeout",
@@ -1140,7 +1200,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInnodbRollb
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInteractiveTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInteractiveTimeout(val *float64) {
+	if err := j.validateSetInteractiveTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"interactiveTimeout",
@@ -1148,7 +1211,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInteractive
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInternalTmpMemStorageEngine(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInternalTmpMemStorageEngine(val *string) {
+	if err := j.validateSetInternalTmpMemStorageEngineParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalTmpMemStorageEngine",
@@ -1156,7 +1222,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInternalTmp
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInternalValue(val *ManagedDatabaseMysqlProperties) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInternalValue(val *ManagedDatabaseMysqlProperties) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -1164,7 +1233,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetInternalVal
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetIpFilter(val *[]*string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetIpFilter(val *[]*string) {
+	if err := j.validateSetIpFilterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ipFilter",
@@ -1172,7 +1244,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetIpFilter(va
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetLongQueryTime(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetLongQueryTime(val *float64) {
+	if err := j.validateSetLongQueryTimeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"longQueryTime",
@@ -1180,7 +1255,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetLongQueryTi
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetMaxAllowedPacket(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetMaxAllowedPacket(val *float64) {
+	if err := j.validateSetMaxAllowedPacketParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxAllowedPacket",
@@ -1188,7 +1266,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetMaxAllowedP
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetMaxHeapTableSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetMaxHeapTableSize(val *float64) {
+	if err := j.validateSetMaxHeapTableSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxHeapTableSize",
@@ -1196,7 +1277,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetMaxHeapTabl
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetNetReadTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetNetReadTimeout(val *float64) {
+	if err := j.validateSetNetReadTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"netReadTimeout",
@@ -1204,7 +1288,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetNetReadTime
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetNetWriteTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetNetWriteTimeout(val *float64) {
+	if err := j.validateSetNetWriteTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"netWriteTimeout",
@@ -1212,7 +1299,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetNetWriteTim
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetPublicAccess(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetPublicAccess(val interface{}) {
+	if err := j.validateSetPublicAccessParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"publicAccess",
@@ -1220,7 +1310,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetPublicAcces
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSlowQueryLog(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetSlowQueryLog(val interface{}) {
+	if err := j.validateSetSlowQueryLogParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"slowQueryLog",
@@ -1228,7 +1321,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSlowQueryLo
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSortBufferSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetSortBufferSize(val *float64) {
+	if err := j.validateSetSortBufferSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sortBufferSize",
@@ -1236,7 +1332,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSortBufferS
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSqlMode(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetSqlMode(val *string) {
+	if err := j.validateSetSqlModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sqlMode",
@@ -1244,7 +1343,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSqlMode(val
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSqlRequirePrimaryKey(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetSqlRequirePrimaryKey(val interface{}) {
+	if err := j.validateSetSqlRequirePrimaryKeyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sqlRequirePrimaryKey",
@@ -1252,7 +1354,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetSqlRequireP
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -1260,7 +1365,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetTerraformAt
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -1268,7 +1376,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetTerraformRe
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetTmpTableSize(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetTmpTableSize(val *float64) {
+	if err := j.validateSetTmpTableSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tmpTableSize",
@@ -1276,7 +1387,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetTmpTableSiz
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetVersion(val *string) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetVersion(val *string) {
+	if err := j.validateSetVersionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"version",
@@ -1284,7 +1398,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetVersion(val
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SetWaitTimeout(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetWaitTimeout(val *float64) {
+	if err := j.validateSetWaitTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"waitTimeout",
@@ -1306,6 +1423,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ComputeFqn() *
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -1319,6 +1439,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetAnyMapAttri
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1332,6 +1455,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetBooleanAttr
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -1345,6 +1471,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetBooleanMapA
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -1358,6 +1487,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetListAttribu
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -1371,6 +1503,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetNumberAttri
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -1384,6 +1519,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetNumberListA
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1397,6 +1535,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetNumberMapAt
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1410,6 +1551,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetStringAttri
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1436,6 +1580,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InterpolationA
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1449,6 +1596,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InterpolationF
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) PutMigration(value *ManagedDatabaseMysqlPropertiesMigration) {
+	if err := m.validatePutMigrationParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putMigration",
@@ -1729,6 +1879,9 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetWaitTimeo
 }
 
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

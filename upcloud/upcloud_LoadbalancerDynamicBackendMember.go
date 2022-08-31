@@ -455,6 +455,9 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) WeightInput() *float64 {
 func NewLoadbalancerDynamicBackendMember(scope constructs.Construct, id *string, config *LoadbalancerDynamicBackendMemberConfig) LoadbalancerDynamicBackendMember {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerDynamicBackendMemberParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerDynamicBackendMember{}
 
 	_jsii_.Create(
@@ -477,7 +480,10 @@ func NewLoadbalancerDynamicBackendMember_Override(l LoadbalancerDynamicBackendMe
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetBackend(val *string) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetBackend(val *string) {
+	if err := j.validateSetBackendParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"backend",
@@ -485,7 +491,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetBackend(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetConnection(val interface{}) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -493,7 +502,7 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetConnection(val interface
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetCount(val *float64) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -501,7 +510,7 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -509,7 +518,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetDependsOn(val *[]*string
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetEnabled(val interface{}) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetEnabled(val interface{}) {
+	if err := j.validateSetEnabledParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enabled",
@@ -517,7 +529,7 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetEnabled(val interface{})
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -525,7 +537,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetForEach(val cdktf.ITerra
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetId(val *string) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -533,7 +548,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetIp(val *string) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetIp(val *string) {
+	if err := j.validateSetIpParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ip",
@@ -541,7 +559,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetIp(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -549,7 +570,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetLifecycle(val *cdktf.Ter
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetMaxSessions(val *float64) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetMaxSessions(val *float64) {
+	if err := j.validateSetMaxSessionsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxSessions",
@@ -557,7 +581,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetMaxSessions(val *float64
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetName(val *string) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -565,7 +592,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetPort(val *float64) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetPort(val *float64) {
+	if err := j.validateSetPortParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"port",
@@ -573,7 +603,7 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetPort(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -581,7 +611,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetProvider(val cdktf.Terra
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -589,7 +622,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetProvisioners(val *[]inte
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetWeight(val *float64) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetWeight(val *float64) {
+	if err := j.validateSetWeightParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"weight",
@@ -617,6 +653,9 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) SetWeight(val *float64) {
 func LoadbalancerDynamicBackendMember_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateLoadbalancerDynamicBackendMember_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -641,6 +680,9 @@ func LoadbalancerDynamicBackendMember_TfResourceType() *string {
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) AddOverride(path *string, value interface{}) {
+	if err := l.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		l,
 		"addOverride",
@@ -649,6 +691,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) AddOverride(path *string, v
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := l.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -662,6 +707,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetAnyMapAttribute(terrafor
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := l.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -675,6 +723,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetBooleanAttribute(terrafo
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := l.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -688,6 +739,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetBooleanMapAttribute(terr
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := l.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -701,6 +755,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetListAttribute(terraformA
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := l.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -714,6 +771,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetNumberAttribute(terrafor
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := l.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -727,6 +787,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetNumberListAttribute(terr
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := l.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -740,6 +803,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetNumberMapAttribute(terra
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetStringAttribute(terraformAttribute *string) *string {
+	if err := l.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -753,6 +819,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetStringAttribute(terrafor
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := l.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -766,6 +835,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) GetStringMapAttribute(terra
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := l.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -779,6 +851,9 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) InterpolationForAttribute(t
 }
 
 func (l *jsiiProxy_LoadbalancerDynamicBackendMember) OverrideLogicalId(newLogicalId *string) {
+	if err := l.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		l,
 		"overrideLogicalId",

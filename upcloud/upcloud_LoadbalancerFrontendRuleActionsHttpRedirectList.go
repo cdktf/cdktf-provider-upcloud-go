@@ -111,6 +111,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) WrapsSet() *
 func NewLoadbalancerFrontendRuleActionsHttpRedirectList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoadbalancerFrontendRuleActionsHttpRedirectList {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerFrontendRuleActionsHttpRedirectListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewLoadbalancerFrontendRuleActionsHttpRedirectList_Override(l LoadbalancerF
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) SetInternalV
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) SetTerraform
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) SetTerraform
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) ComputeFqn()
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) Get(index *float64) LoadbalancerFrontendRuleActionsHttpRedirectOutputReference {
+	if err := l.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns LoadbalancerFrontendRuleActionsHttpRedirectOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) Get(index *f
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -303,6 +303,9 @@ func (j *jsiiProxy_UpcloudProvider) UsernameInput() *string {
 func NewUpcloudProvider(scope constructs.Construct, id *string, config *UpcloudProviderConfig) UpcloudProvider {
 	_init_.Initialize()
 
+	if err := validateNewUpcloudProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_UpcloudProvider{}
 
 	_jsii_.Create(
@@ -325,7 +328,7 @@ func NewUpcloudProvider_Override(u UpcloudProvider, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_UpcloudProvider) SetAlias(val *string) {
+func (j *jsiiProxy_UpcloudProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -333,7 +336,7 @@ func (j *jsiiProxy_UpcloudProvider) SetAlias(val *string) {
 	)
 }
 
-func (j *jsiiProxy_UpcloudProvider) SetPassword(val *string) {
+func (j *jsiiProxy_UpcloudProvider)SetPassword(val *string) {
 	_jsii_.Set(
 		j,
 		"password",
@@ -341,7 +344,7 @@ func (j *jsiiProxy_UpcloudProvider) SetPassword(val *string) {
 	)
 }
 
-func (j *jsiiProxy_UpcloudProvider) SetRetryMax(val *float64) {
+func (j *jsiiProxy_UpcloudProvider)SetRetryMax(val *float64) {
 	_jsii_.Set(
 		j,
 		"retryMax",
@@ -349,7 +352,7 @@ func (j *jsiiProxy_UpcloudProvider) SetRetryMax(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_UpcloudProvider) SetRetryWaitMaxSec(val *float64) {
+func (j *jsiiProxy_UpcloudProvider)SetRetryWaitMaxSec(val *float64) {
 	_jsii_.Set(
 		j,
 		"retryWaitMaxSec",
@@ -357,7 +360,7 @@ func (j *jsiiProxy_UpcloudProvider) SetRetryWaitMaxSec(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_UpcloudProvider) SetRetryWaitMinSec(val *float64) {
+func (j *jsiiProxy_UpcloudProvider)SetRetryWaitMinSec(val *float64) {
 	_jsii_.Set(
 		j,
 		"retryWaitMinSec",
@@ -365,7 +368,7 @@ func (j *jsiiProxy_UpcloudProvider) SetRetryWaitMinSec(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_UpcloudProvider) SetUsername(val *string) {
+func (j *jsiiProxy_UpcloudProvider)SetUsername(val *string) {
 	_jsii_.Set(
 		j,
 		"username",
@@ -393,6 +396,9 @@ func (j *jsiiProxy_UpcloudProvider) SetUsername(val *string) {
 func UpcloudProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateUpcloudProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -417,6 +423,9 @@ func UpcloudProvider_TfResourceType() *string {
 }
 
 func (u *jsiiProxy_UpcloudProvider) AddOverride(path *string, value interface{}) {
+	if err := u.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		u,
 		"addOverride",
@@ -425,6 +434,9 @@ func (u *jsiiProxy_UpcloudProvider) AddOverride(path *string, value interface{})
 }
 
 func (u *jsiiProxy_UpcloudProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := u.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		u,
 		"overrideLogicalId",

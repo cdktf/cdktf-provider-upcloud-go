@@ -475,6 +475,9 @@ func (j *jsiiProxy_LoadbalancerResolver) TimeoutRetryInput() *float64 {
 func NewLoadbalancerResolver(scope constructs.Construct, id *string, config *LoadbalancerResolverConfig) LoadbalancerResolver {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerResolverParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerResolver{}
 
 	_jsii_.Create(
@@ -497,7 +500,10 @@ func NewLoadbalancerResolver_Override(l LoadbalancerResolver, scope constructs.C
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetCacheInvalid(val *float64) {
+func (j *jsiiProxy_LoadbalancerResolver)SetCacheInvalid(val *float64) {
+	if err := j.validateSetCacheInvalidParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cacheInvalid",
@@ -505,7 +511,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetCacheInvalid(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetCacheValid(val *float64) {
+func (j *jsiiProxy_LoadbalancerResolver)SetCacheValid(val *float64) {
+	if err := j.validateSetCacheValidParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cacheValid",
@@ -513,7 +522,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetCacheValid(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetConnection(val interface{}) {
+func (j *jsiiProxy_LoadbalancerResolver)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -521,7 +533,7 @@ func (j *jsiiProxy_LoadbalancerResolver) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetCount(val *float64) {
+func (j *jsiiProxy_LoadbalancerResolver)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -529,7 +541,7 @@ func (j *jsiiProxy_LoadbalancerResolver) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_LoadbalancerResolver)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -537,7 +549,7 @@ func (j *jsiiProxy_LoadbalancerResolver) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_LoadbalancerResolver)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -545,7 +557,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetForEach(val cdktf.ITerraformIterator
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetId(val *string) {
+func (j *jsiiProxy_LoadbalancerResolver)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -553,7 +568,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_LoadbalancerResolver)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -561,7 +579,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetLifecycle(val *cdktf.TerraformResour
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetLoadbalancer(val *string) {
+func (j *jsiiProxy_LoadbalancerResolver)SetLoadbalancer(val *string) {
+	if err := j.validateSetLoadbalancerParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"loadbalancer",
@@ -569,7 +590,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetLoadbalancer(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetName(val *string) {
+func (j *jsiiProxy_LoadbalancerResolver)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -577,7 +601,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetNameservers(val *[]*string) {
+func (j *jsiiProxy_LoadbalancerResolver)SetNameservers(val *[]*string) {
+	if err := j.validateSetNameserversParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"nameservers",
@@ -585,7 +612,7 @@ func (j *jsiiProxy_LoadbalancerResolver) SetNameservers(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_LoadbalancerResolver)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -593,7 +620,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetProvider(val cdktf.TerraformProvider
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_LoadbalancerResolver)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -601,7 +631,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetRetries(val *float64) {
+func (j *jsiiProxy_LoadbalancerResolver)SetRetries(val *float64) {
+	if err := j.validateSetRetriesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"retries",
@@ -609,7 +642,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetRetries(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetTimeout(val *float64) {
+func (j *jsiiProxy_LoadbalancerResolver)SetTimeout(val *float64) {
+	if err := j.validateSetTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timeout",
@@ -617,7 +653,10 @@ func (j *jsiiProxy_LoadbalancerResolver) SetTimeout(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) SetTimeoutRetry(val *float64) {
+func (j *jsiiProxy_LoadbalancerResolver)SetTimeoutRetry(val *float64) {
+	if err := j.validateSetTimeoutRetryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timeoutRetry",
@@ -645,6 +684,9 @@ func (j *jsiiProxy_LoadbalancerResolver) SetTimeoutRetry(val *float64) {
 func LoadbalancerResolver_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateLoadbalancerResolver_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -669,6 +711,9 @@ func LoadbalancerResolver_TfResourceType() *string {
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) AddOverride(path *string, value interface{}) {
+	if err := l.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		l,
 		"addOverride",
@@ -677,6 +722,9 @@ func (l *jsiiProxy_LoadbalancerResolver) AddOverride(path *string, value interfa
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := l.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -690,6 +738,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetAnyMapAttribute(terraformAttribute *
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := l.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -703,6 +754,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetBooleanAttribute(terraformAttribute 
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := l.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -716,6 +770,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetBooleanMapAttribute(terraformAttribu
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := l.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -729,6 +786,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetListAttribute(terraformAttribute *st
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := l.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -742,6 +802,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetNumberAttribute(terraformAttribute *
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := l.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -755,6 +818,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetNumberListAttribute(terraformAttribu
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := l.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -768,6 +834,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetNumberMapAttribute(terraformAttribut
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetStringAttribute(terraformAttribute *string) *string {
+	if err := l.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -781,6 +850,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetStringAttribute(terraformAttribute *
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := l.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -794,6 +866,9 @@ func (l *jsiiProxy_LoadbalancerResolver) GetStringMapAttribute(terraformAttribut
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := l.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -807,6 +882,9 @@ func (l *jsiiProxy_LoadbalancerResolver) InterpolationForAttribute(terraformAttr
 }
 
 func (l *jsiiProxy_LoadbalancerResolver) OverrideLogicalId(newLogicalId *string) {
+	if err := l.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		l,
 		"overrideLogicalId",

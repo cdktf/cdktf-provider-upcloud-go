@@ -385,6 +385,9 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) TerraformResourceType() *stri
 func NewManagedDatabaseLogicalDatabase(scope constructs.Construct, id *string, config *ManagedDatabaseLogicalDatabaseConfig) ManagedDatabaseLogicalDatabase {
 	_init_.Initialize()
 
+	if err := validateNewManagedDatabaseLogicalDatabaseParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ManagedDatabaseLogicalDatabase{}
 
 	_jsii_.Create(
@@ -407,7 +410,10 @@ func NewManagedDatabaseLogicalDatabase_Override(m ManagedDatabaseLogicalDatabase
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetCharacterSet(val *string) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetCharacterSet(val *string) {
+	if err := j.validateSetCharacterSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"characterSet",
@@ -415,7 +421,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetCharacterSet(val *string) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetCollation(val *string) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetCollation(val *string) {
+	if err := j.validateSetCollationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"collation",
@@ -423,7 +432,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetCollation(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetConnection(val interface{}) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -431,7 +443,7 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetConnection(val interface{}
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetCount(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -439,7 +451,7 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -447,7 +459,7 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetDependsOn(val *[]*string) 
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -455,7 +467,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetForEach(val cdktf.ITerrafo
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetId(val *string) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -463,7 +478,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -471,7 +489,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetLifecycle(val *cdktf.Terra
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetName(val *string) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -479,7 +500,7 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -487,7 +508,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetProvider(val cdktf.Terrafo
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -495,7 +519,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetProvisioners(val *[]interf
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetService(val *string) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetService(val *string) {
+	if err := j.validateSetServiceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"service",
@@ -523,6 +550,9 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) SetService(val *string) {
 func ManagedDatabaseLogicalDatabase_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateManagedDatabaseLogicalDatabase_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -547,6 +577,9 @@ func ManagedDatabaseLogicalDatabase_TfResourceType() *string {
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) AddOverride(path *string, value interface{}) {
+	if err := m.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"addOverride",
@@ -555,6 +588,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) AddOverride(path *string, val
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -568,6 +604,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetAnyMapAttribute(terraformA
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -581,6 +620,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetBooleanAttribute(terraform
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -594,6 +636,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetBooleanMapAttribute(terraf
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -607,6 +652,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetListAttribute(terraformAtt
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -620,6 +668,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetNumberAttribute(terraformA
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -633,6 +684,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetNumberListAttribute(terraf
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -646,6 +700,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetNumberMapAttribute(terrafo
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -659,6 +716,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetStringAttribute(terraformA
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -672,6 +732,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) GetStringMapAttribute(terrafo
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -685,6 +748,9 @@ func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) InterpolationForAttribute(ter
 }
 
 func (m *jsiiProxy_ManagedDatabaseLogicalDatabase) OverrideLogicalId(newLogicalId *string) {
+	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"overrideLogicalId",

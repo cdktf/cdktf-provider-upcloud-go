@@ -111,6 +111,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) WrapsSet()
 func NewLoadbalancerFrontendRuleMatchersBodySizeRangeList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoadbalancerFrontendRuleMatchersBodySizeRangeList {
 	_init_.Initialize()
 
+	if err := validateNewLoadbalancerFrontendRuleMatchersBodySizeRangeListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewLoadbalancerFrontendRuleMatchersBodySizeRangeList_Override(l Loadbalance
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) SetInterna
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) SetTerrafo
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) SetTerrafo
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) ComputeFqn
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) Get(index *float64) LoadbalancerFrontendRuleMatchersBodySizeRangeOutputReference {
+	if err := l.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns LoadbalancerFrontendRuleMatchersBodySizeRangeOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) Get(index 
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -308,6 +308,9 @@ func (j *jsiiProxy_DataUpcloudZone) TerraformResourceType() *string {
 func NewDataUpcloudZone(scope constructs.Construct, id *string, config *DataUpcloudZoneConfig) DataUpcloudZone {
 	_init_.Initialize()
 
+	if err := validateNewDataUpcloudZoneParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataUpcloudZone{}
 
 	_jsii_.Create(
@@ -330,7 +333,7 @@ func NewDataUpcloudZone_Override(d DataUpcloudZone, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudZone) SetCount(val *float64) {
+func (j *jsiiProxy_DataUpcloudZone)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -338,7 +341,7 @@ func (j *jsiiProxy_DataUpcloudZone) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudZone) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_DataUpcloudZone)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -346,7 +349,7 @@ func (j *jsiiProxy_DataUpcloudZone) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudZone) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_DataUpcloudZone)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -354,7 +357,10 @@ func (j *jsiiProxy_DataUpcloudZone) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudZone) SetId(val *string) {
+func (j *jsiiProxy_DataUpcloudZone)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -362,7 +368,10 @@ func (j *jsiiProxy_DataUpcloudZone) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudZone) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_DataUpcloudZone)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -370,7 +379,10 @@ func (j *jsiiProxy_DataUpcloudZone) SetLifecycle(val *cdktf.TerraformResourceLif
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudZone) SetName(val *string) {
+func (j *jsiiProxy_DataUpcloudZone)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -378,7 +390,7 @@ func (j *jsiiProxy_DataUpcloudZone) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudZone) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_DataUpcloudZone)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -406,6 +418,9 @@ func (j *jsiiProxy_DataUpcloudZone) SetProvider(val cdktf.TerraformProvider) {
 func DataUpcloudZone_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateDataUpcloudZone_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -430,6 +445,9 @@ func DataUpcloudZone_TfResourceType() *string {
 }
 
 func (d *jsiiProxy_DataUpcloudZone) AddOverride(path *string, value interface{}) {
+	if err := d.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"addOverride",
@@ -438,6 +456,9 @@ func (d *jsiiProxy_DataUpcloudZone) AddOverride(path *string, value interface{})
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -451,6 +472,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetAnyMapAttribute(terraformAttribute *strin
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -464,6 +488,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetBooleanAttribute(terraformAttribute *stri
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -477,6 +504,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetBooleanMapAttribute(terraformAttribute *s
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -490,6 +520,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetListAttribute(terraformAttribute *string)
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -503,6 +536,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetNumberAttribute(terraformAttribute *strin
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -516,6 +552,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetNumberListAttribute(terraformAttribute *s
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -529,6 +568,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetNumberMapAttribute(terraformAttribute *st
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -542,6 +584,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetStringAttribute(terraformAttribute *strin
 }
 
 func (d *jsiiProxy_DataUpcloudZone) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -555,6 +600,9 @@ func (d *jsiiProxy_DataUpcloudZone) GetStringMapAttribute(terraformAttribute *st
 }
 
 func (d *jsiiProxy_DataUpcloudZone) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -568,6 +616,9 @@ func (d *jsiiProxy_DataUpcloudZone) InterpolationForAttribute(terraformAttribute
 }
 
 func (d *jsiiProxy_DataUpcloudZone) OverrideLogicalId(newLogicalId *string) {
+	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"overrideLogicalId",

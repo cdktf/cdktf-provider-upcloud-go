@@ -111,6 +111,9 @@ func (j *jsiiProxy_ServerNetworkInterfaceList) WrapsSet() *bool {
 func NewServerNetworkInterfaceList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServerNetworkInterfaceList {
 	_init_.Initialize()
 
+	if err := validateNewServerNetworkInterfaceListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ServerNetworkInterfaceList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewServerNetworkInterfaceList_Override(s ServerNetworkInterfaceList, terraf
 	)
 }
 
-func (j *jsiiProxy_ServerNetworkInterfaceList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ServerNetworkInterfaceList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ServerNetworkInterfaceList) SetInternalValue(val interface{})
 	)
 }
 
-func (j *jsiiProxy_ServerNetworkInterfaceList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ServerNetworkInterfaceList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ServerNetworkInterfaceList) SetTerraformAttribute(val *string
 	)
 }
 
-func (j *jsiiProxy_ServerNetworkInterfaceList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ServerNetworkInterfaceList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ServerNetworkInterfaceList) SetTerraformResource(val cdktf.II
 	)
 }
 
-func (j *jsiiProxy_ServerNetworkInterfaceList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ServerNetworkInterfaceList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (s *jsiiProxy_ServerNetworkInterfaceList) ComputeFqn() *string {
 }
 
 func (s *jsiiProxy_ServerNetworkInterfaceList) Get(index *float64) ServerNetworkInterfaceOutputReference {
+	if err := s.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ServerNetworkInterfaceOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (s *jsiiProxy_ServerNetworkInterfaceList) Get(index *float64) ServerNetwork
 }
 
 func (s *jsiiProxy_ServerNetworkInterfaceList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(
