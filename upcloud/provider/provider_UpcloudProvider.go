@@ -59,9 +59,11 @@ type UpcloudProvider interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPassword()
 	ResetRetryMax()
 	ResetRetryWaitMaxSec()
 	ResetRetryWaitMinSec()
+	ResetUsername()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -459,6 +461,14 @@ func (u *jsiiProxy_UpcloudProvider) ResetOverrideLogicalId() {
 	)
 }
 
+func (u *jsiiProxy_UpcloudProvider) ResetPassword() {
+	_jsii_.InvokeVoid(
+		u,
+		"resetPassword",
+		nil, // no parameters
+	)
+}
+
 func (u *jsiiProxy_UpcloudProvider) ResetRetryMax() {
 	_jsii_.InvokeVoid(
 		u,
@@ -479,6 +489,14 @@ func (u *jsiiProxy_UpcloudProvider) ResetRetryWaitMinSec() {
 	_jsii_.InvokeVoid(
 		u,
 		"resetRetryWaitMinSec",
+		nil, // no parameters
+	)
+}
+
+func (u *jsiiProxy_UpcloudProvider) ResetUsername() {
+	_jsii_.InvokeVoid(
+		u,
+		"resetUsername",
 		nil, // no parameters
 	)
 }

@@ -101,6 +101,10 @@ func (j *jsiiProxy_Server) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Server) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Server) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

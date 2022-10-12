@@ -51,6 +51,9 @@ type Server interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -138,6 +141,7 @@ type Server interface {
 	ResetFirewall()
 	ResetHost()
 	ResetId()
+	ResetLabels()
 	ResetLogin()
 	ResetMem()
 	ResetMetadata()
@@ -341,6 +345,26 @@ func (j *jsiiProxy_Server) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -786,6 +810,17 @@ func (j *jsiiProxy_Server)SetId(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Server)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Server)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
@@ -1204,6 +1239,14 @@ func (s *jsiiProxy_Server) ResetId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Server) ResetLabels() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLabels",
 		nil, // no parameters
 	)
 }

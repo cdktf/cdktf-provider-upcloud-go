@@ -42,7 +42,7 @@ type ManagedDatabasePostgresqlPropertiesPgbouncer struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#server_lifetime ManagedDatabasePostgresql#server_lifetime}
 	ServerLifetime *float64 `field:"optional" json:"serverLifetime" yaml:"serverLifetime"`
-	// Run server_reset_query (DISCARD ALL) in all pooling modes.
+	// Run server_reset_query (`DISCARD ALL`) in all pooling modes.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#server_reset_query_always ManagedDatabasePostgresql#server_reset_query_always}
 	ServerResetQueryAlways interface{} `field:"optional" json:"serverResetQueryAlways" yaml:"serverResetQueryAlways"`

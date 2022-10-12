@@ -10,7 +10,7 @@ type ServerLogin struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/server#keys Server#keys}
 	Keys *[]*string `field:"optional" json:"keys" yaml:"keys"`
-	// The delivery method for the server’s root password.
+	// The delivery method for the server's root password (one of `none`, `email` or `sms`).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/server#password_delivery Server#password_delivery}
 	PasswordDelivery *string `field:"optional" json:"passwordDelivery" yaml:"passwordDelivery"`

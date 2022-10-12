@@ -34,55 +34,55 @@ type ManagedDatabaseMysqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#binlog_retention_period ManagedDatabaseMysql#binlog_retention_period}
 	BinlogRetentionPeriod *float64 `field:"optional" json:"binlogRetentionPeriod" yaml:"binlogRetentionPeriod"`
-	// connect_timeout.
+	// The number of seconds that the mysqld server waits for a connect packet before responding with Bad handshake.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#connect_timeout ManagedDatabaseMysql#connect_timeout}
 	ConnectTimeout *float64 `field:"optional" json:"connectTimeout" yaml:"connectTimeout"`
-	// default_time_zone.
+	// Default server time zone as an offset from UTC (from -12:00 to +12:00), a time zone name, or `SYSTEM` to use the MySQL server default.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#default_time_zone ManagedDatabaseMysql#default_time_zone}
 	DefaultTimeZone *string `field:"optional" json:"defaultTimeZone" yaml:"defaultTimeZone"`
-	// group_concat_max_len.
+	// The maximum permitted result length in bytes for the `GROUP_CONCAT()` function.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#group_concat_max_len ManagedDatabaseMysql#group_concat_max_len}
 	GroupConcatMaxLen *float64 `field:"optional" json:"groupConcatMaxLen" yaml:"groupConcatMaxLen"`
-	// information_schema_stats_expiry.
+	// The time, in seconds, before cached statistics expire.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#information_schema_stats_expiry ManagedDatabaseMysql#information_schema_stats_expiry}
 	InformationSchemaStatsExpiry *float64 `field:"optional" json:"informationSchemaStatsExpiry" yaml:"informationSchemaStatsExpiry"`
-	// innodb_ft_min_token_size.
+	// Minimum length of words that are stored in an InnoDB `FULLTEXT` index.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_ft_min_token_size ManagedDatabaseMysql#innodb_ft_min_token_size}
 	InnodbFtMinTokenSize *float64 `field:"optional" json:"innodbFtMinTokenSize" yaml:"innodbFtMinTokenSize"`
-	// innodb_ft_server_stopword_table.
+	// This option is used to specify your own InnoDB `FULLTEXT` index stopword list for all InnoDB tables.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_ft_server_stopword_table ManagedDatabaseMysql#innodb_ft_server_stopword_table}
 	InnodbFtServerStopwordTable *string `field:"optional" json:"innodbFtServerStopwordTable" yaml:"innodbFtServerStopwordTable"`
-	// innodb_lock_wait_timeout.
+	// The length of time in seconds an InnoDB transaction waits for a row lock before giving up.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_lock_wait_timeout ManagedDatabaseMysql#innodb_lock_wait_timeout}
 	InnodbLockWaitTimeout *float64 `field:"optional" json:"innodbLockWaitTimeout" yaml:"innodbLockWaitTimeout"`
-	// innodb_log_buffer_size.
+	// The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_log_buffer_size ManagedDatabaseMysql#innodb_log_buffer_size}
 	InnodbLogBufferSize *float64 `field:"optional" json:"innodbLogBufferSize" yaml:"innodbLogBufferSize"`
-	// innodb_online_alter_log_max_size.
+	// The upper limit in bytes on the size of the temporary log files used during online DDL operations for InnoDB tables.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_online_alter_log_max_size ManagedDatabaseMysql#innodb_online_alter_log_max_size}
 	InnodbOnlineAlterLogMaxSize *float64 `field:"optional" json:"innodbOnlineAlterLogMaxSize" yaml:"innodbOnlineAlterLogMaxSize"`
-	// innodb_print_all_deadlocks.
+	// When enabled, information about all deadlocks in InnoDB user transactions is recorded in the error log. Disabled by default.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_print_all_deadlocks ManagedDatabaseMysql#innodb_print_all_deadlocks}
 	InnodbPrintAllDeadlocks interface{} `field:"optional" json:"innodbPrintAllDeadlocks" yaml:"innodbPrintAllDeadlocks"`
-	// innodb_rollback_on_timeout.
+	// When enabled a transaction timeout causes InnoDB to abort and roll back the entire transaction.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_rollback_on_timeout ManagedDatabaseMysql#innodb_rollback_on_timeout}
 	InnodbRollbackOnTimeout interface{} `field:"optional" json:"innodbRollbackOnTimeout" yaml:"innodbRollbackOnTimeout"`
-	// interactive_timeout.
+	// The number of seconds the server waits for activity on an interactive connection before closing it.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#interactive_timeout ManagedDatabaseMysql#interactive_timeout}
 	InteractiveTimeout *float64 `field:"optional" json:"interactiveTimeout" yaml:"interactiveTimeout"`
-	// internal_tmp_mem_storage_engine.
+	// The storage engine for in-memory internal temporary tables.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#internal_tmp_mem_storage_engine ManagedDatabaseMysql#internal_tmp_mem_storage_engine}
 	InternalTmpMemStorageEngine *string `field:"optional" json:"internalTmpMemStorageEngine" yaml:"internalTmpMemStorageEngine"`
@@ -90,15 +90,15 @@ type ManagedDatabaseMysqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#ip_filter ManagedDatabaseMysql#ip_filter}
 	IpFilter *[]*string `field:"optional" json:"ipFilter" yaml:"ipFilter"`
-	// long_query_time.
+	// The `slow_query_logs` work as SQL statements that take more than `long_query_time` seconds to execute. Default is `10s`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#long_query_time ManagedDatabaseMysql#long_query_time}
 	LongQueryTime *float64 `field:"optional" json:"longQueryTime" yaml:"longQueryTime"`
-	// max_allowed_packet.
+	// Size of the largest message in bytes that can be received by the server. Default is `67108864` (64M).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#max_allowed_packet ManagedDatabaseMysql#max_allowed_packet}
 	MaxAllowedPacket *float64 `field:"optional" json:"maxAllowedPacket" yaml:"maxAllowedPacket"`
-	// max_heap_table_size.
+	// Limits the size of internal in-memory tables. Also set `tmp_table_size`. Default is `16777216` (16M).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#max_heap_table_size ManagedDatabaseMysql#max_heap_table_size}
 	MaxHeapTableSize *float64 `field:"optional" json:"maxHeapTableSize" yaml:"maxHeapTableSize"`
@@ -106,35 +106,42 @@ type ManagedDatabaseMysqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#migration ManagedDatabaseMysql#migration}
 	Migration *ManagedDatabaseMysqlPropertiesMigration `field:"optional" json:"migration" yaml:"migration"`
-	// net_read_timeout.
+	// The number of seconds to wait for more data from a connection before aborting the read.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#net_read_timeout ManagedDatabaseMysql#net_read_timeout}
 	NetReadTimeout *float64 `field:"optional" json:"netReadTimeout" yaml:"netReadTimeout"`
-	// net_write_timeout.
+	// The number of seconds to wait for a block to be written to a connection before aborting the write.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#net_write_timeout ManagedDatabaseMysql#net_write_timeout}
 	NetWriteTimeout *float64 `field:"optional" json:"netWriteTimeout" yaml:"netWriteTimeout"`
-	// Public Access.
+	// Public access allows connections to your Managed Database services via the public internet.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#public_access ManagedDatabaseMysql#public_access}
 	PublicAccess interface{} `field:"optional" json:"publicAccess" yaml:"publicAccess"`
-	// slow_query_log.
+	// Slow query log enables capturing of slow queries.
+	//
+	// Setting `slow_query_log` to false also truncates the `mysql.slow_log` table. Default is off
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#slow_query_log ManagedDatabaseMysql#slow_query_log}
 	SlowQueryLog interface{} `field:"optional" json:"slowQueryLog" yaml:"slowQueryLog"`
-	// sort_buffer_size.
+	// Sort buffer size in bytes for `ORDER BY` optimization. Default is `262144` (256K).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#sort_buffer_size ManagedDatabaseMysql#sort_buffer_size}
 	SortBufferSize *float64 `field:"optional" json:"sortBufferSize" yaml:"sortBufferSize"`
-	// sql_mode.
+	// Global SQL mode.
+	//
+	// Set to empty to use MySQL server defaults.
+	// When creating a new service and not setting this field default SQL mode (strict, SQL standard compliant) will be assigned.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#sql_mode ManagedDatabaseMysql#sql_mode}
 	SqlMode *string `field:"optional" json:"sqlMode" yaml:"sqlMode"`
-	// sql_require_primary_key.
+	// Require primary key to be defined for new tables or old tables modified with ALTER TABLE and fail if missing.
+	//
+	// It is recommended to always have primary keys because various functionality may break if any large table is missing them.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#sql_require_primary_key ManagedDatabaseMysql#sql_require_primary_key}
 	SqlRequirePrimaryKey interface{} `field:"optional" json:"sqlRequirePrimaryKey" yaml:"sqlRequirePrimaryKey"`
-	// tmp_table_size.
+	// Limits the size of internal in-memory tables. Also set `max_heap_table_size`. Default is `16777216` (16M).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#tmp_table_size ManagedDatabaseMysql#tmp_table_size}
 	TmpTableSize *float64 `field:"optional" json:"tmpTableSize" yaml:"tmpTableSize"`
@@ -142,7 +149,7 @@ type ManagedDatabaseMysqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#version ManagedDatabaseMysql#version}
 	Version *string `field:"optional" json:"version" yaml:"version"`
-	// wait_timeout.
+	// The number of seconds the server waits for activity on a noninteractive connection before closing it.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#wait_timeout ManagedDatabaseMysql#wait_timeout}
 	WaitTimeout *float64 `field:"optional" json:"waitTimeout" yaml:"waitTimeout"`

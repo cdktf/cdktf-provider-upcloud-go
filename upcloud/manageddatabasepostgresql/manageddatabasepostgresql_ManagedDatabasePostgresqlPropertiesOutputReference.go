@@ -82,6 +82,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	DeadlockTimeout() *float64
 	SetDeadlockTimeout(val *float64)
 	DeadlockTimeoutInput() *float64
+	DefaultToastCompression() *string
+	SetDefaultToastCompression(val *string)
+	DefaultToastCompressionInput() *string
 	// Experimental.
 	Fqn() *string
 	IdleInTransactionSessionTimeout() *float64
@@ -131,6 +134,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	MaxReplicationSlots() *float64
 	SetMaxReplicationSlots(val *float64)
 	MaxReplicationSlotsInput() *float64
+	MaxSlotWalKeepSize() *float64
+	SetMaxSlotWalKeepSize(val *float64)
+	MaxSlotWalKeepSizeInput() *float64
 	MaxStackDepth() *float64
 	SetMaxStackDepth(val *float64)
 	MaxStackDepthInput() *float64
@@ -266,6 +272,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetBgwriterLruMaxpages()
 	ResetBgwriterLruMultiplier()
 	ResetDeadlockTimeout()
+	ResetDefaultToastCompression()
 	ResetIdleInTransactionSessionTimeout()
 	ResetIpFilter()
 	ResetJit()
@@ -281,6 +288,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetMaxPredLocksPerTransaction()
 	ResetMaxPreparedTransactions()
 	ResetMaxReplicationSlots()
+	ResetMaxSlotWalKeepSize()
 	ResetMaxStackDepth()
 	ResetMaxStandbyArchiveDelay()
 	ResetMaxStandbyStreamingDelay()
@@ -734,6 +742,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) DeadlockT
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) DefaultToastCompression() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"defaultToastCompression",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) DefaultToastCompressionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"defaultToastCompressionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1049,6 +1077,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxReplic
 	_jsii_.Get(
 		j,
 		"maxReplicationSlotsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxSlotWalKeepSize() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSlotWalKeepSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxSlotWalKeepSizeInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSlotWalKeepSizeInput",
 		&returns,
 	)
 	return returns
@@ -1893,6 +1941,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetDeadloc
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetDefaultToastCompression(val *string) {
+	if err := j.validateSetDefaultToastCompressionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"defaultToastCompression",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIdleInTransactionSessionTimeout(val *float64) {
 	if err := j.validateSetIdleInTransactionSessionTimeoutParameters(val); err != nil {
 		panic(err)
@@ -2065,6 +2124,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxRepl
 	_jsii_.Set(
 		j,
 		"maxReplicationSlots",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxSlotWalKeepSize(val *float64) {
+	if err := j.validateSetMaxSlotWalKeepSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxSlotWalKeepSize",
 		val,
 	)
 }
@@ -2737,6 +2807,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetDead
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetDefaultToastCompression() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetDefaultToastCompression",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIdleInTransactionSessionTimeout() {
 	_jsii_.InvokeVoid(
 		m,
@@ -2853,6 +2931,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMaxR
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaxReplicationSlots",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMaxSlotWalKeepSize() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxSlotWalKeepSize",
 		nil, // no parameters
 	)
 }
