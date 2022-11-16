@@ -1,5 +1,4 @@
 //go:build !no_runtime_type_checking
-// +build !no_runtime_type_checking
 
 package loadbalancerfrontendtlsconfig
 
@@ -113,6 +112,22 @@ func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) validateOverrideLogicalIdParam
 }
 
 func validateLoadbalancerFrontendTlsConfig_IsConstructParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateLoadbalancerFrontendTlsConfig_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateLoadbalancerFrontendTlsConfig_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}

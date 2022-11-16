@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package manageddatabasepostgresql
 
@@ -58,6 +57,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) validatePutPropertiesParameters(va
 }
 
 func validateManagedDatabasePostgresql_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateManagedDatabasePostgresql_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateManagedDatabasePostgresql_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package loadbalancermanualcertificatebundle
 
@@ -54,6 +53,14 @@ func (l *jsiiProxy_LoadbalancerManualCertificateBundle) validateOverrideLogicalI
 }
 
 func validateLoadbalancerManualCertificateBundle_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateLoadbalancerManualCertificateBundle_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateLoadbalancerManualCertificateBundle_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

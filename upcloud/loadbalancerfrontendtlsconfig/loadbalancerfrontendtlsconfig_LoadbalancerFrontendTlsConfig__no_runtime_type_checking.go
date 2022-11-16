@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package loadbalancerfrontendtlsconfig
 
@@ -54,6 +53,14 @@ func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) validateOverrideLogicalIdParam
 }
 
 func validateLoadbalancerFrontendTlsConfig_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateLoadbalancerFrontendTlsConfig_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateLoadbalancerFrontendTlsConfig_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

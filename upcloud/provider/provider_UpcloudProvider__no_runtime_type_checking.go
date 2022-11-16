@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package provider
 
@@ -14,6 +13,14 @@ func (u *jsiiProxy_UpcloudProvider) validateOverrideLogicalIdParameters(newLogic
 }
 
 func validateUpcloudProvider_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateUpcloudProvider_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateUpcloudProvider_IsTerraformProviderParameters(x interface{}) error {
 	return nil
 }
 

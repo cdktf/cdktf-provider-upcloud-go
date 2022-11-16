@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package loadbalancerstaticbackendmember
 
@@ -54,6 +53,14 @@ func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateOverrideLogicalIdPar
 }
 
 func validateLoadbalancerStaticBackendMember_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateLoadbalancerStaticBackendMember_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateLoadbalancerStaticBackendMember_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

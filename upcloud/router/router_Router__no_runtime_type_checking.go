@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package router
 
@@ -54,6 +53,14 @@ func (r *jsiiProxy_Router) validateOverrideLogicalIdParameters(newLogicalId *str
 }
 
 func validateRouter_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateRouter_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateRouter_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

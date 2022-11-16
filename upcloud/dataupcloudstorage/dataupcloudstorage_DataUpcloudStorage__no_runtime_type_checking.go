@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package dataupcloudstorage
 
@@ -54,6 +53,14 @@ func (d *jsiiProxy_DataUpcloudStorage) validateOverrideLogicalIdParameters(newLo
 }
 
 func validateDataUpcloudStorage_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataUpcloudStorage_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataUpcloudStorage_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 

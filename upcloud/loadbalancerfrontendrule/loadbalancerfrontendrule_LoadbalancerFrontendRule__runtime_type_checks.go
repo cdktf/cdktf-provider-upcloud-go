@@ -1,5 +1,4 @@
 //go:build !no_runtime_type_checking
-// +build !no_runtime_type_checking
 
 package loadbalancerfrontendrule
 
@@ -135,6 +134,22 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutMatchersParameters(value
 }
 
 func validateLoadbalancerFrontendRule_IsConstructParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateLoadbalancerFrontendRule_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateLoadbalancerFrontendRule_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}

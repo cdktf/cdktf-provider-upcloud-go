@@ -2,10 +2,10 @@ package storage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v3/storage/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/storage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -698,6 +698,44 @@ func Storage_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-upcloud.storage.Storage",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Storage_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateStorage_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-upcloud.storage.Storage",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Storage_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateStorage_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-upcloud.storage.Storage",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

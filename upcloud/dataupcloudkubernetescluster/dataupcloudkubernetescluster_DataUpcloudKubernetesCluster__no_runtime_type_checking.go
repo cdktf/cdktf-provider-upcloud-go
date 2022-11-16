@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package dataupcloudkubernetescluster
 
@@ -54,6 +53,14 @@ func (d *jsiiProxy_DataUpcloudKubernetesCluster) validateOverrideLogicalIdParame
 }
 
 func validateDataUpcloudKubernetesCluster_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataUpcloudKubernetesCluster_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataUpcloudKubernetesCluster_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 

@@ -2,10 +2,10 @@ package dataupcloudnetworks
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v3/dataupcloudnetworks/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/dataupcloudnetworks/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -450,6 +450,44 @@ func DataUpcloudNetworks_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-upcloud.dataUpcloudNetworks.DataUpcloudNetworks",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataUpcloudNetworks_IsTerraformDataSource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataUpcloudNetworks_IsTerraformDataSourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-upcloud.dataUpcloudNetworks.DataUpcloudNetworks",
+		"isTerraformDataSource",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataUpcloudNetworks_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataUpcloudNetworks_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-upcloud.dataUpcloudNetworks.DataUpcloudNetworks",
+		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
 	)

@@ -2,10 +2,10 @@ package loadbalancerfrontend
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v3/loadbalancerfrontend/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/loadbalancerfrontend/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -635,6 +635,44 @@ func LoadbalancerFrontend_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-upcloud.loadbalancerFrontend.LoadbalancerFrontend",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func LoadbalancerFrontend_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateLoadbalancerFrontend_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-upcloud.loadbalancerFrontend.LoadbalancerFrontend",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func LoadbalancerFrontend_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateLoadbalancerFrontend_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-upcloud.loadbalancerFrontend.LoadbalancerFrontend",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

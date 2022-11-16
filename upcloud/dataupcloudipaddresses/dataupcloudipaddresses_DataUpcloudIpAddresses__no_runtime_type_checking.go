@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package dataupcloudipaddresses
 
@@ -54,6 +53,14 @@ func (d *jsiiProxy_DataUpcloudIpAddresses) validateOverrideLogicalIdParameters(n
 }
 
 func validateDataUpcloudIpAddresses_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataUpcloudIpAddresses_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataUpcloudIpAddresses_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 
