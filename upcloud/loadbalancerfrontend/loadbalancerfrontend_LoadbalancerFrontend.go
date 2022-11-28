@@ -55,6 +55,8 @@ type LoadbalancerFrontend interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	Networks() LoadbalancerFrontendNetworksList
+	NetworksInput() interface{}
 	// The tree node.
 	Node() constructs.Node
 	Port() *float64
@@ -105,8 +107,10 @@ type LoadbalancerFrontend interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutNetworks(value interface{})
 	PutProperties(value *LoadbalancerFrontendProperties)
 	ResetId()
+	ResetNetworks()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -311,6 +315,26 @@ func (j *jsiiProxy_LoadbalancerFrontend) NameInput() *string {
 	_jsii_.Get(
 		j,
 		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontend) Networks() LoadbalancerFrontendNetworksList {
+	var returns LoadbalancerFrontendNetworksList
+	_jsii_.Get(
+		j,
+		"networks",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontend) NetworksInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"networksInput",
 		&returns,
 	)
 	return returns
@@ -873,6 +897,17 @@ func (l *jsiiProxy_LoadbalancerFrontend) OverrideLogicalId(newLogicalId *string)
 	)
 }
 
+func (l *jsiiProxy_LoadbalancerFrontend) PutNetworks(value interface{}) {
+	if err := l.validatePutNetworksParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putNetworks",
+		[]interface{}{value},
+	)
+}
+
 func (l *jsiiProxy_LoadbalancerFrontend) PutProperties(value *LoadbalancerFrontendProperties) {
 	if err := l.validatePutPropertiesParameters(value); err != nil {
 		panic(err)
@@ -888,6 +923,14 @@ func (l *jsiiProxy_LoadbalancerFrontend) ResetId() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontend) ResetNetworks() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetNetworks",
 		nil, // no parameters
 	)
 }

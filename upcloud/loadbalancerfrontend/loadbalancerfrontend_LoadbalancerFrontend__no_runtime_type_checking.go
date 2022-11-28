@@ -52,6 +52,10 @@ func (l *jsiiProxy_LoadbalancerFrontend) validateOverrideLogicalIdParameters(new
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerFrontend) validatePutNetworksParameters(value interface{}) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontend) validatePutPropertiesParameters(value *LoadbalancerFrontendProperties) error {
 	return nil
 }

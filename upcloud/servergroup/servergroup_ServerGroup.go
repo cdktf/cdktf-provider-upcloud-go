@@ -1,23 +1,22 @@
-package loadbalancer
+package servergroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/loadbalancer/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/servergroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer upcloud_loadbalancer}.
-type Loadbalancer interface {
+// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/server_group upcloud_server_group}.
+type ServerGroup interface {
 	cdktf.TerraformResource
-	Backends() *[]*string
+	AntiAffinity() interface{}
+	SetAntiAffinity(val interface{})
+	AntiAffinityInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
-	ConfiguredStatus() *string
-	SetConfiguredStatus(val *string)
-	ConfiguredStatusInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -32,7 +31,6 @@ type Loadbalancer interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
-	DnsName() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -41,29 +39,21 @@ type Loadbalancer interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
-	Frontends() *[]*string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	Name() *string
-	SetName(val *string)
-	NameInput() *string
-	Network() *string
-	SetNetwork(val *string)
-	NetworkInput() *string
-	Networks() LoadbalancerNetworksList
-	NetworksInput() interface{}
+	Members() *[]*string
+	SetMembers(val *[]*string)
+	MembersInput() *[]*string
 	// The tree node.
 	Node() constructs.Node
-	Nodes() LoadbalancerNodesList
-	OperationalState() *string
-	Plan() *string
-	SetPlan(val *string)
-	PlanInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -74,16 +64,15 @@ type Loadbalancer interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	Resolvers() *[]*string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	Zone() *string
-	SetZone(val *string)
-	ZoneInput() *string
+	Title() *string
+	SetTitle(val *string)
+	TitleInput() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -109,11 +98,10 @@ type Loadbalancer interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutNetworks(value interface{})
-	ResetConfiguredStatus()
+	ResetAntiAffinity()
 	ResetId()
-	ResetNetwork()
-	ResetNetworks()
+	ResetLabels()
+	ResetMembers()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -127,22 +115,32 @@ type Loadbalancer interface {
 	ToTerraform() interface{}
 }
 
-// The jsii proxy struct for Loadbalancer
-type jsiiProxy_Loadbalancer struct {
+// The jsii proxy struct for ServerGroup
+type jsiiProxy_ServerGroup struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_Loadbalancer) Backends() *[]*string {
-	var returns *[]*string
+func (j *jsiiProxy_ServerGroup) AntiAffinity() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
-		"backends",
+		"antiAffinity",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) CdktfStack() cdktf.TerraformStack {
+func (j *jsiiProxy_ServerGroup) AntiAffinityInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"antiAffinityInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerGroup) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
@@ -152,27 +150,7 @@ func (j *jsiiProxy_Loadbalancer) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) ConfiguredStatus() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"configuredStatus",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) ConfiguredStatusInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"configuredStatusInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) Connection() interface{} {
+func (j *jsiiProxy_ServerGroup) Connection() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -182,7 +160,7 @@ func (j *jsiiProxy_Loadbalancer) Connection() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) ConstructNodeMetadata() *map[string]interface{} {
+func (j *jsiiProxy_ServerGroup) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -192,7 +170,7 @@ func (j *jsiiProxy_Loadbalancer) ConstructNodeMetadata() *map[string]interface{}
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Count() *float64 {
+func (j *jsiiProxy_ServerGroup) Count() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
@@ -202,7 +180,7 @@ func (j *jsiiProxy_Loadbalancer) Count() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) DependsOn() *[]*string {
+func (j *jsiiProxy_ServerGroup) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -212,17 +190,7 @@ func (j *jsiiProxy_Loadbalancer) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) DnsName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"dnsName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) ForEach() cdktf.ITerraformIterator {
+func (j *jsiiProxy_ServerGroup) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
 		j,
@@ -232,7 +200,7 @@ func (j *jsiiProxy_Loadbalancer) ForEach() cdktf.ITerraformIterator {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Fqn() *string {
+func (j *jsiiProxy_ServerGroup) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -242,7 +210,7 @@ func (j *jsiiProxy_Loadbalancer) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) FriendlyUniqueId() *string {
+func (j *jsiiProxy_ServerGroup) FriendlyUniqueId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -252,17 +220,7 @@ func (j *jsiiProxy_Loadbalancer) FriendlyUniqueId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Frontends() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"frontends",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) Id() *string {
+func (j *jsiiProxy_ServerGroup) Id() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -272,7 +230,7 @@ func (j *jsiiProxy_Loadbalancer) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) IdInput() *string {
+func (j *jsiiProxy_ServerGroup) IdInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -282,7 +240,27 @@ func (j *jsiiProxy_Loadbalancer) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Lifecycle() *cdktf.TerraformResourceLifecycle {
+func (j *jsiiProxy_ServerGroup) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerGroup) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerGroup) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
@@ -292,67 +270,27 @@ func (j *jsiiProxy_Loadbalancer) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Name() *string {
-	var returns *string
+func (j *jsiiProxy_ServerGroup) Members() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
-		"name",
+		"members",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) NameInput() *string {
-	var returns *string
+func (j *jsiiProxy_ServerGroup) MembersInput() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
-		"nameInput",
+		"membersInput",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Network() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"network",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) NetworkInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"networkInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) Networks() LoadbalancerNetworksList {
-	var returns LoadbalancerNetworksList
-	_jsii_.Get(
-		j,
-		"networks",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) NetworksInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"networksInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) Node() constructs.Node {
+func (j *jsiiProxy_ServerGroup) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -362,47 +300,7 @@ func (j *jsiiProxy_Loadbalancer) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Nodes() LoadbalancerNodesList {
-	var returns LoadbalancerNodesList
-	_jsii_.Get(
-		j,
-		"nodes",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) OperationalState() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"operationalState",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) Plan() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"plan",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) PlanInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"planInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) Provider() cdktf.TerraformProvider {
+func (j *jsiiProxy_ServerGroup) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
 		j,
@@ -412,7 +310,7 @@ func (j *jsiiProxy_Loadbalancer) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Provisioners() *[]interface{} {
+func (j *jsiiProxy_ServerGroup) Provisioners() *[]interface{} {
 	var returns *[]interface{}
 	_jsii_.Get(
 		j,
@@ -422,7 +320,7 @@ func (j *jsiiProxy_Loadbalancer) Provisioners() *[]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) RawOverrides() interface{} {
+func (j *jsiiProxy_ServerGroup) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -432,17 +330,7 @@ func (j *jsiiProxy_Loadbalancer) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Resolvers() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"resolvers",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Loadbalancer) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
+func (j *jsiiProxy_ServerGroup) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
@@ -452,7 +340,7 @@ func (j *jsiiProxy_Loadbalancer) TerraformGeneratorMetadata() *cdktf.TerraformPr
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) TerraformMetaArguments() *map[string]interface{} {
+func (j *jsiiProxy_ServerGroup) TerraformMetaArguments() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -462,7 +350,7 @@ func (j *jsiiProxy_Loadbalancer) TerraformMetaArguments() *map[string]interface{
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) TerraformResourceType() *string {
+func (j *jsiiProxy_ServerGroup) TerraformResourceType() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -472,38 +360,38 @@ func (j *jsiiProxy_Loadbalancer) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Zone() *string {
+func (j *jsiiProxy_ServerGroup) Title() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"zone",
+		"title",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) ZoneInput() *string {
+func (j *jsiiProxy_ServerGroup) TitleInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"zoneInput",
+		"titleInput",
 		&returns,
 	)
 	return returns
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer upcloud_loadbalancer} Resource.
-func NewLoadbalancer(scope constructs.Construct, id *string, config *LoadbalancerConfig) Loadbalancer {
+// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/server_group upcloud_server_group} Resource.
+func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupConfig) ServerGroup {
 	_init_.Initialize()
 
-	if err := validateNewLoadbalancerParameters(scope, id, config); err != nil {
+	if err := validateNewServerGroupParameters(scope, id, config); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_Loadbalancer{}
+	j := jsiiProxy_ServerGroup{}
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.loadbalancer.Loadbalancer",
+		"@cdktf/provider-upcloud.serverGroup.ServerGroup",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -511,29 +399,29 @@ func NewLoadbalancer(scope constructs.Construct, id *string, config *Loadbalance
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer upcloud_loadbalancer} Resource.
-func NewLoadbalancer_Override(l Loadbalancer, scope constructs.Construct, id *string, config *LoadbalancerConfig) {
+// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/server_group upcloud_server_group} Resource.
+func NewServerGroup_Override(s ServerGroup, scope constructs.Construct, id *string, config *ServerGroupConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.loadbalancer.Loadbalancer",
+		"@cdktf/provider-upcloud.serverGroup.ServerGroup",
 		[]interface{}{scope, id, config},
-		l,
+		s,
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetConfiguredStatus(val *string) {
-	if err := j.validateSetConfiguredStatusParameters(val); err != nil {
+func (j *jsiiProxy_ServerGroup)SetAntiAffinity(val interface{}) {
+	if err := j.validateSetAntiAffinityParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"configuredStatus",
+		"antiAffinity",
 		val,
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetConnection(val interface{}) {
+func (j *jsiiProxy_ServerGroup)SetConnection(val interface{}) {
 	if err := j.validateSetConnectionParameters(val); err != nil {
 		panic(err)
 	}
@@ -544,7 +432,7 @@ func (j *jsiiProxy_Loadbalancer)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetCount(val *float64) {
+func (j *jsiiProxy_ServerGroup)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -552,7 +440,7 @@ func (j *jsiiProxy_Loadbalancer)SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_ServerGroup)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -560,7 +448,7 @@ func (j *jsiiProxy_Loadbalancer)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_ServerGroup)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -568,7 +456,7 @@ func (j *jsiiProxy_Loadbalancer)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetId(val *string) {
+func (j *jsiiProxy_ServerGroup)SetId(val *string) {
 	if err := j.validateSetIdParameters(val); err != nil {
 		panic(err)
 	}
@@ -579,7 +467,18 @@ func (j *jsiiProxy_Loadbalancer)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_ServerGroup)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServerGroup)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
@@ -590,40 +489,18 @@ func (j *jsiiProxy_Loadbalancer)SetLifecycle(val *cdktf.TerraformResourceLifecyc
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetName(val *string) {
-	if err := j.validateSetNameParameters(val); err != nil {
+func (j *jsiiProxy_ServerGroup)SetMembers(val *[]*string) {
+	if err := j.validateSetMembersParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"name",
+		"members",
 		val,
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetNetwork(val *string) {
-	if err := j.validateSetNetworkParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"network",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Loadbalancer)SetPlan(val *string) {
-	if err := j.validateSetPlanParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"plan",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Loadbalancer)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_ServerGroup)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -631,7 +508,7 @@ func (j *jsiiProxy_Loadbalancer)SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_ServerGroup)SetProvisioners(val *[]interface{}) {
 	if err := j.validateSetProvisionersParameters(val); err != nil {
 		panic(err)
 	}
@@ -642,13 +519,13 @@ func (j *jsiiProxy_Loadbalancer)SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetZone(val *string) {
-	if err := j.validateSetZoneParameters(val); err != nil {
+func (j *jsiiProxy_ServerGroup)SetTitle(val *string) {
+	if err := j.validateSetTitleParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"zone",
+		"title",
 		val,
 	)
 }
@@ -670,16 +547,16 @@ func (j *jsiiProxy_Loadbalancer)SetZone(val *string) {
 // this type-testing method instead.
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
-func Loadbalancer_IsConstruct(x interface{}) *bool {
+func ServerGroup_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateLoadbalancer_IsConstructParameters(x); err != nil {
+	if err := validateServerGroup_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-upcloud.loadbalancer.Loadbalancer",
+		"@cdktf/provider-upcloud.serverGroup.ServerGroup",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -689,16 +566,16 @@ func Loadbalancer_IsConstruct(x interface{}) *bool {
 }
 
 // Experimental.
-func Loadbalancer_IsTerraformElement(x interface{}) *bool {
+func ServerGroup_IsTerraformElement(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateLoadbalancer_IsTerraformElementParameters(x); err != nil {
+	if err := validateServerGroup_IsTerraformElementParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-upcloud.loadbalancer.Loadbalancer",
+		"@cdktf/provider-upcloud.serverGroup.ServerGroup",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -708,16 +585,16 @@ func Loadbalancer_IsTerraformElement(x interface{}) *bool {
 }
 
 // Experimental.
-func Loadbalancer_IsTerraformResource(x interface{}) *bool {
+func ServerGroup_IsTerraformResource(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateLoadbalancer_IsTerraformResourceParameters(x); err != nil {
+	if err := validateServerGroup_IsTerraformResourceParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-upcloud.loadbalancer.Loadbalancer",
+		"@cdktf/provider-upcloud.serverGroup.ServerGroup",
 		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
@@ -726,36 +603,36 @@ func Loadbalancer_IsTerraformResource(x interface{}) *bool {
 	return returns
 }
 
-func Loadbalancer_TfResourceType() *string {
+func ServerGroup_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-upcloud.loadbalancer.Loadbalancer",
+		"@cdktf/provider-upcloud.serverGroup.ServerGroup",
 		"tfResourceType",
 		&returns,
 	)
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) AddOverride(path *string, value interface{}) {
-	if err := l.validateAddOverrideParameters(path, value); err != nil {
+func (s *jsiiProxy_ServerGroup) AddOverride(path *string, value interface{}) {
+	if err := s.validateAddOverrideParameters(path, value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		l,
+		s,
 		"addOverride",
 		[]interface{}{path, value},
 	)
 }
 
-func (l *jsiiProxy_Loadbalancer) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
-	if err := l.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := s.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getAnyMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -764,14 +641,14 @@ func (l *jsiiProxy_Loadbalancer) GetAnyMapAttribute(terraformAttribute *string) 
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := l.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getBooleanAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -780,14 +657,14 @@ func (l *jsiiProxy_Loadbalancer) GetBooleanAttribute(terraformAttribute *string)
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
-	if err := l.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := s.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getBooleanMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -796,14 +673,14 @@ func (l *jsiiProxy_Loadbalancer) GetBooleanMapAttribute(terraformAttribute *stri
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetListAttribute(terraformAttribute *string) *[]*string {
-	if err := l.validateGetListAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := s.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -812,14 +689,14 @@ func (l *jsiiProxy_Loadbalancer) GetListAttribute(terraformAttribute *string) *[
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetNumberAttribute(terraformAttribute *string) *float64 {
-	if err := l.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := s.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *float64
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getNumberAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -828,14 +705,14 @@ func (l *jsiiProxy_Loadbalancer) GetNumberAttribute(terraformAttribute *string) 
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
-	if err := l.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := s.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getNumberListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -844,14 +721,14 @@ func (l *jsiiProxy_Loadbalancer) GetNumberListAttribute(terraformAttribute *stri
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
-	if err := l.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := s.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getNumberMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -860,14 +737,14 @@ func (l *jsiiProxy_Loadbalancer) GetNumberMapAttribute(terraformAttribute *strin
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetStringAttribute(terraformAttribute *string) *string {
-	if err := l.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetStringAttribute(terraformAttribute *string) *string {
+	if err := s.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getStringAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -876,14 +753,14 @@ func (l *jsiiProxy_Loadbalancer) GetStringAttribute(terraformAttribute *string) 
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
-	if err := l.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := s.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"getStringMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -892,14 +769,14 @@ func (l *jsiiProxy_Loadbalancer) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := l.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+func (s *jsiiProxy_ServerGroup) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"interpolationForAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -908,73 +785,62 @@ func (l *jsiiProxy_Loadbalancer) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) OverrideLogicalId(newLogicalId *string) {
-	if err := l.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+func (s *jsiiProxy_ServerGroup) OverrideLogicalId(newLogicalId *string) {
+	if err := s.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		l,
+		s,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
 	)
 }
 
-func (l *jsiiProxy_Loadbalancer) PutNetworks(value interface{}) {
-	if err := l.validatePutNetworksParameters(value); err != nil {
-		panic(err)
-	}
+func (s *jsiiProxy_ServerGroup) ResetAntiAffinity() {
 	_jsii_.InvokeVoid(
-		l,
-		"putNetworks",
-		[]interface{}{value},
-	)
-}
-
-func (l *jsiiProxy_Loadbalancer) ResetConfiguredStatus() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetConfiguredStatus",
+		s,
+		"resetAntiAffinity",
 		nil, // no parameters
 	)
 }
 
-func (l *jsiiProxy_Loadbalancer) ResetId() {
+func (s *jsiiProxy_ServerGroup) ResetId() {
 	_jsii_.InvokeVoid(
-		l,
+		s,
 		"resetId",
 		nil, // no parameters
 	)
 }
 
-func (l *jsiiProxy_Loadbalancer) ResetNetwork() {
+func (s *jsiiProxy_ServerGroup) ResetLabels() {
 	_jsii_.InvokeVoid(
-		l,
-		"resetNetwork",
+		s,
+		"resetLabels",
 		nil, // no parameters
 	)
 }
 
-func (l *jsiiProxy_Loadbalancer) ResetNetworks() {
+func (s *jsiiProxy_ServerGroup) ResetMembers() {
 	_jsii_.InvokeVoid(
-		l,
-		"resetNetworks",
+		s,
+		"resetMembers",
 		nil, // no parameters
 	)
 }
 
-func (l *jsiiProxy_Loadbalancer) ResetOverrideLogicalId() {
+func (s *jsiiProxy_ServerGroup) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
-		l,
+		s,
 		"resetOverrideLogicalId",
 		nil, // no parameters
 	)
 }
 
-func (l *jsiiProxy_Loadbalancer) SynthesizeAttributes() *map[string]interface{} {
+func (s *jsiiProxy_ServerGroup) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"synthesizeAttributes",
 		nil, // no parameters
 		&returns,
@@ -983,11 +849,11 @@ func (l *jsiiProxy_Loadbalancer) SynthesizeAttributes() *map[string]interface{} 
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) ToMetadata() interface{} {
+func (s *jsiiProxy_ServerGroup) ToMetadata() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"toMetadata",
 		nil, // no parameters
 		&returns,
@@ -996,11 +862,11 @@ func (l *jsiiProxy_Loadbalancer) ToMetadata() interface{} {
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) ToString() *string {
+func (s *jsiiProxy_ServerGroup) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"toString",
 		nil, // no parameters
 		&returns,
@@ -1009,11 +875,11 @@ func (l *jsiiProxy_Loadbalancer) ToString() *string {
 	return returns
 }
 
-func (l *jsiiProxy_Loadbalancer) ToTerraform() interface{} {
+func (s *jsiiProxy_ServerGroup) ToTerraform() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		l,
+		s,
 		"toTerraform",
 		nil, // no parameters
 		&returns,

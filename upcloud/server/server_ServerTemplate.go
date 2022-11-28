@@ -4,6 +4,8 @@ package server
 type ServerTemplate struct {
 	// A valid storage UUID or template name.
 	//
+	// You can list available public templates with `upctl storage list --public --template` and available private templates with `upctl storage list --template`.
+	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/server#storage Server#storage}
 	Storage *string `field:"required" json:"storage" yaml:"storage"`
 	// The device address the storage will be attached to.

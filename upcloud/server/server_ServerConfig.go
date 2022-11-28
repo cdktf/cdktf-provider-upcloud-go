@@ -66,7 +66,7 @@ type ServerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/server#metadata Server#metadata}
 	Metadata interface{} `field:"optional" json:"metadata" yaml:"metadata"`
-	// The pricing plan used for the server.
+	// The pricing plan used for the server. You can list available server plans with `upctl server plans`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/server#plan Server#plan}
 	Plan *string `field:"optional" json:"plan" yaml:"plan"`

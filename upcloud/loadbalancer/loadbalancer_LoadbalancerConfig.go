@@ -23,10 +23,6 @@ type LoadbalancerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer#name Loadbalancer#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// Private network UUID where traffic will be routed. Must reside in load balancer zone.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer#network Loadbalancer#network}
-	Network *string `field:"required" json:"network" yaml:"network"`
 	// Plan which the service will have.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer#plan Loadbalancer#plan}
@@ -44,5 +40,13 @@ type LoadbalancerConfig struct {
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
+	// Private network UUID where traffic will be routed. Must reside in load balancer zone.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer#network Loadbalancer#network}
+	Network *string `field:"optional" json:"network" yaml:"network"`
+	// networks block.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer#networks Loadbalancer#networks}
+	Networks interface{} `field:"optional" json:"networks" yaml:"networks"`
 }
 
