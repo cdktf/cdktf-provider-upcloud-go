@@ -184,6 +184,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetLogTempFilesParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxFilesPerProcessParameters(val *float64) error {
 	return nil
 }
@@ -253,6 +257,18 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetPgServiceToForkFromParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetPgStatMonitorEnableParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetPgStatMonitorPgsmEnableQueryPlanParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetPgStatMonitorPgsmMaxBucketsParameters(val *float64) error {
 	return nil
 }
 

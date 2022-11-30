@@ -140,6 +140,10 @@ type ManagedDatabasePostgresqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#log_min_duration_statement ManagedDatabasePostgresql#log_min_duration_statement}
 	LogMinDurationStatement *float64 `field:"optional" json:"logMinDurationStatement" yaml:"logMinDurationStatement"`
+	// Log statements for each temporary file created larger than this number of kilobytes, -1 disables.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#log_temp_files ManagedDatabasePostgresql#log_temp_files}
+	LogTempFiles *float64 `field:"optional" json:"logTempFiles" yaml:"logTempFiles"`
 	// PostgreSQL maximum number of files that can be open per process.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#max_files_per_process ManagedDatabasePostgresql#max_files_per_process}
@@ -228,6 +232,20 @@ type ManagedDatabasePostgresqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#pg_service_to_fork_from ManagedDatabasePostgresql#pg_service_to_fork_from}
 	PgServiceToForkFrom *string `field:"optional" json:"pgServiceToForkFrom" yaml:"pgServiceToForkFrom"`
+	// Enable the pg_stat_monitor extension.
+	//
+	// Enabling this extension will cause the cluster to be restarted.When this extension is enabled, pg_stat_statements results for utility commands are unreliable
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#pg_stat_monitor_enable ManagedDatabasePostgresql#pg_stat_monitor_enable}
+	PgStatMonitorEnable interface{} `field:"optional" json:"pgStatMonitorEnable" yaml:"pgStatMonitorEnable"`
+	// Enables or disables query plan monitoring.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#pg_stat_monitor_pgsm_enable_query_plan ManagedDatabasePostgresql#pg_stat_monitor_pgsm_enable_query_plan}
+	PgStatMonitorPgsmEnableQueryPlan interface{} `field:"optional" json:"pgStatMonitorPgsmEnableQueryPlan" yaml:"pgStatMonitorPgsmEnableQueryPlan"`
+	// Sets the maximum number of buckets.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_postgresql#pg_stat_monitor_pgsm_max_buckets ManagedDatabasePostgresql#pg_stat_monitor_pgsm_max_buckets}
+	PgStatMonitorPgsmMaxBuckets *float64 `field:"optional" json:"pgStatMonitorPgsmMaxBuckets" yaml:"pgStatMonitorPgsmMaxBuckets"`
 	// Controls which statements are counted.
 	//
 	// Specify top to track top-level statements (those issued directly by clients), all to also track nested statements (such as statements invoked within functions),

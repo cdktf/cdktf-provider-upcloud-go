@@ -266,6 +266,22 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInf
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbChangeBufferMaxSizeParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbFlushNeighborsParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbFtMinTokenSizeParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -326,6 +342,14 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInn
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbReadIoThreadsParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbRollbackOnTimeoutParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -341,6 +365,22 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInn
 		if !_jsii_.IsAnonymousProxy(val) {
 			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
 		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbThreadConcurrencyParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbWriteIoThreadsParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -395,6 +435,14 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetMax
 }
 
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetMaxHeapTableSizeParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetNetBufferLengthParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

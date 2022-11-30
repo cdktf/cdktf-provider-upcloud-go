@@ -10,6 +10,7 @@ import (
 
 type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalBackupRegions() *[]*string
 	AdminPassword() *string
 	SetAdminPassword(val *string)
 	AdminPasswordInput() *string
@@ -85,6 +86,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	DefaultToastCompression() *string
 	SetDefaultToastCompression(val *string)
 	DefaultToastCompressionInput() *string
+	EnableIpv6() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
 	IdleInTransactionSessionTimeout() *float64
@@ -110,6 +112,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	LogMinDurationStatement() *float64
 	SetLogMinDurationStatement(val *float64)
 	LogMinDurationStatementInput() *float64
+	LogTempFiles() *float64
+	SetLogTempFiles(val *float64)
+	LogTempFilesInput() *float64
 	MaxFilesPerProcess() *float64
 	SetMaxFilesPerProcess(val *float64)
 	MaxFilesPerProcessInput() *float64
@@ -170,6 +175,15 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	PgServiceToForkFrom() *string
 	SetPgServiceToForkFrom(val *string)
 	PgServiceToForkFromInput() *string
+	PgStatMonitorEnable() interface{}
+	SetPgStatMonitorEnable(val interface{})
+	PgStatMonitorEnableInput() interface{}
+	PgStatMonitorPgsmEnableQueryPlan() interface{}
+	SetPgStatMonitorPgsmEnableQueryPlan(val interface{})
+	PgStatMonitorPgsmEnableQueryPlanInput() interface{}
+	PgStatMonitorPgsmMaxBuckets() *float64
+	SetPgStatMonitorPgsmMaxBuckets(val *float64)
+	PgStatMonitorPgsmMaxBucketsInput() *float64
 	PgStatStatementsTrack() *string
 	SetPgStatStatementsTrack(val *string)
 	PgStatStatementsTrackInput() *string
@@ -280,6 +294,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetLogErrorVerbosity()
 	ResetLogLinePrefix()
 	ResetLogMinDurationStatement()
+	ResetLogTempFiles()
 	ResetMaxFilesPerProcess()
 	ResetMaxLocksPerTransaction()
 	ResetMaxLogicalReplicationWorkers()
@@ -301,6 +316,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetPgPartmanBgwRole()
 	ResetPgReadReplica()
 	ResetPgServiceToForkFrom()
+	ResetPgStatMonitorEnable()
+	ResetPgStatMonitorPgsmEnableQueryPlan()
+	ResetPgStatMonitorPgsmMaxBuckets()
 	ResetPgStatStatementsTrack()
 	ResetPublicAccess()
 	ResetSharedBuffersPercentage()
@@ -330,6 +348,16 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 // The jsii proxy struct for ManagedDatabasePostgresqlPropertiesOutputReference
 type jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) AdditionalBackupRegions() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"additionalBackupRegions",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) AdminPassword() *string {
@@ -762,6 +790,16 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) DefaultTo
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) EnableIpv6() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableIpv6",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -917,6 +955,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) LogMinDur
 	_jsii_.Get(
 		j,
 		"logMinDurationStatementInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) LogTempFiles() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"logTempFiles",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) LogTempFilesInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"logTempFilesInput",
 		&returns,
 	)
 	return returns
@@ -1337,6 +1395,66 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgService
 	_jsii_.Get(
 		j,
 		"pgServiceToForkFromInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgStatMonitorEnable() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pgStatMonitorEnable",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgStatMonitorEnableInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pgStatMonitorEnableInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgStatMonitorPgsmEnableQueryPlan() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pgStatMonitorPgsmEnableQueryPlan",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgStatMonitorPgsmEnableQueryPlanInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pgStatMonitorPgsmEnableQueryPlanInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgStatMonitorPgsmMaxBuckets() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"pgStatMonitorPgsmMaxBuckets",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgStatMonitorPgsmMaxBucketsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"pgStatMonitorPgsmMaxBucketsInput",
 		&returns,
 	)
 	return returns
@@ -2040,6 +2158,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetLogMinD
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetLogTempFiles(val *float64) {
+	if err := j.validateSetLogTempFilesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"logTempFiles",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxFilesPerProcess(val *float64) {
 	if err := j.validateSetMaxFilesPerProcessParameters(val); err != nil {
 		panic(err)
@@ -2234,6 +2363,39 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgServi
 	_jsii_.Set(
 		j,
 		"pgServiceToForkFrom",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgStatMonitorEnable(val interface{}) {
+	if err := j.validateSetPgStatMonitorEnableParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"pgStatMonitorEnable",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgStatMonitorPgsmEnableQueryPlan(val interface{}) {
+	if err := j.validateSetPgStatMonitorPgsmEnableQueryPlanParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"pgStatMonitorPgsmEnableQueryPlan",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgStatMonitorPgsmMaxBuckets(val *float64) {
+	if err := j.validateSetPgStatMonitorPgsmMaxBucketsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"pgStatMonitorPgsmMaxBuckets",
 		val,
 	)
 }
@@ -2871,6 +3033,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetLogM
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetLogTempFiles() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetLogTempFiles",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMaxFilesPerProcess() {
 	_jsii_.InvokeVoid(
 		m,
@@ -3035,6 +3205,30 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgSe
 	_jsii_.InvokeVoid(
 		m,
 		"resetPgServiceToForkFrom",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgStatMonitorEnable() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPgStatMonitorEnable",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgStatMonitorPgsmEnableQueryPlan() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPgStatMonitorPgsmEnableQueryPlan",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgStatMonitorPgsmMaxBuckets() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPgStatMonitorPgsmMaxBuckets",
 		nil, // no parameters
 	)
 }

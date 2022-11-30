@@ -100,6 +100,14 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInf
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbChangeBufferMaxSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbFlushNeighborsParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbFtMinTokenSizeParameters(val *float64) error {
 	return nil
 }
@@ -124,7 +132,19 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInn
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbReadIoThreadsParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbRollbackOnTimeoutParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbThreadConcurrencyParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetInnodbWriteIoThreadsParameters(val *float64) error {
 	return nil
 }
 
@@ -153,6 +173,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetMax
 }
 
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetMaxHeapTableSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetNetBufferLengthParameters(val *float64) error {
 	return nil
 }
 

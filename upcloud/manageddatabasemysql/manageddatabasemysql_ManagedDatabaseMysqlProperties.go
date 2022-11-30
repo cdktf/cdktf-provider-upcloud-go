@@ -50,6 +50,16 @@ type ManagedDatabaseMysqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#information_schema_stats_expiry ManagedDatabaseMysql#information_schema_stats_expiry}
 	InformationSchemaStatsExpiry *float64 `field:"optional" json:"informationSchemaStatsExpiry" yaml:"informationSchemaStatsExpiry"`
+	// Maximum size for the InnoDB change buffer, as a percentage of the total size of the buffer pool.
+	//
+	// Default is 25
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_change_buffer_max_size ManagedDatabaseMysql#innodb_change_buffer_max_size}
+	InnodbChangeBufferMaxSize *float64 `field:"optional" json:"innodbChangeBufferMaxSize" yaml:"innodbChangeBufferMaxSize"`
+	// Specifies whether flushing a page from the InnoDB buffer pool also flushes other dirty pages in the same extent (default is 1): 0 - dirty pages in the same extent are not flushed,  1 - flush contiguous dirty pages in the same extent,  2 - flush dirty pages in the same extent.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_flush_neighbors ManagedDatabaseMysql#innodb_flush_neighbors}
+	InnodbFlushNeighbors *float64 `field:"optional" json:"innodbFlushNeighbors" yaml:"innodbFlushNeighbors"`
 	// Minimum length of words that are stored in an InnoDB `FULLTEXT` index.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_ft_min_token_size ManagedDatabaseMysql#innodb_ft_min_token_size}
@@ -74,10 +84,26 @@ type ManagedDatabaseMysqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_print_all_deadlocks ManagedDatabaseMysql#innodb_print_all_deadlocks}
 	InnodbPrintAllDeadlocks interface{} `field:"optional" json:"innodbPrintAllDeadlocks" yaml:"innodbPrintAllDeadlocks"`
+	// The number of I/O threads for read operations in InnoDB.
+	//
+	// Default is 4. Changing this parameter will lead to a restart of the MySQL service.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_read_io_threads ManagedDatabaseMysql#innodb_read_io_threads}
+	InnodbReadIoThreads *float64 `field:"optional" json:"innodbReadIoThreads" yaml:"innodbReadIoThreads"`
 	// When enabled a transaction timeout causes InnoDB to abort and roll back the entire transaction.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_rollback_on_timeout ManagedDatabaseMysql#innodb_rollback_on_timeout}
 	InnodbRollbackOnTimeout interface{} `field:"optional" json:"innodbRollbackOnTimeout" yaml:"innodbRollbackOnTimeout"`
+	// Defines the maximum number of threads permitted inside of InnoDB. Default is 0 (infinite concurrency - no limit).
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_thread_concurrency ManagedDatabaseMysql#innodb_thread_concurrency}
+	InnodbThreadConcurrency *float64 `field:"optional" json:"innodbThreadConcurrency" yaml:"innodbThreadConcurrency"`
+	// The number of I/O threads for write operations in InnoDB.
+	//
+	// Default is 4. Changing this parameter will lead to a restart of the MySQL service.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#innodb_write_io_threads ManagedDatabaseMysql#innodb_write_io_threads}
+	InnodbWriteIoThreads *float64 `field:"optional" json:"innodbWriteIoThreads" yaml:"innodbWriteIoThreads"`
 	// The number of seconds the server waits for activity on an interactive connection before closing it.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#interactive_timeout ManagedDatabaseMysql#interactive_timeout}
@@ -106,6 +132,12 @@ type ManagedDatabaseMysqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#migration ManagedDatabaseMysql#migration}
 	Migration *ManagedDatabaseMysqlPropertiesMigration `field:"optional" json:"migration" yaml:"migration"`
+	// Start sizes of connection buffer and result buffer.
+	//
+	// Default is 16384 (16K). Changing this parameter will lead to a restart of the MySQL service.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#net_buffer_length ManagedDatabaseMysql#net_buffer_length}
+	NetBufferLength *float64 `field:"optional" json:"netBufferLength" yaml:"netBufferLength"`
 	// The number of seconds to wait for more data from a connection before aborting the read.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_mysql#net_read_timeout ManagedDatabaseMysql#net_read_timeout}

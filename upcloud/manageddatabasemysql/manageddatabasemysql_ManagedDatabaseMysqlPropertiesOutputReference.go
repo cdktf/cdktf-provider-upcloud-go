@@ -10,6 +10,7 @@ import (
 
 type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalBackupRegions() *[]*string
 	AdminPassword() *string
 	SetAdminPassword(val *string)
 	AdminPasswordInput() *string
@@ -57,6 +58,12 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	InformationSchemaStatsExpiry() *float64
 	SetInformationSchemaStatsExpiry(val *float64)
 	InformationSchemaStatsExpiryInput() *float64
+	InnodbChangeBufferMaxSize() *float64
+	SetInnodbChangeBufferMaxSize(val *float64)
+	InnodbChangeBufferMaxSizeInput() *float64
+	InnodbFlushNeighbors() *float64
+	SetInnodbFlushNeighbors(val *float64)
+	InnodbFlushNeighborsInput() *float64
 	InnodbFtMinTokenSize() *float64
 	SetInnodbFtMinTokenSize(val *float64)
 	InnodbFtMinTokenSizeInput() *float64
@@ -75,9 +82,18 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	InnodbPrintAllDeadlocks() interface{}
 	SetInnodbPrintAllDeadlocks(val interface{})
 	InnodbPrintAllDeadlocksInput() interface{}
+	InnodbReadIoThreads() *float64
+	SetInnodbReadIoThreads(val *float64)
+	InnodbReadIoThreadsInput() *float64
 	InnodbRollbackOnTimeout() interface{}
 	SetInnodbRollbackOnTimeout(val interface{})
 	InnodbRollbackOnTimeoutInput() interface{}
+	InnodbThreadConcurrency() *float64
+	SetInnodbThreadConcurrency(val *float64)
+	InnodbThreadConcurrencyInput() *float64
+	InnodbWriteIoThreads() *float64
+	SetInnodbWriteIoThreads(val *float64)
+	InnodbWriteIoThreadsInput() *float64
 	InteractiveTimeout() *float64
 	SetInteractiveTimeout(val *float64)
 	InteractiveTimeoutInput() *float64
@@ -100,6 +116,9 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	MaxHeapTableSizeInput() *float64
 	Migration() ManagedDatabaseMysqlPropertiesMigrationOutputReference
 	MigrationInput() *ManagedDatabaseMysqlPropertiesMigration
+	NetBufferLength() *float64
+	SetNetBufferLength(val *float64)
+	NetBufferLengthInput() *float64
 	NetReadTimeout() *float64
 	SetNetReadTimeout(val *float64)
 	NetReadTimeoutInput() *float64
@@ -173,13 +192,18 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	ResetDefaultTimeZone()
 	ResetGroupConcatMaxLen()
 	ResetInformationSchemaStatsExpiry()
+	ResetInnodbChangeBufferMaxSize()
+	ResetInnodbFlushNeighbors()
 	ResetInnodbFtMinTokenSize()
 	ResetInnodbFtServerStopwordTable()
 	ResetInnodbLockWaitTimeout()
 	ResetInnodbLogBufferSize()
 	ResetInnodbOnlineAlterLogMaxSize()
 	ResetInnodbPrintAllDeadlocks()
+	ResetInnodbReadIoThreads()
 	ResetInnodbRollbackOnTimeout()
+	ResetInnodbThreadConcurrency()
+	ResetInnodbWriteIoThreads()
 	ResetInteractiveTimeout()
 	ResetInternalTmpMemStorageEngine()
 	ResetIpFilter()
@@ -187,6 +211,7 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	ResetMaxAllowedPacket()
 	ResetMaxHeapTableSize()
 	ResetMigration()
+	ResetNetBufferLength()
 	ResetNetReadTimeout()
 	ResetNetWriteTimeout()
 	ResetPublicAccess()
@@ -210,6 +235,16 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 // The jsii proxy struct for ManagedDatabaseMysqlPropertiesOutputReference
 type jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) AdditionalBackupRegions() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"additionalBackupRegions",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) AdminPassword() *string {
@@ -452,6 +487,46 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InformationSch
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbChangeBufferMaxSize() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbChangeBufferMaxSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbChangeBufferMaxSizeInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbChangeBufferMaxSizeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbFlushNeighbors() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbFlushNeighbors",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbFlushNeighborsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbFlushNeighborsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbFtMinTokenSize() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -572,6 +647,26 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbPrintAll
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbReadIoThreads() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbReadIoThreads",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbReadIoThreadsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbReadIoThreadsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbRollbackOnTimeout() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -587,6 +682,46 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbRollback
 	_jsii_.Get(
 		j,
 		"innodbRollbackOnTimeoutInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbThreadConcurrency() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbThreadConcurrency",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbThreadConcurrencyInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbThreadConcurrencyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbWriteIoThreads() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbWriteIoThreads",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InnodbWriteIoThreadsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"innodbWriteIoThreadsInput",
 		&returns,
 	)
 	return returns
@@ -737,6 +872,26 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) MigrationInput
 	_jsii_.Get(
 		j,
 		"migrationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) NetBufferLength() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"netBufferLength",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) NetBufferLengthInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"netBufferLengthInput",
 		&returns,
 	)
 	return returns
@@ -1122,6 +1277,28 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInformationS
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbChangeBufferMaxSize(val *float64) {
+	if err := j.validateSetInnodbChangeBufferMaxSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"innodbChangeBufferMaxSize",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbFlushNeighbors(val *float64) {
+	if err := j.validateSetInnodbFlushNeighborsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"innodbFlushNeighbors",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbFtMinTokenSize(val *float64) {
 	if err := j.validateSetInnodbFtMinTokenSizeParameters(val); err != nil {
 		panic(err)
@@ -1188,6 +1365,17 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbPrintA
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbReadIoThreads(val *float64) {
+	if err := j.validateSetInnodbReadIoThreadsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"innodbReadIoThreads",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbRollbackOnTimeout(val interface{}) {
 	if err := j.validateSetInnodbRollbackOnTimeoutParameters(val); err != nil {
 		panic(err)
@@ -1195,6 +1383,28 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbRollba
 	_jsii_.Set(
 		j,
 		"innodbRollbackOnTimeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbThreadConcurrency(val *float64) {
+	if err := j.validateSetInnodbThreadConcurrencyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"innodbThreadConcurrency",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetInnodbWriteIoThreads(val *float64) {
+	if err := j.validateSetInnodbWriteIoThreadsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"innodbWriteIoThreads",
 		val,
 	)
 }
@@ -1272,6 +1482,17 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetMaxHeapTable
 	_jsii_.Set(
 		j,
 		"maxHeapTableSize",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetNetBufferLength(val *float64) {
+	if err := j.validateSetNetBufferLengthParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"netBufferLength",
 		val,
 	)
 }
@@ -1685,6 +1906,22 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInformati
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbChangeBufferMaxSize() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetInnodbChangeBufferMaxSize",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbFlushNeighbors() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetInnodbFlushNeighbors",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbFtMinTokenSize() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1733,10 +1970,34 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbPri
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbReadIoThreads() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetInnodbReadIoThreads",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbRollbackOnTimeout() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetInnodbRollbackOnTimeout",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbThreadConcurrency() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetInnodbThreadConcurrency",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetInnodbWriteIoThreads() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetInnodbWriteIoThreads",
 		nil, // no parameters
 	)
 }
@@ -1793,6 +2054,14 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetMigration
 	_jsii_.InvokeVoid(
 		m,
 		"resetMigration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetNetBufferLength() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetBufferLength",
 		nil, // no parameters
 	)
 }
