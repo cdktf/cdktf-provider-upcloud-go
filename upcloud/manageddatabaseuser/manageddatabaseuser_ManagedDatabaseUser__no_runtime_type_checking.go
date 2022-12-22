@@ -52,6 +52,14 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseUser) validatePutPgAccessControlParameters(value *ManagedDatabaseUserPgAccessControl) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseUser) validatePutRedisAccessControlParameters(value *ManagedDatabaseUserRedisAccessControl) error {
+	return nil
+}
+
 func validateManagedDatabaseUser_IsConstructParameters(x interface{}) error {
 	return nil
 }
@@ -61,6 +69,10 @@ func validateManagedDatabaseUser_IsTerraformElementParameters(x interface{}) err
 }
 
 func validateManagedDatabaseUser_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) validateSetAuthenticationParameters(val *string) error {
 	return nil
 }
 

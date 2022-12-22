@@ -1,6 +1,6 @@
 //go:build !no_runtime_type_checking
 
-package manageddatabaseuser
+package manageddatabaseredis
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateAddOverrideParameters(path *string, value interface{}) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateAddOverrideParameters(path *string, value interface{}) error {
 	if path == nil {
 		return fmt.Errorf("parameter path is required, but nil was provided")
 	}
@@ -23,7 +23,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateAddOverrideParameters(path *stri
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -31,7 +31,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetAnyMapAttributeParameters(ter
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -39,7 +39,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetBooleanAttributeParameters(te
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -47,7 +47,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetBooleanMapAttributeParameters
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -55,7 +55,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetListAttributeParameters(terra
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -63,7 +63,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetNumberAttributeParameters(ter
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -71,7 +71,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetNumberListAttributeParameters
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -79,7 +79,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetNumberMapAttributeParameters(
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -87,7 +87,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetStringAttributeParameters(ter
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -95,7 +95,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateGetStringMapAttributeParameters(
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -103,7 +103,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateInterpolationForAttributeParamet
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
 	}
@@ -111,7 +111,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validatePutPgAccessControlParameters(value *ManagedDatabaseUserPgAccessControl) error {
+func (m *jsiiProxy_ManagedDatabaseRedis) validatePutPropertiesParameters(value *ManagedDatabaseRedisProperties) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -122,18 +122,7 @@ func (m *jsiiProxy_ManagedDatabaseUser) validatePutPgAccessControlParameters(val
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validatePutRedisAccessControlParameters(value *ManagedDatabaseUserRedisAccessControl) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func validateManagedDatabaseUser_IsConstructParameters(x interface{}) error {
+func validateManagedDatabaseRedis_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -141,7 +130,7 @@ func validateManagedDatabaseUser_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateManagedDatabaseUser_IsTerraformElementParameters(x interface{}) error {
+func validateManagedDatabaseRedis_IsTerraformElementParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -149,7 +138,7 @@ func validateManagedDatabaseUser_IsTerraformElementParameters(x interface{}) err
 	return nil
 }
 
-func validateManagedDatabaseUser_IsTerraformResourceParameters(x interface{}) error {
+func validateManagedDatabaseRedis_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -157,15 +146,7 @@ func validateManagedDatabaseUser_IsTerraformResourceParameters(x interface{}) er
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetAuthenticationParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetConnectionParameters(val interface{}) error {
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetConnectionParameters(val interface{}) error {
 	switch val.(type) {
 	case *cdktf.SSHProvisionerConnection:
 		val := val.(*cdktf.SSHProvisionerConnection)
@@ -198,7 +179,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) validateSetConnectionParameters(val inte
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -206,7 +187,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) validateSetIdParameters(val *string) err
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
 	}
@@ -214,7 +195,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) validateSetLifecycleParameters(val *cdkt
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetPasswordParameters(val *string) error {
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetMaintenanceWindowDowParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -222,7 +203,51 @@ func (j *jsiiProxy_ManagedDatabaseUser) validateSetPasswordParameters(val *strin
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetProvisionersParameters(val *[]interface{}) error {
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetMaintenanceWindowTimeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetPlanParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetPoweredParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetProvisionersParameters(val *[]interface{}) error {
 	for idx_97dfc6, v := range *val {
 		switch v.(type) {
 		case *cdktf.FileProvisioner:
@@ -268,7 +293,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) validateSetProvisionersParameters(val *[
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetServiceParameters(val *string) error {
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetTitleParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -276,7 +301,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) validateSetServiceParameters(val *string
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) validateSetUsernameParameters(val *string) error {
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetZoneParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -284,7 +309,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) validateSetUsernameParameters(val *strin
 	return nil
 }
 
-func validateNewManagedDatabaseUserParameters(scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) error {
+func validateNewManagedDatabaseRedisParameters(scope constructs.Construct, id *string, config *ManagedDatabaseRedisConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}

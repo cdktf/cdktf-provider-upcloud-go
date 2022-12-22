@@ -23,7 +23,7 @@ type LoadbalancerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer#name Loadbalancer#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// Plan which the service will have.
+	// Plan which the service will have. You can list available loadbalancer plans with `upctl loadbalancer plans`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer#plan Loadbalancer#plan}
 	Plan *string `field:"required" json:"plan" yaml:"plan"`

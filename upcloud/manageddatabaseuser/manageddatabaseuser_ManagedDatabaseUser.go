@@ -12,6 +12,9 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_user upcloud_managed_database_user}.
 type ManagedDatabaseUser interface {
 	cdktf.TerraformResource
+	Authentication() *string
+	SetAuthentication(val *string)
+	AuthenticationInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -48,6 +51,8 @@ type ManagedDatabaseUser interface {
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
+	PgAccessControl() ManagedDatabaseUserPgAccessControlOutputReference
+	PgAccessControlInput() *ManagedDatabaseUserPgAccessControl
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -58,6 +63,8 @@ type ManagedDatabaseUser interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RedisAccessControl() ManagedDatabaseUserRedisAccessControlOutputReference
+	RedisAccessControlInput() *ManagedDatabaseUserRedisAccessControl
 	Service() *string
 	SetService(val *string)
 	ServiceInput() *string
@@ -96,11 +103,16 @@ type ManagedDatabaseUser interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutPgAccessControl(value *ManagedDatabaseUserPgAccessControl)
+	PutRedisAccessControl(value *ManagedDatabaseUserRedisAccessControl)
+	ResetAuthentication()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPassword()
+	ResetPgAccessControl()
+	ResetRedisAccessControl()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -114,6 +126,26 @@ type ManagedDatabaseUser interface {
 // The jsii proxy struct for ManagedDatabaseUser
 type jsiiProxy_ManagedDatabaseUser struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) Authentication() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authentication",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) AuthenticationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabaseUser) CdktfStack() cdktf.TerraformStack {
@@ -256,6 +288,26 @@ func (j *jsiiProxy_ManagedDatabaseUser) PasswordInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseUser) PgAccessControl() ManagedDatabaseUserPgAccessControlOutputReference {
+	var returns ManagedDatabaseUserPgAccessControlOutputReference
+	_jsii_.Get(
+		j,
+		"pgAccessControl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) PgAccessControlInput() *ManagedDatabaseUserPgAccessControl {
+	var returns *ManagedDatabaseUserPgAccessControl
+	_jsii_.Get(
+		j,
+		"pgAccessControlInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseUser) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -281,6 +333,26 @@ func (j *jsiiProxy_ManagedDatabaseUser) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) RedisAccessControl() ManagedDatabaseUserRedisAccessControlOutputReference {
+	var returns ManagedDatabaseUserRedisAccessControlOutputReference
+	_jsii_.Get(
+		j,
+		"redisAccessControl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) RedisAccessControlInput() *ManagedDatabaseUserRedisAccessControl {
+	var returns *ManagedDatabaseUserRedisAccessControl
+	_jsii_.Get(
+		j,
+		"redisAccessControlInput",
 		&returns,
 	)
 	return returns
@@ -393,6 +465,17 @@ func NewManagedDatabaseUser_Override(m ManagedDatabaseUser, scope constructs.Con
 		"@cdktf/provider-upcloud.managedDatabaseUser.ManagedDatabaseUser",
 		[]interface{}{scope, id, config},
 		m,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser)SetAuthentication(val *string) {
+	if err := j.validateSetAuthenticationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"authentication",
+		val,
 	)
 }
 
@@ -771,6 +854,36 @@ func (m *jsiiProxy_ManagedDatabaseUser) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseUser) PutPgAccessControl(value *ManagedDatabaseUserPgAccessControl) {
+	if err := m.validatePutPgAccessControlParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putPgAccessControl",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseUser) PutRedisAccessControl(value *ManagedDatabaseUserRedisAccessControl) {
+	if err := m.validatePutRedisAccessControlParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putRedisAccessControl",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseUser) ResetAuthentication() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAuthentication",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseUser) ResetId() {
 	_jsii_.InvokeVoid(
 		m,
@@ -791,6 +904,22 @@ func (m *jsiiProxy_ManagedDatabaseUser) ResetPassword() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetPassword",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseUser) ResetPgAccessControl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPgAccessControl",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseUser) ResetRedisAccessControl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRedisAccessControl",
 		nil, // no parameters
 	)
 }

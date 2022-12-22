@@ -32,6 +32,9 @@ type LoadbalancerFrontendRuleActionsHttpRedirectOutputReference interface {
 	Location() *string
 	SetLocation(val *string)
 	LocationInput() *string
+	Scheme() *string
+	SetScheme(val *string)
+	SchemeInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +67,8 @@ type LoadbalancerFrontendRuleActionsHttpRedirectOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLocation()
+	ResetScheme()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -144,6 +149,26 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) L
 	_jsii_.Get(
 		j,
 		"locationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) Scheme() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"scheme",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) SchemeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"schemeInput",
 		&returns,
 	)
 	return returns
@@ -237,6 +262,17 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference)Se
 	_jsii_.Set(
 		j,
 		"location",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference)SetScheme(val *string) {
+	if err := j.validateSetSchemeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"scheme",
 		val,
 	)
 }
@@ -447,6 +483,22 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) I
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) ResetLocation() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLocation",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) ResetScheme() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetScheme",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
