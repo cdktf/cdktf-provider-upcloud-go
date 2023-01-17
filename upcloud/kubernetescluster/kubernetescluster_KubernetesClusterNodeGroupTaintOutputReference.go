@@ -2,9 +2,9 @@ package kubernetescluster
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v4/kubernetescluster/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetescluster/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
