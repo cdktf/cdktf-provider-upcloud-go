@@ -230,14 +230,6 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetPub
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRecoveryBasebackupNameParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRedisAclChannelsDefaultParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

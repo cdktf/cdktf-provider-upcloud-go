@@ -76,10 +76,6 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetPub
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRecoveryBasebackupNameParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRedisAclChannelsDefaultParameters(val *string) error {
 	return nil
 }

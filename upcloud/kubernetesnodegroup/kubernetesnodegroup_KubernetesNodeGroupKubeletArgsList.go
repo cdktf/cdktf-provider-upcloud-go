@@ -1,14 +1,14 @@
-package kubernetescluster
+package kubernetesnodegroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetescluster/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetesnodegroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type KubernetesClusterNodeGroupList interface {
+type KubernetesNodeGroupKubeletArgsList interface {
 	cdktf.ComplexList
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -30,7 +30,7 @@ type KubernetesClusterNodeGroupList interface {
 	SetWrapsSet(val *bool)
 	// Experimental.
 	ComputeFqn() *string
-	Get(index *float64) KubernetesClusterNodeGroupOutputReference
+	Get(index *float64) KubernetesNodeGroupKubeletArgsOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -41,12 +41,12 @@ type KubernetesClusterNodeGroupList interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for KubernetesClusterNodeGroupList
-type jsiiProxy_KubernetesClusterNodeGroupList struct {
+// The jsii proxy struct for KubernetesNodeGroupKubeletArgsList
+type jsiiProxy_KubernetesNodeGroupKubeletArgsList struct {
 	internal.Type__cdktfComplexList
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList) CreationStack() *[]*string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -56,7 +56,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList) CreationStack() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList) Fqn() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -66,7 +66,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList) InternalValue() interface{} {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -76,7 +76,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList) InternalValue() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList) TerraformAttribute() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -86,7 +86,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList) TerraformAttribute() *string 
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -96,7 +96,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList) TerraformResource() cdktf.IIn
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList) WrapsSet() *bool {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList) WrapsSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -107,16 +107,16 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList) WrapsSet() *bool {
 }
 
 
-func NewKubernetesClusterNodeGroupList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) KubernetesClusterNodeGroupList {
+func NewKubernetesNodeGroupKubeletArgsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) KubernetesNodeGroupKubeletArgsList {
 	_init_.Initialize()
 
-	if err := validateNewKubernetesClusterNodeGroupListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+	if err := validateNewKubernetesNodeGroupKubeletArgsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_KubernetesClusterNodeGroupList{}
+	j := jsiiProxy_KubernetesNodeGroupKubeletArgsList{}
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesClusterNodeGroupList",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroupKubeletArgsList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
 		&j,
 	)
@@ -124,17 +124,17 @@ func NewKubernetesClusterNodeGroupList(terraformResource cdktf.IInterpolatingPar
 	return &j
 }
 
-func NewKubernetesClusterNodeGroupList_Override(k KubernetesClusterNodeGroupList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
+func NewKubernetesNodeGroupKubeletArgsList_Override(k KubernetesNodeGroupKubeletArgsList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesClusterNodeGroupList",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroupKubeletArgsList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
 		k,
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -145,7 +145,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetInternalValue(val interface
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -156,7 +156,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetTerraformAttribute(val *str
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -167,7 +167,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetTerraformResource(val cdktf
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetWrapsSet(val *bool) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsList)SetWrapsSet(val *bool) {
 	if err := j.validateSetWrapsSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -178,7 +178,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupList)SetWrapsSet(val *bool) {
 	)
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupList) ComputeFqn() *string {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsList) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -191,11 +191,11 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupList) ComputeFqn() *string {
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupList) Get(index *float64) KubernetesClusterNodeGroupOutputReference {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsList) Get(index *float64) KubernetesNodeGroupKubeletArgsOutputReference {
 	if err := k.validateGetParameters(index); err != nil {
 		panic(err)
 	}
-	var returns KubernetesClusterNodeGroupOutputReference
+	var returns KubernetesNodeGroupKubeletArgsOutputReference
 
 	_jsii_.Invoke(
 		k,
@@ -207,7 +207,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupList) Get(index *float64) Kubernete
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupList) Resolve(_context cdktf.IResolveContext) interface{} {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsList) Resolve(_context cdktf.IResolveContext) interface{} {
 	if err := k.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
@@ -223,7 +223,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupList) Resolve(_context cdktf.IResol
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupList) ToString() *string {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsList) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(

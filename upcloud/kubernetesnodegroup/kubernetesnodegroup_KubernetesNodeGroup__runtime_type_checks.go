@@ -1,6 +1,6 @@
 //go:build !no_runtime_type_checking
 
-package kubernetescluster
+package kubernetesnodegroup
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (k *jsiiProxy_KubernetesCluster) validateAddOverrideParameters(path *string, value interface{}) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateAddOverrideParameters(path *string, value interface{}) error {
 	if path == nil {
 		return fmt.Errorf("parameter path is required, but nil was provided")
 	}
@@ -23,7 +23,7 @@ func (k *jsiiProxy_KubernetesCluster) validateAddOverrideParameters(path *string
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -31,7 +31,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetAnyMapAttributeParameters(terra
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -39,7 +39,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetBooleanAttributeParameters(terr
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -47,7 +47,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetBooleanMapAttributeParameters(t
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -55,7 +55,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetListAttributeParameters(terrafo
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -63,7 +63,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetNumberAttributeParameters(terra
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -71,7 +71,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetNumberListAttributeParameters(t
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -79,7 +79,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetNumberMapAttributeParameters(te
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -87,7 +87,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetStringAttributeParameters(terra
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -95,7 +95,7 @@ func (k *jsiiProxy_KubernetesCluster) validateGetStringMapAttributeParameters(te
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -103,7 +103,7 @@ func (k *jsiiProxy_KubernetesCluster) validateInterpolationForAttributeParameter
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
 	}
@@ -111,7 +111,69 @@ func (k *jsiiProxy_KubernetesCluster) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
-func validateKubernetesCluster_IsConstructParameters(x interface{}) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutKubeletArgsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*KubernetesNodeGroupKubeletArgs:
+		value := value.(*[]*KubernetesNodeGroupKubeletArgs)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*KubernetesNodeGroupKubeletArgs:
+		value_ := value.([]*KubernetesNodeGroupKubeletArgs)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*KubernetesNodeGroupKubeletArgs; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutTaintParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*KubernetesNodeGroupTaint:
+		value := value.(*[]*KubernetesNodeGroupTaint)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*KubernetesNodeGroupTaint:
+		value_ := value.([]*KubernetesNodeGroupTaint)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*KubernetesNodeGroupTaint; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func validateKubernetesNodeGroup_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -119,7 +181,7 @@ func validateKubernetesCluster_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateKubernetesCluster_IsTerraformElementParameters(x interface{}) error {
+func validateKubernetesNodeGroup_IsTerraformElementParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -127,7 +189,7 @@ func validateKubernetesCluster_IsTerraformElementParameters(x interface{}) error
 	return nil
 }
 
-func validateKubernetesCluster_IsTerraformResourceParameters(x interface{}) error {
+func validateKubernetesNodeGroup_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -135,7 +197,15 @@ func validateKubernetesCluster_IsTerraformResourceParameters(x interface{}) erro
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesCluster) validateSetConnectionParameters(val interface{}) error {
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetClusterParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetConnectionParameters(val interface{}) error {
 	switch val.(type) {
 	case *cdktf.SSHProvisionerConnection:
 		val := val.(*cdktf.SSHProvisionerConnection)
@@ -168,7 +238,7 @@ func (j *jsiiProxy_KubernetesCluster) validateSetConnectionParameters(val interf
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesCluster) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -176,7 +246,15 @@ func (j *jsiiProxy_KubernetesCluster) validateSetIdParameters(val *string) error
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesCluster) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetLabelsParameters(val *map[string]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
 	}
@@ -184,7 +262,7 @@ func (j *jsiiProxy_KubernetesCluster) validateSetLifecycleParameters(val *cdktf.
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesCluster) validateSetNameParameters(val *string) error {
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -192,7 +270,7 @@ func (j *jsiiProxy_KubernetesCluster) validateSetNameParameters(val *string) err
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesCluster) validateSetNetworkParameters(val *string) error {
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetNodeCountParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -200,7 +278,15 @@ func (j *jsiiProxy_KubernetesCluster) validateSetNetworkParameters(val *string) 
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesCluster) validateSetProvisionersParameters(val *[]interface{}) error {
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetPlanParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetProvisionersParameters(val *[]interface{}) error {
 	for idx_97dfc6, v := range *val {
 		switch v.(type) {
 		case *cdktf.FileProvisioner:
@@ -246,7 +332,7 @@ func (j *jsiiProxy_KubernetesCluster) validateSetProvisionersParameters(val *[]i
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesCluster) validateSetZoneParameters(val *string) error {
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetSshKeysParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -254,7 +340,7 @@ func (j *jsiiProxy_KubernetesCluster) validateSetZoneParameters(val *string) err
 	return nil
 }
 
-func validateNewKubernetesClusterParameters(scope constructs.Construct, id *string, config *KubernetesClusterConfig) error {
+func validateNewKubernetesNodeGroupParameters(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}

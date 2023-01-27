@@ -1,6 +1,6 @@
 //go:build !no_runtime_type_checking
 
-package kubernetescluster
+package kubernetesnodegroup
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -18,7 +18,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetAn
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -26,7 +26,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetBo
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -34,7 +34,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetBo
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -42,7 +42,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetLi
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -50,7 +50,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetNu
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -58,7 +58,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetNu
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -66,7 +66,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetNu
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -74,7 +74,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetSt
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -82,7 +82,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateGetSt
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
 	if property == nil {
 		return fmt.Errorf("parameter property is required, but nil was provided")
 	}
@@ -90,7 +90,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateInter
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
 	}
@@ -98,7 +98,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateResol
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
 		// ok
@@ -155,7 +155,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -163,23 +163,15 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetEffectParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetInternalValueParameters(val interface{}) error {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
-	case *KubernetesClusterNodeGroupTaint:
-		val := val.(*KubernetesClusterNodeGroupTaint)
+	case *KubernetesNodeGroupKubeletArgs:
+		val := val.(*KubernetesNodeGroupKubeletArgs)
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
 		}
-	case KubernetesClusterNodeGroupTaint:
-		val_ := val.(KubernetesClusterNodeGroupTaint)
+	case KubernetesNodeGroupKubeletArgs:
+		val_ := val.(KubernetesNodeGroupKubeletArgs)
 		val := &val_
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
@@ -188,14 +180,14 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetIn
 		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *KubernetesClusterNodeGroupTaint, cdktf.IResolvable; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: *KubernetesNodeGroupKubeletArgs, cdktf.IResolvable; received %#v (a %T)", val, val)
 		}
 	}
 
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetKeyParameters(val *string) error {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateSetKeyParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -203,7 +195,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetKe
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -211,7 +203,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetTe
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -219,7 +211,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetTe
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetValueParameters(val *string) error {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) validateSetValueParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -227,7 +219,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) validateSetVa
 	return nil
 }
 
-func validateNewKubernetesClusterNodeGroupTaintOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+func validateNewKubernetesNodeGroupKubeletArgsOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

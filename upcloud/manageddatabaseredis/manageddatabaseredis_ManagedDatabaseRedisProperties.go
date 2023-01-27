@@ -18,10 +18,6 @@ type ManagedDatabaseRedisProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_redis#public_access ManagedDatabaseRedis#public_access}
 	PublicAccess interface{} `field:"optional" json:"publicAccess" yaml:"publicAccess"`
-	// Name of the basebackup to restore in forked service.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_redis#recovery_basebackup_name ManagedDatabaseRedis#recovery_basebackup_name}
-	RecoveryBasebackupName *string `field:"optional" json:"recoveryBasebackupName" yaml:"recoveryBasebackupName"`
 	// Default ACL for pub/sub channels used when Redis user is created.
 	//
 	// Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Redis configuration acl-pubsub-default.

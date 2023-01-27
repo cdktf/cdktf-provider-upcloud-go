@@ -276,7 +276,6 @@ func init() {
 		"@cdktf/provider-upcloud.managedDatabasePostgresql.ManagedDatabasePostgresqlPropertiesOutputReference",
 		reflect.TypeOf((*ManagedDatabasePostgresqlPropertiesOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "additionalBackupRegions", GoGetter: "AdditionalBackupRegions"},
 			_jsii_.MemberProperty{JsiiProperty: "adminPassword", GoGetter: "AdminPassword"},
 			_jsii_.MemberProperty{JsiiProperty: "adminPasswordInput", GoGetter: "AdminPasswordInput"},
 			_jsii_.MemberProperty{JsiiProperty: "adminUsername", GoGetter: "AdminUsername"},
@@ -321,7 +320,6 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "deadlockTimeoutInput", GoGetter: "DeadlockTimeoutInput"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultToastCompression", GoGetter: "DefaultToastCompression"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultToastCompressionInput", GoGetter: "DefaultToastCompressionInput"},
-			_jsii_.MemberProperty{JsiiProperty: "enableIpv6", GoGetter: "EnableIpv6"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
 			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},

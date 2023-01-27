@@ -10,7 +10,6 @@ import (
 
 type ManagedDatabaseRedisPropertiesOutputReference interface {
 	cdktf.ComplexObject
-	AdditionalBackupRegions() *[]*string
 	AutomaticUtilityNetworkIpFilter() interface{}
 	SetAutomaticUtilityNetworkIpFilter(val interface{})
 	AutomaticUtilityNetworkIpFilterInput() interface{}
@@ -41,9 +40,6 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	PublicAccess() interface{}
 	SetPublicAccess(val interface{})
 	PublicAccessInput() interface{}
-	RecoveryBasebackupName() *string
-	SetRecoveryBasebackupName(val *string)
-	RecoveryBasebackupNameInput() *string
 	RedisAclChannelsDefault() *string
 	SetRedisAclChannelsDefault(val *string)
 	RedisAclChannelsDefaultInput() *string
@@ -114,7 +110,6 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	ResetIpFilter()
 	ResetMigration()
 	ResetPublicAccess()
-	ResetRecoveryBasebackupName()
 	ResetRedisAclChannelsDefault()
 	ResetRedisIoThreads()
 	ResetRedisLfuDecayTime()
@@ -139,16 +134,6 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 // The jsii proxy struct for ManagedDatabaseRedisPropertiesOutputReference
 type jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference struct {
 	internal.Type__cdktfComplexObject
-}
-
-func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) AdditionalBackupRegions() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"additionalBackupRegions",
-		&returns,
-	)
-	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) AutomaticUtilityNetworkIpFilter() interface{} {
@@ -276,26 +261,6 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) PublicAccessIn
 	_jsii_.Get(
 		j,
 		"publicAccessInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) RecoveryBasebackupName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"recoveryBasebackupName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) RecoveryBasebackupNameInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"recoveryBasebackupNameInput",
 		&returns,
 	)
 	return returns
@@ -631,17 +596,6 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetPublicAccess
 	_jsii_.Set(
 		j,
 		"publicAccess",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetRecoveryBasebackupName(val *string) {
-	if err := j.validateSetRecoveryBasebackupNameParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"recoveryBasebackupName",
 		val,
 	)
 }
@@ -1014,14 +968,6 @@ func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetPublicAcc
 	_jsii_.InvokeVoid(
 		m,
 		"resetPublicAccess",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetRecoveryBasebackupName() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetRecoveryBasebackupName",
 		nil, // no parameters
 	)
 }

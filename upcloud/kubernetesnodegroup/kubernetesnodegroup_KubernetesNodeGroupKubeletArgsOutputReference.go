@@ -1,14 +1,14 @@
-package kubernetescluster
+package kubernetesnodegroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetescluster/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetesnodegroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type KubernetesClusterNodeGroupTaintOutputReference interface {
+type KubernetesNodeGroupKubeletArgsOutputReference interface {
 	cdktf.ComplexObject
 	// the index of the complex object in a list.
 	// Experimental.
@@ -25,9 +25,6 @@ type KubernetesClusterNodeGroupTaintOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Effect() *string
-	SetEffect(val *string)
-	EffectInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -80,12 +77,12 @@ type KubernetesClusterNodeGroupTaintOutputReference interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for KubernetesClusterNodeGroupTaintOutputReference
-type jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference struct {
+// The jsii proxy struct for KubernetesNodeGroupKubeletArgsOutputReference
+type jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ComplexObjectIndex() interface{} {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -95,7 +92,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ComplexObject
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ComplexObjectIsFromSet() *bool {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) ComplexObjectIsFromSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -105,7 +102,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ComplexObject
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) CreationStack() *[]*string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -115,27 +112,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) CreationStack
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Effect() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"effect",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) EffectInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"effectInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Fqn() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -145,7 +122,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Fqn() *string
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) InternalValue() interface{} {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -155,7 +132,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) InternalValue
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Key() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) Key() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -165,7 +142,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Key() *string
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) KeyInput() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) KeyInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -175,7 +152,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) KeyInput() *s
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) TerraformAttribute() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -185,7 +162,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) TerraformAttr
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -195,7 +172,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) TerraformReso
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Value() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) Value() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -205,7 +182,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Value() *stri
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ValueInput() *string {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) ValueInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -216,16 +193,16 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ValueInput() 
 }
 
 
-func NewKubernetesClusterNodeGroupTaintOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) KubernetesClusterNodeGroupTaintOutputReference {
+func NewKubernetesNodeGroupKubeletArgsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) KubernetesNodeGroupKubeletArgsOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewKubernetesClusterNodeGroupTaintOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+	if err := validateNewKubernetesNodeGroupKubeletArgsOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference{}
+	j := jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference{}
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesClusterNodeGroupTaintOutputReference",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroupKubeletArgsOutputReference",
 		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
@@ -233,17 +210,17 @@ func NewKubernetesClusterNodeGroupTaintOutputReference(terraformResource cdktf.I
 	return &j
 }
 
-func NewKubernetesClusterNodeGroupTaintOutputReference_Override(k KubernetesClusterNodeGroupTaintOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
+func NewKubernetesNodeGroupKubeletArgsOutputReference_Override(k KubernetesNodeGroupKubeletArgsOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesClusterNodeGroupTaintOutputReference",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroupKubeletArgsOutputReference",
 		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		k,
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
 	}
@@ -254,7 +231,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference)SetComplexObjectIsFromSet(val *bool) {
 	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -265,18 +242,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetEffect(val *string) {
-	if err := j.validateSetEffectParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"effect",
-		val,
-	)
-}
-
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -287,7 +253,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetInternalVal
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetKey(val *string) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference)SetKey(val *string) {
 	if err := j.validateSetKeyParameters(val); err != nil {
 		panic(err)
 	}
@@ -298,7 +264,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetKey(val *st
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -309,7 +275,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetTerraformAt
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -320,7 +286,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetTerraformRe
 	)
 }
 
-func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetValue(val *string) {
+func (j *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference)SetValue(val *string) {
 	if err := j.validateSetValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -331,7 +297,7 @@ func (j *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference)SetValue(val *
 	)
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ComputeFqn() *string {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -344,7 +310,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ComputeFqn() 
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
 	if err := k.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -360,7 +326,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetAnyMapAttr
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := k.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -376,7 +342,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetBooleanAtt
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
 	if err := k.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -392,7 +358,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetBooleanMap
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
 	if err := k.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -408,7 +374,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetListAttrib
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
 	if err := k.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -424,7 +390,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetNumberAttr
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
 	if err := k.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -440,7 +406,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetNumberList
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
 	if err := k.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -456,7 +422,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetNumberMapA
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetStringAttribute(terraformAttribute *string) *string {
 	if err := k.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -472,7 +438,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetStringAttr
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
 	if err := k.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -488,7 +454,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) GetStringMapA
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) InterpolationAsList() cdktf.IResolvable {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) InterpolationAsList() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -501,7 +467,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Interpolation
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
 	if err := k.validateInterpolationForAttributeParameters(property); err != nil {
 		panic(err)
 	}
@@ -517,7 +483,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Interpolation
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
 	if err := k.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
@@ -533,7 +499,7 @@ func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) Resolve(_cont
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesClusterNodeGroupTaintOutputReference) ToString() *string {
+func (k *jsiiProxy_KubernetesNodeGroupKubeletArgsOutputReference) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(

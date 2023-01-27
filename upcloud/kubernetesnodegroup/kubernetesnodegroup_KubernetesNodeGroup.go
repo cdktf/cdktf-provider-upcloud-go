@@ -1,19 +1,22 @@
-package kubernetescluster
+package kubernetesnodegroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetescluster/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetesnodegroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_cluster upcloud_kubernetes_cluster}.
-type KubernetesCluster interface {
+// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group upcloud_kubernetes_node_group}.
+type KubernetesNodeGroup interface {
 	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	Cluster() *string
+	SetCluster(val *string)
+	ClusterInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -39,6 +42,11 @@ type KubernetesCluster interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	KubeletArgs() KubernetesNodeGroupKubeletArgsList
+	KubeletArgsInput() interface{}
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -46,13 +54,14 @@ type KubernetesCluster interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
-	Network() *string
-	SetNetwork(val *string)
-	NetworkCidr() *string
-	NetworkInput() *string
 	// The tree node.
 	Node() constructs.Node
-	NodeGroups() *[]*string
+	NodeCount() *float64
+	SetNodeCount(val *float64)
+	NodeCountInput() *float64
+	Plan() *string
+	SetPlan(val *string)
+	PlanInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -63,16 +72,17 @@ type KubernetesCluster interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	State() *string
+	SshKeys() *[]*string
+	SetSshKeys(val *[]*string)
+	SshKeysInput() *[]*string
+	Taint() KubernetesNodeGroupTaintList
+	TaintInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	Zone() *string
-	SetZone(val *string)
-	ZoneInput() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -98,10 +108,16 @@ type KubernetesCluster interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutKubeletArgs(value interface{})
+	PutTaint(value interface{})
 	ResetId()
+	ResetKubeletArgs()
+	ResetLabels()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSshKeys()
+	ResetTaint()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -112,12 +128,12 @@ type KubernetesCluster interface {
 	ToTerraform() interface{}
 }
 
-// The jsii proxy struct for KubernetesCluster
-type jsiiProxy_KubernetesCluster struct {
+// The jsii proxy struct for KubernetesNodeGroup
+type jsiiProxy_KubernetesNodeGroup struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_KubernetesCluster) CdktfStack() cdktf.TerraformStack {
+func (j *jsiiProxy_KubernetesNodeGroup) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
@@ -127,7 +143,27 @@ func (j *jsiiProxy_KubernetesCluster) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Connection() interface{} {
+func (j *jsiiProxy_KubernetesNodeGroup) Cluster() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cluster",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) ClusterInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clusterInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) Connection() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -137,7 +173,7 @@ func (j *jsiiProxy_KubernetesCluster) Connection() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) ConstructNodeMetadata() *map[string]interface{} {
+func (j *jsiiProxy_KubernetesNodeGroup) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -147,7 +183,7 @@ func (j *jsiiProxy_KubernetesCluster) ConstructNodeMetadata() *map[string]interf
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Count() *float64 {
+func (j *jsiiProxy_KubernetesNodeGroup) Count() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
@@ -157,7 +193,7 @@ func (j *jsiiProxy_KubernetesCluster) Count() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) DependsOn() *[]*string {
+func (j *jsiiProxy_KubernetesNodeGroup) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -167,7 +203,7 @@ func (j *jsiiProxy_KubernetesCluster) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) ForEach() cdktf.ITerraformIterator {
+func (j *jsiiProxy_KubernetesNodeGroup) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
 		j,
@@ -177,7 +213,7 @@ func (j *jsiiProxy_KubernetesCluster) ForEach() cdktf.ITerraformIterator {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Fqn() *string {
+func (j *jsiiProxy_KubernetesNodeGroup) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -187,7 +223,7 @@ func (j *jsiiProxy_KubernetesCluster) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) FriendlyUniqueId() *string {
+func (j *jsiiProxy_KubernetesNodeGroup) FriendlyUniqueId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -197,7 +233,7 @@ func (j *jsiiProxy_KubernetesCluster) FriendlyUniqueId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Id() *string {
+func (j *jsiiProxy_KubernetesNodeGroup) Id() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -207,7 +243,7 @@ func (j *jsiiProxy_KubernetesCluster) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) IdInput() *string {
+func (j *jsiiProxy_KubernetesNodeGroup) IdInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -217,7 +253,47 @@ func (j *jsiiProxy_KubernetesCluster) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Lifecycle() *cdktf.TerraformResourceLifecycle {
+func (j *jsiiProxy_KubernetesNodeGroup) KubeletArgs() KubernetesNodeGroupKubeletArgsList {
+	var returns KubernetesNodeGroupKubeletArgsList
+	_jsii_.Get(
+		j,
+		"kubeletArgs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) KubeletArgsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"kubeletArgsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
@@ -227,7 +303,7 @@ func (j *jsiiProxy_KubernetesCluster) Lifecycle() *cdktf.TerraformResourceLifecy
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Name() *string {
+func (j *jsiiProxy_KubernetesNodeGroup) Name() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -237,7 +313,7 @@ func (j *jsiiProxy_KubernetesCluster) Name() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) NameInput() *string {
+func (j *jsiiProxy_KubernetesNodeGroup) NameInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -247,37 +323,7 @@ func (j *jsiiProxy_KubernetesCluster) NameInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Network() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"network",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_KubernetesCluster) NetworkCidr() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"networkCidr",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_KubernetesCluster) NetworkInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"networkInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_KubernetesCluster) Node() constructs.Node {
+func (j *jsiiProxy_KubernetesNodeGroup) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -287,17 +333,47 @@ func (j *jsiiProxy_KubernetesCluster) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) NodeGroups() *[]*string {
-	var returns *[]*string
+func (j *jsiiProxy_KubernetesNodeGroup) NodeCount() *float64 {
+	var returns *float64
 	_jsii_.Get(
 		j,
-		"nodeGroups",
+		"nodeCount",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Provider() cdktf.TerraformProvider {
+func (j *jsiiProxy_KubernetesNodeGroup) NodeCountInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"nodeCountInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) Plan() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"plan",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) PlanInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"planInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
 		j,
@@ -307,7 +383,7 @@ func (j *jsiiProxy_KubernetesCluster) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Provisioners() *[]interface{} {
+func (j *jsiiProxy_KubernetesNodeGroup) Provisioners() *[]interface{} {
 	var returns *[]interface{}
 	_jsii_.Get(
 		j,
@@ -317,7 +393,7 @@ func (j *jsiiProxy_KubernetesCluster) Provisioners() *[]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) RawOverrides() interface{} {
+func (j *jsiiProxy_KubernetesNodeGroup) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -327,17 +403,47 @@ func (j *jsiiProxy_KubernetesCluster) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) State() *string {
-	var returns *string
+func (j *jsiiProxy_KubernetesNodeGroup) SshKeys() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
-		"state",
+		"sshKeys",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
+func (j *jsiiProxy_KubernetesNodeGroup) SshKeysInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"sshKeysInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) Taint() KubernetesNodeGroupTaintList {
+	var returns KubernetesNodeGroupTaintList
+	_jsii_.Get(
+		j,
+		"taint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) TaintInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"taintInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
@@ -347,7 +453,7 @@ func (j *jsiiProxy_KubernetesCluster) TerraformGeneratorMetadata() *cdktf.Terraf
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) TerraformMetaArguments() *map[string]interface{} {
+func (j *jsiiProxy_KubernetesNodeGroup) TerraformMetaArguments() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -357,7 +463,7 @@ func (j *jsiiProxy_KubernetesCluster) TerraformMetaArguments() *map[string]inter
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) TerraformResourceType() *string {
+func (j *jsiiProxy_KubernetesNodeGroup) TerraformResourceType() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -367,38 +473,18 @@ func (j *jsiiProxy_KubernetesCluster) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesCluster) Zone() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"zone",
-		&returns,
-	)
-	return returns
-}
 
-func (j *jsiiProxy_KubernetesCluster) ZoneInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"zoneInput",
-		&returns,
-	)
-	return returns
-}
-
-
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
-func NewKubernetesCluster(scope constructs.Construct, id *string, config *KubernetesClusterConfig) KubernetesCluster {
+// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) KubernetesNodeGroup {
 	_init_.Initialize()
 
-	if err := validateNewKubernetesClusterParameters(scope, id, config); err != nil {
+	if err := validateNewKubernetesNodeGroupParameters(scope, id, config); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_KubernetesCluster{}
+	j := jsiiProxy_KubernetesNodeGroup{}
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesCluster",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroup",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -406,18 +492,29 @@ func NewKubernetesCluster(scope constructs.Construct, id *string, config *Kubern
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
-func NewKubernetesCluster_Override(k KubernetesCluster, scope constructs.Construct, id *string, config *KubernetesClusterConfig) {
+// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+func NewKubernetesNodeGroup_Override(k KubernetesNodeGroup, scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesCluster",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroup",
 		[]interface{}{scope, id, config},
 		k,
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetConnection(val interface{}) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetCluster(val *string) {
+	if err := j.validateSetClusterParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cluster",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup)SetConnection(val interface{}) {
 	if err := j.validateSetConnectionParameters(val); err != nil {
 		panic(err)
 	}
@@ -428,7 +525,7 @@ func (j *jsiiProxy_KubernetesCluster)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetCount(val *float64) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -436,7 +533,7 @@ func (j *jsiiProxy_KubernetesCluster)SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -444,7 +541,7 @@ func (j *jsiiProxy_KubernetesCluster)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -452,7 +549,7 @@ func (j *jsiiProxy_KubernetesCluster)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetId(val *string) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetId(val *string) {
 	if err := j.validateSetIdParameters(val); err != nil {
 		panic(err)
 	}
@@ -463,7 +560,18 @@ func (j *jsiiProxy_KubernetesCluster)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
@@ -474,7 +582,7 @@ func (j *jsiiProxy_KubernetesCluster)SetLifecycle(val *cdktf.TerraformResourceLi
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetName(val *string) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetName(val *string) {
 	if err := j.validateSetNameParameters(val); err != nil {
 		panic(err)
 	}
@@ -485,18 +593,29 @@ func (j *jsiiProxy_KubernetesCluster)SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetNetwork(val *string) {
-	if err := j.validateSetNetworkParameters(val); err != nil {
+func (j *jsiiProxy_KubernetesNodeGroup)SetNodeCount(val *float64) {
+	if err := j.validateSetNodeCountParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"network",
+		"nodeCount",
 		val,
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetPlan(val *string) {
+	if err := j.validateSetPlanParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"plan",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -504,7 +623,7 @@ func (j *jsiiProxy_KubernetesCluster)SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetProvisioners(val *[]interface{}) {
 	if err := j.validateSetProvisionersParameters(val); err != nil {
 		panic(err)
 	}
@@ -515,13 +634,13 @@ func (j *jsiiProxy_KubernetesCluster)SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesCluster)SetZone(val *string) {
-	if err := j.validateSetZoneParameters(val); err != nil {
+func (j *jsiiProxy_KubernetesNodeGroup)SetSshKeys(val *[]*string) {
+	if err := j.validateSetSshKeysParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"zone",
+		"sshKeys",
 		val,
 	)
 }
@@ -543,16 +662,16 @@ func (j *jsiiProxy_KubernetesCluster)SetZone(val *string) {
 // this type-testing method instead.
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
-func KubernetesCluster_IsConstruct(x interface{}) *bool {
+func KubernetesNodeGroup_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateKubernetesCluster_IsConstructParameters(x); err != nil {
+	if err := validateKubernetesNodeGroup_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesCluster",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroup",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -562,16 +681,16 @@ func KubernetesCluster_IsConstruct(x interface{}) *bool {
 }
 
 // Experimental.
-func KubernetesCluster_IsTerraformElement(x interface{}) *bool {
+func KubernetesNodeGroup_IsTerraformElement(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateKubernetesCluster_IsTerraformElementParameters(x); err != nil {
+	if err := validateKubernetesNodeGroup_IsTerraformElementParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesCluster",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroup",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -581,16 +700,16 @@ func KubernetesCluster_IsTerraformElement(x interface{}) *bool {
 }
 
 // Experimental.
-func KubernetesCluster_IsTerraformResource(x interface{}) *bool {
+func KubernetesNodeGroup_IsTerraformResource(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateKubernetesCluster_IsTerraformResourceParameters(x); err != nil {
+	if err := validateKubernetesNodeGroup_IsTerraformResourceParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesCluster",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroup",
 		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
@@ -599,18 +718,18 @@ func KubernetesCluster_IsTerraformResource(x interface{}) *bool {
 	return returns
 }
 
-func KubernetesCluster_TfResourceType() *string {
+func KubernetesNodeGroup_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-upcloud.kubernetesCluster.KubernetesCluster",
+		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroup",
 		"tfResourceType",
 		&returns,
 	)
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) AddOverride(path *string, value interface{}) {
+func (k *jsiiProxy_KubernetesNodeGroup) AddOverride(path *string, value interface{}) {
 	if err := k.validateAddOverrideParameters(path, value); err != nil {
 		panic(err)
 	}
@@ -621,7 +740,7 @@ func (k *jsiiProxy_KubernetesCluster) AddOverride(path *string, value interface{
 	)
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+func (k *jsiiProxy_KubernetesNodeGroup) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
 	if err := k.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -637,7 +756,7 @@ func (k *jsiiProxy_KubernetesCluster) GetAnyMapAttribute(terraformAttribute *str
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (k *jsiiProxy_KubernetesNodeGroup) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := k.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -653,7 +772,7 @@ func (k *jsiiProxy_KubernetesCluster) GetBooleanAttribute(terraformAttribute *st
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+func (k *jsiiProxy_KubernetesNodeGroup) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
 	if err := k.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -669,7 +788,7 @@ func (k *jsiiProxy_KubernetesCluster) GetBooleanMapAttribute(terraformAttribute 
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetListAttribute(terraformAttribute *string) *[]*string {
+func (k *jsiiProxy_KubernetesNodeGroup) GetListAttribute(terraformAttribute *string) *[]*string {
 	if err := k.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -685,7 +804,7 @@ func (k *jsiiProxy_KubernetesCluster) GetListAttribute(terraformAttribute *strin
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetNumberAttribute(terraformAttribute *string) *float64 {
+func (k *jsiiProxy_KubernetesNodeGroup) GetNumberAttribute(terraformAttribute *string) *float64 {
 	if err := k.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -701,7 +820,7 @@ func (k *jsiiProxy_KubernetesCluster) GetNumberAttribute(terraformAttribute *str
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+func (k *jsiiProxy_KubernetesNodeGroup) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
 	if err := k.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -717,7 +836,7 @@ func (k *jsiiProxy_KubernetesCluster) GetNumberListAttribute(terraformAttribute 
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+func (k *jsiiProxy_KubernetesNodeGroup) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
 	if err := k.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -733,7 +852,7 @@ func (k *jsiiProxy_KubernetesCluster) GetNumberMapAttribute(terraformAttribute *
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetStringAttribute(terraformAttribute *string) *string {
+func (k *jsiiProxy_KubernetesNodeGroup) GetStringAttribute(terraformAttribute *string) *string {
 	if err := k.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -749,7 +868,7 @@ func (k *jsiiProxy_KubernetesCluster) GetStringAttribute(terraformAttribute *str
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+func (k *jsiiProxy_KubernetesNodeGroup) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
 	if err := k.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -765,7 +884,7 @@ func (k *jsiiProxy_KubernetesCluster) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (k *jsiiProxy_KubernetesNodeGroup) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := k.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -781,7 +900,7 @@ func (k *jsiiProxy_KubernetesCluster) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) OverrideLogicalId(newLogicalId *string) {
+func (k *jsiiProxy_KubernetesNodeGroup) OverrideLogicalId(newLogicalId *string) {
 	if err := k.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
 	}
@@ -792,7 +911,29 @@ func (k *jsiiProxy_KubernetesCluster) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (k *jsiiProxy_KubernetesCluster) ResetId() {
+func (k *jsiiProxy_KubernetesNodeGroup) PutKubeletArgs(value interface{}) {
+	if err := k.validatePutKubeletArgsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putKubeletArgs",
+		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) PutTaint(value interface{}) {
+	if err := k.validatePutTaintParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putTaint",
+		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) ResetId() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetId",
@@ -800,7 +941,23 @@ func (k *jsiiProxy_KubernetesCluster) ResetId() {
 	)
 }
 
-func (k *jsiiProxy_KubernetesCluster) ResetOverrideLogicalId() {
+func (k *jsiiProxy_KubernetesNodeGroup) ResetKubeletArgs() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetKubeletArgs",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) ResetLabels() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetLabels",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetOverrideLogicalId",
@@ -808,7 +965,23 @@ func (k *jsiiProxy_KubernetesCluster) ResetOverrideLogicalId() {
 	)
 }
 
-func (k *jsiiProxy_KubernetesCluster) SynthesizeAttributes() *map[string]interface{} {
+func (k *jsiiProxy_KubernetesNodeGroup) ResetSshKeys() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSshKeys",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) ResetTaint() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetTaint",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -821,7 +994,7 @@ func (k *jsiiProxy_KubernetesCluster) SynthesizeAttributes() *map[string]interfa
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) ToMetadata() interface{} {
+func (k *jsiiProxy_KubernetesNodeGroup) ToMetadata() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -834,7 +1007,7 @@ func (k *jsiiProxy_KubernetesCluster) ToMetadata() interface{} {
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) ToString() *string {
+func (k *jsiiProxy_KubernetesNodeGroup) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -847,7 +1020,7 @@ func (k *jsiiProxy_KubernetesCluster) ToString() *string {
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesCluster) ToTerraform() interface{} {
+func (k *jsiiProxy_KubernetesNodeGroup) ToTerraform() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(

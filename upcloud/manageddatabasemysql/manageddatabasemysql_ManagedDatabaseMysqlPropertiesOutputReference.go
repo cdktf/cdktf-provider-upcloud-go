@@ -10,7 +10,6 @@ import (
 
 type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	cdktf.ComplexObject
-	AdditionalBackupRegions() *[]*string
 	AdminPassword() *string
 	SetAdminPassword(val *string)
 	AdminPasswordInput() *string
@@ -235,16 +234,6 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 // The jsii proxy struct for ManagedDatabaseMysqlPropertiesOutputReference
 type jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference struct {
 	internal.Type__cdktfComplexObject
-}
-
-func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) AdditionalBackupRegions() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"additionalBackupRegions",
-		&returns,
-	)
-	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) AdminPassword() *string {

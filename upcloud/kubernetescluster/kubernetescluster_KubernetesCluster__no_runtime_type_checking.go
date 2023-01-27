@@ -52,10 +52,6 @@ func (k *jsiiProxy_KubernetesCluster) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesCluster) validatePutNodeGroupParameters(value interface{}) error {
-	return nil
-}
-
 func validateKubernetesCluster_IsConstructParameters(x interface{}) error {
 	return nil
 }

@@ -27,10 +27,6 @@ type KubernetesClusterConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_cluster#network KubernetesCluster#network}
 	Network *string `field:"required" json:"network" yaml:"network"`
-	// node_group block.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_cluster#node_group KubernetesCluster#node_group}
-	NodeGroup interface{} `field:"required" json:"nodeGroup" yaml:"nodeGroup"`
 	// Zone in which the Kubernetes cluster will be hosted, e.g. `de-fra1`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_cluster#zone KubernetesCluster#zone}

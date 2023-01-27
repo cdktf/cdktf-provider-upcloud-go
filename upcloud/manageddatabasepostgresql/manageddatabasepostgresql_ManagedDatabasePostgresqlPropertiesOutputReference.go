@@ -10,7 +10,6 @@ import (
 
 type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	cdktf.ComplexObject
-	AdditionalBackupRegions() *[]*string
 	AdminPassword() *string
 	SetAdminPassword(val *string)
 	AdminPasswordInput() *string
@@ -86,7 +85,6 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	DefaultToastCompression() *string
 	SetDefaultToastCompression(val *string)
 	DefaultToastCompressionInput() *string
-	EnableIpv6() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
 	IdleInTransactionSessionTimeout() *float64
@@ -348,16 +346,6 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 // The jsii proxy struct for ManagedDatabasePostgresqlPropertiesOutputReference
 type jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference struct {
 	internal.Type__cdktfComplexObject
-}
-
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) AdditionalBackupRegions() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"additionalBackupRegions",
-		&returns,
-	)
-	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) AdminPassword() *string {
@@ -785,16 +773,6 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) DefaultTo
 	_jsii_.Get(
 		j,
 		"defaultToastCompressionInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) EnableIpv6() cdktf.IResolvable {
-	var returns cdktf.IResolvable
-	_jsii_.Get(
-		j,
-		"enableIpv6",
 		&returns,
 	)
 	return returns
