@@ -2,7 +2,7 @@ package server
 
 
 type ServerSimpleBackup struct {
-	// Simple backup plan. Accepted values: dailies, weeklies, monthlies.
+	// Simple backup plan. Accepted values: daily, dailies, weeklies, monthlies.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/server#plan Server#plan}
 	Plan *string `field:"required" json:"plan" yaml:"plan"`
