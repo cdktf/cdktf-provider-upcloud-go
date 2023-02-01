@@ -12,6 +12,8 @@ func init() {
 		reflect.TypeOf((*KubernetesNodeGroup)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "antiAffinity", GoGetter: "AntiAffinity"},
+			_jsii_.MemberProperty{JsiiProperty: "antiAffinityInput", GoGetter: "AntiAffinityInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "cluster", GoGetter: "Cluster"},
 			_jsii_.MemberProperty{JsiiProperty: "clusterInput", GoGetter: "ClusterInput"},
@@ -52,6 +54,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putKubeletArgs", GoMethod: "PutKubeletArgs"},
 			_jsii_.MemberMethod{JsiiMethod: "putTaint", GoMethod: "PutTaint"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAntiAffinity", GoMethod: "ResetAntiAffinity"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetKubeletArgs", GoMethod: "ResetKubeletArgs"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLabels", GoMethod: "ResetLabels"},

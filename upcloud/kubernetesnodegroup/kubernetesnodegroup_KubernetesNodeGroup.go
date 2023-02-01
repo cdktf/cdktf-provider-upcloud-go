@@ -12,6 +12,9 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group upcloud_kubernetes_node_group}.
 type KubernetesNodeGroup interface {
 	cdktf.TerraformResource
+	AntiAffinity() interface{}
+	SetAntiAffinity(val interface{})
+	AntiAffinityInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Cluster() *string
@@ -110,6 +113,7 @@ type KubernetesNodeGroup interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutKubeletArgs(value interface{})
 	PutTaint(value interface{})
+	ResetAntiAffinity()
 	ResetId()
 	ResetKubeletArgs()
 	ResetLabels()
@@ -131,6 +135,26 @@ type KubernetesNodeGroup interface {
 // The jsii proxy struct for KubernetesNodeGroup
 type jsiiProxy_KubernetesNodeGroup struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) AntiAffinity() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"antiAffinity",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) AntiAffinityInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"antiAffinityInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_KubernetesNodeGroup) CdktfStack() cdktf.TerraformStack {
@@ -500,6 +524,17 @@ func NewKubernetesNodeGroup_Override(k KubernetesNodeGroup, scope constructs.Con
 		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroup",
 		[]interface{}{scope, id, config},
 		k,
+	)
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup)SetAntiAffinity(val interface{}) {
+	if err := j.validateSetAntiAffinityParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"antiAffinity",
+		val,
 	)
 }
 
@@ -930,6 +965,14 @@ func (k *jsiiProxy_KubernetesNodeGroup) PutTaint(value interface{}) {
 		k,
 		"putTaint",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) ResetAntiAffinity() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetAntiAffinity",
+		nil, // no parameters
 	)
 }
 

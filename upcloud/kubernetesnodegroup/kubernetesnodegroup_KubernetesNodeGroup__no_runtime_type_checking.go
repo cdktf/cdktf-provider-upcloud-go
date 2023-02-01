@@ -72,6 +72,10 @@ func validateKubernetesNodeGroup_IsTerraformResourceParameters(x interface{}) er
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetAntiAffinityParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_KubernetesNodeGroup) validateSetClusterParameters(val *string) error {
 	return nil
 }

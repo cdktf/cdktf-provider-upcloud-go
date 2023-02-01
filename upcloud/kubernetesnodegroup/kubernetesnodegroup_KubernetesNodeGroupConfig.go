@@ -35,6 +35,12 @@ type KubernetesNodeGroupConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group#plan KubernetesNodeGroup#plan}
 	Plan *string `field:"required" json:"plan" yaml:"plan"`
+	// If set to true, nodes in this group will be placed on separate compute hosts.
+	//
+	// Please note that anti-affinity policy is considered "best effort" and enabling it does not fully guarantee that the nodes will end up on different hardware.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group#anti_affinity KubernetesNodeGroup#anti_affinity}
+	AntiAffinity interface{} `field:"optional" json:"antiAffinity" yaml:"antiAffinity"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group#id KubernetesNodeGroup#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
