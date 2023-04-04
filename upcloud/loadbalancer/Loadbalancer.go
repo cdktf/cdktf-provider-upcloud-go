@@ -45,6 +45,9 @@ type Loadbalancer interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -112,6 +115,7 @@ type Loadbalancer interface {
 	PutNetworks(value interface{})
 	ResetConfiguredStatus()
 	ResetId()
+	ResetLabels()
 	ResetNetwork()
 	ResetNetworks()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -277,6 +281,26 @@ func (j *jsiiProxy_Loadbalancer) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -575,6 +599,17 @@ func (j *jsiiProxy_Loadbalancer)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Loadbalancer)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
 		val,
 	)
 }
@@ -942,6 +977,14 @@ func (l *jsiiProxy_Loadbalancer) ResetId() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_Loadbalancer) ResetLabels() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLabels",
 		nil, // no parameters
 	)
 }

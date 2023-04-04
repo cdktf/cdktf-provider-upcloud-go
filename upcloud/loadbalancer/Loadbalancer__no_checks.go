@@ -80,6 +80,10 @@ func (j *jsiiProxy_Loadbalancer) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Loadbalancer) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Loadbalancer) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
