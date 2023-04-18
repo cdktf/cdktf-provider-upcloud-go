@@ -2,14 +2,14 @@ package loadbalancerresolver
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/loadbalancerresolver/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/loadbalancerresolver/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_resolver upcloud_loadbalancer_resolver}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver}.
 type LoadbalancerResolver interface {
 	cdktf.TerraformResource
 	CacheInvalid() *float64
@@ -27,9 +27,9 @@ type LoadbalancerResolver interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -199,8 +199,8 @@ func (j *jsiiProxy_LoadbalancerResolver) ConstructNodeMetadata() *map[string]int
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_LoadbalancerResolver) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -470,7 +470,7 @@ func (j *jsiiProxy_LoadbalancerResolver) TimeoutRetryInput() *float64 {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
 func NewLoadbalancerResolver(scope constructs.Construct, id *string, config *LoadbalancerResolverConfig) LoadbalancerResolver {
 	_init_.Initialize()
 
@@ -488,7 +488,7 @@ func NewLoadbalancerResolver(scope constructs.Construct, id *string, config *Loa
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
 func NewLoadbalancerResolver_Override(l LoadbalancerResolver, scope constructs.Construct, id *string, config *LoadbalancerResolverConfig) {
 	_init_.Initialize()
 
@@ -532,7 +532,10 @@ func (j *jsiiProxy_LoadbalancerResolver)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerResolver)SetCount(val *float64) {
+func (j *jsiiProxy_LoadbalancerResolver)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

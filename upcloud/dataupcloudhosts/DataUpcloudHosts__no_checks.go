@@ -64,6 +64,10 @@ func validateDataUpcloudHosts_IsTerraformElementParameters(x interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_DataUpcloudHosts) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataUpcloudHosts) validateSetIdParameters(val *string) error {
 	return nil
 }

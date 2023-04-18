@@ -4,7 +4,7 @@ package objectstorage
 type ObjectStorageBucket struct {
 	// The name of the bucket.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/upcloud/r/object_storage#name ObjectStorage#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/object_storage#name ObjectStorage#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 }
 

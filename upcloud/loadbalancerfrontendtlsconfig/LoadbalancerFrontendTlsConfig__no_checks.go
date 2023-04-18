@@ -72,6 +72,10 @@ func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) validateSetConnectionParameter
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) validateSetFrontendParameters(val *string) error {
 	return nil
 }

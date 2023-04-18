@@ -2,14 +2,14 @@ package manageddatabaselogicaldatabase
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/manageddatabaselogicaldatabase/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/manageddatabaselogicaldatabase/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_logical_database upcloud_managed_database_logical_database}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database}.
 type ManagedDatabaseLogicalDatabase interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -27,9 +27,9 @@ type ManagedDatabaseLogicalDatabase interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -189,8 +189,8 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) ConstructNodeMetadata() *map[
 	return returns
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -380,7 +380,7 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
 func NewManagedDatabaseLogicalDatabase(scope constructs.Construct, id *string, config *ManagedDatabaseLogicalDatabaseConfig) ManagedDatabaseLogicalDatabase {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewManagedDatabaseLogicalDatabase(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
 func NewManagedDatabaseLogicalDatabase_Override(m ManagedDatabaseLogicalDatabase, scope constructs.Construct, id *string, config *ManagedDatabaseLogicalDatabaseConfig) {
 	_init_.Initialize()
 
@@ -442,7 +442,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetConnection(val interface{})
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetCount(val *float64) {
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

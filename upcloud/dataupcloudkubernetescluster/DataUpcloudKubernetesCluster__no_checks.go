@@ -64,6 +64,10 @@ func validateDataUpcloudKubernetesCluster_IsTerraformElementParameters(x interfa
 	return nil
 }
 
+func (j *jsiiProxy_DataUpcloudKubernetesCluster) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataUpcloudKubernetesCluster) validateSetIdParameters(val *string) error {
 	return nil
 }

@@ -2,14 +2,14 @@ package kubernetesnodegroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/kubernetesnodegroup/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/kubernetesnodegroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group upcloud_kubernetes_node_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
 type KubernetesNodeGroup interface {
 	cdktf.TerraformResource
 	AntiAffinity() interface{}
@@ -27,9 +27,9 @@ type KubernetesNodeGroup interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -207,8 +207,8 @@ func (j *jsiiProxy_KubernetesNodeGroup) ConstructNodeMetadata() *map[string]inte
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesNodeGroup) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_KubernetesNodeGroup) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -498,7 +498,7 @@ func (j *jsiiProxy_KubernetesNodeGroup) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) KubernetesNodeGroup {
 	_init_.Initialize()
 
@@ -516,7 +516,7 @@ func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *Kube
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup_Override(k KubernetesNodeGroup, scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) {
 	_init_.Initialize()
 
@@ -560,7 +560,10 @@ func (j *jsiiProxy_KubernetesNodeGroup)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_KubernetesNodeGroup)SetCount(val *float64) {
+func (j *jsiiProxy_KubernetesNodeGroup)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

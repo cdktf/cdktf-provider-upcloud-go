@@ -2,14 +2,14 @@ package dataupcloudkubernetescluster
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/dataupcloudkubernetescluster/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/dataupcloudkubernetescluster/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/d/kubernetes_cluster upcloud_kubernetes_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster}.
 type DataUpcloudKubernetesCluster interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -20,9 +20,9 @@ type DataUpcloudKubernetesCluster interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -152,8 +152,8 @@ func (j *jsiiProxy_DataUpcloudKubernetesCluster) ConstructNodeMetadata() *map[st
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudKubernetesCluster) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataUpcloudKubernetesCluster) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -323,7 +323,7 @@ func (j *jsiiProxy_DataUpcloudKubernetesCluster) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
 func NewDataUpcloudKubernetesCluster(scope constructs.Construct, id *string, config *DataUpcloudKubernetesClusterConfig) DataUpcloudKubernetesCluster {
 	_init_.Initialize()
 
@@ -341,7 +341,7 @@ func NewDataUpcloudKubernetesCluster(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
 func NewDataUpcloudKubernetesCluster_Override(d DataUpcloudKubernetesCluster, scope constructs.Construct, id *string, config *DataUpcloudKubernetesClusterConfig) {
 	_init_.Initialize()
 
@@ -352,7 +352,10 @@ func NewDataUpcloudKubernetesCluster_Override(d DataUpcloudKubernetesCluster, sc
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudKubernetesCluster)SetCount(val *float64) {
+func (j *jsiiProxy_DataUpcloudKubernetesCluster)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

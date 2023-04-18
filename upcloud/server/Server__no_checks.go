@@ -88,6 +88,10 @@ func (j *jsiiProxy_Server) validateSetConnectionParameters(val interface{}) erro
 	return nil
 }
 
+func (j *jsiiProxy_Server) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Server) validateSetCpuParameters(val *float64) error {
 	return nil
 }

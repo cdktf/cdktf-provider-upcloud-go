@@ -2,14 +2,14 @@ package loadbalancerdynamicbackendmember
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/loadbalancerdynamicbackendmember/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/loadbalancerdynamicbackendmember/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member}.
 type LoadbalancerDynamicBackendMember interface {
 	cdktf.TerraformResource
 	Backend() *string
@@ -24,9 +24,9 @@ type LoadbalancerDynamicBackendMember interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -179,8 +179,8 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) ConstructNodeMetadata() *ma
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -450,7 +450,7 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) WeightInput() *float64 {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
 func NewLoadbalancerDynamicBackendMember(scope constructs.Construct, id *string, config *LoadbalancerDynamicBackendMemberConfig) LoadbalancerDynamicBackendMember {
 	_init_.Initialize()
 
@@ -468,7 +468,7 @@ func NewLoadbalancerDynamicBackendMember(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
 func NewLoadbalancerDynamicBackendMember_Override(l LoadbalancerDynamicBackendMember, scope constructs.Construct, id *string, config *LoadbalancerDynamicBackendMemberConfig) {
 	_init_.Initialize()
 
@@ -501,7 +501,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetConnection(val interface{
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetCount(val *float64) {
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -2,14 +2,14 @@ package firewallrules
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/firewallrules/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/firewallrules/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/firewall_rules upcloud_firewall_rules}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/firewall_rules upcloud_firewall_rules}.
 type FirewallRules interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type FirewallRules interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -141,8 +141,8 @@ func (j *jsiiProxy_FirewallRules) ConstructNodeMetadata() *map[string]interface{
 	return returns
 }
 
-func (j *jsiiProxy_FirewallRules) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_FirewallRules) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -332,7 +332,7 @@ func (j *jsiiProxy_FirewallRules) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/firewall_rules upcloud_firewall_rules} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
 func NewFirewallRules(scope constructs.Construct, id *string, config *FirewallRulesConfig) FirewallRules {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewFirewallRules(scope constructs.Construct, id *string, config *FirewallRu
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/firewall_rules upcloud_firewall_rules} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
 func NewFirewallRules_Override(f FirewallRules, scope constructs.Construct, id *string, config *FirewallRulesConfig) {
 	_init_.Initialize()
 
@@ -372,7 +372,10 @@ func (j *jsiiProxy_FirewallRules)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FirewallRules)SetCount(val *float64) {
+func (j *jsiiProxy_FirewallRules)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -2,14 +2,14 @@ package loadbalancer
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/loadbalancer/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/loadbalancer/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer upcloud_loadbalancer}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer upcloud_loadbalancer}.
 type Loadbalancer interface {
 	cdktf.TerraformResource
 	Backends() *[]*string
@@ -25,9 +25,9 @@ type Loadbalancer interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -196,8 +196,8 @@ func (j *jsiiProxy_Loadbalancer) ConstructNodeMetadata() *map[string]interface{}
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Loadbalancer) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -517,7 +517,7 @@ func (j *jsiiProxy_Loadbalancer) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer(scope constructs.Construct, id *string, config *LoadbalancerConfig) Loadbalancer {
 	_init_.Initialize()
 
@@ -535,7 +535,7 @@ func NewLoadbalancer(scope constructs.Construct, id *string, config *Loadbalance
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer_Override(l Loadbalancer, scope constructs.Construct, id *string, config *LoadbalancerConfig) {
 	_init_.Initialize()
 
@@ -568,7 +568,10 @@ func (j *jsiiProxy_Loadbalancer)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Loadbalancer)SetCount(val *float64) {
+func (j *jsiiProxy_Loadbalancer)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

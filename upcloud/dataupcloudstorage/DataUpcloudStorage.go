@@ -2,14 +2,14 @@ package dataupcloudstorage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/dataupcloudstorage/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/dataupcloudstorage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/d/storage upcloud_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/storage upcloud_storage}.
 type DataUpcloudStorage interface {
 	cdktf.TerraformDataSource
 	AccessType() *string
@@ -20,9 +20,9 @@ type DataUpcloudStorage interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -164,8 +164,8 @@ func (j *jsiiProxy_DataUpcloudStorage) ConstructNodeMetadata() *map[string]inter
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudStorage) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataUpcloudStorage) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -445,7 +445,7 @@ func (j *jsiiProxy_DataUpcloudStorage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/storage upcloud_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/storage upcloud_storage} Data Source.
 func NewDataUpcloudStorage(scope constructs.Construct, id *string, config *DataUpcloudStorageConfig) DataUpcloudStorage {
 	_init_.Initialize()
 
@@ -463,7 +463,7 @@ func NewDataUpcloudStorage(scope constructs.Construct, id *string, config *DataU
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/storage upcloud_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/storage upcloud_storage} Data Source.
 func NewDataUpcloudStorage_Override(d DataUpcloudStorage, scope constructs.Construct, id *string, config *DataUpcloudStorageConfig) {
 	_init_.Initialize()
 
@@ -485,7 +485,10 @@ func (j *jsiiProxy_DataUpcloudStorage)SetAccessType(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudStorage)SetCount(val *float64) {
+func (j *jsiiProxy_DataUpcloudStorage)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

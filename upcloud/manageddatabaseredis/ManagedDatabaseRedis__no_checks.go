@@ -72,6 +72,10 @@ func (j *jsiiProxy_ManagedDatabaseRedis) validateSetConnectionParameters(val int
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedis) validateSetIdParameters(val *string) error {
 	return nil
 }

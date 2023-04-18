@@ -72,6 +72,10 @@ func (j *jsiiProxy_FloatingIpAddress) validateSetConnectionParameters(val interf
 	return nil
 }
 
+func (j *jsiiProxy_FloatingIpAddress) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FloatingIpAddress) validateSetFamilyParameters(val *string) error {
 	return nil
 }

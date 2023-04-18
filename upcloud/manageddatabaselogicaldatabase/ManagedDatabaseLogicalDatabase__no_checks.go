@@ -76,6 +76,10 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) validateSetConnectionParamete
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) validateSetIdParameters(val *string) error {
 	return nil
 }

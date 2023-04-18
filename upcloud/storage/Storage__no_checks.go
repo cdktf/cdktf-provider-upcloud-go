@@ -80,6 +80,10 @@ func (j *jsiiProxy_Storage) validateSetConnectionParameters(val interface{}) err
 	return nil
 }
 
+func (j *jsiiProxy_Storage) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Storage) validateSetDeleteAutoresizeBackupParameters(val interface{}) error {
 	return nil
 }

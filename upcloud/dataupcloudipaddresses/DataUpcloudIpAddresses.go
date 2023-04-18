@@ -2,14 +2,14 @@ package dataupcloudipaddresses
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/dataupcloudipaddresses/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/dataupcloudipaddresses/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/d/ip_addresses upcloud_ip_addresses}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/ip_addresses upcloud_ip_addresses}.
 type DataUpcloudIpAddresses interface {
 	cdktf.TerraformDataSource
 	Addresses() DataUpcloudIpAddressesAddressesList
@@ -18,9 +18,9 @@ type DataUpcloudIpAddresses interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -128,8 +128,8 @@ func (j *jsiiProxy_DataUpcloudIpAddresses) ConstructNodeMetadata() *map[string]i
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddresses) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataUpcloudIpAddresses) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -269,7 +269,7 @@ func (j *jsiiProxy_DataUpcloudIpAddresses) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/ip_addresses upcloud_ip_addresses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
 func NewDataUpcloudIpAddresses(scope constructs.Construct, id *string, config *DataUpcloudIpAddressesConfig) DataUpcloudIpAddresses {
 	_init_.Initialize()
 
@@ -287,7 +287,7 @@ func NewDataUpcloudIpAddresses(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/ip_addresses upcloud_ip_addresses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
 func NewDataUpcloudIpAddresses_Override(d DataUpcloudIpAddresses, scope constructs.Construct, id *string, config *DataUpcloudIpAddressesConfig) {
 	_init_.Initialize()
 
@@ -298,7 +298,10 @@ func NewDataUpcloudIpAddresses_Override(d DataUpcloudIpAddresses, scope construc
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddresses)SetCount(val *float64) {
+func (j *jsiiProxy_DataUpcloudIpAddresses)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

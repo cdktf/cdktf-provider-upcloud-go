@@ -68,6 +68,10 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) validateSetConnectionPa
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) validateSetHostnamesParameters(val *[]*string) error {
 	return nil
 }

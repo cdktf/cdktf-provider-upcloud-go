@@ -2,14 +2,14 @@ package storage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/storage/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/storage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/storage upcloud_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/storage upcloud_storage}.
 type Storage interface {
 	cdktf.TerraformResource
 	BackupRule() StorageBackupRuleOutputReference
@@ -25,9 +25,9 @@ type Storage interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	DeleteAutoresizeBackup() interface{}
 	SetDeleteAutoresizeBackup(val interface{})
 	DeleteAutoresizeBackupInput() interface{}
@@ -208,8 +208,8 @@ func (j *jsiiProxy_Storage) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Storage) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Storage) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -499,7 +499,7 @@ func (j *jsiiProxy_Storage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/storage upcloud_storage} Resource.
 func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) Storage {
 	_init_.Initialize()
 
@@ -517,7 +517,7 @@ func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) S
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/storage upcloud_storage} Resource.
 func NewStorage_Override(s Storage, scope constructs.Construct, id *string, config *StorageConfig) {
 	_init_.Initialize()
 
@@ -539,7 +539,10 @@ func (j *jsiiProxy_Storage)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Storage)SetCount(val *float64) {
+func (j *jsiiProxy_Storage)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

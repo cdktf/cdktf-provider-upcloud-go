@@ -72,6 +72,10 @@ func (j *jsiiProxy_LoadbalancerManualCertificateBundle) validateSetConnectionPar
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerManualCertificateBundle) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerManualCertificateBundle) validateSetIdParameters(val *string) error {
 	return nil
 }

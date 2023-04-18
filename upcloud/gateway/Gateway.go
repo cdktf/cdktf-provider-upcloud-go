@@ -2,14 +2,14 @@ package gateway
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/gateway/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/gateway/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/gateway upcloud_gateway}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/gateway upcloud_gateway}.
 type Gateway interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -24,9 +24,9 @@ type Gateway interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -176,8 +176,8 @@ func (j *jsiiProxy_Gateway) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Gateway) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Gateway) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -437,7 +437,7 @@ func (j *jsiiProxy_Gateway) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/gateway upcloud_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/gateway upcloud_gateway} Resource.
 func NewGateway(scope constructs.Construct, id *string, config *GatewayConfig) Gateway {
 	_init_.Initialize()
 
@@ -455,7 +455,7 @@ func NewGateway(scope constructs.Construct, id *string, config *GatewayConfig) G
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/gateway upcloud_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/gateway upcloud_gateway} Resource.
 func NewGateway_Override(g Gateway, scope constructs.Construct, id *string, config *GatewayConfig) {
 	_init_.Initialize()
 
@@ -488,7 +488,10 @@ func (j *jsiiProxy_Gateway)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Gateway)SetCount(val *float64) {
+func (j *jsiiProxy_Gateway)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

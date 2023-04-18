@@ -2,14 +2,14 @@ package dataupcloudtags
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/dataupcloudtags/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/dataupcloudtags/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/d/tags upcloud_tags}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/tags upcloud_tags}.
 type DataUpcloudTags interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataUpcloudTags interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -118,8 +118,8 @@ func (j *jsiiProxy_DataUpcloudTags) ConstructNodeMetadata() *map[string]interfac
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudTags) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataUpcloudTags) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -269,7 +269,7 @@ func (j *jsiiProxy_DataUpcloudTags) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/tags upcloud_tags} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/tags upcloud_tags} Data Source.
 func NewDataUpcloudTags(scope constructs.Construct, id *string, config *DataUpcloudTagsConfig) DataUpcloudTags {
 	_init_.Initialize()
 
@@ -287,7 +287,7 @@ func NewDataUpcloudTags(scope constructs.Construct, id *string, config *DataUpcl
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/d/tags upcloud_tags} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/data-sources/tags upcloud_tags} Data Source.
 func NewDataUpcloudTags_Override(d DataUpcloudTags, scope constructs.Construct, id *string, config *DataUpcloudTagsConfig) {
 	_init_.Initialize()
 
@@ -298,7 +298,10 @@ func NewDataUpcloudTags_Override(d DataUpcloudTags, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudTags)SetCount(val *float64) {
+func (j *jsiiProxy_DataUpcloudTags)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

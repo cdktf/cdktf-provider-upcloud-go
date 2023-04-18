@@ -72,6 +72,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) validateSetConnectionParameters(val int
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysql) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysql) validateSetIdParameters(val *string) error {
 	return nil
 }

@@ -72,6 +72,10 @@ func (j *jsiiProxy_LoadbalancerStaticBackendMember) validateSetConnectionParamet
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerStaticBackendMember) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerStaticBackendMember) validateSetEnabledParameters(val interface{}) error {
 	return nil
 }

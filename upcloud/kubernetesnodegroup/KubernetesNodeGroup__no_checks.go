@@ -84,6 +84,10 @@ func (j *jsiiProxy_KubernetesNodeGroup) validateSetConnectionParameters(val inte
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_KubernetesNodeGroup) validateSetIdParameters(val *string) error {
 	return nil
 }

@@ -68,6 +68,10 @@ func (j *jsiiProxy_DataUpcloudStorage) validateSetAccessTypeParameters(val *stri
 	return nil
 }
 
+func (j *jsiiProxy_DataUpcloudStorage) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataUpcloudStorage) validateSetIdParameters(val *string) error {
 	return nil
 }

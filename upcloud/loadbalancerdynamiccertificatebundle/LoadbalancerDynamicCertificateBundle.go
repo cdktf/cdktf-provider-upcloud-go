@@ -2,14 +2,14 @@ package loadbalancerdynamiccertificatebundle
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/loadbalancerdynamiccertificatebundle/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/loadbalancerdynamiccertificatebundle/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle}.
 type LoadbalancerDynamicCertificateBundle interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type LoadbalancerDynamicCertificateBundle interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -147,8 +147,8 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) ConstructNodeMetadata()
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -388,7 +388,7 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) TerraformResourceType()
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
 func NewLoadbalancerDynamicCertificateBundle(scope constructs.Construct, id *string, config *LoadbalancerDynamicCertificateBundleConfig) LoadbalancerDynamicCertificateBundle {
 	_init_.Initialize()
 
@@ -406,7 +406,7 @@ func NewLoadbalancerDynamicCertificateBundle(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
 func NewLoadbalancerDynamicCertificateBundle_Override(l LoadbalancerDynamicCertificateBundle, scope constructs.Construct, id *string, config *LoadbalancerDynamicCertificateBundleConfig) {
 	_init_.Initialize()
 
@@ -428,7 +428,10 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle)SetConnection(val interf
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle)SetCount(val *float64) {
+func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

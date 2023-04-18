@@ -72,6 +72,10 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) validateSetConnectionParame
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerDynamicBackendMember) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerDynamicBackendMember) validateSetEnabledParameters(val interface{}) error {
 	return nil
 }

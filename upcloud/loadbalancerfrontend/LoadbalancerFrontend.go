@@ -2,14 +2,14 @@ package loadbalancerfrontend
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v5/loadbalancerfrontend/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/loadbalancerfrontend/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_frontend upcloud_loadbalancer_frontend}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend}.
 type LoadbalancerFrontend interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type LoadbalancerFrontend interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	DefaultBackendName() *string
 	SetDefaultBackendName(val *string)
 	DefaultBackendNameInput() *string
@@ -160,8 +160,8 @@ func (j *jsiiProxy_LoadbalancerFrontend) ConstructNodeMetadata() *map[string]int
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontend) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_LoadbalancerFrontend) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -471,7 +471,7 @@ func (j *jsiiProxy_LoadbalancerFrontend) TlsConfigs() *[]*string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
 func NewLoadbalancerFrontend(scope constructs.Construct, id *string, config *LoadbalancerFrontendConfig) LoadbalancerFrontend {
 	_init_.Initialize()
 
@@ -489,7 +489,7 @@ func NewLoadbalancerFrontend(scope constructs.Construct, id *string, config *Loa
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/upcloud/r/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
 func NewLoadbalancerFrontend_Override(l LoadbalancerFrontend, scope constructs.Construct, id *string, config *LoadbalancerFrontendConfig) {
 	_init_.Initialize()
 
@@ -511,7 +511,10 @@ func (j *jsiiProxy_LoadbalancerFrontend)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontend)SetCount(val *float64) {
+func (j *jsiiProxy_LoadbalancerFrontend)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",
