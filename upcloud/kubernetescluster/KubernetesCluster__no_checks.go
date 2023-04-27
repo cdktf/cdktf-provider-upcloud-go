@@ -88,6 +88,10 @@ func (j *jsiiProxy_KubernetesCluster) validateSetNetworkParameters(val *string) 
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesCluster) validateSetPlanParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_KubernetesCluster) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }

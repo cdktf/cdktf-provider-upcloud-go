@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule}.
 type LoadbalancerFrontendRule interface {
 	cdktf.TerraformResource
 	Actions() LoadbalancerFrontendRuleActionsOutputReference
@@ -403,7 +403,7 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
 func NewLoadbalancerFrontendRule(scope constructs.Construct, id *string, config *LoadbalancerFrontendRuleConfig) LoadbalancerFrontendRule {
 	_init_.Initialize()
 
@@ -421,7 +421,7 @@ func NewLoadbalancerFrontendRule(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
 func NewLoadbalancerFrontendRule_Override(l LoadbalancerFrontendRule, scope constructs.Construct, id *string, config *LoadbalancerFrontendRuleConfig) {
 	_init_.Initialize()
 

@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/firewall_rules upcloud_firewall_rules}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/firewall_rules upcloud_firewall_rules}.
 type FirewallRules interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -332,7 +332,7 @@ func (j *jsiiProxy_FirewallRules) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
 func NewFirewallRules(scope constructs.Construct, id *string, config *FirewallRulesConfig) FirewallRules {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewFirewallRules(scope constructs.Construct, id *string, config *FirewallRu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.9.1/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
 func NewFirewallRules_Override(f FirewallRules, scope constructs.Construct, id *string, config *FirewallRulesConfig) {
 	_init_.Initialize()
 
