@@ -1,0 +1,6 @@
+package dataupcloudmanageddatabaseopensearchindices
+
+
+type DataUpcloudManagedDatabaseOpensearchIndicesIndices struct {
+}
+

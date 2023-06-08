@@ -52,6 +52,10 @@ func (m *jsiiProxy_ManagedDatabaseUser) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseUser) validatePutOpensearchAccessControlParameters(value *ManagedDatabaseUserOpensearchAccessControl) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseUser) validatePutPgAccessControlParameters(value *ManagedDatabaseUserPgAccessControl) error {
 	return nil
 }

@@ -92,6 +92,10 @@ func (j *jsiiProxy_KubernetesCluster) validateSetPlanParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesCluster) validateSetPrivateNodeGroupsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_KubernetesCluster) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }

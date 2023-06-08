@@ -416,6 +416,14 @@ func (j *jsiiProxy_Server) validateSetMetadataParameters(val interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_Server) validateSetNicModelParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Server) validateSetPlanParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -478,6 +486,14 @@ func (j *jsiiProxy_Server) validateSetTagsParameters(val *[]*string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Server) validateSetTimezoneParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Server) validateSetTitleParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -487,6 +503,14 @@ func (j *jsiiProxy_Server) validateSetTitleParameters(val *string) error {
 }
 
 func (j *jsiiProxy_Server) validateSetUserDataParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Server) validateSetVideoModelParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

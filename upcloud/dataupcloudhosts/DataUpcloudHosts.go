@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/data-sources/hosts upcloud_hosts}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/data-sources/hosts upcloud_hosts}.
 type DataUpcloudHosts interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -269,7 +269,7 @@ func (j *jsiiProxy_DataUpcloudHosts) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/data-sources/hosts upcloud_hosts} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/data-sources/hosts upcloud_hosts} Data Source.
 func NewDataUpcloudHosts(scope constructs.Construct, id *string, config *DataUpcloudHostsConfig) DataUpcloudHosts {
 	_init_.Initialize()
 
@@ -287,7 +287,7 @@ func NewDataUpcloudHosts(scope constructs.Construct, id *string, config *DataUpc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/data-sources/hosts upcloud_hosts} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/data-sources/hosts upcloud_hosts} Data Source.
 func NewDataUpcloudHosts_Override(d DataUpcloudHosts, scope constructs.Construct, id *string, config *DataUpcloudHostsConfig) {
 	_init_.Initialize()
 

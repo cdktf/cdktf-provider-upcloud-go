@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
 type LoadbalancerBackend interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -391,7 +391,7 @@ func (j *jsiiProxy_LoadbalancerBackend) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) LoadbalancerBackend {
 	_init_.Initialize()
 
@@ -409,7 +409,7 @@ func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *Load
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend_Override(l LoadbalancerBackend, scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) {
 	_init_.Initialize()
 

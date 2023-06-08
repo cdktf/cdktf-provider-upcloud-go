@@ -64,7 +64,7 @@ func validateServerGroup_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_ServerGroup) validateSetAntiAffinityParameters(val interface{}) error {
+func (j *jsiiProxy_ServerGroup) validateSetAntiAffinityPolicyParameters(val *string) error {
 	return nil
 }
 

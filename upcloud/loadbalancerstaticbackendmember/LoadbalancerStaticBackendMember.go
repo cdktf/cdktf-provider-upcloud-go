@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member}.
 type LoadbalancerStaticBackendMember interface {
 	cdktf.TerraformResource
 	Backend() *string
@@ -448,7 +448,7 @@ func (j *jsiiProxy_LoadbalancerStaticBackendMember) WeightInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
 func NewLoadbalancerStaticBackendMember(scope constructs.Construct, id *string, config *LoadbalancerStaticBackendMemberConfig) LoadbalancerStaticBackendMember {
 	_init_.Initialize()
 
@@ -466,7 +466,7 @@ func NewLoadbalancerStaticBackendMember(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
 func NewLoadbalancerStaticBackendMember_Override(l LoadbalancerStaticBackendMember, scope constructs.Construct, id *string, config *LoadbalancerStaticBackendMemberConfig) {
 	_init_.Initialize()
 

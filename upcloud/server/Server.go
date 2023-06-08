@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/server upcloud_server}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/server upcloud_server}.
 type Server interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -68,6 +68,9 @@ type Server interface {
 	MetadataInput() interface{}
 	NetworkInterface() ServerNetworkInterfaceList
 	NetworkInterfaceInput() interface{}
+	NicModel() *string
+	SetNicModel(val *string)
+	NicModelInput() *string
 	// The tree node.
 	Node() constructs.Node
 	Plan() *string
@@ -98,12 +101,18 @@ type Server interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timezone() *string
+	SetTimezone(val *string)
+	TimezoneInput() *string
 	Title() *string
 	SetTitle(val *string)
 	TitleInput() *string
 	UserData() *string
 	SetUserData(val *string)
 	UserDataInput() *string
+	VideoModel() *string
+	SetVideoModel(val *string)
+	VideoModelInput() *string
 	Zone() *string
 	SetZone(val *string)
 	ZoneInput() *string
@@ -145,6 +154,7 @@ type Server interface {
 	ResetLogin()
 	ResetMem()
 	ResetMetadata()
+	ResetNicModel()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -153,8 +163,10 @@ type Server interface {
 	ResetStorageDevices()
 	ResetTags()
 	ResetTemplate()
+	ResetTimezone()
 	ResetTitle()
 	ResetUserData()
+	ResetVideoModel()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -460,6 +472,26 @@ func (j *jsiiProxy_Server) NetworkInterfaceInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Server) NicModel() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"nicModel",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) NicModelInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"nicModelInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Server) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -630,6 +662,26 @@ func (j *jsiiProxy_Server) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Server) Timezone() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timezone",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) TimezoneInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timezoneInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Server) Title() *string {
 	var returns *string
 	_jsii_.Get(
@@ -670,6 +722,26 @@ func (j *jsiiProxy_Server) UserDataInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Server) VideoModel() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"videoModel",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) VideoModelInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"videoModelInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Server) Zone() *string {
 	var returns *string
 	_jsii_.Get(
@@ -691,7 +763,7 @@ func (j *jsiiProxy_Server) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/server upcloud_server} Resource.
 func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Server {
 	_init_.Initialize()
 
@@ -709,7 +781,7 @@ func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Ser
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/server upcloud_server} Resource.
 func NewServer_Override(s Server, scope constructs.Construct, id *string, config *ServerConfig) {
 	_init_.Initialize()
 
@@ -857,6 +929,17 @@ func (j *jsiiProxy_Server)SetMetadata(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Server)SetNicModel(val *string) {
+	if err := j.validateSetNicModelParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"nicModel",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Server)SetPlan(val *string) {
 	if err := j.validateSetPlanParameters(val); err != nil {
 		panic(err)
@@ -898,6 +981,17 @@ func (j *jsiiProxy_Server)SetTags(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_Server)SetTimezone(val *string) {
+	if err := j.validateSetTimezoneParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"timezone",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Server)SetTitle(val *string) {
 	if err := j.validateSetTitleParameters(val); err != nil {
 		panic(err)
@@ -916,6 +1010,17 @@ func (j *jsiiProxy_Server)SetUserData(val *string) {
 	_jsii_.Set(
 		j,
 		"userData",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Server)SetVideoModel(val *string) {
+	if err := j.validateSetVideoModelParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"videoModel",
 		val,
 	)
 }
@@ -1316,6 +1421,14 @@ func (s *jsiiProxy_Server) ResetMetadata() {
 	)
 }
 
+func (s *jsiiProxy_Server) ResetNicModel() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetNicModel",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_Server) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1364,6 +1477,14 @@ func (s *jsiiProxy_Server) ResetTemplate() {
 	)
 }
 
+func (s *jsiiProxy_Server) ResetTimezone() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimezone",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_Server) ResetTitle() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1376,6 +1497,14 @@ func (s *jsiiProxy_Server) ResetUserData() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetUserData",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Server) ResetVideoModel() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetVideoModel",
 		nil, // no parameters
 	)
 }

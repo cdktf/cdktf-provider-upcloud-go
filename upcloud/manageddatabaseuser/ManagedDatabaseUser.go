@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/managed_database_user upcloud_managed_database_user}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/managed_database_user upcloud_managed_database_user}.
 type ManagedDatabaseUser interface {
 	cdktf.TerraformResource
 	Authentication() *string
@@ -48,6 +48,8 @@ type ManagedDatabaseUser interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OpensearchAccessControl() ManagedDatabaseUserOpensearchAccessControlOutputReference
+	OpensearchAccessControlInput() *ManagedDatabaseUserOpensearchAccessControl
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
@@ -103,10 +105,12 @@ type ManagedDatabaseUser interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutOpensearchAccessControl(value *ManagedDatabaseUserOpensearchAccessControl)
 	PutPgAccessControl(value *ManagedDatabaseUserPgAccessControl)
 	PutRedisAccessControl(value *ManagedDatabaseUserRedisAccessControl)
 	ResetAuthentication()
 	ResetId()
+	ResetOpensearchAccessControl()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -263,6 +267,26 @@ func (j *jsiiProxy_ManagedDatabaseUser) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) OpensearchAccessControl() ManagedDatabaseUserOpensearchAccessControlOutputReference {
+	var returns ManagedDatabaseUserOpensearchAccessControlOutputReference
+	_jsii_.Get(
+		j,
+		"opensearchAccessControl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseUser) OpensearchAccessControlInput() *ManagedDatabaseUserOpensearchAccessControl {
+	var returns *ManagedDatabaseUserOpensearchAccessControl
+	_jsii_.Get(
+		j,
+		"opensearchAccessControlInput",
 		&returns,
 	)
 	return returns
@@ -439,7 +463,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) ManagedDatabaseUser {
 	_init_.Initialize()
 
@@ -457,7 +481,7 @@ func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *Mana
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser_Override(m ManagedDatabaseUser, scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) {
 	_init_.Initialize()
 
@@ -857,6 +881,17 @@ func (m *jsiiProxy_ManagedDatabaseUser) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseUser) PutOpensearchAccessControl(value *ManagedDatabaseUserOpensearchAccessControl) {
+	if err := m.validatePutOpensearchAccessControlParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putOpensearchAccessControl",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseUser) PutPgAccessControl(value *ManagedDatabaseUserPgAccessControl) {
 	if err := m.validatePutPgAccessControlParameters(value); err != nil {
 		panic(err)
@@ -891,6 +926,14 @@ func (m *jsiiProxy_ManagedDatabaseUser) ResetId() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseUser) ResetOpensearchAccessControl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetOpensearchAccessControl",
 		nil, // no parameters
 	)
 }

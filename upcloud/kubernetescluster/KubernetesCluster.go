@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
 type KubernetesCluster interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -56,6 +56,9 @@ type KubernetesCluster interface {
 	Plan() *string
 	SetPlan(val *string)
 	PlanInput() *string
+	PrivateNodeGroups() interface{}
+	SetPrivateNodeGroups(val interface{})
+	PrivateNodeGroupsInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -106,6 +109,7 @@ type KubernetesCluster interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPlan()
+	ResetPrivateNodeGroups()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -321,6 +325,26 @@ func (j *jsiiProxy_KubernetesCluster) PlanInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_KubernetesCluster) PrivateNodeGroups() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"privateNodeGroups",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesCluster) PrivateNodeGroupsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"privateNodeGroupsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KubernetesCluster) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -412,7 +436,7 @@ func (j *jsiiProxy_KubernetesCluster) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster(scope constructs.Construct, id *string, config *KubernetesClusterConfig) KubernetesCluster {
 	_init_.Initialize()
 
@@ -430,7 +454,7 @@ func NewKubernetesCluster(scope constructs.Construct, id *string, config *Kubern
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster_Override(k KubernetesCluster, scope constructs.Construct, id *string, config *KubernetesClusterConfig) {
 	_init_.Initialize()
 
@@ -530,6 +554,17 @@ func (j *jsiiProxy_KubernetesCluster)SetPlan(val *string) {
 	_jsii_.Set(
 		j,
 		"plan",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KubernetesCluster)SetPrivateNodeGroups(val interface{}) {
+	if err := j.validateSetPrivateNodeGroupsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"privateNodeGroups",
 		val,
 	)
 }
@@ -850,6 +885,14 @@ func (k *jsiiProxy_KubernetesCluster) ResetPlan() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetPlan",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesCluster) ResetPrivateNodeGroups() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetPrivateNodeGroups",
 		nil, // no parameters
 	)
 }

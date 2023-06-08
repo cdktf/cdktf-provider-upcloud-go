@@ -128,6 +128,10 @@ func (j *jsiiProxy_Server) validateSetMetadataParameters(val interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_Server) validateSetNicModelParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Server) validateSetPlanParameters(val *string) error {
 	return nil
 }
@@ -140,11 +144,19 @@ func (j *jsiiProxy_Server) validateSetTagsParameters(val *[]*string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Server) validateSetTimezoneParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Server) validateSetTitleParameters(val *string) error {
 	return nil
 }
 
 func (j *jsiiProxy_Server) validateSetUserDataParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Server) validateSetVideoModelParameters(val *string) error {
 	return nil
 }
 

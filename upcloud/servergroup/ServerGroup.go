@@ -9,12 +9,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/server_group upcloud_server_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/server_group upcloud_server_group}.
 type ServerGroup interface {
 	cdktf.TerraformResource
-	AntiAffinity() interface{}
-	SetAntiAffinity(val interface{})
-	AntiAffinityInput() interface{}
+	AntiAffinityPolicy() *string
+	SetAntiAffinityPolicy(val *string)
+	AntiAffinityPolicyInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -98,7 +98,7 @@ type ServerGroup interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetAntiAffinity()
+	ResetAntiAffinityPolicy()
 	ResetId()
 	ResetLabels()
 	ResetMembers()
@@ -120,21 +120,21 @@ type jsiiProxy_ServerGroup struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_ServerGroup) AntiAffinity() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_ServerGroup) AntiAffinityPolicy() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
-		"antiAffinity",
+		"antiAffinityPolicy",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_ServerGroup) AntiAffinityInput() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_ServerGroup) AntiAffinityPolicyInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
-		"antiAffinityInput",
+		"antiAffinityPolicyInput",
 		&returns,
 	)
 	return returns
@@ -381,7 +381,7 @@ func (j *jsiiProxy_ServerGroup) TitleInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/server_group upcloud_server_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupConfig) ServerGroup {
 	_init_.Initialize()
 
@@ -399,7 +399,7 @@ func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.10.0/docs/resources/server_group upcloud_server_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup_Override(s ServerGroup, scope constructs.Construct, id *string, config *ServerGroupConfig) {
 	_init_.Initialize()
 
@@ -410,13 +410,13 @@ func NewServerGroup_Override(s ServerGroup, scope constructs.Construct, id *stri
 	)
 }
 
-func (j *jsiiProxy_ServerGroup)SetAntiAffinity(val interface{}) {
-	if err := j.validateSetAntiAffinityParameters(val); err != nil {
+func (j *jsiiProxy_ServerGroup)SetAntiAffinityPolicy(val *string) {
+	if err := j.validateSetAntiAffinityPolicyParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"antiAffinity",
+		"antiAffinityPolicy",
 		val,
 	)
 }
@@ -799,10 +799,10 @@ func (s *jsiiProxy_ServerGroup) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (s *jsiiProxy_ServerGroup) ResetAntiAffinity() {
+func (s *jsiiProxy_ServerGroup) ResetAntiAffinityPolicy() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetAntiAffinity",
+		"resetAntiAffinityPolicy",
 		nil, // no parameters
 	)
 }
