@@ -2,9 +2,9 @@ package objectstorage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v6/objectstorage/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/objectstorage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
