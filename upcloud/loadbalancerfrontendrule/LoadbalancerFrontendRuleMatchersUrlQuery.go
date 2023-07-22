@@ -6,15 +6,15 @@ type LoadbalancerFrontendRuleMatchersUrlQuery struct {
 	//
 	// Matcher with `exists` and `ip` methods must be used without `value` and `ignore_case` fields.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_frontend_rule#method LoadbalancerFrontendRule#method}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_frontend_rule#method LoadbalancerFrontendRule#method}
 	Method *string `field:"required" json:"method" yaml:"method"`
 	// Ignore case, default `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_frontend_rule#ignore_case LoadbalancerFrontendRule#ignore_case}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_frontend_rule#ignore_case LoadbalancerFrontendRule#ignore_case}
 	IgnoreCase interface{} `field:"optional" json:"ignoreCase" yaml:"ignoreCase"`
 	// String value.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_frontend_rule#value LoadbalancerFrontendRule#value}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_frontend_rule#value LoadbalancerFrontendRule#value}
 	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

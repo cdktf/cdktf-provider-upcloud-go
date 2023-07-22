@@ -2,9 +2,9 @@ package loadbalancerbackend
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/loadbalancerbackend/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/loadbalancerbackend/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -39,6 +39,9 @@ type LoadbalancerBackendPropertiesOutputReference interface {
 	HealthCheckRise() *float64
 	SetHealthCheckRise(val *float64)
 	HealthCheckRiseInput() *float64
+	HealthCheckTlsVerify() interface{}
+	SetHealthCheckTlsVerify(val interface{})
+	HealthCheckTlsVerifyInput() interface{}
 	HealthCheckType() *string
 	SetHealthCheckType(val *string)
 	HealthCheckTypeInput() *string
@@ -95,6 +98,7 @@ type LoadbalancerBackendPropertiesOutputReference interface {
 	ResetHealthCheckFall()
 	ResetHealthCheckInterval()
 	ResetHealthCheckRise()
+	ResetHealthCheckTlsVerify()
 	ResetHealthCheckType()
 	ResetHealthCheckUrl()
 	ResetOutboundProxyProtocol()
@@ -231,6 +235,26 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) HealthCheckRise
 	_jsii_.Get(
 		j,
 		"healthCheckRiseInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) HealthCheckTlsVerify() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"healthCheckTlsVerify",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) HealthCheckTlsVerifyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"healthCheckTlsVerifyInput",
 		&returns,
 	)
 	return returns
@@ -476,6 +500,17 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetHealthCheckRi
 	_jsii_.Set(
 		j,
 		"healthCheckRise",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetHealthCheckTlsVerify(val interface{}) {
+	if err := j.validateSetHealthCheckTlsVerifyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"healthCheckTlsVerify",
 		val,
 	)
 }
@@ -793,6 +828,14 @@ func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetHealthChec
 	_jsii_.InvokeVoid(
 		l,
 		"resetHealthCheckRise",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetHealthCheckTlsVerify() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetHealthCheckTlsVerify",
 		nil, // no parameters
 	)
 }

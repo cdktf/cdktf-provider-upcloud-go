@@ -2,14 +2,14 @@ package kubernetesnodegroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/kubernetesnodegroup/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/kubernetesnodegroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
 type KubernetesNodeGroup interface {
 	cdktf.TerraformResource
 	AntiAffinity() interface{}
@@ -86,6 +86,9 @@ type KubernetesNodeGroup interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UtilityNetworkAccess() interface{}
+	SetUtilityNetworkAccess(val interface{})
+	UtilityNetworkAccessInput() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -122,6 +125,7 @@ type KubernetesNodeGroup interface {
 	ResetOverrideLogicalId()
 	ResetSshKeys()
 	ResetTaint()
+	ResetUtilityNetworkAccess()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -497,8 +501,28 @@ func (j *jsiiProxy_KubernetesNodeGroup) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_KubernetesNodeGroup) UtilityNetworkAccess() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"utilityNetworkAccess",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+func (j *jsiiProxy_KubernetesNodeGroup) UtilityNetworkAccessInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"utilityNetworkAccessInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) KubernetesNodeGroup {
 	_init_.Initialize()
 
@@ -516,7 +540,7 @@ func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *Kube
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup_Override(k KubernetesNodeGroup, scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) {
 	_init_.Initialize()
 
@@ -679,6 +703,17 @@ func (j *jsiiProxy_KubernetesNodeGroup)SetSshKeys(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"sshKeys",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup)SetUtilityNetworkAccess(val interface{}) {
+	if err := j.validateSetUtilityNetworkAccessParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"utilityNetworkAccess",
 		val,
 	)
 }
@@ -1023,6 +1058,14 @@ func (k *jsiiProxy_KubernetesNodeGroup) ResetTaint() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetTaint",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) ResetUtilityNetworkAccess() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetUtilityNetworkAccess",
 		nil, // no parameters
 	)
 }

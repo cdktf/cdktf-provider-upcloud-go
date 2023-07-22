@@ -2,14 +2,14 @@ package dataupcloudnetworks
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/dataupcloudnetworks/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/dataupcloudnetworks/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/data-sources/networks upcloud_networks}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/networks upcloud_networks}.
 type DataUpcloudNetworks interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -317,7 +317,7 @@ func (j *jsiiProxy_DataUpcloudNetworks) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/data-sources/networks upcloud_networks} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/networks upcloud_networks} Data Source.
 func NewDataUpcloudNetworks(scope constructs.Construct, id *string, config *DataUpcloudNetworksConfig) DataUpcloudNetworks {
 	_init_.Initialize()
 
@@ -335,7 +335,7 @@ func NewDataUpcloudNetworks(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/data-sources/networks upcloud_networks} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/networks upcloud_networks} Data Source.
 func NewDataUpcloudNetworks_Override(d DataUpcloudNetworks, scope constructs.Construct, id *string, config *DataUpcloudNetworksConfig) {
 	_init_.Initialize()
 

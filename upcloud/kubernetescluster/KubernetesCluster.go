@@ -2,14 +2,14 @@ package kubernetescluster
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/kubernetescluster/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/kubernetescluster/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
 type KubernetesCluster interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -436,7 +436,7 @@ func (j *jsiiProxy_KubernetesCluster) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster(scope constructs.Construct, id *string, config *KubernetesClusterConfig) KubernetesCluster {
 	_init_.Initialize()
 
@@ -454,7 +454,7 @@ func NewKubernetesCluster(scope constructs.Construct, id *string, config *Kubern
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster_Override(k KubernetesCluster, scope constructs.Construct, id *string, config *KubernetesClusterConfig) {
 	_init_.Initialize()
 

@@ -61,6 +61,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSshKeys", GoMethod: "ResetSshKeys"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTaint", GoMethod: "ResetTaint"},
+			_jsii_.MemberMethod{JsiiMethod: "resetUtilityNetworkAccess", GoMethod: "ResetUtilityNetworkAccess"},
 			_jsii_.MemberProperty{JsiiProperty: "sshKeys", GoGetter: "SshKeys"},
 			_jsii_.MemberProperty{JsiiProperty: "sshKeysInput", GoGetter: "SshKeysInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
@@ -72,6 +73,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
+			_jsii_.MemberProperty{JsiiProperty: "utilityNetworkAccess", GoGetter: "UtilityNetworkAccess"},
+			_jsii_.MemberProperty{JsiiProperty: "utilityNetworkAccessInput", GoGetter: "UtilityNetworkAccessInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_KubernetesNodeGroup{}

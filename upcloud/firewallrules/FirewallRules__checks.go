@@ -116,6 +116,8 @@ func (f *jsiiProxy_FirewallRules) validatePutFirewallRuleParameters(value interf
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
 	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
 	case *[]*FirewallRulesFirewallRule:
 		value := value.(*[]*FirewallRulesFirewallRule)
 		for idx_cd4240, v := range *value {
@@ -131,11 +133,9 @@ func (f *jsiiProxy_FirewallRules) validatePutFirewallRuleParameters(value interf
 				return err
 			}
 		}
-	case cdktf.IResolvable:
-		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
-			return fmt.Errorf("parameter value must be one of the allowed types: *[]*FirewallRulesFirewallRule, cdktf.IResolvable; received %#v (a %T)", value, value)
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*FirewallRulesFirewallRule; received %#v (a %T)", value, value)
 		}
 	}
 

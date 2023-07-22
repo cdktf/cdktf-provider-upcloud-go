@@ -72,6 +72,10 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetHeal
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetHealthCheckTlsVerifyParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetHealthCheckTypeParameters(val *string) error {
 	return nil
 }

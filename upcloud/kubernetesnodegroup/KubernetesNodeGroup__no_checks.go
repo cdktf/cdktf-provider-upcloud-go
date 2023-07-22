@@ -120,6 +120,10 @@ func (j *jsiiProxy_KubernetesNodeGroup) validateSetSshKeysParameters(val *[]*str
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetUtilityNetworkAccessParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewKubernetesNodeGroupParameters(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) error {
 	return nil
 }

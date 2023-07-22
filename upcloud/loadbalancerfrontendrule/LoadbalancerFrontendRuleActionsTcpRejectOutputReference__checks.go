@@ -185,6 +185,8 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectOutputReference) vali
 
 func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
 	case *LoadbalancerFrontendRuleActionsTcpReject:
 		val := val.(*LoadbalancerFrontendRuleActionsTcpReject)
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
@@ -196,11 +198,9 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsTcpRejectOutputReference) vali
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
 		}
-	case cdktf.IResolvable:
-		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *LoadbalancerFrontendRuleActionsTcpReject, cdktf.IResolvable; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *LoadbalancerFrontendRuleActionsTcpReject; received %#v (a %T)", val, val)
 		}
 	}
 

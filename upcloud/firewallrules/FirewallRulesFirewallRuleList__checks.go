@@ -28,6 +28,8 @@ func (f *jsiiProxy_FirewallRulesFirewallRuleList) validateResolveParameters(_con
 
 func (j *jsiiProxy_FirewallRulesFirewallRuleList) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
 	case *[]*FirewallRulesFirewallRule:
 		val := val.(*[]*FirewallRulesFirewallRule)
 		for idx_97dfc6, v := range *val {
@@ -43,11 +45,9 @@ func (j *jsiiProxy_FirewallRulesFirewallRuleList) validateSetInternalValueParame
 				return err
 			}
 		}
-	case cdktf.IResolvable:
-		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *[]*FirewallRulesFirewallRule, cdktf.IResolvable; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*FirewallRulesFirewallRule; received %#v (a %T)", val, val)
 		}
 	}
 

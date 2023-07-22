@@ -2,14 +2,14 @@ package loadbalancerfrontendtlsconfig
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v7/loadbalancerfrontendtlsconfig/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/loadbalancerfrontendtlsconfig/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config}.
 type LoadbalancerFrontendTlsConfig interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -355,7 +355,7 @@ func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
 func NewLoadbalancerFrontendTlsConfig(scope constructs.Construct, id *string, config *LoadbalancerFrontendTlsConfigConfig) LoadbalancerFrontendTlsConfig {
 	_init_.Initialize()
 
@@ -373,7 +373,7 @@ func NewLoadbalancerFrontendTlsConfig(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.11.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
 func NewLoadbalancerFrontendTlsConfig_Override(l LoadbalancerFrontendTlsConfig, scope constructs.Construct, id *string, config *LoadbalancerFrontendTlsConfigConfig) {
 	_init_.Initialize()
 
