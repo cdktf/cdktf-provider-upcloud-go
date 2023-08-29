@@ -1,10 +1,13 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package loadbalancerfrontendrule
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v9/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v8/loadbalancerfrontendrule/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v9/loadbalancerfrontendrule/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
