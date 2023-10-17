@@ -15,6 +15,10 @@ func (u *jsiiProxy_UpcloudProvider) validateOverrideLogicalIdParameters(newLogic
 	return nil
 }
 
+func validateUpcloudProvider_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateUpcloudProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }

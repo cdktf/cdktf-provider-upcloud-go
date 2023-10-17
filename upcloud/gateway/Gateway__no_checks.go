@@ -7,6 +7,10 @@ package gateway
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (g *jsiiProxy_Gateway) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_Gateway) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (g *jsiiProxy_Gateway) validateGetStringMapAttributeParameters(terraformAtt
 	return nil
 }
 
+func (g *jsiiProxy_Gateway) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_Gateway) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (g *jsiiProxy_Gateway) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (g *jsiiProxy_Gateway) validateOverrideLogicalIdParameters(newLogicalId *st
 }
 
 func (g *jsiiProxy_Gateway) validatePutRouterParameters(value *GatewayRouter) error {
+	return nil
+}
+
+func validateGateway_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

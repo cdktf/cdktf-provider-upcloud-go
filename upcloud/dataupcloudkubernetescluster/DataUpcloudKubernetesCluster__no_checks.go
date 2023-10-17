@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataUpcloudKubernetesCluster) validateOverrideLogicalIdParame
 	return nil
 }
 
+func validateDataUpcloudKubernetesCluster_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataUpcloudKubernetesCluster_IsConstructParameters(x interface{}) error {
 	return nil
 }

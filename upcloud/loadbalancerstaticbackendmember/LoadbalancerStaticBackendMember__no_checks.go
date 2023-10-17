@@ -7,6 +7,10 @@ package loadbalancerstaticbackendmember
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateGetStringMapAttribut
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerStaticBackendMember) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateLoadbalancerStaticBackendMember_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

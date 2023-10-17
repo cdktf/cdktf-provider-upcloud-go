@@ -7,6 +7,10 @@ package manageddatabaseopensearch
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_ManagedDatabaseOpensearch) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearch) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) validateGetStringMapAttributeParam
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearch) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearch) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearch) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) validateOverrideLogicalIdParameter
 }
 
 func (m *jsiiProxy_ManagedDatabaseOpensearch) validatePutPropertiesParameters(value *ManagedDatabaseOpensearchProperties) error {
+	return nil
+}
+
+func validateManagedDatabaseOpensearch_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

@@ -5,10 +5,10 @@ package dataupcloudipaddresses
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v9/dataupcloudipaddresses/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/dataupcloudipaddresses/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -356,6 +356,25 @@ func (j *jsiiProxy_DataUpcloudIpAddresses)SetProvider(val cdktf.TerraformProvide
 		"provider",
 		val,
 	)
+}
+
+// Generates CDKTF code for importing a DataUpcloudIpAddresses resource upon running "cdktf plan <stack-name>".
+func DataUpcloudIpAddresses_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateDataUpcloudIpAddresses_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-upcloud.dataUpcloudIpAddresses.DataUpcloudIpAddresses",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.

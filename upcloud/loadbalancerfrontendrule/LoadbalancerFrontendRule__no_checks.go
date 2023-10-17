@@ -7,6 +7,10 @@ package loadbalancerfrontendrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LoadbalancerFrontendRule) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRule) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) validateGetStringMapAttributeParame
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRule) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRule) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRule) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -60,6 +72,10 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutActionsParameters(value 
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutMatchersParameters(value *LoadbalancerFrontendRuleMatchers) error {
+	return nil
+}
+
+func validateLoadbalancerFrontendRule_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

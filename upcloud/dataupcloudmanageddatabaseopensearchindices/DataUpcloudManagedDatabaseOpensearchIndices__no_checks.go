@@ -59,6 +59,10 @@ func (d *jsiiProxy_DataUpcloudManagedDatabaseOpensearchIndices) validatePutIndic
 	return nil
 }
 
+func validateDataUpcloudManagedDatabaseOpensearchIndices_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataUpcloudManagedDatabaseOpensearchIndices_IsConstructParameters(x interface{}) error {
 	return nil
 }

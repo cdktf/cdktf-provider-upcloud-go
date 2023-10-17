@@ -7,6 +7,10 @@ package manageddatabaseredis
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_ManagedDatabaseRedis) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseRedis) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (m *jsiiProxy_ManagedDatabaseRedis) validateGetStringMapAttributeParameters
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseRedis) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseRedis) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedis) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (m *jsiiProxy_ManagedDatabaseRedis) validateOverrideLogicalIdParameters(new
 }
 
 func (m *jsiiProxy_ManagedDatabaseRedis) validatePutPropertiesParameters(value *ManagedDatabaseRedisProperties) error {
+	return nil
+}
+
+func validateManagedDatabaseRedis_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

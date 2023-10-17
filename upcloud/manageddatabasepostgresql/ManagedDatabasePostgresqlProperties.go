@@ -31,7 +31,7 @@ type ManagedDatabasePostgresqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/managed_database_postgresql#autovacuum_analyze_threshold ManagedDatabasePostgresql#autovacuum_analyze_threshold}
 	AutovacuumAnalyzeThreshold *float64 `field:"optional" json:"autovacuumAnalyzeThreshold" yaml:"autovacuumAnalyzeThreshold"`
-	// Specifies the maximum age (in transactions) that a table's `pg_class.relfrozenxid` field can attain before a `VACUUM` operation is forced to prevent transaction ID wraparound within the table.  Note that the system will launch autovacuum processes to prevent wraparound even when autovacuum is otherwise disabled.  This parameter will cause the server to be restarted.
+	// Specifies the maximum age (in transactions) that a table's `pg_class.relfrozenxid` field can attain before a `VACUUM` operation is forced to prevent transaction ID wraparound within the table.  				Note that the system will launch autovacuum processes to prevent wraparound even when autovacuum is otherwise disabled.  				This parameter will cause the server to be restarted.
 	//
 	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/managed_database_postgresql#autovacuum_freeze_max_age ManagedDatabasePostgresql#autovacuum_freeze_max_age}
 	AutovacuumFreezeMaxAge *float64 `field:"optional" json:"autovacuumFreezeMaxAge" yaml:"autovacuumFreezeMaxAge"`
@@ -252,7 +252,7 @@ type ManagedDatabasePostgresqlProperties struct {
 	// Controls which statements are counted.
 	//
 	// Specify top to track top-level statements (those issued directly by clients), all to also track nested statements (such as statements invoked within functions),
-	// or none to disable statement statistics collection.The default value is `top`.
+	// 			or none to disable statement statistics collection.The default value is `top`.
 	//
 	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/managed_database_postgresql#pg_stat_statements_track ManagedDatabasePostgresql#pg_stat_statements_track}
 	PgStatStatementsTrack *string `field:"optional" json:"pgStatStatementsTrack" yaml:"pgStatStatementsTrack"`
@@ -320,7 +320,7 @@ type ManagedDatabasePostgresqlProperties struct {
 	//
 	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/managed_database_postgresql#wal_writer_delay ManagedDatabasePostgresql#wal_writer_delay}
 	WalWriterDelay *float64 `field:"optional" json:"walWriterDelay" yaml:"walWriterDelay"`
-	// Sets the maximum amount of memory to be used by a query operation (such as a sort or hash table) before writing to temporary disk files,  in MB.
+	// Sets the maximum amount of memory to be used by a query operation (such as a sort or hash table) before writing to temporary disk files,  			in MB.
 	//
 	// Default is 1MB + 0.075% of total RAM (up to 32MB).
 	//

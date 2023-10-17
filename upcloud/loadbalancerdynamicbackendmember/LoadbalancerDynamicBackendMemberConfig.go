@@ -37,7 +37,7 @@ type LoadbalancerDynamicBackendMemberConfig struct {
 	// Used to adjust the server's weight relative to other servers.
 	//
 	// All servers will receive a load proportional to their weight relative to the sum of all weights, so the higher the weight, the higher the load.
-	// A value of 0 means the server will not participate in load balancing but will still accept persistent connections.
+	// 				A value of 0 means the server will not participate in load balancing but will still accept persistent connections.
 	//
 	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_dynamic_backend_member#weight LoadbalancerDynamicBackendMember#weight}
 	Weight *float64 `field:"required" json:"weight" yaml:"weight"`

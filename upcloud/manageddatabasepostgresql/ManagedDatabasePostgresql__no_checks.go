@@ -7,6 +7,10 @@ package manageddatabasepostgresql
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_ManagedDatabasePostgresql) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresql) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) validateGetStringMapAttributeParam
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresql) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresql) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresql) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) validateOverrideLogicalIdParameter
 }
 
 func (m *jsiiProxy_ManagedDatabasePostgresql) validatePutPropertiesParameters(value *ManagedDatabasePostgresqlProperties) error {
+	return nil
+}
+
+func validateManagedDatabasePostgresql_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

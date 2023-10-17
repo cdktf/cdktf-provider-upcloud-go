@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataUpcloudIpAddresses) validateOverrideLogicalIdParameters(n
 	return nil
 }
 
+func validateDataUpcloudIpAddresses_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataUpcloudIpAddresses_IsConstructParameters(x interface{}) error {
 	return nil
 }
