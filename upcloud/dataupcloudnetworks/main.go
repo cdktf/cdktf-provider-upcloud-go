@@ -106,6 +106,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "dhcp", GoGetter: "Dhcp"},
 			_jsii_.MemberProperty{JsiiProperty: "dhcpDefaultRoute", GoGetter: "DhcpDefaultRoute"},
 			_jsii_.MemberProperty{JsiiProperty: "dhcpDns", GoGetter: "DhcpDns"},
+			_jsii_.MemberProperty{JsiiProperty: "dhcpRoutes", GoGetter: "DhcpRoutes"},
 			_jsii_.MemberProperty{JsiiProperty: "family", GoGetter: "Family"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
 			_jsii_.MemberProperty{JsiiProperty: "gateway", GoGetter: "Gateway"},

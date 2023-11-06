@@ -24,13 +24,13 @@ type DataUpcloudStorageConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Storage type (normal, backup, cdrom, template). Use 'favorite' as type to filter storages on the list of favorites.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/storage#type DataUpcloudStorage#type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/data-sources/storage#type DataUpcloudStorage#type}
 	Type *string `field:"required" json:"type" yaml:"type"`
 	// Storage access type (public, private).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/storage#access_type DataUpcloudStorage#access_type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/data-sources/storage#access_type DataUpcloudStorage#access_type}
 	AccessType *string `field:"optional" json:"accessType" yaml:"accessType"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/storage#id DataUpcloudStorage#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/data-sources/storage#id DataUpcloudStorage#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,19 +39,19 @@ type DataUpcloudStorageConfig struct {
 	//
 	// This is only useful with private storages. Public storages might give unpredictable results.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/storage#most_recent DataUpcloudStorage#most_recent}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/data-sources/storage#most_recent DataUpcloudStorage#most_recent}
 	MostRecent interface{} `field:"optional" json:"mostRecent" yaml:"mostRecent"`
 	// Exact name of the storage (same as title).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/storage#name DataUpcloudStorage#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/data-sources/storage#name DataUpcloudStorage#name}
 	Name *string `field:"optional" json:"name" yaml:"name"`
 	// Use regular expression to match storage name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/storage#name_regex DataUpcloudStorage#name_regex}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/data-sources/storage#name_regex DataUpcloudStorage#name_regex}
 	NameRegex *string `field:"optional" json:"nameRegex" yaml:"nameRegex"`
 	// The zone in which the storage resides, e.g. `de-fra1`. You can list available zones with `upctl zone list`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/data-sources/storage#zone DataUpcloudStorage#zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/data-sources/storage#zone DataUpcloudStorage#zone}
 	Zone *string `field:"optional" json:"zone" yaml:"zone"`
 }
 

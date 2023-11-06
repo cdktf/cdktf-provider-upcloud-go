@@ -5,9 +5,9 @@ package dataupcloudnetworks
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/dataupcloudnetworks/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/dataupcloudnetworks/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -32,6 +32,7 @@ type DataUpcloudNetworksNetworksIpNetworkOutputReference interface {
 	Dhcp() cdktf.IResolvable
 	DhcpDefaultRoute() cdktf.IResolvable
 	DhcpDns() *[]*string
+	DhcpRoutes() *[]*string
 	Family() *string
 	// Experimental.
 	Fqn() *string
@@ -150,6 +151,16 @@ func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkOutputReference) DhcpDns(
 	_jsii_.Get(
 		j,
 		"dhcpDns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkOutputReference) DhcpRoutes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dhcpRoutes",
 		&returns,
 	)
 	return returns

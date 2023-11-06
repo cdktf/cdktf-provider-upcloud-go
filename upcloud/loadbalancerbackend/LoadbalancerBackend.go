@@ -5,14 +5,14 @@ package loadbalancerbackend
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/loadbalancerbackend/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/loadbalancerbackend/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
 type LoadbalancerBackend interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -402,7 +402,7 @@ func (j *jsiiProxy_LoadbalancerBackend) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) LoadbalancerBackend {
 	_init_.Initialize()
 
@@ -420,7 +420,7 @@ func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *Load
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend_Override(l LoadbalancerBackend, scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) {
 	_init_.Initialize()
 

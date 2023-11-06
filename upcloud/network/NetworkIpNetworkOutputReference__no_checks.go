@@ -75,6 +75,10 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) validateSetDhcpDnsParameters
 	return nil
 }
 
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) validateSetDhcpRoutesParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_NetworkIpNetworkOutputReference) validateSetFamilyParameters(val *string) error {
 	return nil
 }

@@ -5,9 +5,9 @@ package dataupcloudhosts
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/dataupcloudhosts/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/dataupcloudhosts/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

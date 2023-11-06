@@ -5,16 +5,17 @@ package gateway
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/gateway/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/gateway/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/gateway upcloud_gateway}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/gateway upcloud_gateway}.
 type Gateway interface {
 	cdktf.TerraformResource
+	Addresses() GatewayAddressesList
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ConfiguredStatus() *string
@@ -135,6 +136,16 @@ type Gateway interface {
 // The jsii proxy struct for Gateway
 type jsiiProxy_Gateway struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Gateway) Addresses() GatewayAddressesList {
+	var returns GatewayAddressesList
+	_jsii_.Get(
+		j,
+		"addresses",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Gateway) CdktfStack() cdktf.TerraformStack {
@@ -448,7 +459,7 @@ func (j *jsiiProxy_Gateway) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/gateway upcloud_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/gateway upcloud_gateway} Resource.
 func NewGateway(scope constructs.Construct, id *string, config *GatewayConfig) Gateway {
 	_init_.Initialize()
 
@@ -466,7 +477,7 @@ func NewGateway(scope constructs.Construct, id *string, config *GatewayConfig) G
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/gateway upcloud_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/gateway upcloud_gateway} Resource.
 func NewGateway_Override(g Gateway, scope constructs.Construct, id *string, config *GatewayConfig) {
 	_init_.Initialize()
 

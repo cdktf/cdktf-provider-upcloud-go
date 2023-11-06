@@ -5,9 +5,9 @@ package network
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/network/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/network/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -40,6 +40,9 @@ type NetworkIpNetworkOutputReference interface {
 	SetDhcpDns(val *[]*string)
 	DhcpDnsInput() *[]*string
 	DhcpInput() interface{}
+	DhcpRoutes() *[]*string
+	SetDhcpRoutes(val *[]*string)
+	DhcpRoutesInput() *[]*string
 	Family() *string
 	SetFamily(val *string)
 	FamilyInput() *string
@@ -84,6 +87,7 @@ type NetworkIpNetworkOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDhcpDefaultRoute()
 	ResetDhcpDns()
+	ResetDhcpRoutes()
 	ResetGateway()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -205,6 +209,26 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpInput() interface{} {
 	_jsii_.Get(
 		j,
 		"dhcpInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpRoutes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dhcpRoutes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpRoutesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dhcpRoutesInput",
 		&returns,
 	)
 	return returns
@@ -380,6 +404,17 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference)SetDhcpDns(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dhcpDns",
+		val,
+	)
+}
+
+func (j *jsiiProxy_NetworkIpNetworkOutputReference)SetDhcpRoutes(val *[]*string) {
+	if err := j.validateSetDhcpRoutesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"dhcpRoutes",
 		val,
 	)
 }
@@ -637,6 +672,14 @@ func (n *jsiiProxy_NetworkIpNetworkOutputReference) ResetDhcpDns() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetDhcpDns",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkIpNetworkOutputReference) ResetDhcpRoutes() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetDhcpRoutes",
 		nil, // no parameters
 	)
 }

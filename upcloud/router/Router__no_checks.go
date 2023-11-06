@@ -67,6 +67,10 @@ func (r *jsiiProxy_Router) validateOverrideLogicalIdParameters(newLogicalId *str
 	return nil
 }
 
+func (r *jsiiProxy_Router) validatePutStaticRouteParameters(value interface{}) error {
+	return nil
+}
+
 func validateRouter_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

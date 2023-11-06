@@ -5,14 +5,14 @@ package router
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v10/router/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/router/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/router upcloud_router}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/router upcloud_router}.
 type Router interface {
 	cdktf.TerraformResource
 	AttachedNetworks() *[]*string
@@ -62,6 +62,8 @@ type Router interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	StaticRoute() RouterStaticRouteList
+	StaticRouteInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -102,10 +104,12 @@ type Router interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutStaticRoute(value interface{})
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetStaticRoute()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -301,6 +305,26 @@ func (j *jsiiProxy_Router) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Router) StaticRoute() RouterStaticRouteList {
+	var returns RouterStaticRouteList
+	_jsii_.Get(
+		j,
+		"staticRoute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Router) StaticRouteInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"staticRouteInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Router) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -342,7 +366,7 @@ func (j *jsiiProxy_Router) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/router upcloud_router} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/router upcloud_router} Resource.
 func NewRouter(scope constructs.Construct, id *string, config *RouterConfig) Router {
 	_init_.Initialize()
 
@@ -360,7 +384,7 @@ func NewRouter(scope constructs.Construct, id *string, config *RouterConfig) Rou
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/2.12.0/docs/resources/router upcloud_router} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/router upcloud_router} Resource.
 func NewRouter_Override(r Router, scope constructs.Construct, id *string, config *RouterConfig) {
 	_init_.Initialize()
 
@@ -779,6 +803,17 @@ func (r *jsiiProxy_Router) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (r *jsiiProxy_Router) PutStaticRoute(value interface{}) {
+	if err := r.validatePutStaticRouteParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putStaticRoute",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_Router) ResetId() {
 	_jsii_.InvokeVoid(
 		r,
@@ -791,6 +826,14 @@ func (r *jsiiProxy_Router) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Router) ResetStaticRoute() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetStaticRoute",
 		nil, // no parameters
 	)
 }
