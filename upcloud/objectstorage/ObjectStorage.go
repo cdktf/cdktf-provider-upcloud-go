@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/object_storage upcloud_object_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/object_storage upcloud_object_storage}.
 type ObjectStorage interface {
 	cdktf.TerraformResource
 	AccessKey() *string
@@ -504,7 +504,7 @@ func (j *jsiiProxy_ObjectStorage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/object_storage upcloud_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/object_storage upcloud_object_storage} Resource.
 func NewObjectStorage(scope constructs.Construct, id *string, config *ObjectStorageConfig) ObjectStorage {
 	_init_.Initialize()
 
@@ -522,7 +522,7 @@ func NewObjectStorage(scope constructs.Construct, id *string, config *ObjectStor
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.0.3/docs/resources/object_storage upcloud_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/object_storage upcloud_object_storage} Resource.
 func NewObjectStorage_Override(o ObjectStorage, scope constructs.Construct, id *string, config *ObjectStorageConfig) {
 	_init_.Initialize()
 
