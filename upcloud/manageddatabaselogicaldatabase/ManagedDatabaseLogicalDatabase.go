@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database}.
 type ManagedDatabaseLogicalDatabase interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -391,7 +391,7 @@ func (j *jsiiProxy_ManagedDatabaseLogicalDatabase) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
 func NewManagedDatabaseLogicalDatabase(scope constructs.Construct, id *string, config *ManagedDatabaseLogicalDatabaseConfig) ManagedDatabaseLogicalDatabase {
 	_init_.Initialize()
 
@@ -409,7 +409,7 @@ func NewManagedDatabaseLogicalDatabase(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_logical_database upcloud_managed_database_logical_database} Resource.
 func NewManagedDatabaseLogicalDatabase_Override(m ManagedDatabaseLogicalDatabase, scope constructs.Construct, id *string, config *ManagedDatabaseLogicalDatabaseConfig) {
 	_init_.Initialize()
 

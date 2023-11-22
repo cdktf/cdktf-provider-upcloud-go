@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/router upcloud_router}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/router upcloud_router}.
 type Router interface {
 	cdktf.TerraformResource
 	AttachedNetworks() *[]*string
@@ -366,7 +366,7 @@ func (j *jsiiProxy_Router) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/router upcloud_router} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/router upcloud_router} Resource.
 func NewRouter(scope constructs.Construct, id *string, config *RouterConfig) Router {
 	_init_.Initialize()
 
@@ -384,7 +384,7 @@ func NewRouter(scope constructs.Construct, id *string, config *RouterConfig) Rou
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.0/docs/resources/router upcloud_router} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/router upcloud_router} Resource.
 func NewRouter_Override(r Router, scope constructs.Construct, id *string, config *RouterConfig) {
 	_init_.Initialize()
 
