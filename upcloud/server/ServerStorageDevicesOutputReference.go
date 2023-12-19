@@ -16,6 +16,9 @@ type ServerStorageDevicesOutputReference interface {
 	Address() *string
 	SetAddress(val *string)
 	AddressInput() *string
+	AddressPosition() *string
+	SetAddressPosition(val *string)
+	AddressPositionInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -74,6 +77,7 @@ type ServerStorageDevicesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAddress()
+	ResetAddressPosition()
 	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -105,6 +109,26 @@ func (j *jsiiProxy_ServerStorageDevicesOutputReference) AddressInput() *string {
 	_jsii_.Get(
 		j,
 		"addressInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerStorageDevicesOutputReference) AddressPosition() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"addressPosition",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerStorageDevicesOutputReference) AddressPositionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"addressPositionInput",
 		&returns,
 	)
 	return returns
@@ -255,6 +279,17 @@ func (j *jsiiProxy_ServerStorageDevicesOutputReference)SetAddress(val *string) {
 	_jsii_.Set(
 		j,
 		"address",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServerStorageDevicesOutputReference)SetAddressPosition(val *string) {
+	if err := j.validateSetAddressPositionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"addressPosition",
 		val,
 	)
 }
@@ -526,6 +561,14 @@ func (s *jsiiProxy_ServerStorageDevicesOutputReference) ResetAddress() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetAddress",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerStorageDevicesOutputReference) ResetAddressPosition() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAddressPosition",
 		nil, // no parameters
 	)
 }

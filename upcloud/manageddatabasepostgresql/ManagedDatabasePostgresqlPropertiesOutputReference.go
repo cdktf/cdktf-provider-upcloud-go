@@ -191,6 +191,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	PublicAccess() interface{}
 	SetPublicAccess(val interface{})
 	PublicAccessInput() interface{}
+	ServiceLog() interface{}
+	SetServiceLog(val interface{})
+	ServiceLogInput() interface{}
 	SharedBuffersPercentage() *float64
 	SetSharedBuffersPercentage(val *float64)
 	SharedBuffersPercentageInput() *float64
@@ -322,6 +325,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetPgStatMonitorPgsmMaxBuckets()
 	ResetPgStatStatementsTrack()
 	ResetPublicAccess()
+	ResetServiceLog()
 	ResetSharedBuffersPercentage()
 	ResetSynchronousReplication()
 	ResetTempFileLimit()
@@ -1481,6 +1485,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PublicAcc
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ServiceLog() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serviceLog",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ServiceLogInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serviceLogInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) SharedBuffersPercentage() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -2403,6 +2427,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPublicA
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetServiceLog(val interface{}) {
+	if err := j.validateSetServiceLogParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceLog",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetSharedBuffersPercentage(val *float64) {
 	if err := j.validateSetSharedBuffersPercentageParameters(val); err != nil {
 		panic(err)
@@ -3226,6 +3261,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPubl
 	_jsii_.InvokeVoid(
 		m,
 		"resetPublicAccess",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetServiceLog() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetServiceLog",
 		nil, // no parameters
 	)
 }

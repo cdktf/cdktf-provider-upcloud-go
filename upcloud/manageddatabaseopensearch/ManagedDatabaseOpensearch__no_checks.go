@@ -59,7 +59,15 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) validateInterpolationForAttributeP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearch) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearch) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearch) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

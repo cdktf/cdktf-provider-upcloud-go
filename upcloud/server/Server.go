@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/server upcloud_server}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/server upcloud_server}.
 type Server interface {
 	cdktf.TerraformResource
+	BootOrder() *string
+	SetBootOrder(val *string)
+	BootOrderInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -143,12 +146,22 @@ type Server interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -157,6 +170,7 @@ type Server interface {
 	PutSimpleBackup(value *ServerSimpleBackup)
 	PutStorageDevices(value interface{})
 	PutTemplate(value *ServerTemplate)
+	ResetBootOrder()
 	ResetCpu()
 	ResetFirewall()
 	ResetHost()
@@ -191,6 +205,26 @@ type Server interface {
 // The jsii proxy struct for Server
 type jsiiProxy_Server struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Server) BootOrder() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bootOrder",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) BootOrderInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bootOrderInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Server) CdktfStack() cdktf.TerraformStack {
@@ -774,7 +808,7 @@ func (j *jsiiProxy_Server) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/server upcloud_server} Resource.
 func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Server {
 	_init_.Initialize()
 
@@ -792,7 +826,7 @@ func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Ser
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/server upcloud_server} Resource.
 func NewServer_Override(s Server, scope constructs.Construct, id *string, config *ServerConfig) {
 	_init_.Initialize()
 
@@ -800,6 +834,17 @@ func NewServer_Override(s Server, scope constructs.Construct, id *string, config
 		"@cdktf/provider-upcloud.server.Server",
 		[]interface{}{scope, id, config},
 		s,
+	)
+}
+
+func (j *jsiiProxy_Server)SetBootOrder(val *string) {
+	if err := j.validateSetBootOrderParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"bootOrder",
+		val,
 	)
 }
 
@@ -1316,6 +1361,19 @@ func (s *jsiiProxy_Server) GetStringMapAttribute(terraformAttribute *string) *ma
 	return returns
 }
 
+func (s *jsiiProxy_Server) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_Server) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1343,6 +1401,17 @@ func (s *jsiiProxy_Server) InterpolationForAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (s *jsiiProxy_Server) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_Server) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1351,6 +1420,17 @@ func (s *jsiiProxy_Server) MoveTo(moveTarget *string, index interface{}) {
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_Server) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1417,6 +1497,14 @@ func (s *jsiiProxy_Server) PutTemplate(value *ServerTemplate) {
 		s,
 		"putTemplate",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_Server) ResetBootOrder() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBootOrder",
+		nil, // no parameters
 	)
 }
 

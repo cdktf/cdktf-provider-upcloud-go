@@ -195,6 +195,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetPub
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetServiceLogParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetSlowQueryLogParameters(val interface{}) error {
 	return nil
 }

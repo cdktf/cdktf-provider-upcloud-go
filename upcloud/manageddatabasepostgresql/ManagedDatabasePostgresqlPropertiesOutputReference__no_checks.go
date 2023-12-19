@@ -283,6 +283,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetServiceLogParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetSharedBuffersPercentageParameters(val *float64) error {
 	return nil
 }

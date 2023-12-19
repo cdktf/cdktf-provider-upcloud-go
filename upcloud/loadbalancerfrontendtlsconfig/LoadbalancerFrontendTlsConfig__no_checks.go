@@ -59,7 +59,15 @@ func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) validateInterpolationForAttrib
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

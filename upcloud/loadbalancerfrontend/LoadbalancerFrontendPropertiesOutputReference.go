@@ -30,6 +30,9 @@ type LoadbalancerFrontendPropertiesOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	Http2Enabled() interface{}
+	SetHttp2Enabled(val interface{})
+	Http2EnabledInput() interface{}
 	InboundProxyProtocol() interface{}
 	SetInboundProxyProtocol(val interface{})
 	InboundProxyProtocolInput() interface{}
@@ -70,6 +73,7 @@ type LoadbalancerFrontendPropertiesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHttp2Enabled()
 	ResetInboundProxyProtocol()
 	ResetTimeoutClient()
 	// Produce the Token's value at resolution time.
@@ -122,6 +126,26 @@ func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) Fqn() *string 
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) Http2Enabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"http2Enabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) Http2EnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"http2EnabledInput",
 		&returns,
 	)
 	return returns
@@ -243,6 +267,17 @@ func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference)SetComplexObjec
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference)SetHttp2Enabled(val interface{}) {
+	if err := j.validateSetHttp2EnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"http2Enabled",
 		val,
 	)
 }
@@ -486,6 +521,14 @@ func (l *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) ResetHttp2Enabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetHttp2Enabled",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) ResetInboundProxyProtocol() {

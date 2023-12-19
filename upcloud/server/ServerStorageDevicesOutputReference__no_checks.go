@@ -55,6 +55,10 @@ func (j *jsiiProxy_ServerStorageDevicesOutputReference) validateSetAddressParame
 	return nil
 }
 
+func (j *jsiiProxy_ServerStorageDevicesOutputReference) validateSetAddressPositionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ServerStorageDevicesOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

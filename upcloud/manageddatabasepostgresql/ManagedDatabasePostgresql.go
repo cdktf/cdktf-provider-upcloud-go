@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
 type ManagedDatabasePostgresql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -122,12 +122,22 @@ type ManagedDatabasePostgresql interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -607,7 +617,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) ManagedDatabasePostgresql {
 	_init_.Initialize()
 
@@ -625,7 +635,7 @@ func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) {
 	_init_.Initialize()
 
@@ -1061,6 +1071,19 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresql) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresql) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1088,6 +1111,17 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresql) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresql) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1096,6 +1130,17 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) MoveTo(moveTarget *string, index i
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresql) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

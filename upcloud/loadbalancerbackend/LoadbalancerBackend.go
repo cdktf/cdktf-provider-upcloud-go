@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
 type LoadbalancerBackend interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -76,6 +76,7 @@ type LoadbalancerBackend interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TlsConfigs() *[]*string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -100,12 +101,22 @@ type LoadbalancerBackend interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -401,8 +412,18 @@ func (j *jsiiProxy_LoadbalancerBackend) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_LoadbalancerBackend) TlsConfigs() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"tlsConfigs",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) LoadbalancerBackend {
 	_init_.Initialize()
 
@@ -420,7 +441,7 @@ func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *Load
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend_Override(l LoadbalancerBackend, scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) {
 	_init_.Initialize()
 
@@ -812,6 +833,19 @@ func (l *jsiiProxy_LoadbalancerBackend) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (l *jsiiProxy_LoadbalancerBackend) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LoadbalancerBackend) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -839,6 +873,17 @@ func (l *jsiiProxy_LoadbalancerBackend) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (l *jsiiProxy_LoadbalancerBackend) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LoadbalancerBackend) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -847,6 +892,17 @@ func (l *jsiiProxy_LoadbalancerBackend) MoveTo(moveTarget *string, index interfa
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerBackend) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

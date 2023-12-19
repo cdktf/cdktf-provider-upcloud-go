@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/network upcloud_network}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/network upcloud_network}.
 type Network interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -100,12 +100,22 @@ type Network interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -401,7 +411,7 @@ func (j *jsiiProxy_Network) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/network upcloud_network} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/network upcloud_network} Resource.
 func NewNetwork(scope constructs.Construct, id *string, config *NetworkConfig) Network {
 	_init_.Initialize()
 
@@ -419,7 +429,7 @@ func NewNetwork(scope constructs.Construct, id *string, config *NetworkConfig) N
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/network upcloud_network} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/network upcloud_network} Resource.
 func NewNetwork_Override(n Network, scope constructs.Construct, id *string, config *NetworkConfig) {
 	_init_.Initialize()
 
@@ -811,6 +821,19 @@ func (n *jsiiProxy_Network) GetStringMapAttribute(terraformAttribute *string) *m
 	return returns
 }
 
+func (n *jsiiProxy_Network) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (n *jsiiProxy_Network) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := n.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -838,6 +861,17 @@ func (n *jsiiProxy_Network) InterpolationForAttribute(terraformAttribute *string
 	return returns
 }
 
+func (n *jsiiProxy_Network) MoveFromId(id *string) {
+	if err := n.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (n *jsiiProxy_Network) MoveTo(moveTarget *string, index interface{}) {
 	if err := n.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -846,6 +880,17 @@ func (n *jsiiProxy_Network) MoveTo(moveTarget *string, index interface{}) {
 		n,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (n *jsiiProxy_Network) MoveToId(id *string) {
+	if err := n.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

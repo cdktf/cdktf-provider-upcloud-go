@@ -87,6 +87,10 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetHeal
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetHttp2EnabledParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetInternalValueParameters(val *LoadbalancerBackendProperties) error {
 	return nil
 }
@@ -112,6 +116,18 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetTime
 }
 
 func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetTimeoutTunnelParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetTlsEnabledParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetTlsUseSystemCaParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetTlsVerifyParameters(val interface{}) error {
 	return nil
 }
 

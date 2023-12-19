@@ -59,7 +59,15 @@ func (s *jsiiProxy_Server) validateInterpolationForAttributeParameters(terraform
 	return nil
 }
 
+func (s *jsiiProxy_Server) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_Server) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_Server) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -100,6 +108,10 @@ func validateServer_IsTerraformElementParameters(x interface{}) error {
 }
 
 func validateServer_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Server) validateSetBootOrderParameters(val *string) error {
 	return nil
 }
 

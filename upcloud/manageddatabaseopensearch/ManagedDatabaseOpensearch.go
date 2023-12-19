@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
 type ManagedDatabaseOpensearch interface {
 	cdktf.TerraformResource
 	AccessControl() interface{}
@@ -127,12 +127,22 @@ type ManagedDatabaseOpensearch interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -644,7 +654,7 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) ManagedDatabaseOpensearch {
 	_init_.Initialize()
 
@@ -662,7 +672,7 @@ func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch_Override(m ManagedDatabaseOpensearch, scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) {
 	_init_.Initialize()
 
@@ -1120,6 +1130,19 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearch) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearch) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1147,6 +1170,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearch) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearch) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1155,6 +1189,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) MoveTo(moveTarget *string, index i
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearch) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

@@ -24,30 +24,30 @@ type ManagedObjectStorageConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Service status managed by the end user.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_object_storage#configured_status ManagedObjectStorage#configured_status}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage#configured_status ManagedObjectStorage#configured_status}
 	ConfiguredStatus *string `field:"required" json:"configuredStatus" yaml:"configuredStatus"`
 	// Region in which the service will be hosted, see `upcloud_managed_object_storage_regions` data source.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_object_storage#region ManagedObjectStorage#region}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage#region ManagedObjectStorage#region}
 	Region *string `field:"required" json:"region" yaml:"region"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_object_storage#id ManagedObjectStorage#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage#id ManagedObjectStorage#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Key-value pairs to classify the managed object storage.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_object_storage#labels ManagedObjectStorage#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage#labels ManagedObjectStorage#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 	// network block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_object_storage#network ManagedObjectStorage#network}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage#network ManagedObjectStorage#network}
 	Network interface{} `field:"optional" json:"network" yaml:"network"`
 	// List of UpCloud API users allowed to use object storage.
 	//
 	// Valid values include current account and it's sub-accounts. See `upcloud_managed_object_storage_user_access_key` for managing access keys.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/managed_object_storage#users ManagedObjectStorage#users}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage#users ManagedObjectStorage#users}
 	Users *[]*string `field:"optional" json:"users" yaml:"users"`
 }
 

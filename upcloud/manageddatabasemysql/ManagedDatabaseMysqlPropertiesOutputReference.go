@@ -130,6 +130,9 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	PublicAccess() interface{}
 	SetPublicAccess(val interface{})
 	PublicAccessInput() interface{}
+	ServiceLog() interface{}
+	SetServiceLog(val interface{})
+	ServiceLogInput() interface{}
 	SlowQueryLog() interface{}
 	SetSlowQueryLog(val interface{})
 	SlowQueryLogInput() interface{}
@@ -217,6 +220,7 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	ResetNetReadTimeout()
 	ResetNetWriteTimeout()
 	ResetPublicAccess()
+	ResetServiceLog()
 	ResetSlowQueryLog()
 	ResetSortBufferSize()
 	ResetSqlMode()
@@ -949,6 +953,26 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) PublicAccessIn
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ServiceLog() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serviceLog",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ServiceLogInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serviceLogInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) SlowQueryLog() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -1522,6 +1546,17 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetPublicAccess
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetServiceLog(val interface{}) {
+	if err := j.validateSetServiceLogParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceLog",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetSlowQueryLog(val interface{}) {
 	if err := j.validateSetSlowQueryLogParameters(val); err != nil {
 		panic(err)
@@ -2078,6 +2113,14 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetPublicAcc
 	_jsii_.InvokeVoid(
 		m,
 		"resetPublicAccess",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetServiceLog() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetServiceLog",
 		nil, // no parameters
 	)
 }

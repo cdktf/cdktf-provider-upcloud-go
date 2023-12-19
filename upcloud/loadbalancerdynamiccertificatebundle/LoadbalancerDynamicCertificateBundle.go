@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle}.
 type LoadbalancerDynamicCertificateBundle interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -100,12 +100,22 @@ type LoadbalancerDynamicCertificateBundle interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -399,7 +409,7 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
 func NewLoadbalancerDynamicCertificateBundle(scope constructs.Construct, id *string, config *LoadbalancerDynamicCertificateBundleConfig) LoadbalancerDynamicCertificateBundle {
 	_init_.Initialize()
 
@@ -417,7 +427,7 @@ func NewLoadbalancerDynamicCertificateBundle(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
 func NewLoadbalancerDynamicCertificateBundle_Override(l LoadbalancerDynamicCertificateBundle, scope constructs.Construct, id *string, config *LoadbalancerDynamicCertificateBundleConfig) {
 	_init_.Initialize()
 
@@ -809,6 +819,19 @@ func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) GetStringMapAttribute(t
 	return returns
 }
 
+func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -836,6 +859,17 @@ func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) InterpolationForAttribu
 	return returns
 }
 
+func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -844,6 +878,17 @@ func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) MoveTo(moveTarget *stri
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

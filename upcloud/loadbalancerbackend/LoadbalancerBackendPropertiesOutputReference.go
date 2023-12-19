@@ -51,6 +51,9 @@ type LoadbalancerBackendPropertiesOutputReference interface {
 	HealthCheckUrl() *string
 	SetHealthCheckUrl(val *string)
 	HealthCheckUrlInput() *string
+	Http2Enabled() interface{}
+	SetHttp2Enabled(val interface{})
+	Http2EnabledInput() interface{}
 	InternalValue() *LoadbalancerBackendProperties
 	SetInternalValue(val *LoadbalancerBackendProperties)
 	OutboundProxyProtocol() *string
@@ -73,6 +76,16 @@ type LoadbalancerBackendPropertiesOutputReference interface {
 	TimeoutTunnel() *float64
 	SetTimeoutTunnel(val *float64)
 	TimeoutTunnelInput() *float64
+	TlsConfigs() *[]*string
+	TlsEnabled() interface{}
+	SetTlsEnabled(val interface{})
+	TlsEnabledInput() interface{}
+	TlsUseSystemCa() interface{}
+	SetTlsUseSystemCa(val interface{})
+	TlsUseSystemCaInput() interface{}
+	TlsVerify() interface{}
+	SetTlsVerify(val interface{})
+	TlsVerifyInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -104,10 +117,14 @@ type LoadbalancerBackendPropertiesOutputReference interface {
 	ResetHealthCheckTlsVerify()
 	ResetHealthCheckType()
 	ResetHealthCheckUrl()
+	ResetHttp2Enabled()
 	ResetOutboundProxyProtocol()
 	ResetStickySessionCookieName()
 	ResetTimeoutServer()
 	ResetTimeoutTunnel()
+	ResetTlsEnabled()
+	ResetTlsUseSystemCa()
+	ResetTlsVerify()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -303,6 +320,26 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) HealthCheckUrlI
 	return returns
 }
 
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) Http2Enabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"http2Enabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) Http2EnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"http2EnabledInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) InternalValue() *LoadbalancerBackendProperties {
 	var returns *LoadbalancerBackendProperties
 	_jsii_.Get(
@@ -408,6 +445,76 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TimeoutTunnelIn
 	_jsii_.Get(
 		j,
 		"timeoutTunnelInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsConfigs() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"tlsConfigs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tlsEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tlsEnabledInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsUseSystemCa() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tlsUseSystemCa",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsUseSystemCaInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tlsUseSystemCaInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsVerify() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tlsVerify",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsVerifyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tlsVerifyInput",
 		&returns,
 	)
 	return returns
@@ -540,6 +647,17 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetHealthCheckUr
 	)
 }
 
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetHttp2Enabled(val interface{}) {
+	if err := j.validateSetHttp2EnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"http2Enabled",
+		val,
+	)
+}
+
 func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetInternalValue(val *LoadbalancerBackendProperties) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -613,6 +731,39 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetTimeoutTunnel
 	_jsii_.Set(
 		j,
 		"timeoutTunnel",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetTlsEnabled(val interface{}) {
+	if err := j.validateSetTlsEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tlsEnabled",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetTlsUseSystemCa(val interface{}) {
+	if err := j.validateSetTlsUseSystemCaParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tlsUseSystemCa",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetTlsVerify(val interface{}) {
+	if err := j.validateSetTlsVerifyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tlsVerify",
 		val,
 	)
 }
@@ -859,6 +1010,14 @@ func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetHealthChec
 	)
 }
 
+func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetHttp2Enabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetHttp2Enabled",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetOutboundProxyProtocol() {
 	_jsii_.InvokeVoid(
 		l,
@@ -887,6 +1046,30 @@ func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetTimeoutTun
 	_jsii_.InvokeVoid(
 		l,
 		"resetTimeoutTunnel",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetTlsEnabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTlsEnabled",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetTlsUseSystemCa() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTlsUseSystemCa",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) ResetTlsVerify() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTlsVerify",
 		nil, // no parameters
 	)
 }

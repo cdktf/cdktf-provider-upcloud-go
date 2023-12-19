@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/floating_ip_address upcloud_floating_ip_address}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/floating_ip_address upcloud_floating_ip_address}.
 type FloatingIpAddress interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -101,12 +101,22 @@ type FloatingIpAddress interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -404,7 +414,7 @@ func (j *jsiiProxy_FloatingIpAddress) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress(scope constructs.Construct, id *string, config *FloatingIpAddressConfig) FloatingIpAddress {
 	_init_.Initialize()
 
@@ -422,7 +432,7 @@ func NewFloatingIpAddress(scope constructs.Construct, id *string, config *Floati
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress_Override(f FloatingIpAddress, scope constructs.Construct, id *string, config *FloatingIpAddressConfig) {
 	_init_.Initialize()
 
@@ -825,6 +835,19 @@ func (f *jsiiProxy_FloatingIpAddress) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
+func (f *jsiiProxy_FloatingIpAddress) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (f *jsiiProxy_FloatingIpAddress) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := f.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -852,6 +875,17 @@ func (f *jsiiProxy_FloatingIpAddress) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
+func (f *jsiiProxy_FloatingIpAddress) MoveFromId(id *string) {
+	if err := f.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (f *jsiiProxy_FloatingIpAddress) MoveTo(moveTarget *string, index interface{}) {
 	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -860,6 +894,17 @@ func (f *jsiiProxy_FloatingIpAddress) MoveTo(moveTarget *string, index interface
 		f,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (f *jsiiProxy_FloatingIpAddress) MoveToId(id *string) {
+	if err := f.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

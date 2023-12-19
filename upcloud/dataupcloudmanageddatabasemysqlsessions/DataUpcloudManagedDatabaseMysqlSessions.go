@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/data-sources/managed_database_mysql_sessions upcloud_managed_database_mysql_sessions}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/data-sources/managed_database_mysql_sessions upcloud_managed_database_mysql_sessions}.
 type DataUpcloudManagedDatabaseMysqlSessions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -380,7 +380,7 @@ func (j *jsiiProxy_DataUpcloudManagedDatabaseMysqlSessions) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/data-sources/managed_database_mysql_sessions upcloud_managed_database_mysql_sessions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/data-sources/managed_database_mysql_sessions upcloud_managed_database_mysql_sessions} Data Source.
 func NewDataUpcloudManagedDatabaseMysqlSessions(scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseMysqlSessionsConfig) DataUpcloudManagedDatabaseMysqlSessions {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewDataUpcloudManagedDatabaseMysqlSessions(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs/data-sources/managed_database_mysql_sessions upcloud_managed_database_mysql_sessions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/data-sources/managed_database_mysql_sessions upcloud_managed_database_mysql_sessions} Data Source.
 func NewDataUpcloudManagedDatabaseMysqlSessions_Override(d DataUpcloudManagedDatabaseMysqlSessions, scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseMysqlSessionsConfig) {
 	_init_.Initialize()
 

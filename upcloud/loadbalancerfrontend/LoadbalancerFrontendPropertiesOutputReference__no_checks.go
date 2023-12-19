@@ -59,6 +59,10 @@ func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) validateSetCom
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) validateSetHttp2EnabledParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) validateSetInboundProxyProtocolParameters(val interface{}) error {
 	return nil
 }

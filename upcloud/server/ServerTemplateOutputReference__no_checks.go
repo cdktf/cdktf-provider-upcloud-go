@@ -59,6 +59,10 @@ func (j *jsiiProxy_ServerTemplateOutputReference) validateSetAddressParameters(v
 	return nil
 }
 
+func (j *jsiiProxy_ServerTemplateOutputReference) validateSetAddressPositionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ServerTemplateOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

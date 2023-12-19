@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs upcloud}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs upcloud}.
 type UpcloudProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -35,6 +35,9 @@ type UpcloudProvider interface {
 	PasswordInput() *string
 	// Experimental.
 	RawOverrides() interface{}
+	RequestTimeoutSec() *float64
+	SetRequestTimeoutSec(val *float64)
+	RequestTimeoutSecInput() *float64
 	RetryMax() *float64
 	SetRetryMax(val *float64)
 	RetryMaxInput() *float64
@@ -63,6 +66,7 @@ type UpcloudProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPassword()
+	ResetRequestTimeoutSec()
 	ResetRetryMax()
 	ResetRetryWaitMaxSec()
 	ResetRetryWaitMinSec()
@@ -192,6 +196,26 @@ func (j *jsiiProxy_UpcloudProvider) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_UpcloudProvider) RequestTimeoutSec() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"requestTimeoutSec",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_UpcloudProvider) RequestTimeoutSecInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"requestTimeoutSecInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_UpcloudProvider) RetryMax() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -303,7 +327,7 @@ func (j *jsiiProxy_UpcloudProvider) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs upcloud} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs upcloud} Resource.
 func NewUpcloudProvider(scope constructs.Construct, id *string, config *UpcloudProviderConfig) UpcloudProvider {
 	_init_.Initialize()
 
@@ -321,7 +345,7 @@ func NewUpcloudProvider(scope constructs.Construct, id *string, config *UpcloudP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.1.1/docs upcloud} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs upcloud} Resource.
 func NewUpcloudProvider_Override(u UpcloudProvider, scope constructs.Construct, id *string, config *UpcloudProviderConfig) {
 	_init_.Initialize()
 
@@ -344,6 +368,14 @@ func (j *jsiiProxy_UpcloudProvider)SetPassword(val *string) {
 	_jsii_.Set(
 		j,
 		"password",
+		val,
+	)
+}
+
+func (j *jsiiProxy_UpcloudProvider)SetRequestTimeoutSec(val *float64) {
+	_jsii_.Set(
+		j,
+		"requestTimeoutSec",
 		val,
 	)
 }
@@ -525,6 +557,14 @@ func (u *jsiiProxy_UpcloudProvider) ResetPassword() {
 	_jsii_.InvokeVoid(
 		u,
 		"resetPassword",
+		nil, // no parameters
+	)
+}
+
+func (u *jsiiProxy_UpcloudProvider) ResetRequestTimeoutSec() {
+	_jsii_.InvokeVoid(
+		u,
+		"resetRequestTimeoutSec",
 		nil, // no parameters
 	)
 }

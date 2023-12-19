@@ -76,6 +76,9 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	RedisTimeout() *float64
 	SetRedisTimeout(val *float64)
 	RedisTimeoutInput() *float64
+	ServiceLog() interface{}
+	SetServiceLog(val interface{})
+	ServiceLogInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -124,6 +127,7 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	ResetRedisPubsubClientOutputBufferLimit()
 	ResetRedisSsl()
 	ResetRedisTimeout()
+	ResetServiceLog()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -489,6 +493,26 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) RedisTimeoutIn
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ServiceLog() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serviceLog",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ServiceLogInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serviceLogInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -720,6 +744,17 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetRedisTimeout
 	_jsii_.Set(
 		j,
 		"redisTimeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetServiceLog(val interface{}) {
+	if err := j.validateSetServiceLogParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceLog",
 		val,
 	)
 }
@@ -1059,6 +1094,14 @@ func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetRedisTime
 	_jsii_.InvokeVoid(
 		m,
 		"resetRedisTimeout",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetServiceLog() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetServiceLog",
 		nil, // no parameters
 	)
 }
