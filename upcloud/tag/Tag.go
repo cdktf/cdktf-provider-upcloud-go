@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/tag upcloud_tag}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/tag upcloud_tag}.
 type Tag interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -378,7 +378,7 @@ func (j *jsiiProxy_Tag) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/tag upcloud_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/tag upcloud_tag} Resource.
 func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	_init_.Initialize()
 
@@ -396,7 +396,7 @@ func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/tag upcloud_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/tag upcloud_tag} Resource.
 func NewTag_Override(t Tag, scope constructs.Construct, id *string, config *TagConfig) {
 	_init_.Initialize()
 

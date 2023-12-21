@@ -400,6 +400,14 @@ func (j *jsiiProxy_ManagedObjectStorage) validateSetLifecycleParameters(val *cdk
 	return nil
 }
 
+func (j *jsiiProxy_ManagedObjectStorage) validateSetNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedObjectStorage) validateSetProvisionersParameters(val *[]interface{}) error {
 	for idx_97dfc6, v := range *val {
 		switch v.(type) {

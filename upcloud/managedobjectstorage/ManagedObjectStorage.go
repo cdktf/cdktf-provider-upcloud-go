@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage upcloud_managed_object_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/managed_object_storage upcloud_managed_object_storage}.
 type ManagedObjectStorage interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -54,6 +54,9 @@ type ManagedObjectStorage interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Name() *string
+	SetName(val *string)
+	NameInput() *string
 	Network() ManagedObjectStorageNetworkList
 	NetworkInput() interface{}
 	// The tree node.
@@ -318,6 +321,26 @@ func (j *jsiiProxy_ManagedObjectStorage) Lifecycle() *cdktf.TerraformResourceLif
 	return returns
 }
 
+func (j *jsiiProxy_ManagedObjectStorage) Name() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"name",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedObjectStorage) NameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedObjectStorage) Network() ManagedObjectStorageNetworkList {
 	var returns ManagedObjectStorageNetworkList
 	_jsii_.Get(
@@ -469,7 +492,7 @@ func (j *jsiiProxy_ManagedObjectStorage) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
 func NewManagedObjectStorage(scope constructs.Construct, id *string, config *ManagedObjectStorageConfig) ManagedObjectStorage {
 	_init_.Initialize()
 
@@ -487,7 +510,7 @@ func NewManagedObjectStorage(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
 func NewManagedObjectStorage_Override(m ManagedObjectStorage, scope constructs.Construct, id *string, config *ManagedObjectStorageConfig) {
 	_init_.Initialize()
 
@@ -576,6 +599,17 @@ func (j *jsiiProxy_ManagedObjectStorage)SetLifecycle(val *cdktf.TerraformResourc
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedObjectStorage)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"name",
 		val,
 	)
 }

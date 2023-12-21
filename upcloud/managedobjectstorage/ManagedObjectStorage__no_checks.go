@@ -119,6 +119,10 @@ func (j *jsiiProxy_ManagedObjectStorage) validateSetLifecycleParameters(val *cdk
 	return nil
 }
 
+func (j *jsiiProxy_ManagedObjectStorage) validateSetNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedObjectStorage) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/storage upcloud_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/storage upcloud_storage}.
 type Storage interface {
 	cdktf.TerraformResource
 	BackupRule() StorageBackupRuleOutputReference
@@ -520,7 +520,7 @@ func (j *jsiiProxy_Storage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/storage upcloud_storage} Resource.
 func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) Storage {
 	_init_.Initialize()
 
@@ -538,7 +538,7 @@ func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) S
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.2.0/docs/resources/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.0/docs/resources/storage upcloud_storage} Resource.
 func NewStorage_Override(s Storage, scope constructs.Construct, id *string, config *StorageConfig) {
 	_init_.Initialize()
 
