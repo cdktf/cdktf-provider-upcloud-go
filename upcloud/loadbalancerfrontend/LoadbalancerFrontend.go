@@ -5,10 +5,10 @@ package loadbalancerfrontend
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/loadbalancerfrontend/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/loadbalancerfrontend/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -137,6 +137,9 @@ type LoadbalancerFrontend interface {
 	ResetOverrideLogicalId()
 	ResetProperties()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -1068,6 +1071,32 @@ func (l *jsiiProxy_LoadbalancerFrontend) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LoadbalancerFrontend) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LoadbalancerFrontend) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

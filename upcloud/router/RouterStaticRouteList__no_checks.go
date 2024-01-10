@@ -7,6 +7,10 @@ package router
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_RouterStaticRouteList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RouterStaticRouteList) validateGetParameters(index *float64) error {
 	return nil
 }

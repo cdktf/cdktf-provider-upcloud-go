@@ -7,6 +7,10 @@ package dataupcloudmanagedobjectstorageregions
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsList) validateGetParameters(index *float64) error {
 	return nil
 }

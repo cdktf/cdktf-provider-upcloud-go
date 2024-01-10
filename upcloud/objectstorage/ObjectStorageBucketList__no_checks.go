@@ -7,6 +7,10 @@ package objectstorage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (o *jsiiProxy_ObjectStorageBucketList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (o *jsiiProxy_ObjectStorageBucketList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -7,6 +7,10 @@ package manageddatabaseopensearch
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchNodeStatesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchNodeStatesList) validateGetParameters(index *float64) error {
 	return nil
 }

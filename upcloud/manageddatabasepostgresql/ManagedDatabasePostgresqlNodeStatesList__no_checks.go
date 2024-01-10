@@ -7,6 +7,10 @@ package manageddatabasepostgresql
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesList) validateGetParameters(index *float64) error {
 	return nil
 }

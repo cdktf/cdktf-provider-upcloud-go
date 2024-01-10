@@ -5,9 +5,9 @@ package loadbalancerfrontend
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v11/loadbalancerfrontend/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/loadbalancerfrontend/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

@@ -7,6 +7,10 @@ package dataupcloudipaddresses
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataUpcloudIpAddressesAddressesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataUpcloudIpAddressesAddressesList) validateGetParameters(index *float64) error {
 	return nil
 }

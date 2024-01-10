@@ -7,6 +7,10 @@ package loadbalancerfrontend
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LoadbalancerFrontendNetworksList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendNetworksList) validateGetParameters(index *float64) error {
 	return nil
 }
