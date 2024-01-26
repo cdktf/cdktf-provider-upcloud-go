@@ -35,6 +35,9 @@ type LoadbalancerFrontendRuleMatchersCookieOutputReference interface {
 	IgnoreCaseInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Inverse() interface{}
+	SetInverse(val interface{})
+	InverseInput() interface{}
 	Method() *string
 	SetMethod(val *string)
 	MethodInput() *string
@@ -77,6 +80,7 @@ type LoadbalancerFrontendRuleMatchersCookieOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetIgnoreCase()
+	ResetInverse()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -158,6 +162,26 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieOutputReference) Intern
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieOutputReference) Inverse() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inverse",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieOutputReference) InverseInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inverseInput",
 		&returns,
 	)
 	return returns
@@ -311,6 +335,17 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieOutputReference)SetInte
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieOutputReference)SetInverse(val interface{}) {
+	if err := j.validateSetInverseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"inverse",
 		val,
 	)
 }
@@ -560,6 +595,14 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieOutputReference) ResetI
 	_jsii_.InvokeVoid(
 		l,
 		"resetIgnoreCase",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersCookieOutputReference) ResetInverse() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetInverse",
 		nil, // no parameters
 	)
 }

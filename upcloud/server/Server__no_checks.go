@@ -171,6 +171,10 @@ func (j *jsiiProxy_Server) validateSetProvisionersParameters(val *[]interface{})
 	return nil
 }
 
+func (j *jsiiProxy_Server) validateSetServerGroupParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Server) validateSetTagsParameters(val *[]*string) error {
 	return nil
 }

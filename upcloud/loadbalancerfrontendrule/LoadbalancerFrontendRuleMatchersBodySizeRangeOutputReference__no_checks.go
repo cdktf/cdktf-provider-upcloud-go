@@ -63,6 +63,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeOutputReference)
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeOutputReference) validateSetInverseParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeRangeOutputReference) validateSetRangeEndParameters(val *float64) error {
 	return nil
 }

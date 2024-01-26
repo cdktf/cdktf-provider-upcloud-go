@@ -75,6 +75,10 @@ func (j *jsiiProxy_ServerTemplateOutputReference) validateSetDeleteAutoresizeBac
 	return nil
 }
 
+func (j *jsiiProxy_ServerTemplateOutputReference) validateSetEncryptParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ServerTemplateOutputReference) validateSetFilesystemAutoresizeParameters(val interface{}) error {
 	return nil
 }

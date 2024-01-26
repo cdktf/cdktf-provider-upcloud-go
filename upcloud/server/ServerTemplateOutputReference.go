@@ -39,6 +39,9 @@ type ServerTemplateOutputReference interface {
 	DeleteAutoresizeBackup() interface{}
 	SetDeleteAutoresizeBackup(val interface{})
 	DeleteAutoresizeBackupInput() interface{}
+	Encrypt() interface{}
+	SetEncrypt(val interface{})
+	EncryptInput() interface{}
 	FilesystemAutoresize() interface{}
 	SetFilesystemAutoresize(val interface{})
 	FilesystemAutoresizeInput() interface{}
@@ -94,6 +97,7 @@ type ServerTemplateOutputReference interface {
 	ResetAddressPosition()
 	ResetBackupRule()
 	ResetDeleteAutoresizeBackup()
+	ResetEncrypt()
 	ResetFilesystemAutoresize()
 	ResetSize()
 	ResetTitle()
@@ -217,6 +221,26 @@ func (j *jsiiProxy_ServerTemplateOutputReference) DeleteAutoresizeBackupInput() 
 	_jsii_.Get(
 		j,
 		"deleteAutoresizeBackupInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerTemplateOutputReference) Encrypt() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"encrypt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerTemplateOutputReference) EncryptInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"encryptInput",
 		&returns,
 	)
 	return returns
@@ -441,6 +465,17 @@ func (j *jsiiProxy_ServerTemplateOutputReference)SetDeleteAutoresizeBackup(val i
 	_jsii_.Set(
 		j,
 		"deleteAutoresizeBackup",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServerTemplateOutputReference)SetEncrypt(val interface{}) {
+	if err := j.validateSetEncryptParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"encrypt",
 		val,
 	)
 }
@@ -747,6 +782,14 @@ func (s *jsiiProxy_ServerTemplateOutputReference) ResetDeleteAutoresizeBackup() 
 	_jsii_.InvokeVoid(
 		s,
 		"resetDeleteAutoresizeBackup",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerTemplateOutputReference) ResetEncrypt() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEncrypt",
 		nil, // no parameters
 	)
 }

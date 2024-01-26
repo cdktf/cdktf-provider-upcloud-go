@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/server_group upcloud_server_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/server_group upcloud_server_group}.
 type ServerGroup interface {
 	cdktf.TerraformResource
 	AntiAffinityPolicy() *string
@@ -76,6 +76,9 @@ type ServerGroup interface {
 	Title() *string
 	SetTitle(val *string)
 	TitleInput() *string
+	TrackMembers() interface{}
+	SetTrackMembers(val interface{})
+	TrackMembersInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -126,6 +129,7 @@ type ServerGroup interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTrackMembers()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -404,8 +408,28 @@ func (j *jsiiProxy_ServerGroup) TitleInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ServerGroup) TrackMembers() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"trackMembers",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/server_group upcloud_server_group} Resource.
+func (j *jsiiProxy_ServerGroup) TrackMembersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"trackMembersInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupConfig) ServerGroup {
 	_init_.Initialize()
 
@@ -423,7 +447,7 @@ func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/server_group upcloud_server_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup_Override(s ServerGroup, scope constructs.Construct, id *string, config *ServerGroupConfig) {
 	_init_.Initialize()
 
@@ -553,6 +577,17 @@ func (j *jsiiProxy_ServerGroup)SetTitle(val *string) {
 	_jsii_.Set(
 		j,
 		"title",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServerGroup)SetTrackMembers(val interface{}) {
+	if err := j.validateSetTrackMembersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"trackMembers",
 		val,
 	)
 }
@@ -946,6 +981,14 @@ func (s *jsiiProxy_ServerGroup) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerGroup) ResetTrackMembers() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTrackMembers",
 		nil, // no parameters
 	)
 }

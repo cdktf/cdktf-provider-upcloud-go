@@ -35,6 +35,9 @@ type LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Inverse() interface{}
+	SetInverse(val interface{})
+	InverseInput() interface{}
 	Method() *string
 	SetMethod(val *string)
 	MethodInput() *string
@@ -73,6 +76,7 @@ type LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetInverse()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -153,6 +157,26 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference) 
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference) Inverse() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inverse",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference) InverseInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inverseInput",
 		&returns,
 	)
 	return returns
@@ -286,6 +310,17 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference)S
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference)SetInverse(val interface{}) {
+	if err := j.validateSetInverseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"inverse",
 		val,
 	)
 }
@@ -518,6 +553,14 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference) 
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference) ResetInverse() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetInverse",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersNumMembersUpOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -127,6 +127,10 @@ func (j *jsiiProxy_ServerGroup) validateSetTitleParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_ServerGroup) validateSetTrackMembersParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewServerGroupParameters(scope constructs.Construct, id *string, config *ServerGroupConfig) error {
 	return nil
 }

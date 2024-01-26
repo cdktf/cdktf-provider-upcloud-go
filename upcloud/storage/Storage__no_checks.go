@@ -115,6 +115,10 @@ func (j *jsiiProxy_Storage) validateSetDeleteAutoresizeBackupParameters(val inte
 	return nil
 }
 
+func (j *jsiiProxy_Storage) validateSetEncryptParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Storage) validateSetFilesystemAutoresizeParameters(val interface{}) error {
 	return nil
 }

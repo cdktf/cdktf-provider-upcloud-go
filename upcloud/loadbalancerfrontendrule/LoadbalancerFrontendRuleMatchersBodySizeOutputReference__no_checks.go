@@ -63,6 +63,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeOutputReference) vali
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeOutputReference) validateSetInverseParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeOutputReference) validateSetMethodParameters(val *string) error {
 	return nil
 }

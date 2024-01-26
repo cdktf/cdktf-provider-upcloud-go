@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/storage upcloud_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/storage upcloud_storage}.
 type Storage interface {
 	cdktf.TerraformResource
 	BackupRule() StorageBackupRuleOutputReference
@@ -38,6 +38,9 @@ type Storage interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Encrypt() interface{}
+	SetEncrypt(val interface{})
+	EncryptInput() interface{}
 	FilesystemAutoresize() interface{}
 	SetFilesystemAutoresize(val interface{})
 	FilesystemAutoresizeInput() interface{}
@@ -137,6 +140,7 @@ type Storage interface {
 	ResetBackupRule()
 	ResetClone()
 	ResetDeleteAutoresizeBackup()
+	ResetEncrypt()
 	ResetFilesystemAutoresize()
 	ResetId()
 	ResetImport()
@@ -267,6 +271,26 @@ func (j *jsiiProxy_Storage) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Storage) Encrypt() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"encrypt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Storage) EncryptInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"encryptInput",
 		&returns,
 	)
 	return returns
@@ -523,7 +547,7 @@ func (j *jsiiProxy_Storage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/storage upcloud_storage} Resource.
 func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) Storage {
 	_init_.Initialize()
 
@@ -541,7 +565,7 @@ func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) S
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/storage upcloud_storage} Resource.
 func NewStorage_Override(s Storage, scope constructs.Construct, id *string, config *StorageConfig) {
 	_init_.Initialize()
 
@@ -589,6 +613,17 @@ func (j *jsiiProxy_Storage)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Storage)SetEncrypt(val interface{}) {
+	if err := j.validateSetEncryptParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"encrypt",
 		val,
 	)
 }
@@ -1103,6 +1138,14 @@ func (s *jsiiProxy_Storage) ResetDeleteAutoresizeBackup() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetDeleteAutoresizeBackup",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Storage) ResetEncrypt() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEncrypt",
 		nil, // no parameters
 	)
 }

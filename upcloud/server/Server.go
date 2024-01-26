@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/server upcloud_server}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/server upcloud_server}.
 type Server interface {
 	cdktf.TerraformResource
 	BootOrder() *string
@@ -92,6 +92,9 @@ type Server interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ServerGroup() *string
+	SetServerGroup(val *string)
+	ServerGroupInput() *string
 	SimpleBackup() ServerSimpleBackupOutputReference
 	SimpleBackupInput() *ServerSimpleBackup
 	StorageDevices() ServerStorageDevicesList
@@ -184,6 +187,7 @@ type Server interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPlan()
+	ResetServerGroup()
 	ResetSimpleBackup()
 	ResetStorageDevices()
 	ResetTags()
@@ -600,6 +604,26 @@ func (j *jsiiProxy_Server) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Server) ServerGroup() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serverGroup",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) ServerGroupInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serverGroupInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Server) SimpleBackup() ServerSimpleBackupOutputReference {
 	var returns ServerSimpleBackupOutputReference
 	_jsii_.Get(
@@ -811,7 +835,7 @@ func (j *jsiiProxy_Server) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/server upcloud_server} Resource.
 func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Server {
 	_init_.Initialize()
 
@@ -829,7 +853,7 @@ func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Ser
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.3.1/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/server upcloud_server} Resource.
 func NewServer_Override(s Server, scope constructs.Construct, id *string, config *ServerConfig) {
 	_init_.Initialize()
 
@@ -1025,6 +1049,17 @@ func (j *jsiiProxy_Server)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Server)SetServerGroup(val *string) {
+	if err := j.validateSetServerGroupParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serverGroup",
 		val,
 	)
 }
@@ -1595,6 +1630,14 @@ func (s *jsiiProxy_Server) ResetPlan() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetPlan",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Server) ResetServerGroup() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetServerGroup",
 		nil, // no parameters
 	)
 }

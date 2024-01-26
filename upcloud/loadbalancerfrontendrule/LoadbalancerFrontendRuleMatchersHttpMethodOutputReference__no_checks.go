@@ -63,6 +63,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHttpMethodOutputReference) va
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHttpMethodOutputReference) validateSetInverseParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersHttpMethodOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

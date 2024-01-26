@@ -35,6 +35,9 @@ type LoadbalancerFrontendRuleMatchersPathOutputReference interface {
 	IgnoreCaseInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Inverse() interface{}
+	SetInverse(val interface{})
+	InverseInput() interface{}
 	Method() *string
 	SetMethod(val *string)
 	MethodInput() *string
@@ -74,6 +77,7 @@ type LoadbalancerFrontendRuleMatchersPathOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetIgnoreCase()
+	ResetInverse()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -155,6 +159,26 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersPathOutputReference) Internal
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersPathOutputReference) Inverse() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inverse",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersPathOutputReference) InverseInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inverseInput",
 		&returns,
 	)
 	return returns
@@ -288,6 +312,17 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersPathOutputReference)SetIntern
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersPathOutputReference)SetInverse(val interface{}) {
+	if err := j.validateSetInverseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"inverse",
 		val,
 	)
 }
@@ -526,6 +561,14 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersPathOutputReference) ResetIgn
 	_jsii_.InvokeVoid(
 		l,
 		"resetIgnoreCase",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersPathOutputReference) ResetInverse() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetInverse",
 		nil, // no parameters
 	)
 }

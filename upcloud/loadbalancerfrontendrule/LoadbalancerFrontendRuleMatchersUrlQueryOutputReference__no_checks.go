@@ -67,6 +67,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlQueryOutputReference) vali
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlQueryOutputReference) validateSetInverseParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlQueryOutputReference) validateSetMethodParameters(val *string) error {
 	return nil
 }

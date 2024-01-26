@@ -63,6 +63,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcPortOutputReference) valid
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcPortOutputReference) validateSetInverseParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersSrcPortOutputReference) validateSetMethodParameters(val *string) error {
 	return nil
 }
