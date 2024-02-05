@@ -255,14 +255,6 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetPgReadReplicaParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetPgServiceToForkFromParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetPgStatMonitorEnableParameters(val interface{}) error {
 	return nil
 }

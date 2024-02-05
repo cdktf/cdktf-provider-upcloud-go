@@ -5,14 +5,14 @@ package manageddatabasemysql
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/manageddatabasemysql/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/manageddatabasemysql/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
 type ManagedDatabaseMysql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -149,7 +149,6 @@ type ManagedDatabaseMysql interface {
 	ResetOverrideLogicalId()
 	ResetPowered()
 	ResetProperties()
-	ResetTitle()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -609,7 +608,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) ManagedDatabaseMysql {
 	_init_.Initialize()
 
@@ -627,7 +626,7 @@ func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql_Override(m ManagedDatabaseMysql, scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) {
 	_init_.Initialize()
 
@@ -1202,14 +1201,6 @@ func (m *jsiiProxy_ManagedDatabaseMysql) ResetProperties() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetProperties",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabaseMysql) ResetTitle() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetTitle",
 		nil, // no parameters
 	)
 }

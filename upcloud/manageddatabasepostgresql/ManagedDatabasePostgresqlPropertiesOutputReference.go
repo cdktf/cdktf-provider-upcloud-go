@@ -5,9 +5,9 @@ package manageddatabasepostgresql
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/manageddatabasepostgresql/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/manageddatabasepostgresql/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -170,12 +170,6 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	PgPartmanBgwRole() *string
 	SetPgPartmanBgwRole(val *string)
 	PgPartmanBgwRoleInput() *string
-	PgReadReplica() interface{}
-	SetPgReadReplica(val interface{})
-	PgReadReplicaInput() interface{}
-	PgServiceToForkFrom() *string
-	SetPgServiceToForkFrom(val *string)
-	PgServiceToForkFromInput() *string
 	PgStatMonitorEnable() interface{}
 	SetPgStatMonitorEnable(val interface{})
 	PgStatMonitorEnableInput() interface{}
@@ -318,8 +312,6 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetPglookout()
 	ResetPgPartmanBgwInterval()
 	ResetPgPartmanBgwRole()
-	ResetPgReadReplica()
-	ResetPgServiceToForkFrom()
 	ResetPgStatMonitorEnable()
 	ResetPgStatMonitorPgsmEnableQueryPlan()
 	ResetPgStatMonitorPgsmMaxBuckets()
@@ -1345,46 +1337,6 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgPartman
 	return returns
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgReadReplica() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"pgReadReplica",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgReadReplicaInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"pgReadReplicaInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgServiceToForkFrom() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"pgServiceToForkFrom",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgServiceToForkFromInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"pgServiceToForkFromInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgStatMonitorEnable() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -2350,28 +2302,6 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgPartm
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgReadReplica(val interface{}) {
-	if err := j.validateSetPgReadReplicaParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"pgReadReplica",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgServiceToForkFrom(val *string) {
-	if err := j.validateSetPgServiceToForkFromParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"pgServiceToForkFrom",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgStatMonitorEnable(val interface{}) {
 	if err := j.validateSetPgStatMonitorEnableParameters(val); err != nil {
 		panic(err)
@@ -3205,22 +3135,6 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgPa
 	_jsii_.InvokeVoid(
 		m,
 		"resetPgPartmanBgwRole",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgReadReplica() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetPgReadReplica",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgServiceToForkFrom() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetPgServiceToForkFrom",
 		nil, // no parameters
 	)
 }

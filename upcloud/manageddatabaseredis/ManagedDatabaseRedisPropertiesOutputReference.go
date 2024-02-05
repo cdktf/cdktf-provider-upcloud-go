@@ -5,9 +5,9 @@ package manageddatabaseredis
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/manageddatabaseredis/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/manageddatabaseredis/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -76,6 +76,9 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	RedisTimeout() *float64
 	SetRedisTimeout(val *float64)
 	RedisTimeoutInput() *float64
+	RedisVersion() *string
+	SetRedisVersion(val *string)
+	RedisVersionInput() *string
 	ServiceLog() interface{}
 	SetServiceLog(val interface{})
 	ServiceLogInput() interface{}
@@ -127,6 +130,7 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	ResetRedisPubsubClientOutputBufferLimit()
 	ResetRedisSsl()
 	ResetRedisTimeout()
+	ResetRedisVersion()
 	ResetServiceLog()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -493,6 +497,26 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) RedisTimeoutIn
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) RedisVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"redisVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) RedisVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"redisVersionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ServiceLog() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -744,6 +768,17 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetRedisTimeout
 	_jsii_.Set(
 		j,
 		"redisTimeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetRedisVersion(val *string) {
+	if err := j.validateSetRedisVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"redisVersion",
 		val,
 	)
 }
@@ -1094,6 +1129,14 @@ func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetRedisTime
 	_jsii_.InvokeVoid(
 		m,
 		"resetRedisTimeout",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetRedisVersion() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRedisVersion",
 		nil, // no parameters
 	)
 }

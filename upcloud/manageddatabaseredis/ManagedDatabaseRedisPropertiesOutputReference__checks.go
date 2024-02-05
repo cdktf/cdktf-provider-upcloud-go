@@ -333,6 +333,14 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRed
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRedisVersionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetServiceLogParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

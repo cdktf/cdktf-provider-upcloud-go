@@ -1,6 +1,6 @@
-# CDKTF Go bindings for UpCloudLtd/upcloud provider version 3.4.0
+# CDKTF Go bindings for UpCloudLtd/upcloud provider version 4.0.0
 
-This repo builds and publishes the [Terraform upcloud provider](https://registry.terraform.io/providers/UpCloudLtd/upcloud/3.4.0/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform upcloud provider](https://registry.terraform.io/providers/UpCloudLtd/upcloud/4.0.0/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
@@ -18,12 +18,12 @@ Find auto-generated docs for this provider [here](https://github.com/cdktf/cdktf
 
 ## Versioning
 
-This project is explicitly not tracking the Terraform upcloud provider version 1:1. In fact, it always tracks `latest` of `~> 3.0` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by [generating the provider constructs manually](https://cdk.tf/imports).
+This project is explicitly not tracking the Terraform upcloud provider version 1:1. In fact, it always tracks `latest` of `~> 4.0` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by [generating the provider constructs manually](https://cdk.tf/imports).
 
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform upcloud provider](https://registry.terraform.io/providers/UpCloudLtd/upcloud/3.4.0)
+* [Terraform upcloud provider](https://registry.terraform.io/providers/UpCloudLtd/upcloud/4.0.0)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.

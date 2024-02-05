@@ -5,14 +5,14 @@ package managedobjectstorage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/managedobjectstorage/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/managedobjectstorage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/managed_object_storage upcloud_managed_object_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/managed_object_storage upcloud_managed_object_storage}.
 type ManagedObjectStorage interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -495,7 +495,7 @@ func (j *jsiiProxy_ManagedObjectStorage) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
 func NewManagedObjectStorage(scope constructs.Construct, id *string, config *ManagedObjectStorageConfig) ManagedObjectStorage {
 	_init_.Initialize()
 
@@ -513,7 +513,7 @@ func NewManagedObjectStorage(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
 func NewManagedObjectStorage_Override(m ManagedObjectStorage, scope constructs.Construct, id *string, config *ManagedObjectStorageConfig) {
 	_init_.Initialize()
 

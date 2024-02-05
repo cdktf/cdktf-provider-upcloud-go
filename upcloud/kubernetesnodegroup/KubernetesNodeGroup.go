@@ -5,14 +5,14 @@ package kubernetesnodegroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/kubernetesnodegroup/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/kubernetesnodegroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
 type KubernetesNodeGroup interface {
 	cdktf.TerraformResource
 	AntiAffinity() interface{}
@@ -546,7 +546,7 @@ func (j *jsiiProxy_KubernetesNodeGroup) UtilityNetworkAccessInput() interface{} 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) KubernetesNodeGroup {
 	_init_.Initialize()
 
@@ -564,7 +564,7 @@ func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *Kube
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup_Override(k KubernetesNodeGroup, scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) {
 	_init_.Initialize()
 

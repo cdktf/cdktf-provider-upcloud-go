@@ -5,14 +5,14 @@ package dataupcloudzone
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v12/dataupcloudzone/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/dataupcloudzone/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/data-sources/zone upcloud_zone}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/data-sources/zone upcloud_zone}.
 type DataUpcloudZone interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -310,7 +310,7 @@ func (j *jsiiProxy_DataUpcloudZone) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/data-sources/zone upcloud_zone} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/data-sources/zone upcloud_zone} Data Source.
 func NewDataUpcloudZone(scope constructs.Construct, id *string, config *DataUpcloudZoneConfig) DataUpcloudZone {
 	_init_.Initialize()
 
@@ -328,7 +328,7 @@ func NewDataUpcloudZone(scope constructs.Construct, id *string, config *DataUpcl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/3.4.0/docs/data-sources/zone upcloud_zone} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/data-sources/zone upcloud_zone} Data Source.
 func NewDataUpcloudZone_Override(d DataUpcloudZone, scope constructs.Construct, id *string, config *DataUpcloudZoneConfig) {
 	_init_.Initialize()
 

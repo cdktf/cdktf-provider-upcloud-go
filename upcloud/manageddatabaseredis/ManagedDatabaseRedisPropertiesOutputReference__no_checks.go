@@ -123,6 +123,10 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRed
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetRedisVersionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetServiceLogParameters(val interface{}) error {
 	return nil
 }

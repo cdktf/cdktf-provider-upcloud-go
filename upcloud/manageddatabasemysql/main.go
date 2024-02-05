@@ -69,7 +69,6 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPowered", GoMethod: "ResetPowered"},
 			_jsii_.MemberMethod{JsiiMethod: "resetProperties", GoMethod: "ResetProperties"},
-			_jsii_.MemberMethod{JsiiMethod: "resetTitle", GoMethod: "ResetTitle"},
 			_jsii_.MemberProperty{JsiiProperty: "serviceHost", GoGetter: "ServiceHost"},
 			_jsii_.MemberProperty{JsiiProperty: "servicePassword", GoGetter: "ServicePassword"},
 			_jsii_.MemberProperty{JsiiProperty: "servicePort", GoGetter: "ServicePort"},
