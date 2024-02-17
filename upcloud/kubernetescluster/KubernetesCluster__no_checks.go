@@ -107,6 +107,10 @@ func (j *jsiiProxy_KubernetesCluster) validateSetIdParameters(val *string) error
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesCluster) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_KubernetesCluster) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

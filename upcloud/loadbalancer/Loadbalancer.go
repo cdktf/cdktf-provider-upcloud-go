@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/loadbalancer upcloud_loadbalancer}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/loadbalancer upcloud_loadbalancer}.
 type Loadbalancer interface {
 	cdktf.TerraformResource
 	Backends() *[]*string
@@ -55,6 +55,12 @@ type Loadbalancer interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MaintenanceDow() *string
+	SetMaintenanceDow(val *string)
+	MaintenanceDowInput() *string
+	MaintenanceTime() *string
+	SetMaintenanceTime(val *string)
+	MaintenanceTimeInput() *string
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -137,6 +143,8 @@ type Loadbalancer interface {
 	ResetConfiguredStatus()
 	ResetId()
 	ResetLabels()
+	ResetMaintenanceDow()
+	ResetMaintenanceTime()
 	ResetNetwork()
 	ResetNetworks()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -335,6 +343,46 @@ func (j *jsiiProxy_Loadbalancer) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) MaintenanceDow() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maintenanceDow",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) MaintenanceDowInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maintenanceDowInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) MaintenanceTime() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maintenanceTime",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) MaintenanceTimeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maintenanceTimeInput",
 		&returns,
 	)
 	return returns
@@ -541,7 +589,7 @@ func (j *jsiiProxy_Loadbalancer) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer(scope constructs.Construct, id *string, config *LoadbalancerConfig) Loadbalancer {
 	_init_.Initialize()
 
@@ -559,7 +607,7 @@ func NewLoadbalancer(scope constructs.Construct, id *string, config *Loadbalance
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.0.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer_Override(l Loadbalancer, scope constructs.Construct, id *string, config *LoadbalancerConfig) {
 	_init_.Initialize()
 
@@ -648,6 +696,28 @@ func (j *jsiiProxy_Loadbalancer)SetLifecycle(val *cdktf.TerraformResourceLifecyc
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Loadbalancer)SetMaintenanceDow(val *string) {
+	if err := j.validateSetMaintenanceDowParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maintenanceDow",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Loadbalancer)SetMaintenanceTime(val *string) {
+	if err := j.validateSetMaintenanceTimeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maintenanceTime",
 		val,
 	)
 }
@@ -1099,6 +1169,22 @@ func (l *jsiiProxy_Loadbalancer) ResetLabels() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetLabels",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_Loadbalancer) ResetMaintenanceDow() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMaintenanceDow",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_Loadbalancer) ResetMaintenanceTime() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMaintenanceTime",
 		nil, // no parameters
 	)
 }

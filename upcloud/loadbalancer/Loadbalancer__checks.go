@@ -400,6 +400,22 @@ func (j *jsiiProxy_Loadbalancer) validateSetLifecycleParameters(val *cdktf.Terra
 	return nil
 }
 
+func (j *jsiiProxy_Loadbalancer) validateSetMaintenanceDowParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Loadbalancer) validateSetMaintenanceTimeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Loadbalancer) validateSetNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

@@ -119,6 +119,14 @@ func (j *jsiiProxy_Loadbalancer) validateSetLifecycleParameters(val *cdktf.Terra
 	return nil
 }
 
+func (j *jsiiProxy_Loadbalancer) validateSetMaintenanceDowParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Loadbalancer) validateSetMaintenanceTimeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Loadbalancer) validateSetNameParameters(val *string) error {
 	return nil
 }
