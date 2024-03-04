@@ -5,9 +5,9 @@ package managedobjectstorage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/jsii"
 
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/managedobjectstorage/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/managedobjectstorage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -31,8 +31,10 @@ type ManagedObjectStorageEndpointOutputReference interface {
 	DomainName() *string
 	// Experimental.
 	Fqn() *string
+	IamUrl() *string
 	InternalValue() *ManagedObjectStorageEndpoint
 	SetInternalValue(val *ManagedObjectStorageEndpoint)
+	StsUrl() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -131,11 +133,31 @@ func (j *jsiiProxy_ManagedObjectStorageEndpointOutputReference) Fqn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ManagedObjectStorageEndpointOutputReference) IamUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"iamUrl",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedObjectStorageEndpointOutputReference) InternalValue() *ManagedObjectStorageEndpoint {
 	var returns *ManagedObjectStorageEndpoint
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedObjectStorageEndpointOutputReference) StsUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"stsUrl",
 		&returns,
 	)
 	return returns

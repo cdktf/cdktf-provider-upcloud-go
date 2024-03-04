@@ -5,14 +5,14 @@ package loadbalancermanualcertificatebundle
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/loadbalancermanualcertificatebundle/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/loadbalancermanualcertificatebundle/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle}.
 type LoadbalancerManualCertificateBundle interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -436,7 +436,7 @@ func (j *jsiiProxy_LoadbalancerManualCertificateBundle) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
 func NewLoadbalancerManualCertificateBundle(scope constructs.Construct, id *string, config *LoadbalancerManualCertificateBundleConfig) LoadbalancerManualCertificateBundle {
 	_init_.Initialize()
 
@@ -454,7 +454,7 @@ func NewLoadbalancerManualCertificateBundle(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
 func NewLoadbalancerManualCertificateBundle_Override(l LoadbalancerManualCertificateBundle, scope constructs.Construct, id *string, config *LoadbalancerManualCertificateBundleConfig) {
 	_init_.Initialize()
 

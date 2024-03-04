@@ -5,14 +5,14 @@ package manageddatabaseopensearch
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/manageddatabaseopensearch/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/manageddatabaseopensearch/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
 type ManagedDatabaseOpensearch interface {
 	cdktf.TerraformResource
 	AccessControl() interface{}
@@ -656,7 +656,7 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) ManagedDatabaseOpensearch {
 	_init_.Initialize()
 
@@ -674,7 +674,7 @@ func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch_Override(m ManagedDatabaseOpensearch, scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) {
 	_init_.Initialize()
 

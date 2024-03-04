@@ -99,10 +99,6 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetCountParameters
 	return nil
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetEnabledParameters(val interface{}) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetIdParameters(val *string) error {
 	return nil
 }
@@ -111,15 +107,15 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetLifecycleParame
 	return nil
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetNameParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetServiceUuidParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetStatusParameters(val *string) error {
 	return nil
 }
 

@@ -5,14 +5,14 @@ package managedobjectstorageuseraccesskey
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/managedobjectstorageuseraccesskey/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/managedobjectstorageuseraccesskey/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/managed_object_storage_user_access_key upcloud_managed_object_storage_user_access_key}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/managed_object_storage_user_access_key upcloud_managed_object_storage_user_access_key}.
 type ManagedObjectStorageUserAccessKey interface {
 	cdktf.TerraformResource
 	AccessKeyId() *string
@@ -33,9 +33,6 @@ type ManagedObjectStorageUserAccessKey interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
-	Enabled() interface{}
-	SetEnabled(val interface{})
-	EnabledInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -52,9 +49,6 @@ type ManagedObjectStorageUserAccessKey interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	Name() *string
-	SetName(val *string)
-	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -71,13 +65,15 @@ type ManagedObjectStorageUserAccessKey interface {
 	ServiceUuid() *string
 	SetServiceUuid(val *string)
 	ServiceUuidInput() *string
+	Status() *string
+	SetStatus(val *string)
+	StatusInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	UpdatedAt() *string
 	Username() *string
 	SetUsername(val *string)
 	UsernameInput() *string
@@ -216,26 +212,6 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) Enabled() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"enabled",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) EnabledInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"enabledInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -301,26 +277,6 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) Lifecycle() *cdktf.Terrafo
 	_jsii_.Get(
 		j,
 		"lifecycle",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) Name() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) NameInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"nameInput",
 		&returns,
 	)
 	return returns
@@ -396,6 +352,26 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) ServiceUuidInput() *string
 	return returns
 }
 
+func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) StatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -426,16 +402,6 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) TerraformResourceType() *s
 	return returns
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) UpdatedAt() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"updatedAt",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) Username() *string {
 	var returns *string
 	_jsii_.Get(
@@ -457,7 +423,7 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/managed_object_storage_user_access_key upcloud_managed_object_storage_user_access_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/managed_object_storage_user_access_key upcloud_managed_object_storage_user_access_key} Resource.
 func NewManagedObjectStorageUserAccessKey(scope constructs.Construct, id *string, config *ManagedObjectStorageUserAccessKeyConfig) ManagedObjectStorageUserAccessKey {
 	_init_.Initialize()
 
@@ -475,7 +441,7 @@ func NewManagedObjectStorageUserAccessKey(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/resources/managed_object_storage_user_access_key upcloud_managed_object_storage_user_access_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/managed_object_storage_user_access_key upcloud_managed_object_storage_user_access_key} Resource.
 func NewManagedObjectStorageUserAccessKey_Override(m ManagedObjectStorageUserAccessKey, scope constructs.Construct, id *string, config *ManagedObjectStorageUserAccessKeyConfig) {
 	_init_.Initialize()
 
@@ -516,17 +482,6 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetDependsOn(val *[]*string
 	)
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetEnabled(val interface{}) {
-	if err := j.validateSetEnabledParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"enabled",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -557,17 +512,6 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetLifecycle(val *cdktf.Ter
 	)
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetName(val *string) {
-	if err := j.validateSetNameParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"name",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
@@ -594,6 +538,17 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetServiceUuid(val *string)
 	_jsii_.Set(
 		j,
 		"serviceUuid",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedObjectStorageUserAccessKey)SetStatus(val *string) {
+	if err := j.validateSetStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"status",
 		val,
 	)
 }

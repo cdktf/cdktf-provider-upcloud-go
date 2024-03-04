@@ -131,10 +131,6 @@ func (j *jsiiProxy_ManagedObjectStorage) validateSetRegionParameters(val *string
 	return nil
 }
 
-func (j *jsiiProxy_ManagedObjectStorage) validateSetUsersParameters(val *[]*string) error {
-	return nil
-}
-
 func validateNewManagedObjectStorageParameters(scope constructs.Construct, id *string, config *ManagedObjectStorageConfig) error {
 	return nil
 }

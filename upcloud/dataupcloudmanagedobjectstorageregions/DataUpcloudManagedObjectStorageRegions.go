@@ -5,14 +5,14 @@ package dataupcloudmanagedobjectstorageregions
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v13/dataupcloudmanagedobjectstorageregions/internal"
+	"github.com/cdktf/cdktf-provider-upcloud-go/upcloud/v14/dataupcloudmanagedobjectstorageregions/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions}.
 type DataUpcloudManagedObjectStorageRegions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
 func NewDataUpcloudManagedObjectStorageRegions(scope constructs.Construct, id *string, config *DataUpcloudManagedObjectStorageRegionsConfig) DataUpcloudManagedObjectStorageRegions {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewDataUpcloudManagedObjectStorageRegions(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/4.1.0/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
 func NewDataUpcloudManagedObjectStorageRegions_Override(d DataUpcloudManagedObjectStorageRegions, scope constructs.Construct, id *string, config *DataUpcloudManagedObjectStorageRegionsConfig) {
 	_init_.Initialize()
 
