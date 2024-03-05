@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/floating_ip_address upcloud_floating_ip_address}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/floating_ip_address upcloud_floating_ip_address}.
 type FloatingIpAddress interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -417,7 +417,7 @@ func (j *jsiiProxy_FloatingIpAddress) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress(scope constructs.Construct, id *string, config *FloatingIpAddressConfig) FloatingIpAddress {
 	_init_.Initialize()
 
@@ -435,7 +435,7 @@ func NewFloatingIpAddress(scope constructs.Construct, id *string, config *Floati
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.1/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress_Override(f FloatingIpAddress, scope constructs.Construct, id *string, config *FloatingIpAddressConfig) {
 	_init_.Initialize()
 
