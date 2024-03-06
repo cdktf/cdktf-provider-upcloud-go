@@ -24,7 +24,7 @@ type ServerGroupConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Title of your server group.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/server_group#title ServerGroup#title}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/server_group#title ServerGroup#title}
 	Title *string `field:"required" json:"title" yaml:"title"`
 	// Defines if a server group is an anti-affinity group.
 	//
@@ -42,28 +42,28 @@ type ServerGroupConfig struct {
 	// 	policies in server group are not met, you need to manually restart the servers in said group,
 	// 	for example via API, UpCloud Control Panel or upctl (UpCloud CLI)
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/server_group#anti_affinity_policy ServerGroup#anti_affinity_policy}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/server_group#anti_affinity_policy ServerGroup#anti_affinity_policy}
 	AntiAffinityPolicy *string `field:"optional" json:"antiAffinityPolicy" yaml:"antiAffinityPolicy"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/server_group#id ServerGroup#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/server_group#id ServerGroup#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Key-value pairs to classify the server group.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/server_group#labels ServerGroup#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/server_group#labels ServerGroup#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 	// UUIDs of the servers that are members of this group.
 	//
 	// Servers can also be attached to the server group via `server_group` property of `upcloud_server`. See also `track_members` property.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/server_group#members ServerGroup#members}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/server_group#members ServerGroup#members}
 	Members *[]*string `field:"optional" json:"members" yaml:"members"`
 	// Controls if members of the server group are being tracked in this resource.
 	//
 	// Set to `false` when using `server_group` property of `upcloud_server` to attach servers to the server group to avoid delayed state updates.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/server_group#track_members ServerGroup#track_members}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/server_group#track_members ServerGroup#track_members}
 	TrackMembers interface{} `field:"optional" json:"trackMembers" yaml:"trackMembers"`
 }
 

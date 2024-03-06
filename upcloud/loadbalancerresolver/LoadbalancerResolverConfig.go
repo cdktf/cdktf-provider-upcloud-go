@@ -24,40 +24,40 @@ type LoadbalancerResolverConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Time in seconds to cache invalid results.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#cache_invalid LoadbalancerResolver#cache_invalid}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#cache_invalid LoadbalancerResolver#cache_invalid}
 	CacheInvalid *float64 `field:"required" json:"cacheInvalid" yaml:"cacheInvalid"`
 	// Time in seconds to cache valid results.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#cache_valid LoadbalancerResolver#cache_valid}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#cache_valid LoadbalancerResolver#cache_valid}
 	CacheValid *float64 `field:"required" json:"cacheValid" yaml:"cacheValid"`
 	// ID of the load balancer to which the resolver is connected.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#loadbalancer LoadbalancerResolver#loadbalancer}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#loadbalancer LoadbalancerResolver#loadbalancer}
 	Loadbalancer *string `field:"required" json:"loadbalancer" yaml:"loadbalancer"`
 	// The name of the resolver must be unique within the service.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#name LoadbalancerResolver#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#name LoadbalancerResolver#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// List of nameserver IP addresses.
 	//
 	// Nameserver can reside in public internet or in customer private network.
 	// 				Port is optional, if missing then default 53 will be used.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#nameservers LoadbalancerResolver#nameservers}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#nameservers LoadbalancerResolver#nameservers}
 	Nameservers *[]*string `field:"required" json:"nameservers" yaml:"nameservers"`
 	// Number of retries on failure.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#retries LoadbalancerResolver#retries}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#retries LoadbalancerResolver#retries}
 	Retries *float64 `field:"required" json:"retries" yaml:"retries"`
 	// Timeout for the query in seconds.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#timeout LoadbalancerResolver#timeout}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#timeout LoadbalancerResolver#timeout}
 	Timeout *float64 `field:"required" json:"timeout" yaml:"timeout"`
 	// Timeout for the query retries in seconds.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#timeout_retry LoadbalancerResolver#timeout_retry}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#timeout_retry LoadbalancerResolver#timeout_retry}
 	TimeoutRetry *float64 `field:"required" json:"timeoutRetry" yaml:"timeoutRetry"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.2/docs/resources/loadbalancer_resolver#id LoadbalancerResolver#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_resolver#id LoadbalancerResolver#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
