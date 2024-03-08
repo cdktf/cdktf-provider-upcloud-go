@@ -75,6 +75,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) validateOverrideLogicalIdParameter
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearch) validatePutNetworkParameters(value interface{}) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearch) validatePutPropertiesParameters(value *ManagedDatabaseOpensearchProperties) error {
 	return nil
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_redis upcloud_managed_database_redis}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_redis upcloud_managed_database_redis}.
 type ManagedDatabaseRedis interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -56,6 +56,8 @@ type ManagedDatabaseRedis interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	Network() ManagedDatabaseRedisNetworkList
+	NetworkInput() interface{}
 	// The tree node.
 	Node() constructs.Node
 	NodeStates() ManagedDatabaseRedisNodeStatesList
@@ -140,10 +142,12 @@ type ManagedDatabaseRedis interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseRedisProperties)
 	ResetId()
 	ResetMaintenanceWindowDow()
 	ResetMaintenanceWindowTime()
+	ResetNetwork()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -342,6 +346,26 @@ func (j *jsiiProxy_ManagedDatabaseRedis) NameInput() *string {
 	_jsii_.Get(
 		j,
 		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) Network() ManagedDatabaseRedisNetworkList {
+	var returns ManagedDatabaseRedisNetworkList
+	_jsii_.Get(
+		j,
+		"network",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) NetworkInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"networkInput",
 		&returns,
 	)
 	return returns
@@ -608,7 +632,7 @@ func (j *jsiiProxy_ManagedDatabaseRedis) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
 func NewManagedDatabaseRedis(scope constructs.Construct, id *string, config *ManagedDatabaseRedisConfig) ManagedDatabaseRedis {
 	_init_.Initialize()
 
@@ -626,7 +650,7 @@ func NewManagedDatabaseRedis(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
 func NewManagedDatabaseRedis_Override(m ManagedDatabaseRedis, scope constructs.Construct, id *string, config *ManagedDatabaseRedisConfig) {
 	_init_.Initialize()
 
@@ -1146,6 +1170,17 @@ func (m *jsiiProxy_ManagedDatabaseRedis) OverrideLogicalId(newLogicalId *string)
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseRedis) PutNetwork(value interface{}) {
+	if err := m.validatePutNetworkParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putNetwork",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseRedis) PutProperties(value *ManagedDatabaseRedisProperties) {
 	if err := m.validatePutPropertiesParameters(value); err != nil {
 		panic(err)
@@ -1177,6 +1212,14 @@ func (m *jsiiProxy_ManagedDatabaseRedis) ResetMaintenanceWindowTime() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaintenanceWindowTime",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedis) ResetNetwork() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetwork",
 		nil, // no parameters
 	)
 }

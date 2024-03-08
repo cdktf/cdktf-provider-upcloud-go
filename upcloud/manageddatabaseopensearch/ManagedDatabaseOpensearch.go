@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
 type ManagedDatabaseOpensearch interface {
 	cdktf.TerraformResource
 	AccessControl() interface{}
@@ -62,6 +62,8 @@ type ManagedDatabaseOpensearch interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	Network() ManagedDatabaseOpensearchNetworkList
+	NetworkInput() interface{}
 	// The tree node.
 	Node() constructs.Node
 	NodeStates() ManagedDatabaseOpensearchNodeStatesList
@@ -146,12 +148,14 @@ type ManagedDatabaseOpensearch interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseOpensearchProperties)
 	ResetAccessControl()
 	ResetExtendedAccessControl()
 	ResetId()
 	ResetMaintenanceWindowDow()
 	ResetMaintenanceWindowTime()
+	ResetNetwork()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -390,6 +394,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) NameInput() *string {
 	_jsii_.Get(
 		j,
 		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch) Network() ManagedDatabaseOpensearchNetworkList {
+	var returns ManagedDatabaseOpensearchNetworkList
+	_jsii_.Get(
+		j,
+		"network",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch) NetworkInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"networkInput",
 		&returns,
 	)
 	return returns
@@ -656,7 +680,7 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) ManagedDatabaseOpensearch {
 	_init_.Initialize()
 
@@ -674,7 +698,7 @@ func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch_Override(m ManagedDatabaseOpensearch, scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) {
 	_init_.Initialize()
 
@@ -1216,6 +1240,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) OverrideLogicalId(newLogicalId *st
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearch) PutNetwork(value interface{}) {
+	if err := m.validatePutNetworkParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putNetwork",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearch) PutProperties(value *ManagedDatabaseOpensearchProperties) {
 	if err := m.validatePutPropertiesParameters(value); err != nil {
 		panic(err)
@@ -1263,6 +1298,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) ResetMaintenanceWindowTime() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaintenanceWindowTime",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearch) ResetNetwork() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetwork",
 		nil, // no parameters
 	)
 }

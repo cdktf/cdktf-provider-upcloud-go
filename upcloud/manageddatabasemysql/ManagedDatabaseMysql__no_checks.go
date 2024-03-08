@@ -75,6 +75,10 @@ func (m *jsiiProxy_ManagedDatabaseMysql) validateOverrideLogicalIdParameters(new
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseMysql) validatePutNetworkParameters(value interface{}) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseMysql) validatePutPropertiesParameters(value *ManagedDatabaseMysqlProperties) error {
 	return nil
 }

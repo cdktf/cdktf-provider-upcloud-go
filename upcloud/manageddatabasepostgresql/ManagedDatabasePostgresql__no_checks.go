@@ -75,6 +75,10 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) validateOverrideLogicalIdParameter
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresql) validatePutNetworkParameters(value interface{}) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresql) validatePutPropertiesParameters(value *ManagedDatabasePostgresqlProperties) error {
 	return nil
 }

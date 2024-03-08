@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
 type ManagedDatabaseMysql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -56,6 +56,8 @@ type ManagedDatabaseMysql interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	Network() ManagedDatabaseMysqlNetworkList
+	NetworkInput() interface{}
 	// The tree node.
 	Node() constructs.Node
 	NodeStates() ManagedDatabaseMysqlNodeStatesList
@@ -140,10 +142,12 @@ type ManagedDatabaseMysql interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseMysqlProperties)
 	ResetId()
 	ResetMaintenanceWindowDow()
 	ResetMaintenanceWindowTime()
+	ResetNetwork()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -342,6 +346,26 @@ func (j *jsiiProxy_ManagedDatabaseMysql) NameInput() *string {
 	_jsii_.Get(
 		j,
 		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql) Network() ManagedDatabaseMysqlNetworkList {
+	var returns ManagedDatabaseMysqlNetworkList
+	_jsii_.Get(
+		j,
+		"network",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql) NetworkInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"networkInput",
 		&returns,
 	)
 	return returns
@@ -608,7 +632,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) ManagedDatabaseMysql {
 	_init_.Initialize()
 
@@ -626,7 +650,7 @@ func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql_Override(m ManagedDatabaseMysql, scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) {
 	_init_.Initialize()
 
@@ -1146,6 +1170,17 @@ func (m *jsiiProxy_ManagedDatabaseMysql) OverrideLogicalId(newLogicalId *string)
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseMysql) PutNetwork(value interface{}) {
+	if err := m.validatePutNetworkParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putNetwork",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseMysql) PutProperties(value *ManagedDatabaseMysqlProperties) {
 	if err := m.validatePutPropertiesParameters(value); err != nil {
 		panic(err)
@@ -1177,6 +1212,14 @@ func (m *jsiiProxy_ManagedDatabaseMysql) ResetMaintenanceWindowTime() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaintenanceWindowTime",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysql) ResetNetwork() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetwork",
 		nil, // no parameters
 	)
 }

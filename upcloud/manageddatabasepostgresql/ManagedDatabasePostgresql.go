@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
 type ManagedDatabasePostgresql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -56,6 +56,8 @@ type ManagedDatabasePostgresql interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	Network() ManagedDatabasePostgresqlNetworkList
+	NetworkInput() interface{}
 	// The tree node.
 	Node() constructs.Node
 	NodeStates() ManagedDatabasePostgresqlNodeStatesList
@@ -141,10 +143,12 @@ type ManagedDatabasePostgresql interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabasePostgresqlProperties)
 	ResetId()
 	ResetMaintenanceWindowDow()
 	ResetMaintenanceWindowTime()
+	ResetNetwork()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -343,6 +347,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) NameInput() *string {
 	_jsii_.Get(
 		j,
 		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql) Network() ManagedDatabasePostgresqlNetworkList {
+	var returns ManagedDatabasePostgresqlNetworkList
+	_jsii_.Get(
+		j,
+		"network",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql) NetworkInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"networkInput",
 		&returns,
 	)
 	return returns
@@ -619,7 +643,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) ManagedDatabasePostgresql {
 	_init_.Initialize()
 
@@ -637,7 +661,7 @@ func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) {
 	_init_.Initialize()
 
@@ -1157,6 +1181,17 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) OverrideLogicalId(newLogicalId *st
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresql) PutNetwork(value interface{}) {
+	if err := m.validatePutNetworkParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putNetwork",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresql) PutProperties(value *ManagedDatabasePostgresqlProperties) {
 	if err := m.validatePutPropertiesParameters(value); err != nil {
 		panic(err)
@@ -1188,6 +1223,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) ResetMaintenanceWindowTime() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaintenanceWindowTime",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresql) ResetNetwork() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetwork",
 		nil, // no parameters
 	)
 }

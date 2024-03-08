@@ -75,6 +75,10 @@ func (m *jsiiProxy_ManagedDatabaseRedis) validateOverrideLogicalIdParameters(new
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseRedis) validatePutNetworkParameters(value interface{}) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseRedis) validatePutPropertiesParameters(value *ManagedDatabaseRedisProperties) error {
 	return nil
 }

@@ -24,36 +24,36 @@ type LoadbalancerStaticBackendMemberConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// ID of the load balancer backend to which the member is connected.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#backend LoadbalancerStaticBackendMember#backend}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#backend LoadbalancerStaticBackendMember#backend}
 	Backend *string `field:"required" json:"backend" yaml:"backend"`
 	// Server IP address in the customer private network.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#ip LoadbalancerStaticBackendMember#ip}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#ip LoadbalancerStaticBackendMember#ip}
 	Ip *string `field:"required" json:"ip" yaml:"ip"`
 	// Maximum number of sessions before queueing.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#max_sessions LoadbalancerStaticBackendMember#max_sessions}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#max_sessions LoadbalancerStaticBackendMember#max_sessions}
 	MaxSessions *float64 `field:"required" json:"maxSessions" yaml:"maxSessions"`
 	// The name of the member must be unique within the load balancer backend service.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#name LoadbalancerStaticBackendMember#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#name LoadbalancerStaticBackendMember#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Server port.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#port LoadbalancerStaticBackendMember#port}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#port LoadbalancerStaticBackendMember#port}
 	Port *float64 `field:"required" json:"port" yaml:"port"`
 	// Used to adjust the server's weight relative to other servers.
 	//
 	// All servers will receive a load proportional to their weight relative to the sum of all weights, so the higher the weight, the higher the load.
 	// 				A value of 0 means the server will not participate in load balancing but will still accept persistent connections.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#weight LoadbalancerStaticBackendMember#weight}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#weight LoadbalancerStaticBackendMember#weight}
 	Weight *float64 `field:"required" json:"weight" yaml:"weight"`
 	// Indicates if the member is enabled. Disabled members are excluded from load balancing.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#enabled LoadbalancerStaticBackendMember#enabled}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#enabled LoadbalancerStaticBackendMember#enabled}
 	Enabled interface{} `field:"optional" json:"enabled" yaml:"enabled"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.0.3/docs/resources/loadbalancer_static_backend_member#id LoadbalancerStaticBackendMember#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.0/docs/resources/loadbalancer_static_backend_member#id LoadbalancerStaticBackendMember#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
