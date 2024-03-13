@@ -51,6 +51,10 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validatePutPgauditParameters(value *ManagedDatabasePostgresqlPropertiesPgaudit) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validatePutPgbouncerParameters(value *ManagedDatabasePostgresqlPropertiesPgbouncer) error {
 	return nil
 }

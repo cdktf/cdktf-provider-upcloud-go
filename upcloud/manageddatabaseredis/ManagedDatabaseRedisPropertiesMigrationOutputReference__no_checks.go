@@ -75,6 +75,10 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) valid
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) validateSetMethodParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) validateSetPasswordParameters(val *string) error {
 	return nil
 }

@@ -47,7 +47,23 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateI
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutMigrationParameters(value *ManagedDatabaseOpensearchPropertiesMigration) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutAuthFailureListenersParameters(value *ManagedDatabaseOpensearchPropertiesAuthFailureListeners) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutIndexTemplateParameters(value *ManagedDatabaseOpensearchPropertiesIndexTemplate) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutOpenidParameters(value *ManagedDatabaseOpensearchPropertiesOpenid) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutOpensearchDashboardsParameters(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSamlParameters(value *ManagedDatabaseOpensearchPropertiesSaml) error {
 	return nil
 }
 
@@ -55,7 +71,23 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateR
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetActionAutoCreateIndexEnabledParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetActionDestructiveRequiresNameParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetAutomaticUtilityNetworkIpFilterParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetClusterMaxShardsPerNodeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetClusterRoutingAllocationNodeConcurrentRecoveriesParameters(val *float64) error {
 	return nil
 }
 
@@ -67,6 +99,74 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetCustomDomainParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEmailSenderNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEmailSenderPasswordParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEmailSenderUsernameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEnableSecurityAuditParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetHttpMaxContentLengthParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetHttpMaxHeaderSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetHttpMaxInitialLineLengthParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndexPatternsParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesFielddataCacheSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesMemoryIndexBufferSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesMemoryMaxIndexBufferSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesMemoryMinIndexBufferSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesQueriesCacheSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesQueryBoolMaxClauseCountParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesRecoveryMaxBytesPerSecParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIndicesRecoveryMaxConcurrentFileChunksParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetInternalValueParameters(val *ManagedDatabaseOpensearchProperties) error {
 	return nil
 }
@@ -75,7 +175,63 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIsmEnabledParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIsmHistoryEnabledParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIsmHistoryMaxAgeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIsmHistoryMaxDocsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIsmHistoryRolloverCheckPeriodParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetIsmHistoryRolloverRetentionPeriodParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetKeepIndexRefreshIntervalParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetMaxIndexCountParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetOverrideMainResponseVersionParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetPluginsAlertingFilterByBackendRolesParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetPublicAccessParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetReindexRemoteWhitelistParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetScriptMaxCompilationsRateParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetSearchMaxBucketsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetServiceLogParameters(val interface{}) error {
 	return nil
 }
 
@@ -84,6 +240,50 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolAnalyzeQueueSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolAnalyzeSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolForceMergeSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolGetQueueSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolGetSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolSearchQueueSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolSearchSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolSearchThrottledQueueSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolSearchThrottledSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolWriteQueueSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetThreadPoolWriteSizeParameters(val *float64) error {
 	return nil
 }
 

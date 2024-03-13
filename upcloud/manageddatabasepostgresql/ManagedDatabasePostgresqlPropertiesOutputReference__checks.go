@@ -104,6 +104,17 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validatePutPgauditParameters(value *ManagedDatabasePostgresqlPropertiesPgaudit) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validatePutPgbouncerParameters(value *ManagedDatabasePostgresqlPropertiesPgbouncer) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")

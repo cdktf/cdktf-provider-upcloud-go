@@ -41,6 +41,9 @@ type ManagedDatabaseRedisPropertiesMigrationOutputReference interface {
 	IgnoreDbsInput() *string
 	InternalValue() *ManagedDatabaseRedisPropertiesMigration
 	SetInternalValue(val *ManagedDatabaseRedisPropertiesMigration)
+	Method() *string
+	SetMethod(val *string)
+	MethodInput() *string
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
@@ -88,6 +91,7 @@ type ManagedDatabaseRedisPropertiesMigrationOutputReference interface {
 	ResetDbname()
 	ResetHost()
 	ResetIgnoreDbs()
+	ResetMethod()
 	ResetPassword()
 	ResetPort()
 	ResetSsl()
@@ -212,6 +216,26 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) Inter
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) Method() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"method",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) MethodInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"methodInput",
 		&returns,
 	)
 	return returns
@@ -407,6 +431,17 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference)SetInt
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference)SetMethod(val *string) {
+	if err := j.validateSetMethodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"method",
 		val,
 	)
 }
@@ -683,6 +718,14 @@ func (m *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) Reset
 	_jsii_.InvokeVoid(
 		m,
 		"resetIgnoreDbs",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) ResetMethod() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMethod",
 		nil, // no parameters
 	)
 }

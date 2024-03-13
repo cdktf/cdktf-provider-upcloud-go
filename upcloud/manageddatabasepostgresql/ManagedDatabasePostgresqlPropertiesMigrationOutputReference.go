@@ -41,6 +41,9 @@ type ManagedDatabasePostgresqlPropertiesMigrationOutputReference interface {
 	IgnoreDbsInput() *string
 	InternalValue() *ManagedDatabasePostgresqlPropertiesMigration
 	SetInternalValue(val *ManagedDatabasePostgresqlPropertiesMigration)
+	Method() *string
+	SetMethod(val *string)
+	MethodInput() *string
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
@@ -88,6 +91,7 @@ type ManagedDatabasePostgresqlPropertiesMigrationOutputReference interface {
 	ResetDbname()
 	ResetHost()
 	ResetIgnoreDbs()
+	ResetMethod()
 	ResetPassword()
 	ResetPort()
 	ResetSsl()
@@ -212,6 +216,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) Method() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"method",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) MethodInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"methodInput",
 		&returns,
 	)
 	return returns
@@ -407,6 +431,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference)S
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference)SetMethod(val *string) {
+	if err := j.validateSetMethodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"method",
 		val,
 	)
 }
@@ -683,6 +718,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	_jsii_.InvokeVoid(
 		m,
 		"resetIgnoreDbs",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) ResetMethod() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMethod",
 		nil, // no parameters
 	)
 }

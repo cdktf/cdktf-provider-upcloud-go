@@ -75,6 +75,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) valid
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) validateSetMethodParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) validateSetPasswordParameters(val *string) error {
 	return nil
 }

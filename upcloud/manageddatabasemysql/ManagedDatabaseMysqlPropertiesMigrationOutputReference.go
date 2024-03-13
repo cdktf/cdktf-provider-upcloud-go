@@ -41,6 +41,9 @@ type ManagedDatabaseMysqlPropertiesMigrationOutputReference interface {
 	IgnoreDbsInput() *string
 	InternalValue() *ManagedDatabaseMysqlPropertiesMigration
 	SetInternalValue(val *ManagedDatabaseMysqlPropertiesMigration)
+	Method() *string
+	SetMethod(val *string)
+	MethodInput() *string
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
@@ -88,6 +91,7 @@ type ManagedDatabaseMysqlPropertiesMigrationOutputReference interface {
 	ResetDbname()
 	ResetHost()
 	ResetIgnoreDbs()
+	ResetMethod()
 	ResetPassword()
 	ResetPort()
 	ResetSsl()
@@ -212,6 +216,26 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) Inter
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) Method() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"method",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) MethodInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"methodInput",
 		&returns,
 	)
 	return returns
@@ -407,6 +431,17 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference)SetInt
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference)SetMethod(val *string) {
+	if err := j.validateSetMethodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"method",
 		val,
 	)
 }
@@ -683,6 +718,14 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) Reset
 	_jsii_.InvokeVoid(
 		m,
 		"resetIgnoreDbs",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) ResetMethod() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMethod",
 		nil, // no parameters
 	)
 }

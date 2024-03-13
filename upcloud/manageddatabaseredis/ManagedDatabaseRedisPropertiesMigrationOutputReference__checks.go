@@ -198,6 +198,14 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) valid
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) validateSetMethodParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) validateSetPasswordParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
