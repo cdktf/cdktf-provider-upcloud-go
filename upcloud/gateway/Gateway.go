@@ -12,10 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/gateway upcloud_gateway}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/gateway upcloud_gateway}.
 type Gateway interface {
 	cdktf.TerraformResource
+	Address() GatewayAddressOutputReference
 	Addresses() GatewayAddressesList
+	AddressInput() *GatewayAddress
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ConfiguredStatus() *string
@@ -25,6 +27,7 @@ type Gateway interface {
 	Connection() interface{}
 	// Experimental.
 	SetConnection(val interface{})
+	Connections() *[]*string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -62,6 +65,9 @@ type Gateway interface {
 	// The tree node.
 	Node() constructs.Node
 	OperationalState() *string
+	Plan() *string
+	SetPlan(val *string)
+	PlanInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -126,13 +132,16 @@ type Gateway interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutAddress(value *GatewayAddress)
 	PutRouter(value *GatewayRouter)
+	ResetAddress()
 	ResetConfiguredStatus()
 	ResetId()
 	ResetLabels()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPlan()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -151,11 +160,31 @@ type jsiiProxy_Gateway struct {
 	internal.Type__cdktfTerraformResource
 }
 
+func (j *jsiiProxy_Gateway) Address() GatewayAddressOutputReference {
+	var returns GatewayAddressOutputReference
+	_jsii_.Get(
+		j,
+		"address",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Gateway) Addresses() GatewayAddressesList {
 	var returns GatewayAddressesList
 	_jsii_.Get(
 		j,
 		"addresses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Gateway) AddressInput() *GatewayAddress {
+	var returns *GatewayAddress
+	_jsii_.Get(
+		j,
+		"addressInput",
 		&returns,
 	)
 	return returns
@@ -196,6 +225,16 @@ func (j *jsiiProxy_Gateway) Connection() interface{} {
 	_jsii_.Get(
 		j,
 		"connection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Gateway) Connections() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"connections",
 		&returns,
 	)
 	return returns
@@ -371,6 +410,26 @@ func (j *jsiiProxy_Gateway) OperationalState() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Gateway) Plan() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"plan",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Gateway) PlanInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"planInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Gateway) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -472,7 +531,7 @@ func (j *jsiiProxy_Gateway) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/gateway upcloud_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/gateway upcloud_gateway} Resource.
 func NewGateway(scope constructs.Construct, id *string, config *GatewayConfig) Gateway {
 	_init_.Initialize()
 
@@ -490,7 +549,7 @@ func NewGateway(scope constructs.Construct, id *string, config *GatewayConfig) G
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/gateway upcloud_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/gateway upcloud_gateway} Resource.
 func NewGateway_Override(g Gateway, scope constructs.Construct, id *string, config *GatewayConfig) {
 	_init_.Initialize()
 
@@ -601,6 +660,17 @@ func (j *jsiiProxy_Gateway)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Gateway)SetPlan(val *string) {
+	if err := j.validateSetPlanParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"plan",
 		val,
 	)
 }
@@ -988,6 +1058,17 @@ func (g *jsiiProxy_Gateway) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (g *jsiiProxy_Gateway) PutAddress(value *GatewayAddress) {
+	if err := g.validatePutAddressParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putAddress",
+		[]interface{}{value},
+	)
+}
+
 func (g *jsiiProxy_Gateway) PutRouter(value *GatewayRouter) {
 	if err := g.validatePutRouterParameters(value); err != nil {
 		panic(err)
@@ -996,6 +1077,14 @@ func (g *jsiiProxy_Gateway) PutRouter(value *GatewayRouter) {
 		g,
 		"putRouter",
 		[]interface{}{value},
+	)
+}
+
+func (g *jsiiProxy_Gateway) ResetAddress() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetAddress",
+		nil, // no parameters
 	)
 }
 
@@ -1027,6 +1116,14 @@ func (g *jsiiProxy_Gateway) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_Gateway) ResetPlan() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetPlan",
 		nil, // no parameters
 	)
 }

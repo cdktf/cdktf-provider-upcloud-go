@@ -24,21 +24,21 @@ type ManagedDatabaseLogicalDatabaseConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the logical database.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/managed_database_logical_database#name ManagedDatabaseLogicalDatabase#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/managed_database_logical_database#name ManagedDatabaseLogicalDatabase#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Service's UUID for which this user belongs to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/managed_database_logical_database#service ManagedDatabaseLogicalDatabase#service}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/managed_database_logical_database#service ManagedDatabaseLogicalDatabase#service}
 	Service *string `field:"required" json:"service" yaml:"service"`
 	// Default character set for the database (LC_CTYPE).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/managed_database_logical_database#character_set ManagedDatabaseLogicalDatabase#character_set}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/managed_database_logical_database#character_set ManagedDatabaseLogicalDatabase#character_set}
 	CharacterSet *string `field:"optional" json:"characterSet" yaml:"characterSet"`
 	// Default collation for the database (LC_COLLATE).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/managed_database_logical_database#collation ManagedDatabaseLogicalDatabase#collation}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/managed_database_logical_database#collation ManagedDatabaseLogicalDatabase#collation}
 	Collation *string `field:"optional" json:"collation" yaml:"collation"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.1.1/docs/resources/managed_database_logical_database#id ManagedDatabaseLogicalDatabase#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.0/docs/resources/managed_database_logical_database#id ManagedDatabaseLogicalDatabase#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

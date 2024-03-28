@@ -75,6 +75,10 @@ func (g *jsiiProxy_Gateway) validateOverrideLogicalIdParameters(newLogicalId *st
 	return nil
 }
 
+func (g *jsiiProxy_Gateway) validatePutAddressParameters(value *GatewayAddress) error {
+	return nil
+}
+
 func (g *jsiiProxy_Gateway) validatePutRouterParameters(value *GatewayRouter) error {
 	return nil
 }
@@ -124,6 +128,10 @@ func (j *jsiiProxy_Gateway) validateSetLifecycleParameters(val *cdktf.TerraformR
 }
 
 func (j *jsiiProxy_Gateway) validateSetNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Gateway) validateSetPlanParameters(val *string) error {
 	return nil
 }
 
