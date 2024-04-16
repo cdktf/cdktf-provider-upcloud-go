@@ -47,6 +47,10 @@ func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) validateInterpolationF
 	return nil
 }
 
+func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) validatePutAdditionalIpAddressParameters(value interface{}) error {
+	return nil
+}
+
 func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

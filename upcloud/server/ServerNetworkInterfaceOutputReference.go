@@ -13,6 +13,8 @@ import (
 
 type ServerNetworkInterfaceOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalIpAddress() ServerNetworkInterfaceAdditionalIpAddressList
+	AdditionalIpAddressInput() interface{}
 	Bootable() interface{}
 	SetBootable(val interface{})
 	BootableInput() interface{}
@@ -84,6 +86,8 @@ type ServerNetworkInterfaceOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutAdditionalIpAddress(value interface{})
+	ResetAdditionalIpAddress()
 	ResetBootable()
 	ResetIpAddress()
 	ResetIpAddressFamily()
@@ -102,6 +106,26 @@ type ServerNetworkInterfaceOutputReference interface {
 // The jsii proxy struct for ServerNetworkInterfaceOutputReference
 type jsiiProxy_ServerNetworkInterfaceOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) AdditionalIpAddress() ServerNetworkInterfaceAdditionalIpAddressList {
+	var returns ServerNetworkInterfaceAdditionalIpAddressList
+	_jsii_.Get(
+		j,
+		"additionalIpAddress",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) AdditionalIpAddressInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"additionalIpAddressInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) Bootable() interface{} {
@@ -647,6 +671,25 @@ func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) InterpolationForAttrib
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) PutAdditionalIpAddress(value interface{}) {
+	if err := s.validatePutAdditionalIpAddressParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putAdditionalIpAddress",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) ResetAdditionalIpAddress() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAdditionalIpAddress",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) ResetBootable() {
