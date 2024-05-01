@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.2/docs/resources/gateway_connection upcloud_gateway_connection}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.3/docs/resources/gateway_connection upcloud_gateway_connection}.
 type GatewayConnection interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -439,7 +439,7 @@ func (j *jsiiProxy_GatewayConnection) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.2/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.3/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
 func NewGatewayConnection(scope constructs.Construct, id *string, config *GatewayConnectionConfig) GatewayConnection {
 	_init_.Initialize()
 
@@ -457,7 +457,7 @@ func NewGatewayConnection(scope constructs.Construct, id *string, config *Gatewa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.2/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.3/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
 func NewGatewayConnection_Override(g GatewayConnection, scope constructs.Construct, id *string, config *GatewayConnectionConfig) {
 	_init_.Initialize()
 
