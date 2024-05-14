@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegions) validateOverrideLogic
 	return nil
 }
 
+func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegions) validatePutRegionsParameters(value interface{}) error {
+	return nil
+}
+
 func validateDataUpcloudManagedObjectStorageRegions_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -72,10 +76,6 @@ func validateDataUpcloudManagedObjectStorageRegions_IsTerraformElementParameters
 }
 
 func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) validateSetIdParameters(val *string) error {
 	return nil
 }
 

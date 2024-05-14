@@ -59,7 +59,7 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference)
 	return nil
 }
 
-func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) validateSetInternalValueParameters(val *DataUpcloudManagedObjectStorageRegionsRegions) error {
+func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

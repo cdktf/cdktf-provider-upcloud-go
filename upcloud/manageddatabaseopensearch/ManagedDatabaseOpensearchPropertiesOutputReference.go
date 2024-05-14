@@ -126,9 +126,6 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	KeepIndexRefreshInterval() interface{}
 	SetKeepIndexRefreshInterval(val interface{})
 	KeepIndexRefreshIntervalInput() interface{}
-	MaxIndexCount() *float64
-	SetMaxIndexCount(val *float64)
-	MaxIndexCountInput() *float64
 	Openid() ManagedDatabaseOpensearchPropertiesOpenidOutputReference
 	OpenidInput() *ManagedDatabaseOpensearchPropertiesOpenid
 	OpensearchDashboards() ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference
@@ -261,7 +258,6 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetIsmHistoryRolloverCheckPeriod()
 	ResetIsmHistoryRolloverRetentionPeriod()
 	ResetKeepIndexRefreshInterval()
-	ResetMaxIndexCount()
 	ResetOpenid()
 	ResetOpensearchDashboards()
 	ResetOverrideMainResponseVersion()
@@ -984,26 +980,6 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) KeepIndex
 	_jsii_.Get(
 		j,
 		"keepIndexRefreshIntervalInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) MaxIndexCount() *float64 {
-	var returns *float64
-	_jsii_.Get(
-		j,
-		"maxIndexCount",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) MaxIndexCountInput() *float64 {
-	var returns *float64
-	_jsii_.Get(
-		j,
-		"maxIndexCountInput",
 		&returns,
 	)
 	return returns
@@ -1860,17 +1836,6 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetKeepInd
 	)
 }
 
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetMaxIndexCount(val *float64) {
-	if err := j.validateSetMaxIndexCountParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"maxIndexCount",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetOverrideMainResponseVersion(val interface{}) {
 	if err := j.validateSetOverrideMainResponseVersionParameters(val); err != nil {
 		panic(err)
@@ -2595,14 +2560,6 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetKeep
 	_jsii_.InvokeVoid(
 		m,
 		"resetKeepIndexRefreshInterval",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetMaxIndexCount() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetMaxIndexCount",
 		nil, // no parameters
 	)
 }

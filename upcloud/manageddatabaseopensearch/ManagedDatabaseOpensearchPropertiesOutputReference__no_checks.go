@@ -203,10 +203,6 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetMaxIndexCountParameters(val *float64) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetOverrideMainResponseVersionParameters(val interface{}) error {
 	return nil
 }

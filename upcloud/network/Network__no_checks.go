@@ -75,7 +75,7 @@ func (n *jsiiProxy_Network) validateOverrideLogicalIdParameters(newLogicalId *st
 	return nil
 }
 
-func (n *jsiiProxy_Network) validatePutIpNetworkParameters(value *NetworkIpNetwork) error {
+func (n *jsiiProxy_Network) validatePutIpNetworkParameters(value interface{}) error {
 	return nil
 }
 
@@ -100,10 +100,6 @@ func (j *jsiiProxy_Network) validateSetConnectionParameters(val interface{}) err
 }
 
 func (j *jsiiProxy_Network) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_Network) validateSetIdParameters(val *string) error {
 	return nil
 }
 

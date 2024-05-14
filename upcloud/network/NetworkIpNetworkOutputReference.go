@@ -51,8 +51,8 @@ type NetworkIpNetworkOutputReference interface {
 	Gateway() *string
 	SetGateway(val *string)
 	GatewayInput() *string
-	InternalValue() *NetworkIpNetwork
-	SetInternalValue(val *NetworkIpNetwork)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -284,8 +284,8 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) GatewayInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_NetworkIpNetworkOutputReference) InternalValue() *NetworkIpNetwork {
-	var returns *NetworkIpNetwork
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -315,29 +315,29 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) TerraformResource() cdktf.II
 }
 
 
-func NewNetworkIpNetworkOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) NetworkIpNetworkOutputReference {
+func NewNetworkIpNetworkOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) NetworkIpNetworkOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewNetworkIpNetworkOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewNetworkIpNetworkOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_NetworkIpNetworkOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.network.NetworkIpNetworkOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewNetworkIpNetworkOutputReference_Override(n NetworkIpNetworkOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewNetworkIpNetworkOutputReference_Override(n NetworkIpNetworkOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.network.NetworkIpNetworkOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		n,
 	)
 }
@@ -441,7 +441,7 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference)SetGateway(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkIpNetworkOutputReference)SetInternalValue(val *NetworkIpNetwork) {
+func (j *jsiiProxy_NetworkIpNetworkOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

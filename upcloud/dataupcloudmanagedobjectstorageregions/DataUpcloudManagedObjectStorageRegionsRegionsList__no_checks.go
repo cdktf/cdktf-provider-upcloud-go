@@ -19,6 +19,10 @@ func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsList) validateRe
 	return nil
 }
 
+func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsList) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsList) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

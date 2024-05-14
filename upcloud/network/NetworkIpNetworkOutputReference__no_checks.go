@@ -87,7 +87,7 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) validateSetGatewayParameters
 	return nil
 }
 
-func (j *jsiiProxy_NetworkIpNetworkOutputReference) validateSetInternalValueParameters(val *NetworkIpNetwork) error {
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -99,7 +99,7 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) validateSetTerraformResource
 	return nil
 }
 
-func validateNewNetworkIpNetworkOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewNetworkIpNetworkOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

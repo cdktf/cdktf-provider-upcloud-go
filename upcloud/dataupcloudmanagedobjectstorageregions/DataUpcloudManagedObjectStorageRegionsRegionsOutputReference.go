@@ -30,8 +30,8 @@ type DataUpcloudManagedObjectStorageRegionsRegionsOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DataUpcloudManagedObjectStorageRegionsRegions
-	SetInternalValue(val *DataUpcloudManagedObjectStorageRegionsRegions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	PrimaryZone() *string
 	// Experimental.
@@ -122,8 +122,8 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference)
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) InternalValue() *DataUpcloudManagedObjectStorageRegionsRegions {
-	var returns *DataUpcloudManagedObjectStorageRegionsRegions
+func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -232,7 +232,7 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference)
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference)SetInternalValue(val *DataUpcloudManagedObjectStorageRegionsRegions) {
+func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

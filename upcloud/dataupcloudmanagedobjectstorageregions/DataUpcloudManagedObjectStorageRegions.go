@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.3/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.3.0/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions}.
 type DataUpcloudManagedObjectStorageRegions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -36,8 +36,6 @@ type DataUpcloudManagedObjectStorageRegions interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -51,6 +49,7 @@ type DataUpcloudManagedObjectStorageRegions interface {
 	// Experimental.
 	RawOverrides() interface{}
 	Regions() DataUpcloudManagedObjectStorageRegionsRegionsList
+	RegionsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -82,10 +81,11 @@ type DataUpcloudManagedObjectStorageRegions interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
+	PutRegions(value interface{})
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRegions()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -185,16 +185,6 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -245,6 +235,16 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) Regions() DataUpcloud
 	return returns
 }
 
+func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) RegionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"regionsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.3/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.3.0/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
 func NewDataUpcloudManagedObjectStorageRegions(scope constructs.Construct, id *string, config *DataUpcloudManagedObjectStorageRegionsConfig) DataUpcloudManagedObjectStorageRegions {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewDataUpcloudManagedObjectStorageRegions(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.2.3/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.3.0/docs/data-sources/managed_object_storage_regions upcloud_managed_object_storage_regions} Data Source.
 func NewDataUpcloudManagedObjectStorageRegions_Override(d DataUpcloudManagedObjectStorageRegions, scope constructs.Construct, id *string, config *DataUpcloudManagedObjectStorageRegionsConfig) {
 	_init_.Initialize()
 
@@ -328,17 +328,6 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions)SetForEach(val cdktf.I
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataUpcloudManagedObjectStorageRegions)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -647,11 +636,14 @@ func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegions) OverrideLogicalId(new
 	)
 }
 
-func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegions) ResetId() {
+func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegions) PutRegions(value interface{}) {
+	if err := d.validatePutRegionsParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
-		"resetId",
-		nil, // no parameters
+		"putRegions",
+		[]interface{}{value},
 	)
 }
 
@@ -659,6 +651,14 @@ func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegions) ResetOverrideLogicalI
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegions) ResetRegions() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRegions",
 		nil, // no parameters
 	)
 }
