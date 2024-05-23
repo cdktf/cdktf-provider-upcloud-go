@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.3.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
 type KubernetesCluster interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -79,6 +79,9 @@ type KubernetesCluster interface {
 	// Experimental.
 	RawOverrides() interface{}
 	State() *string
+	StorageEncryption() *string
+	SetStorageEncryption(val *string)
+	StorageEncryptionInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -141,6 +144,7 @@ type KubernetesCluster interface {
 	ResetOverrideLogicalId()
 	ResetPlan()
 	ResetPrivateNodeGroups()
+	ResetStorageEncryption()
 	ResetVersion()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -460,6 +464,26 @@ func (j *jsiiProxy_KubernetesCluster) State() *string {
 	return returns
 }
 
+func (j *jsiiProxy_KubernetesCluster) StorageEncryption() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageEncryption",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesCluster) StorageEncryptionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageEncryptionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KubernetesCluster) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -531,7 +555,7 @@ func (j *jsiiProxy_KubernetesCluster) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.3.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster(scope constructs.Construct, id *string, config *KubernetesClusterConfig) KubernetesCluster {
 	_init_.Initialize()
 
@@ -549,7 +573,7 @@ func NewKubernetesCluster(scope constructs.Construct, id *string, config *Kubern
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.3.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster_Override(k KubernetesCluster, scope constructs.Construct, id *string, config *KubernetesClusterConfig) {
 	_init_.Initialize()
 
@@ -701,6 +725,17 @@ func (j *jsiiProxy_KubernetesCluster)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KubernetesCluster)SetStorageEncryption(val *string) {
+	if err := j.validateSetStorageEncryptionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"storageEncryption",
 		val,
 	)
 }
@@ -1116,6 +1151,14 @@ func (k *jsiiProxy_KubernetesCluster) ResetPrivateNodeGroups() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetPrivateNodeGroups",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesCluster) ResetStorageEncryption() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetStorageEncryption",
 		nil, // no parameters
 	)
 }

@@ -75,6 +75,10 @@ func (k *jsiiProxy_KubernetesNodeGroup) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutCustomPlanParameters(value *KubernetesNodeGroupCustomPlan) error {
+	return nil
+}
+
 func (k *jsiiProxy_KubernetesNodeGroup) validatePutKubeletArgsParameters(value interface{}) error {
 	return nil
 }
@@ -144,6 +148,10 @@ func (j *jsiiProxy_KubernetesNodeGroup) validateSetProvisionersParameters(val *[
 }
 
 func (j *jsiiProxy_KubernetesNodeGroup) validateSetSshKeysParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) validateSetStorageEncryptionParameters(val *string) error {
 	return nil
 }
 

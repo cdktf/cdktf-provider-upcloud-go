@@ -135,6 +135,10 @@ func (j *jsiiProxy_KubernetesCluster) validateSetProvisionersParameters(val *[]i
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesCluster) validateSetStorageEncryptionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_KubernetesCluster) validateSetVersionParameters(val *string) error {
 	return nil
 }
