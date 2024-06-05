@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/gateway_connection upcloud_gateway_connection}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/gateway_connection upcloud_gateway_connection}.
 type GatewayConnection interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -78,6 +78,7 @@ type GatewayConnection interface {
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
+	Uuid() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -438,8 +439,18 @@ func (j *jsiiProxy_GatewayConnection) TypeInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_GatewayConnection) Uuid() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"uuid",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
 func NewGatewayConnection(scope constructs.Construct, id *string, config *GatewayConnectionConfig) GatewayConnection {
 	_init_.Initialize()
 
@@ -457,7 +468,7 @@ func NewGatewayConnection(scope constructs.Construct, id *string, config *Gatewa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/gateway_connection upcloud_gateway_connection} Resource.
 func NewGatewayConnection_Override(g GatewayConnection, scope constructs.Construct, id *string, config *GatewayConnectionConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/managed_database_user upcloud_managed_database_user}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/managed_database_user upcloud_managed_database_user}.
 type ManagedDatabaseUser interface {
 	cdktf.TerraformResource
 	Authentication() *string
@@ -487,7 +487,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) ManagedDatabaseUser {
 	_init_.Initialize()
 
@@ -505,7 +505,7 @@ func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *Mana
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser_Override(m ManagedDatabaseUser, scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) {
 	_init_.Initialize()
 

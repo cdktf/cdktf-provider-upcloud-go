@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/data-sources/managed_database_opensearch_indices upcloud_managed_database_opensearch_indices}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/data-sources/managed_database_opensearch_indices upcloud_managed_database_opensearch_indices}.
 type DataUpcloudManagedDatabaseOpensearchIndices interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -312,7 +312,7 @@ func (j *jsiiProxy_DataUpcloudManagedDatabaseOpensearchIndices) TerraformResourc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/data-sources/managed_database_opensearch_indices upcloud_managed_database_opensearch_indices} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/data-sources/managed_database_opensearch_indices upcloud_managed_database_opensearch_indices} Data Source.
 func NewDataUpcloudManagedDatabaseOpensearchIndices(scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseOpensearchIndicesConfig) DataUpcloudManagedDatabaseOpensearchIndices {
 	_init_.Initialize()
 
@@ -330,7 +330,7 @@ func NewDataUpcloudManagedDatabaseOpensearchIndices(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/data-sources/managed_database_opensearch_indices upcloud_managed_database_opensearch_indices} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/data-sources/managed_database_opensearch_indices upcloud_managed_database_opensearch_indices} Data Source.
 func NewDataUpcloudManagedDatabaseOpensearchIndices_Override(d DataUpcloudManagedDatabaseOpensearchIndices, scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseOpensearchIndicesConfig) {
 	_init_.Initialize()
 

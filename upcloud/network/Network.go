@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/network upcloud_network}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/network upcloud_network}.
 type Network interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -42,6 +42,9 @@ type Network interface {
 	Id() *string
 	IpNetwork() NetworkIpNetworkList
 	IpNetworkInput() interface{}
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -119,6 +122,7 @@ type Network interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutIpNetwork(value interface{})
 	ResetIpNetwork()
+	ResetLabels()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -246,6 +250,26 @@ func (j *jsiiProxy_Network) IpNetworkInput() interface{} {
 	_jsii_.Get(
 		j,
 		"ipNetworkInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Network) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Network) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -402,7 +426,7 @@ func (j *jsiiProxy_Network) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/network upcloud_network} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/network upcloud_network} Resource.
 func NewNetwork(scope constructs.Construct, id *string, config *NetworkConfig) Network {
 	_init_.Initialize()
 
@@ -420,7 +444,7 @@ func NewNetwork(scope constructs.Construct, id *string, config *NetworkConfig) N
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/network upcloud_network} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/network upcloud_network} Resource.
 func NewNetwork_Override(n Network, scope constructs.Construct, id *string, config *NetworkConfig) {
 	_init_.Initialize()
 
@@ -465,6 +489,17 @@ func (j *jsiiProxy_Network)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Network)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
 		val,
 	)
 }
@@ -900,6 +935,14 @@ func (n *jsiiProxy_Network) ResetIpNetwork() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetIpNetwork",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_Network) ResetLabels() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetLabels",
 		nil, // no parameters
 	)
 }

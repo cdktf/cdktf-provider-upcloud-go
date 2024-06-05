@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/data-sources/zone upcloud_zone}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/data-sources/zone upcloud_zone}.
 type DataUpcloudZone interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -48,6 +48,7 @@ type DataUpcloudZone interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	ParentZone() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -87,6 +88,7 @@ type DataUpcloudZone interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -249,6 +251,16 @@ func (j *jsiiProxy_DataUpcloudZone) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataUpcloudZone) ParentZone() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"parentZone",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataUpcloudZone) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -310,7 +322,7 @@ func (j *jsiiProxy_DataUpcloudZone) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/data-sources/zone upcloud_zone} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/data-sources/zone upcloud_zone} Data Source.
 func NewDataUpcloudZone(scope constructs.Construct, id *string, config *DataUpcloudZoneConfig) DataUpcloudZone {
 	_init_.Initialize()
 
@@ -328,7 +340,7 @@ func NewDataUpcloudZone(scope constructs.Construct, id *string, config *DataUpcl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/data-sources/zone upcloud_zone} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/data-sources/zone upcloud_zone} Data Source.
 func NewDataUpcloudZone_Override(d DataUpcloudZone, scope constructs.Construct, id *string, config *DataUpcloudZoneConfig) {
 	_init_.Initialize()
 
@@ -696,6 +708,14 @@ func (d *jsiiProxy_DataUpcloudZone) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataUpcloudZone) ResetName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetName",
 		nil, // no parameters
 	)
 }

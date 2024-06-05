@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel}.
 type GatewayConnectionTunnel interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -81,6 +81,7 @@ type GatewayConnectionTunnel interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Uuid() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -459,8 +460,18 @@ func (j *jsiiProxy_GatewayConnectionTunnel) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_GatewayConnectionTunnel) Uuid() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"uuid",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
 func NewGatewayConnectionTunnel(scope constructs.Construct, id *string, config *GatewayConnectionTunnelConfig) GatewayConnectionTunnel {
 	_init_.Initialize()
 
@@ -478,7 +489,7 @@ func NewGatewayConnectionTunnel(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
 func NewGatewayConnectionTunnel_Override(g GatewayConnectionTunnel, scope constructs.Construct, id *string, config *GatewayConnectionTunnelConfig) {
 	_init_.Initialize()
 

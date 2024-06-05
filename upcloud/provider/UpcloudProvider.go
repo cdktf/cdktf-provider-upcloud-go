@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs upcloud}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs upcloud}.
 type UpcloudProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -330,7 +330,7 @@ func (j *jsiiProxy_UpcloudProvider) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs upcloud} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs upcloud} Resource.
 func NewUpcloudProvider(scope constructs.Construct, id *string, config *UpcloudProviderConfig) UpcloudProvider {
 	_init_.Initialize()
 
@@ -348,7 +348,7 @@ func NewUpcloudProvider(scope constructs.Construct, id *string, config *UpcloudP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.4.0/docs upcloud} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs upcloud} Resource.
 func NewUpcloudProvider_Override(u UpcloudProvider, scope constructs.Construct, id *string, config *UpcloudProviderConfig) {
 	_init_.Initialize()
 
