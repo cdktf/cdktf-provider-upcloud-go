@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address upcloud_floating_ip_address}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/floating_ip_address upcloud_floating_ip_address}.
 type FloatingIpAddress interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -46,8 +46,6 @@ type FloatingIpAddress interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	IpAddress() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -122,7 +120,6 @@ type FloatingIpAddress interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetAccess()
 	ResetFamily()
-	ResetId()
 	ResetMacAddress()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -276,16 +273,6 @@ func (j *jsiiProxy_FloatingIpAddress) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_FloatingIpAddress) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_FloatingIpAddress) IpAddress() *string {
 	var returns *string
 	_jsii_.Get(
@@ -417,7 +404,7 @@ func (j *jsiiProxy_FloatingIpAddress) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress(scope constructs.Construct, id *string, config *FloatingIpAddressConfig) FloatingIpAddress {
 	_init_.Initialize()
 
@@ -435,7 +422,7 @@ func NewFloatingIpAddress(scope constructs.Construct, id *string, config *Floati
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress_Override(f FloatingIpAddress, scope constructs.Construct, id *string, config *FloatingIpAddressConfig) {
 	_init_.Initialize()
 
@@ -502,17 +489,6 @@ func (j *jsiiProxy_FloatingIpAddress)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_FloatingIpAddress)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -934,14 +910,6 @@ func (f *jsiiProxy_FloatingIpAddress) ResetFamily() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetFamily",
-		nil, // no parameters
-	)
-}
-
-func (f *jsiiProxy_FloatingIpAddress) ResetId() {
-	_jsii_.InvokeVoid(
-		f,
-		"resetId",
 		nil, // no parameters
 	)
 }

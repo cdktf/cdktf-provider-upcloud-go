@@ -24,24 +24,19 @@ type FloatingIpAddressConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Network access for the floating IP address. Supported value: `public`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address#access FloatingIpAddress#access}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/floating_ip_address#access FloatingIpAddress#access}
 	Access *string `field:"optional" json:"access" yaml:"access"`
-	// The address family of new IP address.
+	// The address family of the floating IP address.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address#family FloatingIpAddress#family}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/floating_ip_address#family FloatingIpAddress#family}
 	Family *string `field:"optional" json:"family" yaml:"family"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address#id FloatingIpAddress#id}.
+	// MAC address of a server interface to assign address to.
 	//
-	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-	Id *string `field:"optional" json:"id" yaml:"id"`
-	// MAC address of server interface to assign address to.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address#mac_address FloatingIpAddress#mac_address}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/floating_ip_address#mac_address FloatingIpAddress#mac_address}
 	MacAddress *string `field:"optional" json:"macAddress" yaml:"macAddress"`
-	// Zone of address, required when assigning a detached floating IP address, e.g. `de-fra1`. You can list available zones with `upctl zone list`.
+	// Zone of the address, e.g. `de-fra1`. Required when assigning a detached floating IP address. You can list available zones with `upctl zone list`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/floating_ip_address#zone FloatingIpAddress#zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/floating_ip_address#zone FloatingIpAddress#zone}
 	Zone *string `field:"optional" json:"zone" yaml:"zone"`
 }
 

@@ -103,7 +103,7 @@ func (j *jsiiProxy_Router) validateSetCountParameters(val interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Router) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_Router) validateSetLabelsParameters(val *map[string]*string) error {
 	return nil
 }
 

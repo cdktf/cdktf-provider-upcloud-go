@@ -368,7 +368,7 @@ func (j *jsiiProxy_Router) validateSetCountParameters(val interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Router) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_Router) validateSetLabelsParameters(val *map[string]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

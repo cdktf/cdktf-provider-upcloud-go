@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/router upcloud_router}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/router upcloud_router}.
 type Router interface {
 	cdktf.TerraformResource
 	AttachedNetworks() *[]*string
@@ -41,8 +41,9 @@ type Router interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -115,7 +116,7 @@ type Router interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutStaticRoute(value interface{})
-	ResetId()
+	ResetLabels()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -238,11 +239,21 @@ func (j *jsiiProxy_Router) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Router) IdInput() *string {
-	var returns *string
+func (j *jsiiProxy_Router) Labels() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
-		"idInput",
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Router) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -379,7 +390,7 @@ func (j *jsiiProxy_Router) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/router upcloud_router} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/router upcloud_router} Resource.
 func NewRouter(scope constructs.Construct, id *string, config *RouterConfig) Router {
 	_init_.Initialize()
 
@@ -397,7 +408,7 @@ func NewRouter(scope constructs.Construct, id *string, config *RouterConfig) Rou
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.5.0/docs/resources/router upcloud_router} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/router upcloud_router} Resource.
 func NewRouter_Override(r Router, scope constructs.Construct, id *string, config *RouterConfig) {
 	_init_.Initialize()
 
@@ -446,13 +457,13 @@ func (j *jsiiProxy_Router)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Router)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
+func (j *jsiiProxy_Router)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"id",
+		"labels",
 		val,
 	)
 }
@@ -862,10 +873,10 @@ func (r *jsiiProxy_Router) PutStaticRoute(value interface{}) {
 	)
 }
 
-func (r *jsiiProxy_Router) ResetId() {
+func (r *jsiiProxy_Router) ResetLabels() {
 	_jsii_.InvokeVoid(
 		r,
-		"resetId",
+		"resetLabels",
 		nil, // no parameters
 	)
 }
