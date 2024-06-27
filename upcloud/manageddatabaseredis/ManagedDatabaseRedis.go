@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/managed_database_redis upcloud_managed_database_redis}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.1/docs/resources/managed_database_redis upcloud_managed_database_redis}.
 type ManagedDatabaseRedis interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -632,7 +632,7 @@ func (j *jsiiProxy_ManagedDatabaseRedis) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.1/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
 func NewManagedDatabaseRedis(scope constructs.Construct, id *string, config *ManagedDatabaseRedisConfig) ManagedDatabaseRedis {
 	_init_.Initialize()
 
@@ -650,7 +650,7 @@ func NewManagedDatabaseRedis(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.6.1/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
 func NewManagedDatabaseRedis_Override(m ManagedDatabaseRedis, scope constructs.Construct, id *string, config *ManagedDatabaseRedisConfig) {
 	_init_.Initialize()
 
