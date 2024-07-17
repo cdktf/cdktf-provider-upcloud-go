@@ -79,7 +79,7 @@ func (l *jsiiProxy_LoadbalancerFrontend) validatePutNetworksParameters(value int
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontend) validatePutPropertiesParameters(value *LoadbalancerFrontendProperties) error {
+func (l *jsiiProxy_LoadbalancerFrontend) validatePutPropertiesParameters(value interface{}) error {
 	return nil
 }
 
@@ -108,10 +108,6 @@ func (j *jsiiProxy_LoadbalancerFrontend) validateSetCountParameters(val interfac
 }
 
 func (j *jsiiProxy_LoadbalancerFrontend) validateSetDefaultBackendNameParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_LoadbalancerFrontend) validateSetIdParameters(val *string) error {
 	return nil
 }
 

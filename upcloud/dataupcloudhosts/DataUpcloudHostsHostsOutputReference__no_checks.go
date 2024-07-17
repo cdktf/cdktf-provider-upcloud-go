@@ -59,7 +59,7 @@ func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) validateSetComplexObjec
 	return nil
 }
 
-func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) validateSetInternalValueParameters(val *DataUpcloudHostsHosts) error {
+func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

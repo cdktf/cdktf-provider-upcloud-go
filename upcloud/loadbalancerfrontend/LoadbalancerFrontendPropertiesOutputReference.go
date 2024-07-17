@@ -36,8 +36,8 @@ type LoadbalancerFrontendPropertiesOutputReference interface {
 	InboundProxyProtocol() interface{}
 	SetInboundProxyProtocol(val interface{})
 	InboundProxyProtocolInput() interface{}
-	InternalValue() *LoadbalancerFrontendProperties
-	SetInternalValue(val *LoadbalancerFrontendProperties)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -171,8 +171,8 @@ func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) InboundProxyPr
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) InternalValue() *LoadbalancerFrontendProperties {
-	var returns *LoadbalancerFrontendProperties
+func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -222,29 +222,29 @@ func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference) TimeoutClientI
 }
 
 
-func NewLoadbalancerFrontendPropertiesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) LoadbalancerFrontendPropertiesOutputReference {
+func NewLoadbalancerFrontendPropertiesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) LoadbalancerFrontendPropertiesOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewLoadbalancerFrontendPropertiesOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewLoadbalancerFrontendPropertiesOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_LoadbalancerFrontendPropertiesOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.loadbalancerFrontend.LoadbalancerFrontendPropertiesOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewLoadbalancerFrontendPropertiesOutputReference_Override(l LoadbalancerFrontendPropertiesOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewLoadbalancerFrontendPropertiesOutputReference_Override(l LoadbalancerFrontendPropertiesOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.loadbalancerFrontend.LoadbalancerFrontendPropertiesOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		l,
 	)
 }
@@ -293,7 +293,7 @@ func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference)SetInboundProxy
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference)SetInternalValue(val *LoadbalancerFrontendProperties) {
+func (j *jsiiProxy_LoadbalancerFrontendPropertiesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

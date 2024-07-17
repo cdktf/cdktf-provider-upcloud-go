@@ -79,10 +79,6 @@ func (j *jsiiProxy_DataUpcloudZones) validateSetFilterTypeParameters(val *string
 	return nil
 }
 
-func (j *jsiiProxy_DataUpcloudZones) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_DataUpcloudZones) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

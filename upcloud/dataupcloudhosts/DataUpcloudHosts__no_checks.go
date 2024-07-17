@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataUpcloudHosts) validateOverrideLogicalIdParameters(newLogi
 	return nil
 }
 
+func (d *jsiiProxy_DataUpcloudHosts) validatePutHostsParameters(value interface{}) error {
+	return nil
+}
+
 func validateDataUpcloudHosts_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -72,10 +76,6 @@ func validateDataUpcloudHosts_IsTerraformElementParameters(x interface{}) error 
 }
 
 func (j *jsiiProxy_DataUpcloudHosts) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_DataUpcloudHosts) validateSetIdParameters(val *string) error {
 	return nil
 }
 

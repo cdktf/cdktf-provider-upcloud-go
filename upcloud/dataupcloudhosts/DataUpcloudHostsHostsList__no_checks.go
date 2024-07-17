@@ -19,6 +19,10 @@ func (d *jsiiProxy_DataUpcloudHostsHostsList) validateResolveParameters(_context
 	return nil
 }
 
+func (j *jsiiProxy_DataUpcloudHostsHostsList) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataUpcloudHostsHostsList) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

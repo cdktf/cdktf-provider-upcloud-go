@@ -32,8 +32,8 @@ type DataUpcloudHostsHostsOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	HostId() *float64
-	InternalValue() *DataUpcloudHostsHosts
-	SetInternalValue(val *DataUpcloudHostsHosts)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -142,8 +142,8 @@ func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) HostId() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) InternalValue() *DataUpcloudHostsHosts {
-	var returns *DataUpcloudHostsHosts
+func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -232,7 +232,7 @@ func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference)SetComplexObjectIsFromSe
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference)SetInternalValue(val *DataUpcloudHostsHosts) {
+func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

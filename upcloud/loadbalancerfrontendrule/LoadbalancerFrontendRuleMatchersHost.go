@@ -7,11 +7,11 @@ package loadbalancerfrontendrule
 type LoadbalancerFrontendRuleMatchersHost struct {
 	// String value.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.7.0/docs/resources/loadbalancer_frontend_rule#value LoadbalancerFrontendRule#value}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.0/docs/resources/loadbalancer_frontend_rule#value LoadbalancerFrontendRule#value}
 	Value *string `field:"required" json:"value" yaml:"value"`
 	// Sets if the condition should be inverted. Works similar to logical NOT operator.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.7.0/docs/resources/loadbalancer_frontend_rule#inverse LoadbalancerFrontendRule#inverse}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.0/docs/resources/loadbalancer_frontend_rule#inverse LoadbalancerFrontendRule#inverse}
 	Inverse interface{} `field:"optional" json:"inverse" yaml:"inverse"`
 }
 

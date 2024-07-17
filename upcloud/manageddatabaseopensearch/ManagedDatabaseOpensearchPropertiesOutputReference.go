@@ -126,6 +126,12 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	KeepIndexRefreshInterval() interface{}
 	SetKeepIndexRefreshInterval(val interface{})
 	KeepIndexRefreshIntervalInput() interface{}
+	KnnMemoryCircuitBreakerEnabled() interface{}
+	SetKnnMemoryCircuitBreakerEnabled(val interface{})
+	KnnMemoryCircuitBreakerEnabledInput() interface{}
+	KnnMemoryCircuitBreakerLimit() *float64
+	SetKnnMemoryCircuitBreakerLimit(val *float64)
+	KnnMemoryCircuitBreakerLimitInput() *float64
 	Openid() ManagedDatabaseOpensearchPropertiesOpenidOutputReference
 	OpenidInput() *ManagedDatabaseOpensearchPropertiesOpenid
 	OpensearchDashboards() ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference
@@ -258,6 +264,8 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetIsmHistoryRolloverCheckPeriod()
 	ResetIsmHistoryRolloverRetentionPeriod()
 	ResetKeepIndexRefreshInterval()
+	ResetKnnMemoryCircuitBreakerEnabled()
+	ResetKnnMemoryCircuitBreakerLimit()
 	ResetOpenid()
 	ResetOpensearchDashboards()
 	ResetOverrideMainResponseVersion()
@@ -980,6 +988,46 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) KeepIndex
 	_jsii_.Get(
 		j,
 		"keepIndexRefreshIntervalInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) KnnMemoryCircuitBreakerEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"knnMemoryCircuitBreakerEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) KnnMemoryCircuitBreakerEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"knnMemoryCircuitBreakerEnabledInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) KnnMemoryCircuitBreakerLimit() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"knnMemoryCircuitBreakerLimit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) KnnMemoryCircuitBreakerLimitInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"knnMemoryCircuitBreakerLimitInput",
 		&returns,
 	)
 	return returns
@@ -1836,6 +1884,28 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetKeepInd
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetKnnMemoryCircuitBreakerEnabled(val interface{}) {
+	if err := j.validateSetKnnMemoryCircuitBreakerEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"knnMemoryCircuitBreakerEnabled",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetKnnMemoryCircuitBreakerLimit(val *float64) {
+	if err := j.validateSetKnnMemoryCircuitBreakerLimitParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"knnMemoryCircuitBreakerLimit",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetOverrideMainResponseVersion(val interface{}) {
 	if err := j.validateSetOverrideMainResponseVersionParameters(val); err != nil {
 		panic(err)
@@ -2560,6 +2630,22 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetKeep
 	_jsii_.InvokeVoid(
 		m,
 		"resetKeepIndexRefreshInterval",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetKnnMemoryCircuitBreakerEnabled() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetKnnMemoryCircuitBreakerEnabled",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetKnnMemoryCircuitBreakerLimit() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetKnnMemoryCircuitBreakerLimit",
 		nil, // no parameters
 	)
 }
