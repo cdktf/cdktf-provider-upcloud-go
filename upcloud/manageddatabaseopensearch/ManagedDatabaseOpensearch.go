@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
 type ManagedDatabaseOpensearch interface {
 	cdktf.TerraformResource
 	AccessControl() interface{}
@@ -49,6 +49,9 @@ type ManagedDatabaseOpensearch interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -153,6 +156,7 @@ type ManagedDatabaseOpensearch interface {
 	ResetAccessControl()
 	ResetExtendedAccessControl()
 	ResetId()
+	ResetLabels()
 	ResetMaintenanceWindowDow()
 	ResetMaintenanceWindowTime()
 	ResetNetwork()
@@ -324,6 +328,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -680,7 +704,7 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) ManagedDatabaseOpensearch {
 	_init_.Initialize()
 
@@ -698,7 +722,7 @@ func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch_Override(m ManagedDatabaseOpensearch, scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) {
 	_init_.Initialize()
 
@@ -776,6 +800,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
 		val,
 	)
 }
@@ -1282,6 +1317,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) ResetId() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearch) ResetLabels() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetLabels",
 		nil, // no parameters
 	)
 }

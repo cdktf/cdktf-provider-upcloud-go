@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/server_group upcloud_server_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/server_group upcloud_server_group}.
 type ServerGroup interface {
 	cdktf.TerraformResource
 	AntiAffinityPolicy() *string
@@ -43,8 +43,6 @@ type ServerGroup interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Labels() *map[string]*string
 	SetLabels(val *map[string]*string)
 	LabelsInput() *map[string]*string
@@ -123,7 +121,6 @@ type ServerGroup interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetAntiAffinityPolicy()
-	ResetId()
 	ResetLabels()
 	ResetMembers()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -253,16 +250,6 @@ func (j *jsiiProxy_ServerGroup) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ServerGroup) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -429,7 +416,7 @@ func (j *jsiiProxy_ServerGroup) TrackMembersInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/server_group upcloud_server_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupConfig) ServerGroup {
 	_init_.Initialize()
 
@@ -447,7 +434,7 @@ func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/server_group upcloud_server_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup_Override(s ServerGroup, scope constructs.Construct, id *string, config *ServerGroupConfig) {
 	_init_.Initialize()
 
@@ -503,17 +490,6 @@ func (j *jsiiProxy_ServerGroup)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ServerGroup)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -949,14 +925,6 @@ func (s *jsiiProxy_ServerGroup) ResetAntiAffinityPolicy() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetAntiAffinityPolicy",
-		nil, // no parameters
-	)
-}
-
-func (s *jsiiProxy_ServerGroup) ResetId() {
-	_jsii_.InvokeVoid(
-		s,
-		"resetId",
 		nil, // no parameters
 	)
 }

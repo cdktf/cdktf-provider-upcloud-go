@@ -111,6 +111,10 @@ func (j *jsiiProxy_ManagedDatabaseRedis) validateSetIdParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedis) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

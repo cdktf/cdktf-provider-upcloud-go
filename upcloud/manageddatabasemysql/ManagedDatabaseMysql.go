@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
 type ManagedDatabaseMysql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -43,6 +43,9 @@ type ManagedDatabaseMysql interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -145,6 +148,7 @@ type ManagedDatabaseMysql interface {
 	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseMysqlProperties)
 	ResetId()
+	ResetLabels()
 	ResetMaintenanceWindowDow()
 	ResetMaintenanceWindowTime()
 	ResetNetwork()
@@ -276,6 +280,26 @@ func (j *jsiiProxy_ManagedDatabaseMysql) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -632,7 +656,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) ManagedDatabaseMysql {
 	_init_.Initialize()
 
@@ -650,7 +674,7 @@ func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql_Override(m ManagedDatabaseMysql, scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) {
 	_init_.Initialize()
 
@@ -706,6 +730,17 @@ func (j *jsiiProxy_ManagedDatabaseMysql)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
 		val,
 	)
 }
@@ -1196,6 +1231,14 @@ func (m *jsiiProxy_ManagedDatabaseMysql) ResetId() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysql) ResetLabels() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetLabels",
 		nil, // no parameters
 	)
 }

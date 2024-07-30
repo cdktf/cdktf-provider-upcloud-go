@@ -111,6 +111,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetIdParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

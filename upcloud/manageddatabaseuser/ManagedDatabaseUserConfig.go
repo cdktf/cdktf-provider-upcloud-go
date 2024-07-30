@@ -24,36 +24,36 @@ type ManagedDatabaseUserConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Service's UUID for which this user belongs to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#service ManagedDatabaseUser#service}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#service ManagedDatabaseUser#service}
 	Service *string `field:"required" json:"service" yaml:"service"`
 	// Name of the database user.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#username ManagedDatabaseUser#username}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#username ManagedDatabaseUser#username}
 	Username *string `field:"required" json:"username" yaml:"username"`
 	// MySQL only, authentication type.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#authentication ManagedDatabaseUser#authentication}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#authentication ManagedDatabaseUser#authentication}
 	Authentication *string `field:"optional" json:"authentication" yaml:"authentication"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#id ManagedDatabaseUser#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#id ManagedDatabaseUser#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// opensearch_access_control block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#opensearch_access_control ManagedDatabaseUser#opensearch_access_control}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#opensearch_access_control ManagedDatabaseUser#opensearch_access_control}
 	OpensearchAccessControl *ManagedDatabaseUserOpensearchAccessControl `field:"optional" json:"opensearchAccessControl" yaml:"opensearchAccessControl"`
 	// Password for the database user. Defaults to a random value.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#password ManagedDatabaseUser#password}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#password ManagedDatabaseUser#password}
 	Password *string `field:"optional" json:"password" yaml:"password"`
 	// pg_access_control block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#pg_access_control ManagedDatabaseUser#pg_access_control}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#pg_access_control ManagedDatabaseUser#pg_access_control}
 	PgAccessControl *ManagedDatabaseUserPgAccessControl `field:"optional" json:"pgAccessControl" yaml:"pgAccessControl"`
 	// redis_access_control block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_user#redis_access_control ManagedDatabaseUser#redis_access_control}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_user#redis_access_control ManagedDatabaseUser#redis_access_control}
 	RedisAccessControl *ManagedDatabaseUserRedisAccessControl `field:"optional" json:"redisAccessControl" yaml:"redisAccessControl"`
 }
 

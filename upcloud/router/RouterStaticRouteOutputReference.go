@@ -49,6 +49,7 @@ type RouterStaticRouteOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	Type() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -214,6 +215,16 @@ func (j *jsiiProxy_RouterStaticRouteOutputReference) TerraformResource() cdktf.I
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RouterStaticRouteOutputReference) Type() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"type",
 		&returns,
 	)
 	return returns

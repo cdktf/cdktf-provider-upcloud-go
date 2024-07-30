@@ -119,6 +119,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetIdParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

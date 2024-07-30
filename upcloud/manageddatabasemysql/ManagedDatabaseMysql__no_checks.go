@@ -111,6 +111,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) validateSetIdParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysql) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysql) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

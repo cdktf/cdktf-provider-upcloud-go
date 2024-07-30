@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
 type ManagedDatabasePostgresql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -43,6 +43,9 @@ type ManagedDatabasePostgresql interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -146,6 +149,7 @@ type ManagedDatabasePostgresql interface {
 	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabasePostgresqlProperties)
 	ResetId()
+	ResetLabels()
 	ResetMaintenanceWindowDow()
 	ResetMaintenanceWindowTime()
 	ResetNetwork()
@@ -277,6 +281,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -643,7 +667,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) ManagedDatabasePostgresql {
 	_init_.Initialize()
 
@@ -661,7 +685,7 @@ func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.8.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) {
 	_init_.Initialize()
 
@@ -717,6 +741,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresql)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"labels",
 		val,
 	)
 }
@@ -1207,6 +1242,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) ResetId() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresql) ResetLabels() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetLabels",
 		nil, // no parameters
 	)
 }
