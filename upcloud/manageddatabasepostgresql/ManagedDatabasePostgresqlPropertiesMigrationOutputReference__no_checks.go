@@ -71,6 +71,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) validateSetIgnoreRolesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) validateSetInternalValueParameters(val *ManagedDatabasePostgresqlPropertiesMigration) error {
 	return nil
 }

@@ -71,6 +71,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) valid
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) validateSetIgnoreRolesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesMigrationOutputReference) validateSetInternalValueParameters(val *ManagedDatabaseMysqlPropertiesMigration) error {
 	return nil
 }

@@ -39,6 +39,9 @@ type ManagedDatabaseRedisPropertiesMigrationOutputReference interface {
 	IgnoreDbs() *string
 	SetIgnoreDbs(val *string)
 	IgnoreDbsInput() *string
+	IgnoreRoles() *string
+	SetIgnoreRoles(val *string)
+	IgnoreRolesInput() *string
 	InternalValue() *ManagedDatabaseRedisPropertiesMigration
 	SetInternalValue(val *ManagedDatabaseRedisPropertiesMigration)
 	Method() *string
@@ -91,6 +94,7 @@ type ManagedDatabaseRedisPropertiesMigrationOutputReference interface {
 	ResetDbname()
 	ResetHost()
 	ResetIgnoreDbs()
+	ResetIgnoreRoles()
 	ResetMethod()
 	ResetPassword()
 	ResetPort()
@@ -206,6 +210,26 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) Ignor
 	_jsii_.Get(
 		j,
 		"ignoreDbsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) IgnoreRoles() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ignoreRoles",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) IgnoreRolesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ignoreRolesInput",
 		&returns,
 	)
 	return returns
@@ -420,6 +444,17 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference)SetIgn
 	_jsii_.Set(
 		j,
 		"ignoreDbs",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference)SetIgnoreRoles(val *string) {
+	if err := j.validateSetIgnoreRolesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ignoreRoles",
 		val,
 	)
 }
@@ -718,6 +753,14 @@ func (m *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) Reset
 	_jsii_.InvokeVoid(
 		m,
 		"resetIgnoreDbs",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) ResetIgnoreRoles() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIgnoreRoles",
 		nil, // no parameters
 	)
 }

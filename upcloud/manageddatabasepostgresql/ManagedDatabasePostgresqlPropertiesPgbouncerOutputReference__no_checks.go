@@ -83,6 +83,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) validateSetMaxPreparedStatementsParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) validateSetMinPoolSizeParameters(val *float64) error {
 	return nil
 }

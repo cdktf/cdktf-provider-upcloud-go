@@ -47,6 +47,9 @@ type ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference interface {
 	IgnoreStartupParametersInput() *[]*string
 	InternalValue() *ManagedDatabasePostgresqlPropertiesPgbouncer
 	SetInternalValue(val *ManagedDatabasePostgresqlPropertiesPgbouncer)
+	MaxPreparedStatements() *float64
+	SetMaxPreparedStatements(val *float64)
+	MaxPreparedStatementsInput() *float64
 	MinPoolSize() *float64
 	SetMinPoolSize(val *float64)
 	MinPoolSizeInput() *float64
@@ -96,6 +99,7 @@ type ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference interface {
 	ResetAutodbPoolMode()
 	ResetAutodbPoolSize()
 	ResetIgnoreStartupParameters()
+	ResetMaxPreparedStatements()
 	ResetMinPoolSize()
 	ResetServerIdleTimeout()
 	ResetServerLifetime()
@@ -260,6 +264,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) MaxPreparedStatements() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxPreparedStatements",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) MaxPreparedStatementsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxPreparedStatementsInput",
 		&returns,
 	)
 	return returns
@@ -477,6 +501,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)S
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference)SetMaxPreparedStatements(val *float64) {
+	if err := j.validateSetMaxPreparedStatementsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxPreparedStatements",
 		val,
 	)
 }
@@ -769,6 +804,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	_jsii_.InvokeVoid(
 		m,
 		"resetIgnoreStartupParameters",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) ResetMaxPreparedStatements() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxPreparedStatements",
 		nil, // no parameters
 	)
 }

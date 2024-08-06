@@ -71,6 +71,10 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) valid
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) validateSetIgnoreRolesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesMigrationOutputReference) validateSetInternalValueParameters(val *ManagedDatabaseRedisPropertiesMigration) error {
 	return nil
 }

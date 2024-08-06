@@ -39,6 +39,9 @@ type ManagedDatabasePostgresqlPropertiesMigrationOutputReference interface {
 	IgnoreDbs() *string
 	SetIgnoreDbs(val *string)
 	IgnoreDbsInput() *string
+	IgnoreRoles() *string
+	SetIgnoreRoles(val *string)
+	IgnoreRolesInput() *string
 	InternalValue() *ManagedDatabasePostgresqlPropertiesMigration
 	SetInternalValue(val *ManagedDatabasePostgresqlPropertiesMigration)
 	Method() *string
@@ -91,6 +94,7 @@ type ManagedDatabasePostgresqlPropertiesMigrationOutputReference interface {
 	ResetDbname()
 	ResetHost()
 	ResetIgnoreDbs()
+	ResetIgnoreRoles()
 	ResetMethod()
 	ResetPassword()
 	ResetPort()
@@ -206,6 +210,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	_jsii_.Get(
 		j,
 		"ignoreDbsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) IgnoreRoles() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ignoreRoles",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) IgnoreRolesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ignoreRolesInput",
 		&returns,
 	)
 	return returns
@@ -420,6 +444,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference)S
 	_jsii_.Set(
 		j,
 		"ignoreDbs",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference)SetIgnoreRoles(val *string) {
+	if err := j.validateSetIgnoreRolesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ignoreRoles",
 		val,
 	)
 }
@@ -718,6 +753,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	_jsii_.InvokeVoid(
 		m,
 		"resetIgnoreDbs",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) ResetIgnoreRoles() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIgnoreRoles",
 		nil, // no parameters
 	)
 }

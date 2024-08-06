@@ -214,6 +214,14 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) 
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) validateSetMaxPreparedStatementsParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference) validateSetMinPoolSizeParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
