@@ -63,7 +63,7 @@ func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) validateSetCore
 	return nil
 }
 
-func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) validateSetInternalValueParameters(val *KubernetesNodeGroupCustomPlan) error {
+func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -87,7 +87,7 @@ func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) validateSetTerr
 	return nil
 }
 
-func validateNewKubernetesNodeGroupCustomPlanOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewKubernetesNodeGroupCustomPlanOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

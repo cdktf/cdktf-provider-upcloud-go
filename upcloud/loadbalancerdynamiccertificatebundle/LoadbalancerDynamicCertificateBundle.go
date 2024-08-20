@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle}.
 type LoadbalancerDynamicCertificateBundle interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -43,8 +43,6 @@ type LoadbalancerDynamicCertificateBundle interface {
 	SetHostnames(val *[]*string)
 	HostnamesInput() *[]*string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	KeyType() *string
 	SetKeyType(val *string)
 	KeyTypeInput() *string
@@ -119,7 +117,6 @@ type LoadbalancerDynamicCertificateBundle interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -246,16 +243,6 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -412,7 +399,7 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
 func NewLoadbalancerDynamicCertificateBundle(scope constructs.Construct, id *string, config *LoadbalancerDynamicCertificateBundleConfig) LoadbalancerDynamicCertificateBundle {
 	_init_.Initialize()
 
@@ -430,7 +417,7 @@ func NewLoadbalancerDynamicCertificateBundle(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_dynamic_certificate_bundle upcloud_loadbalancer_dynamic_certificate_bundle} Resource.
 func NewLoadbalancerDynamicCertificateBundle_Override(l LoadbalancerDynamicCertificateBundle, scope constructs.Construct, id *string, config *LoadbalancerDynamicCertificateBundleConfig) {
 	_init_.Initialize()
 
@@ -486,17 +473,6 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle)SetHostnames(val *[]*str
 	_jsii_.Set(
 		j,
 		"hostnames",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -903,14 +879,6 @@ func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) OverrideLogicalId(newLo
 		l,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerDynamicCertificateBundle) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

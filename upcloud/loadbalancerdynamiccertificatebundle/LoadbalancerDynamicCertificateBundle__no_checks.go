@@ -103,10 +103,6 @@ func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) validateSetHostnamesPar
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_LoadbalancerDynamicCertificateBundle) validateSetKeyTypeParameters(val *string) error {
 	return nil
 }

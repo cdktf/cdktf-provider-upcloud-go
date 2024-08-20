@@ -33,8 +33,8 @@ type StorageCloneOutputReference interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	InternalValue() *StorageClone
-	SetInternalValue(val *StorageClone)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -142,8 +142,8 @@ func (j *jsiiProxy_StorageCloneOutputReference) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_StorageCloneOutputReference) InternalValue() *StorageClone {
-	var returns *StorageClone
+func (j *jsiiProxy_StorageCloneOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -173,29 +173,29 @@ func (j *jsiiProxy_StorageCloneOutputReference) TerraformResource() cdktf.IInter
 }
 
 
-func NewStorageCloneOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) StorageCloneOutputReference {
+func NewStorageCloneOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) StorageCloneOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewStorageCloneOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewStorageCloneOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_StorageCloneOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.storage.StorageCloneOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewStorageCloneOutputReference_Override(s StorageCloneOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewStorageCloneOutputReference_Override(s StorageCloneOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.storage.StorageCloneOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -233,7 +233,7 @@ func (j *jsiiProxy_StorageCloneOutputReference)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_StorageCloneOutputReference)SetInternalValue(val *StorageClone) {
+func (j *jsiiProxy_StorageCloneOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

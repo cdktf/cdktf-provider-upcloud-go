@@ -207,34 +207,94 @@ func (s *jsiiProxy_Storage) validateOverrideLogicalIdParameters(newLogicalId *st
 	return nil
 }
 
-func (s *jsiiProxy_Storage) validatePutBackupRuleParameters(value *StorageBackupRule) error {
+func (s *jsiiProxy_Storage) validatePutBackupRuleParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*StorageBackupRule:
+		value := value.(*[]*StorageBackupRule)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*StorageBackupRule:
+		value_ := value.([]*StorageBackupRule)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*StorageBackupRule; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
 }
 
-func (s *jsiiProxy_Storage) validatePutCloneParameters(value *StorageClone) error {
+func (s *jsiiProxy_Storage) validatePutCloneParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*StorageClone:
+		value := value.(*[]*StorageClone)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*StorageClone:
+		value_ := value.([]*StorageClone)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*StorageClone; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
 }
 
-func (s *jsiiProxy_Storage) validatePutImportParameters(value *StorageImport) error {
+func (s *jsiiProxy_Storage) validatePutImportParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*StorageImport:
+		value := value.(*[]*StorageImport)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*StorageImport:
+		value_ := value.([]*StorageImport)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*StorageImport; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -430,7 +490,7 @@ func (j *jsiiProxy_Storage) validateSetFilesystemAutoresizeParameters(val interf
 	return nil
 }
 
-func (j *jsiiProxy_Storage) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_Storage) validateSetLabelsParameters(val *map[string]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

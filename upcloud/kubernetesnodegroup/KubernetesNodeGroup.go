@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
 type KubernetesNodeGroup interface {
 	cdktf.TerraformResource
 	AntiAffinity() interface{}
@@ -33,8 +33,8 @@ type KubernetesNodeGroup interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	CustomPlan() KubernetesNodeGroupCustomPlanOutputReference
-	CustomPlanInput() *KubernetesNodeGroupCustomPlan
+	CustomPlan() KubernetesNodeGroupCustomPlanList
+	CustomPlanInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -48,8 +48,6 @@ type KubernetesNodeGroup interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	KubeletArgs() KubernetesNodeGroupKubeletArgsList
 	KubeletArgsInput() interface{}
 	Labels() *map[string]*string
@@ -140,12 +138,11 @@ type KubernetesNodeGroup interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutCustomPlan(value *KubernetesNodeGroupCustomPlan)
+	PutCustomPlan(value interface{})
 	PutKubeletArgs(value interface{})
 	PutTaint(value interface{})
 	ResetAntiAffinity()
 	ResetCustomPlan()
-	ResetId()
 	ResetKubeletArgs()
 	ResetLabels()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -253,8 +250,8 @@ func (j *jsiiProxy_KubernetesNodeGroup) Count() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesNodeGroup) CustomPlan() KubernetesNodeGroupCustomPlanOutputReference {
-	var returns KubernetesNodeGroupCustomPlanOutputReference
+func (j *jsiiProxy_KubernetesNodeGroup) CustomPlan() KubernetesNodeGroupCustomPlanList {
+	var returns KubernetesNodeGroupCustomPlanList
 	_jsii_.Get(
 		j,
 		"customPlan",
@@ -263,8 +260,8 @@ func (j *jsiiProxy_KubernetesNodeGroup) CustomPlan() KubernetesNodeGroupCustomPl
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesNodeGroup) CustomPlanInput() *KubernetesNodeGroupCustomPlan {
-	var returns *KubernetesNodeGroupCustomPlan
+func (j *jsiiProxy_KubernetesNodeGroup) CustomPlanInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"customPlanInput",
@@ -318,16 +315,6 @@ func (j *jsiiProxy_KubernetesNodeGroup) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_KubernetesNodeGroup) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -594,7 +581,7 @@ func (j *jsiiProxy_KubernetesNodeGroup) UtilityNetworkAccessInput() interface{} 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) KubernetesNodeGroup {
 	_init_.Initialize()
 
@@ -612,7 +599,7 @@ func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *Kube
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup_Override(k KubernetesNodeGroup, scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) {
 	_init_.Initialize()
 
@@ -679,17 +666,6 @@ func (j *jsiiProxy_KubernetesNodeGroup)SetForEach(val cdktf.ITerraformIterator) 
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_KubernetesNodeGroup)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1154,7 +1130,7 @@ func (k *jsiiProxy_KubernetesNodeGroup) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
-func (k *jsiiProxy_KubernetesNodeGroup) PutCustomPlan(value *KubernetesNodeGroupCustomPlan) {
+func (k *jsiiProxy_KubernetesNodeGroup) PutCustomPlan(value interface{}) {
 	if err := k.validatePutCustomPlanParameters(value); err != nil {
 		panic(err)
 	}
@@ -1199,14 +1175,6 @@ func (k *jsiiProxy_KubernetesNodeGroup) ResetCustomPlan() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetCustomPlan",
-		nil, // no parameters
-	)
-}
-
-func (k *jsiiProxy_KubernetesNodeGroup) ResetId() {
-	_jsii_.InvokeVoid(
-		k,
-		"resetId",
 		nil, // no parameters
 	)
 }

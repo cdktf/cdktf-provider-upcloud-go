@@ -59,7 +59,7 @@ func (j *jsiiProxy_StorageBackupRuleOutputReference) validateSetComplexObjectIsF
 	return nil
 }
 
-func (j *jsiiProxy_StorageBackupRuleOutputReference) validateSetInternalValueParameters(val *StorageBackupRule) error {
+func (j *jsiiProxy_StorageBackupRuleOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -83,7 +83,7 @@ func (j *jsiiProxy_StorageBackupRuleOutputReference) validateSetTimeParameters(v
 	return nil
 }
 
-func validateNewStorageBackupRuleOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewStorageBackupRuleOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

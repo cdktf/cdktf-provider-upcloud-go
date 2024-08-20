@@ -51,6 +51,18 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutAzureMigrationParameters(value *ManagedDatabaseOpensearchPropertiesAzureMigration) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutGcsMigrationParameters(value *ManagedDatabaseOpensearchPropertiesGcsMigration) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutIndexRollupParameters(value *ManagedDatabaseOpensearchPropertiesIndexRollup) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutIndexTemplateParameters(value *ManagedDatabaseOpensearchPropertiesIndexTemplate) error {
 	return nil
 }
@@ -60,6 +72,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 }
 
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutOpensearchDashboardsParameters(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutS3MigrationParameters(value *ManagedDatabaseOpensearchPropertiesS3Migration) error {
 	return nil
 }
 

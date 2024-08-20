@@ -107,10 +107,6 @@ func (j *jsiiProxy_ManagedObjectStoragePolicy) validateSetDocumentParameters(val
 	return nil
 }
 
-func (j *jsiiProxy_ManagedObjectStoragePolicy) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedObjectStoragePolicy) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

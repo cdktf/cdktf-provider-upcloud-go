@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config}.
 type LoadbalancerFrontendTlsConfig interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -46,8 +46,6 @@ type LoadbalancerFrontendTlsConfig interface {
 	SetFrontend(val *string)
 	FrontendInput() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -116,7 +114,6 @@ type LoadbalancerFrontendTlsConfig interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -268,16 +265,6 @@ func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -379,7 +366,7 @@ func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
 func NewLoadbalancerFrontendTlsConfig(scope constructs.Construct, id *string, config *LoadbalancerFrontendTlsConfigConfig) LoadbalancerFrontendTlsConfig {
 	_init_.Initialize()
 
@@ -397,7 +384,7 @@ func NewLoadbalancerFrontendTlsConfig(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_frontend_tls_config upcloud_loadbalancer_frontend_tls_config} Resource.
 func NewLoadbalancerFrontendTlsConfig_Override(l LoadbalancerFrontendTlsConfig, scope constructs.Construct, id *string, config *LoadbalancerFrontendTlsConfigConfig) {
 	_init_.Initialize()
 
@@ -464,17 +451,6 @@ func (j *jsiiProxy_LoadbalancerFrontendTlsConfig)SetFrontend(val *string) {
 	_jsii_.Set(
 		j,
 		"frontend",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerFrontendTlsConfig)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -870,14 +846,6 @@ func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) OverrideLogicalId(newLogicalId
 		l,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerFrontendTlsConfig) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

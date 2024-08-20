@@ -103,10 +103,6 @@ func (j *jsiiProxy_LoadbalancerManualCertificateBundle) validateSetCountParamete
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerManualCertificateBundle) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_LoadbalancerManualCertificateBundle) validateSetIntermediatesParameters(val *string) error {
 	return nil
 }

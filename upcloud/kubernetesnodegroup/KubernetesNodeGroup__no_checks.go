@@ -75,7 +75,7 @@ func (k *jsiiProxy_KubernetesNodeGroup) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroup) validatePutCustomPlanParameters(value *KubernetesNodeGroupCustomPlan) error {
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutCustomPlanParameters(value interface{}) error {
 	return nil
 }
 
@@ -116,10 +116,6 @@ func (j *jsiiProxy_KubernetesNodeGroup) validateSetConnectionParameters(val inte
 }
 
 func (j *jsiiProxy_KubernetesNodeGroup) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_KubernetesNodeGroup) validateSetIdParameters(val *string) error {
 	return nil
 }
 

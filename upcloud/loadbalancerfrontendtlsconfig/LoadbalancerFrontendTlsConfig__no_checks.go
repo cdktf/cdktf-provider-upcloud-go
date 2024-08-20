@@ -107,10 +107,6 @@ func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) validateSetFrontendParameters(
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_LoadbalancerFrontendTlsConfig) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

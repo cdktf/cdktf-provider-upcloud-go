@@ -12,15 +12,15 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/storage upcloud_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/storage upcloud_storage}.
 type Storage interface {
 	cdktf.TerraformResource
-	BackupRule() StorageBackupRuleOutputReference
-	BackupRuleInput() *StorageBackupRule
+	BackupRule() StorageBackupRuleList
+	BackupRuleInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
-	Clone() StorageCloneOutputReference
-	CloneInput() *StorageClone
+	Clone() StorageCloneList
+	CloneInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -53,10 +53,11 @@ type Storage interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
-	Import() StorageImportOutputReference
-	ImportInput() *StorageImport
+	Import() StorageImportList
+	ImportInput() interface{}
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -76,6 +77,7 @@ type Storage interface {
 	Size() *float64
 	SetSize(val *float64)
 	SizeInput() *float64
+	SystemLabels() cdktf.StringMap
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -88,6 +90,7 @@ type Storage interface {
 	Title() *string
 	SetTitle(val *string)
 	TitleInput() *string
+	Type() *string
 	Zone() *string
 	SetZone(val *string)
 	ZoneInput() *string
@@ -134,16 +137,16 @@ type Storage interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutBackupRule(value *StorageBackupRule)
-	PutClone(value *StorageClone)
-	PutImport(value *StorageImport)
+	PutBackupRule(value interface{})
+	PutClone(value interface{})
+	PutImport(value interface{})
 	ResetBackupRule()
 	ResetClone()
 	ResetDeleteAutoresizeBackup()
 	ResetEncrypt()
 	ResetFilesystemAutoresize()
-	ResetId()
 	ResetImport()
+	ResetLabels()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -166,8 +169,8 @@ type jsiiProxy_Storage struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_Storage) BackupRule() StorageBackupRuleOutputReference {
-	var returns StorageBackupRuleOutputReference
+func (j *jsiiProxy_Storage) BackupRule() StorageBackupRuleList {
+	var returns StorageBackupRuleList
 	_jsii_.Get(
 		j,
 		"backupRule",
@@ -176,8 +179,8 @@ func (j *jsiiProxy_Storage) BackupRule() StorageBackupRuleOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_Storage) BackupRuleInput() *StorageBackupRule {
-	var returns *StorageBackupRule
+func (j *jsiiProxy_Storage) BackupRuleInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"backupRuleInput",
@@ -196,8 +199,8 @@ func (j *jsiiProxy_Storage) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
-func (j *jsiiProxy_Storage) Clone() StorageCloneOutputReference {
-	var returns StorageCloneOutputReference
+func (j *jsiiProxy_Storage) Clone() StorageCloneList {
+	var returns StorageCloneList
 	_jsii_.Get(
 		j,
 		"clone",
@@ -206,8 +209,8 @@ func (j *jsiiProxy_Storage) Clone() StorageCloneOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_Storage) CloneInput() *StorageClone {
-	var returns *StorageClone
+func (j *jsiiProxy_Storage) CloneInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"cloneInput",
@@ -356,18 +359,8 @@ func (j *jsiiProxy_Storage) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Storage) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Storage) Import() StorageImportOutputReference {
-	var returns StorageImportOutputReference
+func (j *jsiiProxy_Storage) Import() StorageImportList {
+	var returns StorageImportList
 	_jsii_.Get(
 		j,
 		"import",
@@ -376,11 +369,31 @@ func (j *jsiiProxy_Storage) Import() StorageImportOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_Storage) ImportInput() *StorageImport {
-	var returns *StorageImport
+func (j *jsiiProxy_Storage) ImportInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"importInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Storage) Labels() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Storage) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"labelsInput",
 		&returns,
 	)
 	return returns
@@ -456,6 +469,16 @@ func (j *jsiiProxy_Storage) SizeInput() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_Storage) SystemLabels() cdktf.StringMap {
+	var returns cdktf.StringMap
+	_jsii_.Get(
+		j,
+		"systemLabels",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Storage) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -526,6 +549,16 @@ func (j *jsiiProxy_Storage) TitleInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Storage) Type() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"type",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Storage) Zone() *string {
 	var returns *string
 	_jsii_.Get(
@@ -547,7 +580,7 @@ func (j *jsiiProxy_Storage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/storage upcloud_storage} Resource.
 func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) Storage {
 	_init_.Initialize()
 
@@ -565,7 +598,7 @@ func NewStorage(scope constructs.Construct, id *string, config *StorageConfig) S
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/storage upcloud_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/storage upcloud_storage} Resource.
 func NewStorage_Override(s Storage, scope constructs.Construct, id *string, config *StorageConfig) {
 	_init_.Initialize()
 
@@ -647,13 +680,13 @@ func (j *jsiiProxy_Storage)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Storage)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
+func (j *jsiiProxy_Storage)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"id",
+		"labels",
 		val,
 	)
 }
@@ -1085,7 +1118,7 @@ func (s *jsiiProxy_Storage) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (s *jsiiProxy_Storage) PutBackupRule(value *StorageBackupRule) {
+func (s *jsiiProxy_Storage) PutBackupRule(value interface{}) {
 	if err := s.validatePutBackupRuleParameters(value); err != nil {
 		panic(err)
 	}
@@ -1096,7 +1129,7 @@ func (s *jsiiProxy_Storage) PutBackupRule(value *StorageBackupRule) {
 	)
 }
 
-func (s *jsiiProxy_Storage) PutClone(value *StorageClone) {
+func (s *jsiiProxy_Storage) PutClone(value interface{}) {
 	if err := s.validatePutCloneParameters(value); err != nil {
 		panic(err)
 	}
@@ -1107,7 +1140,7 @@ func (s *jsiiProxy_Storage) PutClone(value *StorageClone) {
 	)
 }
 
-func (s *jsiiProxy_Storage) PutImport(value *StorageImport) {
+func (s *jsiiProxy_Storage) PutImport(value interface{}) {
 	if err := s.validatePutImportParameters(value); err != nil {
 		panic(err)
 	}
@@ -1158,18 +1191,18 @@ func (s *jsiiProxy_Storage) ResetFilesystemAutoresize() {
 	)
 }
 
-func (s *jsiiProxy_Storage) ResetId() {
-	_jsii_.InvokeVoid(
-		s,
-		"resetId",
-		nil, // no parameters
-	)
-}
-
 func (s *jsiiProxy_Storage) ResetImport() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetImport",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Storage) ResetLabels() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLabels",
 		nil, // no parameters
 	)
 }

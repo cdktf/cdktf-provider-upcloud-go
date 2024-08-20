@@ -104,6 +104,39 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutAzureMigrationParameters(value *ManagedDatabaseOpensearchPropertiesAzureMigration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutGcsMigrationParameters(value *ManagedDatabaseOpensearchPropertiesGcsMigration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutIndexRollupParameters(value *ManagedDatabaseOpensearchPropertiesIndexRollup) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutIndexTemplateParameters(value *ManagedDatabaseOpensearchPropertiesIndexTemplate) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -127,6 +160,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 }
 
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutOpensearchDashboardsParameters(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutS3MigrationParameters(value *ManagedDatabaseOpensearchPropertiesS3Migration) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

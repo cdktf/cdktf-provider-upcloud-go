@@ -33,8 +33,8 @@ type KubernetesNodeGroupCustomPlanOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KubernetesNodeGroupCustomPlan
-	SetInternalValue(val *KubernetesNodeGroupCustomPlan)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Memory() *float64
 	SetMemory(val *float64)
 	MemoryInput() *float64
@@ -152,8 +152,8 @@ func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) InternalValue() *KubernetesNodeGroupCustomPlan {
-	var returns *KubernetesNodeGroupCustomPlan
+func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,29 +243,29 @@ func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference) TerraformResour
 }
 
 
-func NewKubernetesNodeGroupCustomPlanOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) KubernetesNodeGroupCustomPlanOutputReference {
+func NewKubernetesNodeGroupCustomPlanOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) KubernetesNodeGroupCustomPlanOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewKubernetesNodeGroupCustomPlanOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewKubernetesNodeGroupCustomPlanOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroupCustomPlanOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewKubernetesNodeGroupCustomPlanOutputReference_Override(k KubernetesNodeGroupCustomPlanOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewKubernetesNodeGroupCustomPlanOutputReference_Override(k KubernetesNodeGroupCustomPlanOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.kubernetesNodeGroup.KubernetesNodeGroupCustomPlanOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		k,
 	)
 }
@@ -303,7 +303,7 @@ func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference)SetCores(val *fl
 	)
 }
 
-func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference)SetInternalValue(val *KubernetesNodeGroupCustomPlan) {
+func (j *jsiiProxy_KubernetesNodeGroupCustomPlanOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

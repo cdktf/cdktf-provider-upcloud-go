@@ -59,7 +59,7 @@ func (j *jsiiProxy_StorageImportOutputReference) validateSetComplexObjectIsFromS
 	return nil
 }
 
-func (j *jsiiProxy_StorageImportOutputReference) validateSetInternalValueParameters(val *StorageImport) error {
+func (j *jsiiProxy_StorageImportOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -83,7 +83,7 @@ func (j *jsiiProxy_StorageImportOutputReference) validateSetTerraformResourcePar
 	return nil
 }
 
-func validateNewStorageImportOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewStorageImportOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

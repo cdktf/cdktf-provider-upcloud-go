@@ -75,15 +75,15 @@ func (s *jsiiProxy_Storage) validateOverrideLogicalIdParameters(newLogicalId *st
 	return nil
 }
 
-func (s *jsiiProxy_Storage) validatePutBackupRuleParameters(value *StorageBackupRule) error {
+func (s *jsiiProxy_Storage) validatePutBackupRuleParameters(value interface{}) error {
 	return nil
 }
 
-func (s *jsiiProxy_Storage) validatePutCloneParameters(value *StorageClone) error {
+func (s *jsiiProxy_Storage) validatePutCloneParameters(value interface{}) error {
 	return nil
 }
 
-func (s *jsiiProxy_Storage) validatePutImportParameters(value *StorageImport) error {
+func (s *jsiiProxy_Storage) validatePutImportParameters(value interface{}) error {
 	return nil
 }
 
@@ -123,7 +123,7 @@ func (j *jsiiProxy_Storage) validateSetFilesystemAutoresizeParameters(val interf
 	return nil
 }
 
-func (j *jsiiProxy_Storage) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_Storage) validateSetLabelsParameters(val *map[string]*string) error {
 	return nil
 }
 

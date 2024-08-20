@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle}.
 type LoadbalancerManualCertificateBundle interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -43,8 +43,6 @@ type LoadbalancerManualCertificateBundle interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Intermediates() *string
 	SetIntermediates(val *string)
 	IntermediatesInput() *string
@@ -122,7 +120,6 @@ type LoadbalancerManualCertificateBundle interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	ResetIntermediates()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -250,16 +247,6 @@ func (j *jsiiProxy_LoadbalancerManualCertificateBundle) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_LoadbalancerManualCertificateBundle) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -436,7 +423,7 @@ func (j *jsiiProxy_LoadbalancerManualCertificateBundle) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
 func NewLoadbalancerManualCertificateBundle(scope constructs.Construct, id *string, config *LoadbalancerManualCertificateBundleConfig) LoadbalancerManualCertificateBundle {
 	_init_.Initialize()
 
@@ -454,7 +441,7 @@ func NewLoadbalancerManualCertificateBundle(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.9.1/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.0/docs/resources/loadbalancer_manual_certificate_bundle upcloud_loadbalancer_manual_certificate_bundle} Resource.
 func NewLoadbalancerManualCertificateBundle_Override(l LoadbalancerManualCertificateBundle, scope constructs.Construct, id *string, config *LoadbalancerManualCertificateBundleConfig) {
 	_init_.Initialize()
 
@@ -510,17 +497,6 @@ func (j *jsiiProxy_LoadbalancerManualCertificateBundle)SetForEach(val cdktf.ITer
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerManualCertificateBundle)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -938,14 +914,6 @@ func (l *jsiiProxy_LoadbalancerManualCertificateBundle) OverrideLogicalId(newLog
 		l,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerManualCertificateBundle) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

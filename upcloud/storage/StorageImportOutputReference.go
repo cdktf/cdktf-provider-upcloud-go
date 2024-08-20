@@ -30,8 +30,8 @@ type StorageImportOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *StorageImport
-	SetInternalValue(val *StorageImport)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Sha256Sum() *string
 	Source() *string
 	SetSource(val *string)
@@ -131,8 +131,8 @@ func (j *jsiiProxy_StorageImportOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_StorageImportOutputReference) InternalValue() *StorageImport {
-	var returns *StorageImport
+func (j *jsiiProxy_StorageImportOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,29 +242,29 @@ func (j *jsiiProxy_StorageImportOutputReference) WrittenBytes() *float64 {
 }
 
 
-func NewStorageImportOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) StorageImportOutputReference {
+func NewStorageImportOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) StorageImportOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewStorageImportOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewStorageImportOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_StorageImportOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.storage.StorageImportOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewStorageImportOutputReference_Override(s StorageImportOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewStorageImportOutputReference_Override(s StorageImportOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.storage.StorageImportOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -291,7 +291,7 @@ func (j *jsiiProxy_StorageImportOutputReference)SetComplexObjectIsFromSet(val *b
 	)
 }
 
-func (j *jsiiProxy_StorageImportOutputReference)SetInternalValue(val *StorageImport) {
+func (j *jsiiProxy_StorageImportOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

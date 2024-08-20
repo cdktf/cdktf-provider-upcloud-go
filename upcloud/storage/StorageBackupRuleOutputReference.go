@@ -30,8 +30,8 @@ type StorageBackupRuleOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *StorageBackupRule
-	SetInternalValue(val *StorageBackupRule)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Interval() *string
 	SetInterval(val *string)
 	IntervalInput() *string
@@ -128,8 +128,8 @@ func (j *jsiiProxy_StorageBackupRuleOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_StorageBackupRuleOutputReference) InternalValue() *StorageBackupRule {
-	var returns *StorageBackupRule
+func (j *jsiiProxy_StorageBackupRuleOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,29 +219,29 @@ func (j *jsiiProxy_StorageBackupRuleOutputReference) TimeInput() *string {
 }
 
 
-func NewStorageBackupRuleOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) StorageBackupRuleOutputReference {
+func NewStorageBackupRuleOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) StorageBackupRuleOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewStorageBackupRuleOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewStorageBackupRuleOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_StorageBackupRuleOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.storage.StorageBackupRuleOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewStorageBackupRuleOutputReference_Override(s StorageBackupRuleOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewStorageBackupRuleOutputReference_Override(s StorageBackupRuleOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.storage.StorageBackupRuleOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -268,7 +268,7 @@ func (j *jsiiProxy_StorageBackupRuleOutputReference)SetComplexObjectIsFromSet(va
 	)
 }
 
-func (j *jsiiProxy_StorageBackupRuleOutputReference)SetInternalValue(val *StorageBackupRule) {
+func (j *jsiiProxy_StorageBackupRuleOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

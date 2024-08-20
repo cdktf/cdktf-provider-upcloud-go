@@ -63,7 +63,7 @@ func (j *jsiiProxy_StorageCloneOutputReference) validateSetIdParameters(val *str
 	return nil
 }
 
-func (j *jsiiProxy_StorageCloneOutputReference) validateSetInternalValueParameters(val *StorageClone) error {
+func (j *jsiiProxy_StorageCloneOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -75,7 +75,7 @@ func (j *jsiiProxy_StorageCloneOutputReference) validateSetTerraformResourcePara
 	return nil
 }
 
-func validateNewStorageCloneOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewStorageCloneOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 
