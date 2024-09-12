@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.1/docs/data-sources/storage upcloud_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/data-sources/storage upcloud_storage}.
 type DataUpcloudStorage interface {
 	cdktf.TerraformDataSource
 	AccessType() *string
@@ -30,6 +30,7 @@ type DataUpcloudStorage interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Encrypt() cdktf.IResolvable
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -41,6 +42,7 @@ type DataUpcloudStorage interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Labels() cdktf.StringMap
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -64,6 +66,7 @@ type DataUpcloudStorage interface {
 	RawOverrides() interface{}
 	Size() *float64
 	State() *string
+	SystemLabels() cdktf.StringMap
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -72,6 +75,8 @@ type DataUpcloudStorage interface {
 	TerraformResourceType() *string
 	Tier() *string
 	Title() *string
+	SetTitle(val *string)
+	TitleInput() *string
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
@@ -111,6 +116,8 @@ type DataUpcloudStorage interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTitle()
+	ResetType()
 	ResetZone()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -191,6 +198,16 @@ func (j *jsiiProxy_DataUpcloudStorage) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataUpcloudStorage) Encrypt() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"encrypt",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataUpcloudStorage) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -236,6 +253,16 @@ func (j *jsiiProxy_DataUpcloudStorage) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataUpcloudStorage) Labels() cdktf.StringMap {
+	var returns cdktf.StringMap
+	_jsii_.Get(
+		j,
+		"labels",
 		&returns,
 	)
 	return returns
@@ -361,6 +388,16 @@ func (j *jsiiProxy_DataUpcloudStorage) State() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataUpcloudStorage) SystemLabels() cdktf.StringMap {
+	var returns cdktf.StringMap
+	_jsii_.Get(
+		j,
+		"systemLabels",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataUpcloudStorage) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -411,6 +448,16 @@ func (j *jsiiProxy_DataUpcloudStorage) Title() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataUpcloudStorage) TitleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"titleInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataUpcloudStorage) Type() *string {
 	var returns *string
 	_jsii_.Get(
@@ -452,7 +499,7 @@ func (j *jsiiProxy_DataUpcloudStorage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.1/docs/data-sources/storage upcloud_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/data-sources/storage upcloud_storage} Data Source.
 func NewDataUpcloudStorage(scope constructs.Construct, id *string, config *DataUpcloudStorageConfig) DataUpcloudStorage {
 	_init_.Initialize()
 
@@ -470,7 +517,7 @@ func NewDataUpcloudStorage(scope constructs.Construct, id *string, config *DataU
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.1/docs/data-sources/storage upcloud_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/data-sources/storage upcloud_storage} Data Source.
 func NewDataUpcloudStorage_Override(d DataUpcloudStorage, scope constructs.Construct, id *string, config *DataUpcloudStorageConfig) {
 	_init_.Initialize()
 
@@ -578,6 +625,17 @@ func (j *jsiiProxy_DataUpcloudStorage)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataUpcloudStorage)SetTitle(val *string) {
+	if err := j.validateSetTitleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"title",
 		val,
 	)
 }
@@ -933,6 +991,22 @@ func (d *jsiiProxy_DataUpcloudStorage) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataUpcloudStorage) ResetTitle() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTitle",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataUpcloudStorage) ResetType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetType",
 		nil, // no parameters
 	)
 }

@@ -54,8 +54,8 @@ type LoadbalancerBackendPropertiesOutputReference interface {
 	Http2Enabled() interface{}
 	SetHttp2Enabled(val interface{})
 	Http2EnabledInput() interface{}
-	InternalValue() *LoadbalancerBackendProperties
-	SetInternalValue(val *LoadbalancerBackendProperties)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	OutboundProxyProtocol() *string
 	SetOutboundProxyProtocol(val *string)
 	OutboundProxyProtocolInput() *string
@@ -76,7 +76,6 @@ type LoadbalancerBackendPropertiesOutputReference interface {
 	TimeoutTunnel() *float64
 	SetTimeoutTunnel(val *float64)
 	TimeoutTunnelInput() *float64
-	TlsConfigs() *[]*string
 	TlsEnabled() interface{}
 	SetTlsEnabled(val interface{})
 	TlsEnabledInput() interface{}
@@ -340,8 +339,8 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) Http2EnabledInp
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) InternalValue() *LoadbalancerBackendProperties {
-	var returns *LoadbalancerBackendProperties
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -450,16 +449,6 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TimeoutTunnelIn
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsConfigs() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"tlsConfigs",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsEnabled() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -521,29 +510,29 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) TlsVerifyInput(
 }
 
 
-func NewLoadbalancerBackendPropertiesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) LoadbalancerBackendPropertiesOutputReference {
+func NewLoadbalancerBackendPropertiesOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) LoadbalancerBackendPropertiesOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewLoadbalancerBackendPropertiesOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewLoadbalancerBackendPropertiesOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_LoadbalancerBackendPropertiesOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.loadbalancerBackend.LoadbalancerBackendPropertiesOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewLoadbalancerBackendPropertiesOutputReference_Override(l LoadbalancerBackendPropertiesOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewLoadbalancerBackendPropertiesOutputReference_Override(l LoadbalancerBackendPropertiesOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.loadbalancerBackend.LoadbalancerBackendPropertiesOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		l,
 	)
 }
@@ -658,7 +647,7 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetHttp2Enabled(
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetInternalValue(val *LoadbalancerBackendProperties) {
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

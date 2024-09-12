@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.1/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend}.
 type LoadbalancerBackend interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -40,8 +40,6 @@ type LoadbalancerBackend interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -55,8 +53,8 @@ type LoadbalancerBackend interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
-	Properties() LoadbalancerBackendPropertiesOutputReference
-	PropertiesInput() *LoadbalancerBackendProperties
+	Properties() LoadbalancerBackendPropertiesList
+	PropertiesInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -120,8 +118,7 @@ type LoadbalancerBackend interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutProperties(value *LoadbalancerBackendProperties)
-	ResetId()
+	PutProperties(value interface{})
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -235,16 +232,6 @@ func (j *jsiiProxy_LoadbalancerBackend) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerBackend) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_LoadbalancerBackend) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -315,8 +302,8 @@ func (j *jsiiProxy_LoadbalancerBackend) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerBackend) Properties() LoadbalancerBackendPropertiesOutputReference {
-	var returns LoadbalancerBackendPropertiesOutputReference
+func (j *jsiiProxy_LoadbalancerBackend) Properties() LoadbalancerBackendPropertiesList {
+	var returns LoadbalancerBackendPropertiesList
 	_jsii_.Get(
 		j,
 		"properties",
@@ -325,8 +312,8 @@ func (j *jsiiProxy_LoadbalancerBackend) Properties() LoadbalancerBackendProperti
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerBackend) PropertiesInput() *LoadbalancerBackendProperties {
-	var returns *LoadbalancerBackendProperties
+func (j *jsiiProxy_LoadbalancerBackend) PropertiesInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"propertiesInput",
@@ -426,7 +413,7 @@ func (j *jsiiProxy_LoadbalancerBackend) TlsConfigs() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.1/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) LoadbalancerBackend {
 	_init_.Initialize()
 
@@ -444,7 +431,7 @@ func NewLoadbalancerBackend(scope constructs.Construct, id *string, config *Load
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.10.1/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/resources/loadbalancer_backend upcloud_loadbalancer_backend} Resource.
 func NewLoadbalancerBackend_Override(l LoadbalancerBackend, scope constructs.Construct, id *string, config *LoadbalancerBackendConfig) {
 	_init_.Initialize()
 
@@ -489,17 +476,6 @@ func (j *jsiiProxy_LoadbalancerBackend)SetForEach(val cdktf.ITerraformIterator) 
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerBackend)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -920,7 +896,7 @@ func (l *jsiiProxy_LoadbalancerBackend) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
-func (l *jsiiProxy_LoadbalancerBackend) PutProperties(value *LoadbalancerBackendProperties) {
+func (l *jsiiProxy_LoadbalancerBackend) PutProperties(value interface{}) {
 	if err := l.validatePutPropertiesParameters(value); err != nil {
 		panic(err)
 	}
@@ -928,14 +904,6 @@ func (l *jsiiProxy_LoadbalancerBackend) PutProperties(value *LoadbalancerBackend
 		l,
 		"putProperties",
 		[]interface{}{value},
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerBackend) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

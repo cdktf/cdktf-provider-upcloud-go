@@ -75,7 +75,7 @@ func (l *jsiiProxy_LoadbalancerBackend) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerBackend) validatePutPropertiesParameters(value *LoadbalancerBackendProperties) error {
+func (l *jsiiProxy_LoadbalancerBackend) validatePutPropertiesParameters(value interface{}) error {
 	return nil
 }
 
@@ -100,10 +100,6 @@ func (j *jsiiProxy_LoadbalancerBackend) validateSetConnectionParameters(val inte
 }
 
 func (j *jsiiProxy_LoadbalancerBackend) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_LoadbalancerBackend) validateSetIdParameters(val *string) error {
 	return nil
 }
 

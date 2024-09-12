@@ -99,6 +99,10 @@ func (j *jsiiProxy_DataUpcloudStorage) validateSetNameRegexParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_DataUpcloudStorage) validateSetTitleParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataUpcloudStorage) validateSetTypeParameters(val *string) error {
 	return nil
 }

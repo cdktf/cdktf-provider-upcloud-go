@@ -91,7 +91,7 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetHttp
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetInternalValueParameters(val *LoadbalancerBackendProperties) error {
+func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -131,7 +131,7 @@ func (j *jsiiProxy_LoadbalancerBackendPropertiesOutputReference) validateSetTlsV
 	return nil
 }
 
-func validateNewLoadbalancerBackendPropertiesOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewLoadbalancerBackendPropertiesOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 
