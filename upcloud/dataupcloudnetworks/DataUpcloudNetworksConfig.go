@@ -24,16 +24,16 @@ type DataUpcloudNetworksConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// If specified, results will be filtered to match name using a regular expression.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/data-sources/networks#filter_name DataUpcloudNetworks#filter_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.1/docs/data-sources/networks#filter_name DataUpcloudNetworks#filter_name}
 	FilterName *string `field:"optional" json:"filterName" yaml:"filterName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/data-sources/networks#id DataUpcloudNetworks#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.1/docs/data-sources/networks#id DataUpcloudNetworks#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// If specified, this data source will return only networks from this zone.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/data-sources/networks#zone DataUpcloudNetworks#zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.1/docs/data-sources/networks#zone DataUpcloudNetworks#zone}
 	Zone *string `field:"optional" json:"zone" yaml:"zone"`
 }
 

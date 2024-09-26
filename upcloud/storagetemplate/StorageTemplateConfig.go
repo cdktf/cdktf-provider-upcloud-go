@@ -24,15 +24,15 @@ type StorageTemplateConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The source storage that is used as a base for this storage template.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/resources/storage_template#source_storage StorageTemplate#source_storage}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.1/docs/resources/storage_template#source_storage StorageTemplate#source_storage}
 	SourceStorage *string `field:"required" json:"sourceStorage" yaml:"sourceStorage"`
 	// The title of the storage.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/resources/storage_template#title StorageTemplate#title}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.1/docs/resources/storage_template#title StorageTemplate#title}
 	Title *string `field:"required" json:"title" yaml:"title"`
 	// User defined key-value pairs to classify the storage.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.0/docs/resources/storage_template#labels StorageTemplate#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.1/docs/resources/storage_template#labels StorageTemplate#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 }
 
