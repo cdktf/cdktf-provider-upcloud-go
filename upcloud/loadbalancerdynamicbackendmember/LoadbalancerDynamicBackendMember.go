@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member}.
 type LoadbalancerDynamicBackendMember interface {
 	cdktf.TerraformResource
 	Backend() *string
@@ -46,8 +46,6 @@ type LoadbalancerDynamicBackendMember interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Ip() *string
 	SetIp(val *string)
 	IpInput() *string
@@ -129,7 +127,6 @@ type LoadbalancerDynamicBackendMember interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetEnabled()
-	ResetId()
 	ResetIp()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -278,16 +275,6 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -474,7 +461,7 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember) WeightInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
 func NewLoadbalancerDynamicBackendMember(scope constructs.Construct, id *string, config *LoadbalancerDynamicBackendMemberConfig) LoadbalancerDynamicBackendMember {
 	_init_.Initialize()
 
@@ -492,7 +479,7 @@ func NewLoadbalancerDynamicBackendMember(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_dynamic_backend_member upcloud_loadbalancer_dynamic_backend_member} Resource.
 func NewLoadbalancerDynamicBackendMember_Override(l LoadbalancerDynamicBackendMember, scope constructs.Construct, id *string, config *LoadbalancerDynamicBackendMemberConfig) {
 	_init_.Initialize()
 
@@ -559,17 +546,6 @@ func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetForEach(val cdktf.ITerraf
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerDynamicBackendMember)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1016,14 +992,6 @@ func (l *jsiiProxy_LoadbalancerDynamicBackendMember) ResetEnabled() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetEnabled",
-		nil, // no parameters
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerDynamicBackendMember) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
 		nil, // no parameters
 	)
 }

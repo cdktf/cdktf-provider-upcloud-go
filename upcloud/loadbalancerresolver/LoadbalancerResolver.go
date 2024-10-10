@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver}.
 type LoadbalancerResolver interface {
 	cdktf.TerraformResource
 	CacheInvalid() *float64
@@ -46,8 +46,6 @@ type LoadbalancerResolver interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -131,7 +129,6 @@ type LoadbalancerResolver interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -278,16 +275,6 @@ func (j *jsiiProxy_LoadbalancerResolver) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_LoadbalancerResolver) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -494,7 +481,7 @@ func (j *jsiiProxy_LoadbalancerResolver) TimeoutRetryInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
 func NewLoadbalancerResolver(scope constructs.Construct, id *string, config *LoadbalancerResolverConfig) LoadbalancerResolver {
 	_init_.Initialize()
 
@@ -512,7 +499,7 @@ func NewLoadbalancerResolver(scope constructs.Construct, id *string, config *Loa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
 func NewLoadbalancerResolver_Override(l LoadbalancerResolver, scope constructs.Construct, id *string, config *LoadbalancerResolverConfig) {
 	_init_.Initialize()
 
@@ -579,17 +566,6 @@ func (j *jsiiProxy_LoadbalancerResolver)SetForEach(val cdktf.ITerraformIterator)
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerResolver)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1040,14 +1016,6 @@ func (l *jsiiProxy_LoadbalancerResolver) OverrideLogicalId(newLogicalId *string)
 		l,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerResolver) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member}.
 type LoadbalancerStaticBackendMember interface {
 	cdktf.TerraformResource
 	Backend() *string
@@ -46,8 +46,6 @@ type LoadbalancerStaticBackendMember interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Ip() *string
 	SetIp(val *string)
 	IpInput() *string
@@ -129,10 +127,11 @@ type LoadbalancerStaticBackendMember interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetEnabled()
-	ResetId()
+	ResetIp()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPort()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -276,16 +275,6 @@ func (j *jsiiProxy_LoadbalancerStaticBackendMember) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_LoadbalancerStaticBackendMember) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -472,7 +461,7 @@ func (j *jsiiProxy_LoadbalancerStaticBackendMember) WeightInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
 func NewLoadbalancerStaticBackendMember(scope constructs.Construct, id *string, config *LoadbalancerStaticBackendMemberConfig) LoadbalancerStaticBackendMember {
 	_init_.Initialize()
 
@@ -490,7 +479,7 @@ func NewLoadbalancerStaticBackendMember(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_static_backend_member upcloud_loadbalancer_static_backend_member} Resource.
 func NewLoadbalancerStaticBackendMember_Override(l LoadbalancerStaticBackendMember, scope constructs.Construct, id *string, config *LoadbalancerStaticBackendMemberConfig) {
 	_init_.Initialize()
 
@@ -557,17 +546,6 @@ func (j *jsiiProxy_LoadbalancerStaticBackendMember)SetForEach(val cdktf.ITerrafo
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerStaticBackendMember)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1018,10 +996,10 @@ func (l *jsiiProxy_LoadbalancerStaticBackendMember) ResetEnabled() {
 	)
 }
 
-func (l *jsiiProxy_LoadbalancerStaticBackendMember) ResetId() {
+func (l *jsiiProxy_LoadbalancerStaticBackendMember) ResetIp() {
 	_jsii_.InvokeVoid(
 		l,
-		"resetId",
+		"resetIp",
 		nil, // no parameters
 	)
 }
@@ -1030,6 +1008,14 @@ func (l *jsiiProxy_LoadbalancerStaticBackendMember) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerStaticBackendMember) ResetPort() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetPort",
 		nil, // no parameters
 	)
 }

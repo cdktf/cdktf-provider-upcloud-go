@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/storage_template upcloud_storage_template}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/storage_template upcloud_storage_template}.
 type StorageTemplate interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -433,7 +433,7 @@ func (j *jsiiProxy_StorageTemplate) Zone() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/storage_template upcloud_storage_template} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/storage_template upcloud_storage_template} Resource.
 func NewStorageTemplate(scope constructs.Construct, id *string, config *StorageTemplateConfig) StorageTemplate {
 	_init_.Initialize()
 
@@ -451,7 +451,7 @@ func NewStorageTemplate(scope constructs.Construct, id *string, config *StorageT
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/storage_template upcloud_storage_template} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/storage_template upcloud_storage_template} Resource.
 func NewStorageTemplate_Override(s StorageTemplate, scope constructs.Construct, id *string, config *StorageTemplateConfig) {
 	_init_.Initialize()
 

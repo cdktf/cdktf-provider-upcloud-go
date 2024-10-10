@@ -207,23 +207,63 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) validateOverrideLogicalIdParameters
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutActionsParameters(value *LoadbalancerFrontendRuleActions) error {
+func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutActionsParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleActions:
+		value := value.(*[]*LoadbalancerFrontendRuleActions)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleActions:
+		value_ := value.([]*LoadbalancerFrontendRuleActions)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleActions; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutMatchersParameters(value *LoadbalancerFrontendRuleMatchers) error {
+func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutMatchersParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleMatchers:
+		value := value.(*[]*LoadbalancerFrontendRuleMatchers)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleMatchers:
+		value_ := value.([]*LoadbalancerFrontendRuleMatchers)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleMatchers; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -360,14 +400,6 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetCountParameters(val inte
 }
 
 func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetFrontendParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

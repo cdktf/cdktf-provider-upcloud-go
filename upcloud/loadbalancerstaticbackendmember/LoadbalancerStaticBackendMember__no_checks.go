@@ -107,10 +107,6 @@ func (j *jsiiProxy_LoadbalancerStaticBackendMember) validateSetEnabledParameters
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerStaticBackendMember) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_LoadbalancerStaticBackendMember) validateSetIpParameters(val *string) error {
 	return nil
 }

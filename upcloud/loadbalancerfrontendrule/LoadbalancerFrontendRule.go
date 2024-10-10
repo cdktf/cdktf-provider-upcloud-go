@@ -12,11 +12,11 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule}.
 type LoadbalancerFrontendRule interface {
 	cdktf.TerraformResource
-	Actions() LoadbalancerFrontendRuleActionsOutputReference
-	ActionsInput() *LoadbalancerFrontendRuleActions
+	Actions() LoadbalancerFrontendRuleActionsList
+	ActionsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -45,14 +45,12 @@ type LoadbalancerFrontendRule interface {
 	SetFrontend(val *string)
 	FrontendInput() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	Matchers() LoadbalancerFrontendRuleMatchersOutputReference
-	MatchersInput() *LoadbalancerFrontendRuleMatchers
+	Matchers() LoadbalancerFrontendRuleMatchersList
+	MatchersInput() interface{}
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -120,10 +118,9 @@ type LoadbalancerFrontendRule interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutActions(value *LoadbalancerFrontendRuleActions)
-	PutMatchers(value *LoadbalancerFrontendRuleMatchers)
+	PutActions(value interface{})
+	PutMatchers(value interface{})
 	ResetActions()
-	ResetId()
 	ResetMatchers()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -146,8 +143,8 @@ type jsiiProxy_LoadbalancerFrontendRule struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRule) Actions() LoadbalancerFrontendRuleActionsOutputReference {
-	var returns LoadbalancerFrontendRuleActionsOutputReference
+func (j *jsiiProxy_LoadbalancerFrontendRule) Actions() LoadbalancerFrontendRuleActionsList {
+	var returns LoadbalancerFrontendRuleActionsList
 	_jsii_.Get(
 		j,
 		"actions",
@@ -156,8 +153,8 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) Actions() LoadbalancerFrontendRuleA
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRule) ActionsInput() *LoadbalancerFrontendRuleActions {
-	var returns *LoadbalancerFrontendRuleActions
+func (j *jsiiProxy_LoadbalancerFrontendRule) ActionsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"actionsInput",
@@ -276,16 +273,6 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRule) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_LoadbalancerFrontendRule) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -296,8 +283,8 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) Lifecycle() *cdktf.TerraformResourc
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRule) Matchers() LoadbalancerFrontendRuleMatchersOutputReference {
-	var returns LoadbalancerFrontendRuleMatchersOutputReference
+func (j *jsiiProxy_LoadbalancerFrontendRule) Matchers() LoadbalancerFrontendRuleMatchersList {
+	var returns LoadbalancerFrontendRuleMatchersList
 	_jsii_.Get(
 		j,
 		"matchers",
@@ -306,8 +293,8 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) Matchers() LoadbalancerFrontendRule
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRule) MatchersInput() *LoadbalancerFrontendRuleMatchers {
-	var returns *LoadbalancerFrontendRuleMatchers
+func (j *jsiiProxy_LoadbalancerFrontendRule) MatchersInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"matchersInput",
@@ -427,7 +414,7 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
 func NewLoadbalancerFrontendRule(scope constructs.Construct, id *string, config *LoadbalancerFrontendRuleConfig) LoadbalancerFrontendRule {
 	_init_.Initialize()
 
@@ -445,7 +432,7 @@ func NewLoadbalancerFrontendRule(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/loadbalancer_frontend_rule upcloud_loadbalancer_frontend_rule} Resource.
 func NewLoadbalancerFrontendRule_Override(l LoadbalancerFrontendRule, scope constructs.Construct, id *string, config *LoadbalancerFrontendRuleConfig) {
 	_init_.Initialize()
 
@@ -501,17 +488,6 @@ func (j *jsiiProxy_LoadbalancerFrontendRule)SetFrontend(val *string) {
 	_jsii_.Set(
 		j,
 		"frontend",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LoadbalancerFrontendRule)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -921,7 +897,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) OverrideLogicalId(newLogicalId *str
 	)
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRule) PutActions(value *LoadbalancerFrontendRuleActions) {
+func (l *jsiiProxy_LoadbalancerFrontendRule) PutActions(value interface{}) {
 	if err := l.validatePutActionsParameters(value); err != nil {
 		panic(err)
 	}
@@ -932,7 +908,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) PutActions(value *LoadbalancerFront
 	)
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRule) PutMatchers(value *LoadbalancerFrontendRuleMatchers) {
+func (l *jsiiProxy_LoadbalancerFrontendRule) PutMatchers(value interface{}) {
 	if err := l.validatePutMatchersParameters(value); err != nil {
 		panic(err)
 	}
@@ -947,14 +923,6 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) ResetActions() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetActions",
-		nil, // no parameters
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerFrontendRule) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
 		nil, // no parameters
 	)
 }

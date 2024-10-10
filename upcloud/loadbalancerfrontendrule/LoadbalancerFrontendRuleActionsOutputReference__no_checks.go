@@ -79,7 +79,7 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateSetInternalValueParameters(val *LoadbalancerFrontendRuleActions) error {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -91,7 +91,7 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateSetTe
 	return nil
 }
 
-func validateNewLoadbalancerFrontendRuleActionsOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewLoadbalancerFrontendRuleActionsOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

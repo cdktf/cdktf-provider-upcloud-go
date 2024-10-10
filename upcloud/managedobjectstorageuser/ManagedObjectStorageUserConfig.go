@@ -24,15 +24,15 @@ type ManagedObjectStorageUserConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Managed Object Storage service UUID.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/managed_object_storage_user#service_uuid ManagedObjectStorageUser#service_uuid}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/managed_object_storage_user#service_uuid ManagedObjectStorageUser#service_uuid}
 	ServiceUuid *string `field:"required" json:"serviceUuid" yaml:"serviceUuid"`
 	// Custom usernames for accessing the object storage.
 	//
 	// No relation to UpCloud API accounts. See `upcloud_managed_object_storage_user_access_key` for managing access keys and `upcloud_managed_object_storage_user_policy` for managing policies.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/managed_object_storage_user#username ManagedObjectStorageUser#username}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/managed_object_storage_user#username ManagedObjectStorageUser#username}
 	Username *string `field:"required" json:"username" yaml:"username"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/managed_object_storage_user#id ManagedObjectStorageUser#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/managed_object_storage_user#id ManagedObjectStorageUser#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

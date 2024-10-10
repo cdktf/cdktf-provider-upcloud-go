@@ -7,11 +7,11 @@ package manageddatabaseuser
 type ManagedDatabaseUserOpensearchAccessControlRules struct {
 	// Set index name, pattern or top level API.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/managed_database_user#index ManagedDatabaseUser#index}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/managed_database_user#index ManagedDatabaseUser#index}
 	Index *string `field:"required" json:"index" yaml:"index"`
 	// Set permission access.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.2/docs/resources/managed_database_user#permission ManagedDatabaseUser#permission}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.11.3/docs/resources/managed_database_user#permission ManagedDatabaseUser#permission}
 	Permission *string `field:"required" json:"permission" yaml:"permission"`
 }
 

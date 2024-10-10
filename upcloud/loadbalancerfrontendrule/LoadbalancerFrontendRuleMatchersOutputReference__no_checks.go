@@ -115,7 +115,7 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateSetC
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateSetInternalValueParameters(val *LoadbalancerFrontendRuleMatchers) error {
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -127,7 +127,7 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateSetT
 	return nil
 }
 
-func validateNewLoadbalancerFrontendRuleMatchersOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewLoadbalancerFrontendRuleMatchersOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

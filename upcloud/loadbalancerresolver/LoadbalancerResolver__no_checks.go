@@ -107,10 +107,6 @@ func (j *jsiiProxy_LoadbalancerResolver) validateSetCountParameters(val interfac
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerResolver) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_LoadbalancerResolver) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

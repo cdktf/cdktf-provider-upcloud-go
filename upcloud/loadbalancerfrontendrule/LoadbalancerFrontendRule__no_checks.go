@@ -75,11 +75,11 @@ func (l *jsiiProxy_LoadbalancerFrontendRule) validateOverrideLogicalIdParameters
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutActionsParameters(value *LoadbalancerFrontendRuleActions) error {
+func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutActionsParameters(value interface{}) error {
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutMatchersParameters(value *LoadbalancerFrontendRuleMatchers) error {
+func (l *jsiiProxy_LoadbalancerFrontendRule) validatePutMatchersParameters(value interface{}) error {
 	return nil
 }
 
@@ -108,10 +108,6 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetCountParameters(val inte
 }
 
 func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetFrontendParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetIdParameters(val *string) error {
 	return nil
 }
 

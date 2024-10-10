@@ -34,8 +34,8 @@ type LoadbalancerFrontendRuleActionsOutputReference interface {
 	HttpRedirectInput() interface{}
 	HttpReturn() LoadbalancerFrontendRuleActionsHttpReturnList
 	HttpReturnInput() interface{}
-	InternalValue() *LoadbalancerFrontendRuleActions
-	SetInternalValue(val *LoadbalancerFrontendRuleActions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SetForwardedHeaders() LoadbalancerFrontendRuleActionsSetForwardedHeadersList
 	SetForwardedHeadersInput() interface{}
 	TcpReject() LoadbalancerFrontendRuleActionsTcpRejectList
@@ -179,8 +179,8 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) HttpReturnInp
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) InternalValue() *LoadbalancerFrontendRuleActions {
-	var returns *LoadbalancerFrontendRuleActions
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -270,29 +270,29 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) UseBackendInp
 }
 
 
-func NewLoadbalancerFrontendRuleActionsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) LoadbalancerFrontendRuleActionsOutputReference {
+func NewLoadbalancerFrontendRuleActionsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) LoadbalancerFrontendRuleActionsOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewLoadbalancerFrontendRuleActionsOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewLoadbalancerFrontendRuleActionsOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.loadbalancerFrontendRule.LoadbalancerFrontendRuleActionsOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewLoadbalancerFrontendRuleActionsOutputReference_Override(l LoadbalancerFrontendRuleActionsOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewLoadbalancerFrontendRuleActionsOutputReference_Override(l LoadbalancerFrontendRuleActionsOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.loadbalancerFrontendRule.LoadbalancerFrontendRuleActionsOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		l,
 	)
 }
@@ -319,7 +319,7 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference)SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference)SetInternalValue(val *LoadbalancerFrontendRuleActions) {
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
