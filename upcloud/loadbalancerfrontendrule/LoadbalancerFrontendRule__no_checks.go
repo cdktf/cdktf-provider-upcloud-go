@@ -115,6 +115,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetLifecycleParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetMatchingConditionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRule) validateSetNameParameters(val *string) error {
 	return nil
 }
