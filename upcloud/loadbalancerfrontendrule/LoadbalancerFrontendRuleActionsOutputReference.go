@@ -38,6 +38,10 @@ type LoadbalancerFrontendRuleActionsOutputReference interface {
 	SetInternalValue(val interface{})
 	SetForwardedHeaders() LoadbalancerFrontendRuleActionsSetForwardedHeadersList
 	SetForwardedHeadersInput() interface{}
+	SetRequestHeader() LoadbalancerFrontendRuleActionsSetRequestHeaderList
+	SetRequestHeaderInput() interface{}
+	SetResponseHeader() LoadbalancerFrontendRuleActionsSetResponseHeaderList
+	SetResponseHeaderInput() interface{}
 	TcpReject() LoadbalancerFrontendRuleActionsTcpRejectList
 	TcpRejectInput() interface{}
 	// Experimental.
@@ -77,11 +81,15 @@ type LoadbalancerFrontendRuleActionsOutputReference interface {
 	PutHttpRedirect(value interface{})
 	PutHttpReturn(value interface{})
 	PutSetForwardedHeaders(value interface{})
+	PutSetRequestHeader(value interface{})
+	PutSetResponseHeader(value interface{})
 	PutTcpReject(value interface{})
 	PutUseBackend(value interface{})
 	ResetHttpRedirect()
 	ResetHttpReturn()
 	ResetSetForwardedHeaders()
+	ResetSetRequestHeader()
+	ResetSetResponseHeader()
 	ResetTcpReject()
 	ResetUseBackend()
 	// Produce the Token's value at resolution time.
@@ -204,6 +212,46 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) SetForwardedH
 	_jsii_.Get(
 		j,
 		"setForwardedHeadersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) SetRequestHeader() LoadbalancerFrontendRuleActionsSetRequestHeaderList {
+	var returns LoadbalancerFrontendRuleActionsSetRequestHeaderList
+	_jsii_.Get(
+		j,
+		"setRequestHeader",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) SetRequestHeaderInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"setRequestHeaderInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) SetResponseHeader() LoadbalancerFrontendRuleActionsSetResponseHeaderList {
+	var returns LoadbalancerFrontendRuleActionsSetResponseHeaderList
+	_jsii_.Get(
+		j,
+		"setResponseHeader",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) SetResponseHeaderInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"setResponseHeaderInput",
 		&returns,
 	)
 	return returns
@@ -571,6 +619,28 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) PutSetForward
 	)
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) PutSetRequestHeader(value interface{}) {
+	if err := l.validatePutSetRequestHeaderParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putSetRequestHeader",
+		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) PutSetResponseHeader(value interface{}) {
+	if err := l.validatePutSetResponseHeaderParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putSetResponseHeader",
+		[]interface{}{value},
+	)
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) PutTcpReject(value interface{}) {
 	if err := l.validatePutTcpRejectParameters(value); err != nil {
 		panic(err)
@@ -613,6 +683,22 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) ResetSetForwa
 	_jsii_.InvokeVoid(
 		l,
 		"resetSetForwardedHeaders",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) ResetSetRequestHeader() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSetRequestHeader",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) ResetSetResponseHeader() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSetResponseHeader",
 		nil, // no parameters
 	)
 }

@@ -59,7 +59,7 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) validateSetInternalValueParameters(val *DataUpcloudIpAddressesAddresses) error {
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

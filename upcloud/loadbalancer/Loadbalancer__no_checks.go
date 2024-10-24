@@ -79,6 +79,10 @@ func (l *jsiiProxy_Loadbalancer) validatePutNetworksParameters(value interface{}
 	return nil
 }
 
+func (l *jsiiProxy_Loadbalancer) validatePutNodesParameters(value interface{}) error {
+	return nil
+}
+
 func validateLoadbalancer_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -104,10 +108,6 @@ func (j *jsiiProxy_Loadbalancer) validateSetConnectionParameters(val interface{}
 }
 
 func (j *jsiiProxy_Loadbalancer) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_Loadbalancer) validateSetIdParameters(val *string) error {
 	return nil
 }
 

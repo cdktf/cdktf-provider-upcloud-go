@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.12.0/docs/resources/loadbalancer upcloud_loadbalancer}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/loadbalancer upcloud_loadbalancer}.
 type Loadbalancer interface {
 	cdktf.TerraformResource
 	Backends() *[]*string
@@ -46,8 +46,6 @@ type Loadbalancer interface {
 	FriendlyUniqueId() *string
 	Frontends() *[]*string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Labels() *map[string]*string
 	SetLabels(val *map[string]*string)
 	LabelsInput() *map[string]*string
@@ -72,6 +70,7 @@ type Loadbalancer interface {
 	// The tree node.
 	Node() constructs.Node
 	Nodes() LoadbalancerNodesList
+	NodesInput() interface{}
 	OperationalState() *string
 	Plan() *string
 	SetPlan(val *string)
@@ -140,13 +139,14 @@ type Loadbalancer interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutNetworks(value interface{})
+	PutNodes(value interface{})
 	ResetConfiguredStatus()
-	ResetId()
 	ResetLabels()
 	ResetMaintenanceDow()
 	ResetMaintenanceTime()
 	ResetNetwork()
 	ResetNetworks()
+	ResetNodes()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -308,16 +308,6 @@ func (j *jsiiProxy_Loadbalancer) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Loadbalancer) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Loadbalancer) Labels() *map[string]*string {
 	var returns *map[string]*string
 	_jsii_.Get(
@@ -468,6 +458,16 @@ func (j *jsiiProxy_Loadbalancer) Nodes() LoadbalancerNodesList {
 	return returns
 }
 
+func (j *jsiiProxy_Loadbalancer) NodesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"nodesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Loadbalancer) OperationalState() *string {
 	var returns *string
 	_jsii_.Get(
@@ -589,7 +589,7 @@ func (j *jsiiProxy_Loadbalancer) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.12.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer(scope constructs.Construct, id *string, config *LoadbalancerConfig) Loadbalancer {
 	_init_.Initialize()
 
@@ -607,7 +607,7 @@ func NewLoadbalancer(scope constructs.Construct, id *string, config *Loadbalance
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.12.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer_Override(l Loadbalancer, scope constructs.Construct, id *string, config *LoadbalancerConfig) {
 	_init_.Initialize()
 
@@ -663,17 +663,6 @@ func (j *jsiiProxy_Loadbalancer)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Loadbalancer)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1149,18 +1138,21 @@ func (l *jsiiProxy_Loadbalancer) PutNetworks(value interface{}) {
 	)
 }
 
+func (l *jsiiProxy_Loadbalancer) PutNodes(value interface{}) {
+	if err := l.validatePutNodesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putNodes",
+		[]interface{}{value},
+	)
+}
+
 func (l *jsiiProxy_Loadbalancer) ResetConfiguredStatus() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetConfiguredStatus",
-		nil, // no parameters
-	)
-}
-
-func (l *jsiiProxy_Loadbalancer) ResetId() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetId",
 		nil, // no parameters
 	)
 }
@@ -1201,6 +1193,14 @@ func (l *jsiiProxy_Loadbalancer) ResetNetworks() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetNetworks",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_Loadbalancer) ResetNodes() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetNodes",
 		nil, // no parameters
 	)
 }

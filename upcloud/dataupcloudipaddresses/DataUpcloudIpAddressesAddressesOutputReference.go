@@ -34,8 +34,8 @@ type DataUpcloudIpAddressesAddressesOutputReference interface {
 	Floating() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DataUpcloudIpAddressesAddresses
-	SetInternalValue(val *DataUpcloudIpAddressesAddresses)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Mac() *string
 	PartOfPlan() cdktf.IResolvable
 	PtrRecord() *string
@@ -168,8 +168,8 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) Fqn() *string
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) InternalValue() *DataUpcloudIpAddressesAddresses {
-	var returns *DataUpcloudIpAddressesAddresses
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -298,7 +298,7 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetInternalValue(val *DataUpcloudIpAddressesAddresses) {
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

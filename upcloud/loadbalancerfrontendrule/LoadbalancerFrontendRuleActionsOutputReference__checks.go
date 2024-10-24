@@ -186,6 +186,68 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutSe
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutSetRequestHeaderParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleActionsSetRequestHeader:
+		value := value.(*[]*LoadbalancerFrontendRuleActionsSetRequestHeader)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleActionsSetRequestHeader:
+		value_ := value.([]*LoadbalancerFrontendRuleActionsSetRequestHeader)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleActionsSetRequestHeader; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutSetResponseHeaderParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleActionsSetResponseHeader:
+		value := value.(*[]*LoadbalancerFrontendRuleActionsSetResponseHeader)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleActionsSetResponseHeader:
+		value_ := value.([]*LoadbalancerFrontendRuleActionsSetResponseHeader)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleActionsSetResponseHeader; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutTcpRejectParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")

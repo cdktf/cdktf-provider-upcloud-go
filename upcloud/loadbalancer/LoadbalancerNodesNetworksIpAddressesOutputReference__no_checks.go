@@ -59,7 +59,7 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validate
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validateSetInternalValueParameters(val *LoadbalancerNodesNetworksIpAddresses) error {
+func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

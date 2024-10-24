@@ -42,12 +42,20 @@ type LoadbalancerFrontendRuleMatchersOutputReference interface {
 	HostInput() interface{}
 	HttpMethod() LoadbalancerFrontendRuleMatchersHttpMethodList
 	HttpMethodInput() interface{}
+	HttpStatus() LoadbalancerFrontendRuleMatchersHttpStatusList
+	HttpStatusInput() interface{}
+	HttpStatusRange() LoadbalancerFrontendRuleMatchersHttpStatusRangeList
+	HttpStatusRangeInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	NumMembersUp() LoadbalancerFrontendRuleMatchersNumMembersUpList
 	NumMembersUpInput() interface{}
 	Path() LoadbalancerFrontendRuleMatchersPathList
 	PathInput() interface{}
+	RequestHeader() LoadbalancerFrontendRuleMatchersRequestHeaderList
+	RequestHeaderInput() interface{}
+	ResponseHeader() LoadbalancerFrontendRuleMatchersResponseHeaderList
+	ResponseHeaderInput() interface{}
 	SrcIp() LoadbalancerFrontendRuleMatchersSrcIpList
 	SrcIpInput() interface{}
 	SrcPort() LoadbalancerFrontendRuleMatchersSrcPortList
@@ -98,8 +106,12 @@ type LoadbalancerFrontendRuleMatchersOutputReference interface {
 	PutHeader(value interface{})
 	PutHost(value interface{})
 	PutHttpMethod(value interface{})
+	PutHttpStatus(value interface{})
+	PutHttpStatusRange(value interface{})
 	PutNumMembersUp(value interface{})
 	PutPath(value interface{})
+	PutRequestHeader(value interface{})
+	PutResponseHeader(value interface{})
 	PutSrcIp(value interface{})
 	PutSrcPort(value interface{})
 	PutSrcPortRange(value interface{})
@@ -112,8 +124,12 @@ type LoadbalancerFrontendRuleMatchersOutputReference interface {
 	ResetHeader()
 	ResetHost()
 	ResetHttpMethod()
+	ResetHttpStatus()
+	ResetHttpStatusRange()
 	ResetNumMembersUp()
 	ResetPath()
+	ResetRequestHeader()
+	ResetResponseHeader()
 	ResetSrcIp()
 	ResetSrcPort()
 	ResetSrcPortRange()
@@ -295,6 +311,46 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) HttpMethodIn
 	return returns
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) HttpStatus() LoadbalancerFrontendRuleMatchersHttpStatusList {
+	var returns LoadbalancerFrontendRuleMatchersHttpStatusList
+	_jsii_.Get(
+		j,
+		"httpStatus",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) HttpStatusInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"httpStatusInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) HttpStatusRange() LoadbalancerFrontendRuleMatchersHttpStatusRangeList {
+	var returns LoadbalancerFrontendRuleMatchersHttpStatusRangeList
+	_jsii_.Get(
+		j,
+		"httpStatusRange",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) HttpStatusRangeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"httpStatusRangeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -340,6 +396,46 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PathInput() 
 	_jsii_.Get(
 		j,
 		"pathInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) RequestHeader() LoadbalancerFrontendRuleMatchersRequestHeaderList {
+	var returns LoadbalancerFrontendRuleMatchersRequestHeaderList
+	_jsii_.Get(
+		j,
+		"requestHeader",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) RequestHeaderInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"requestHeaderInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResponseHeader() LoadbalancerFrontendRuleMatchersResponseHeaderList {
+	var returns LoadbalancerFrontendRuleMatchersResponseHeaderList
+	_jsii_.Get(
+		j,
+		"responseHeader",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResponseHeaderInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"responseHeaderInput",
 		&returns,
 	)
 	return returns
@@ -820,6 +916,28 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PutHttpMetho
 	)
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PutHttpStatus(value interface{}) {
+	if err := l.validatePutHttpStatusParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putHttpStatus",
+		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PutHttpStatusRange(value interface{}) {
+	if err := l.validatePutHttpStatusRangeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putHttpStatusRange",
+		[]interface{}{value},
+	)
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PutNumMembersUp(value interface{}) {
 	if err := l.validatePutNumMembersUpParameters(value); err != nil {
 		panic(err)
@@ -838,6 +956,28 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PutPath(valu
 	_jsii_.InvokeVoid(
 		l,
 		"putPath",
+		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PutRequestHeader(value interface{}) {
+	if err := l.validatePutRequestHeaderParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putRequestHeader",
+		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) PutResponseHeader(value interface{}) {
+	if err := l.validatePutResponseHeaderParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putResponseHeader",
 		[]interface{}{value},
 	)
 }
@@ -956,6 +1096,22 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResetHttpMet
 	)
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResetHttpStatus() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetHttpStatus",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResetHttpStatusRange() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetHttpStatusRange",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResetNumMembersUp() {
 	_jsii_.InvokeVoid(
 		l,
@@ -968,6 +1124,22 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResetPath() 
 	_jsii_.InvokeVoid(
 		l,
 		"resetPath",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResetRequestHeader() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRequestHeader",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) ResetResponseHeader() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetResponseHeader",
 		nil, // no parameters
 	)
 }

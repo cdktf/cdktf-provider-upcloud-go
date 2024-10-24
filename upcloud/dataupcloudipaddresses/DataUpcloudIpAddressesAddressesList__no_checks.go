@@ -19,6 +19,10 @@ func (d *jsiiProxy_DataUpcloudIpAddressesAddressesList) validateResolveParameter
 	return nil
 }
 
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesList) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataUpcloudIpAddressesAddressesList) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

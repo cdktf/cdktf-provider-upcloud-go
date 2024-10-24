@@ -47,6 +47,10 @@ func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateInterpolati
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validatePutIpAddressesParameters(value interface{}) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -59,7 +63,7 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateSetComplexO
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateSetInternalValueParameters(val *LoadbalancerNodesNetworks) error {
+func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

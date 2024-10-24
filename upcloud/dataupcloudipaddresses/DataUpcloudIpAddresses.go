@@ -12,10 +12,11 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.12.0/docs/data-sources/ip_addresses upcloud_ip_addresses}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/data-sources/ip_addresses upcloud_ip_addresses}.
 type DataUpcloudIpAddresses interface {
 	cdktf.TerraformDataSource
 	Addresses() DataUpcloudIpAddressesAddressesList
+	AddressesInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -37,8 +38,6 @@ type DataUpcloudIpAddresses interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -82,7 +81,8 @@ type DataUpcloudIpAddresses interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
+	PutAddresses(value interface{})
+	ResetAddresses()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -110,6 +110,16 @@ func (j *jsiiProxy_DataUpcloudIpAddresses) Addresses() DataUpcloudIpAddressesAdd
 	_jsii_.Get(
 		j,
 		"addresses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataUpcloudIpAddresses) AddressesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"addressesInput",
 		&returns,
 	)
 	return returns
@@ -195,16 +205,6 @@ func (j *jsiiProxy_DataUpcloudIpAddresses) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddresses) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataUpcloudIpAddresses) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataUpcloudIpAddresses) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.12.0/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
 func NewDataUpcloudIpAddresses(scope constructs.Construct, id *string, config *DataUpcloudIpAddressesConfig) DataUpcloudIpAddresses {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewDataUpcloudIpAddresses(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.12.0/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
 func NewDataUpcloudIpAddresses_Override(d DataUpcloudIpAddresses, scope constructs.Construct, id *string, config *DataUpcloudIpAddressesConfig) {
 	_init_.Initialize()
 
@@ -328,17 +328,6 @@ func (j *jsiiProxy_DataUpcloudIpAddresses)SetForEach(val cdktf.ITerraformIterato
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataUpcloudIpAddresses)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -647,10 +636,21 @@ func (d *jsiiProxy_DataUpcloudIpAddresses) OverrideLogicalId(newLogicalId *strin
 	)
 }
 
-func (d *jsiiProxy_DataUpcloudIpAddresses) ResetId() {
+func (d *jsiiProxy_DataUpcloudIpAddresses) PutAddresses(value interface{}) {
+	if err := d.validatePutAddressesParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
-		"resetId",
+		"putAddresses",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DataUpcloudIpAddresses) ResetAddresses() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAddresses",
 		nil, // no parameters
 	)
 }

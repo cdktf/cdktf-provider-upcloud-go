@@ -279,6 +279,68 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutH
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutHttpStatusParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleMatchersHttpStatus:
+		value := value.(*[]*LoadbalancerFrontendRuleMatchersHttpStatus)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleMatchersHttpStatus:
+		value_ := value.([]*LoadbalancerFrontendRuleMatchersHttpStatus)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleMatchersHttpStatus; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutHttpStatusRangeParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleMatchersHttpStatusRange:
+		value := value.(*[]*LoadbalancerFrontendRuleMatchersHttpStatusRange)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleMatchersHttpStatusRange:
+		value_ := value.([]*LoadbalancerFrontendRuleMatchersHttpStatusRange)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleMatchersHttpStatusRange; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutNumMembersUpParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -335,6 +397,68 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutP
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleMatchersPath; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutRequestHeaderParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleMatchersRequestHeader:
+		value := value.(*[]*LoadbalancerFrontendRuleMatchersRequestHeader)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleMatchersRequestHeader:
+		value_ := value.([]*LoadbalancerFrontendRuleMatchersRequestHeader)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleMatchersRequestHeader; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutResponseHeaderParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LoadbalancerFrontendRuleMatchersResponseHeader:
+		value := value.(*[]*LoadbalancerFrontendRuleMatchersResponseHeader)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LoadbalancerFrontendRuleMatchersResponseHeader:
+		value_ := value.([]*LoadbalancerFrontendRuleMatchersResponseHeader)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerFrontendRuleMatchersResponseHeader; received %#v (a %T)", value, value)
 		}
 	}
 

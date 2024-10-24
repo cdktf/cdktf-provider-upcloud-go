@@ -166,9 +166,25 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) validateSetInternalValueParameters(val *DataUpcloudIpAddressesAddresses) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *DataUpcloudIpAddressesAddresses:
+		val := val.(*DataUpcloudIpAddressesAddresses)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case DataUpcloudIpAddressesAddresses:
+		val_ := val.(DataUpcloudIpAddressesAddresses)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DataUpcloudIpAddressesAddresses; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -31,8 +31,8 @@ type LoadbalancerNodesNetworksIpAddressesOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LoadbalancerNodesNetworksIpAddresses
-	SetInternalValue(val *LoadbalancerNodesNetworksIpAddresses)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Listen() cdktf.IResolvable
 	// Experimental.
 	TerraformAttribute() *string
@@ -131,8 +131,8 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) Fqn() *s
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) InternalValue() *LoadbalancerNodesNetworksIpAddresses {
-	var returns *LoadbalancerNodesNetworksIpAddresses
+func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -221,7 +221,7 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference)SetComple
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference)SetInternalValue(val *LoadbalancerNodesNetworksIpAddresses) {
+func (j *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

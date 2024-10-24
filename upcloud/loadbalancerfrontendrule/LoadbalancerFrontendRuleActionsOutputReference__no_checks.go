@@ -59,6 +59,14 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutSe
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutSetRequestHeaderParameters(value interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutSetResponseHeaderParameters(value interface{}) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutTcpRejectParameters(value interface{}) error {
 	return nil
 }

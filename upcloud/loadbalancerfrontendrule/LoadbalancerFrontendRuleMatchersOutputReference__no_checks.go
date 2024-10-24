@@ -71,11 +71,27 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutH
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutHttpStatusParameters(value interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutHttpStatusRangeParameters(value interface{}) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutNumMembersUpParameters(value interface{}) error {
 	return nil
 }
 
 func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutPathParameters(value interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutRequestHeaderParameters(value interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutResponseHeaderParameters(value interface{}) error {
 	return nil
 }
 

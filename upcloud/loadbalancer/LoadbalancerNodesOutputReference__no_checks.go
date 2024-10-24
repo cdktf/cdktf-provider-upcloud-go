@@ -47,6 +47,10 @@ func (l *jsiiProxy_LoadbalancerNodesOutputReference) validateInterpolationForAtt
 	return nil
 }
 
+func (l *jsiiProxy_LoadbalancerNodesOutputReference) validatePutNetworksParameters(value interface{}) error {
+	return nil
+}
+
 func (l *jsiiProxy_LoadbalancerNodesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -59,7 +63,7 @@ func (j *jsiiProxy_LoadbalancerNodesOutputReference) validateSetComplexObjectIsF
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerNodesOutputReference) validateSetInternalValueParameters(val *LoadbalancerNodes) error {
+func (j *jsiiProxy_LoadbalancerNodesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
