@@ -24,23 +24,23 @@ type NetworkConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the network.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/network#name Network#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/network#name Network#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// The zone the network is in, e.g. `de-fra1`. You can list available zones with `upctl zone list`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/network#zone Network#zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/network#zone Network#zone}
 	Zone *string `field:"required" json:"zone" yaml:"zone"`
 	// ip_network block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/network#ip_network Network#ip_network}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/network#ip_network Network#ip_network}
 	IpNetwork interface{} `field:"optional" json:"ipNetwork" yaml:"ipNetwork"`
 	// User defined key-value pairs to classify the network.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/network#labels Network#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/network#labels Network#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 	// UUID of a router to attach to this network.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/network#router Network#router}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/network#router Network#router}
 	Router *string `field:"optional" json:"router" yaml:"router"`
 }
 

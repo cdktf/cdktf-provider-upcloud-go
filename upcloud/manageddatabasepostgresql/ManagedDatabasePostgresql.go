@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
 type ManagedDatabasePostgresql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -667,7 +667,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) ManagedDatabasePostgresql {
 	_init_.Initialize()
 
@@ -685,7 +685,7 @@ func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) {
 	_init_.Initialize()
 

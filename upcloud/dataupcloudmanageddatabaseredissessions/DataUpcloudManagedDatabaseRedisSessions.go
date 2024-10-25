@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/data-sources/managed_database_redis_sessions upcloud_managed_database_redis_sessions}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/data-sources/managed_database_redis_sessions upcloud_managed_database_redis_sessions}.
 type DataUpcloudManagedDatabaseRedisSessions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -384,7 +384,7 @@ func (j *jsiiProxy_DataUpcloudManagedDatabaseRedisSessions) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/data-sources/managed_database_redis_sessions upcloud_managed_database_redis_sessions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/data-sources/managed_database_redis_sessions upcloud_managed_database_redis_sessions} Data Source.
 func NewDataUpcloudManagedDatabaseRedisSessions(scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseRedisSessionsConfig) DataUpcloudManagedDatabaseRedisSessions {
 	_init_.Initialize()
 
@@ -402,7 +402,7 @@ func NewDataUpcloudManagedDatabaseRedisSessions(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.0/docs/data-sources/managed_database_redis_sessions upcloud_managed_database_redis_sessions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.1/docs/data-sources/managed_database_redis_sessions upcloud_managed_database_redis_sessions} Data Source.
 func NewDataUpcloudManagedDatabaseRedisSessions_Override(d DataUpcloudManagedDatabaseRedisSessions, scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseRedisSessionsConfig) {
 	_init_.Initialize()
 
