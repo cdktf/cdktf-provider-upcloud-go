@@ -30,10 +30,9 @@ type LoadbalancerNodesNetworksOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
+	InternalValue() *LoadbalancerNodesNetworks
+	SetInternalValue(val *LoadbalancerNodesNetworks)
 	IpAddresses() LoadbalancerNodesNetworksIpAddressesList
-	IpAddressesInput() interface{}
 	Name() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -68,8 +67,6 @@ type LoadbalancerNodesNetworksOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	PutIpAddresses(value interface{})
-	ResetIpAddresses()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -125,8 +122,8 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) InternalValue() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) InternalValue() *LoadbalancerNodesNetworks {
+	var returns *LoadbalancerNodesNetworks
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -140,16 +137,6 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) IpAddresses() Loadb
 	_jsii_.Get(
 		j,
 		"ipAddresses",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) IpAddressesInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"ipAddressesInput",
 		&returns,
 	)
 	return returns
@@ -245,7 +232,7 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference)SetComplexObjectIsFr
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference)SetInternalValue(val *LoadbalancerNodesNetworks) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -462,25 +449,6 @@ func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) InterpolationForAtt
 	)
 
 	return returns
-}
-
-func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) PutIpAddresses(value interface{}) {
-	if err := l.validatePutIpAddressesParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		l,
-		"putIpAddresses",
-		[]interface{}{value},
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) ResetIpAddresses() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetIpAddresses",
-		nil, // no parameters
-	)
 }
 
 func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

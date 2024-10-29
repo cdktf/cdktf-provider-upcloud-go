@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.2/docs/data-sources/storage upcloud_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.14.0/docs/data-sources/storage upcloud_storage}.
 type DataUpcloudStorage interface {
 	cdktf.TerraformDataSource
 	AccessType() *string
@@ -499,7 +499,7 @@ func (j *jsiiProxy_DataUpcloudStorage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.2/docs/data-sources/storage upcloud_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.14.0/docs/data-sources/storage upcloud_storage} Data Source.
 func NewDataUpcloudStorage(scope constructs.Construct, id *string, config *DataUpcloudStorageConfig) DataUpcloudStorage {
 	_init_.Initialize()
 
@@ -517,7 +517,7 @@ func NewDataUpcloudStorage(scope constructs.Construct, id *string, config *DataU
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.2/docs/data-sources/storage upcloud_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.14.0/docs/data-sources/storage upcloud_storage} Data Source.
 func NewDataUpcloudStorage_Override(d DataUpcloudStorage, scope constructs.Construct, id *string, config *DataUpcloudStorageConfig) {
 	_init_.Initialize()
 

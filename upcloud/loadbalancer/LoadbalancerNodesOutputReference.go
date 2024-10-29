@@ -30,10 +30,9 @@ type LoadbalancerNodesOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
+	InternalValue() *LoadbalancerNodes
+	SetInternalValue(val *LoadbalancerNodes)
 	Networks() LoadbalancerNodesNetworksList
-	NetworksInput() interface{}
 	OperationalState() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -67,8 +66,6 @@ type LoadbalancerNodesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	PutNetworks(value interface{})
-	ResetNetworks()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -124,8 +121,8 @@ func (j *jsiiProxy_LoadbalancerNodesOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_LoadbalancerNodesOutputReference) InternalValue() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_LoadbalancerNodesOutputReference) InternalValue() *LoadbalancerNodes {
+	var returns *LoadbalancerNodes
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -139,16 +136,6 @@ func (j *jsiiProxy_LoadbalancerNodesOutputReference) Networks() LoadbalancerNode
 	_jsii_.Get(
 		j,
 		"networks",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_LoadbalancerNodesOutputReference) NetworksInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"networksInput",
 		&returns,
 	)
 	return returns
@@ -234,7 +221,7 @@ func (j *jsiiProxy_LoadbalancerNodesOutputReference)SetComplexObjectIsFromSet(va
 	)
 }
 
-func (j *jsiiProxy_LoadbalancerNodesOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_LoadbalancerNodesOutputReference)SetInternalValue(val *LoadbalancerNodes) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -451,25 +438,6 @@ func (l *jsiiProxy_LoadbalancerNodesOutputReference) InterpolationForAttribute(p
 	)
 
 	return returns
-}
-
-func (l *jsiiProxy_LoadbalancerNodesOutputReference) PutNetworks(value interface{}) {
-	if err := l.validatePutNetworksParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		l,
-		"putNetworks",
-		[]interface{}{value},
-	)
-}
-
-func (l *jsiiProxy_LoadbalancerNodesOutputReference) ResetNetworks() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetNetworks",
-		nil, // no parameters
-	)
 }
 
 func (l *jsiiProxy_LoadbalancerNodesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

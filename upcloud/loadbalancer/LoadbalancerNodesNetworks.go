@@ -5,9 +5,5 @@ package loadbalancer
 
 
 type LoadbalancerNodesNetworks struct {
-	// ip_addresses block.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.13.2/docs/resources/loadbalancer#ip_addresses Loadbalancer#ip_addresses}
-	IpAddresses interface{} `field:"optional" json:"ipAddresses" yaml:"ipAddresses"`
 }
 

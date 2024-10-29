@@ -19,10 +19,6 @@ func (l *jsiiProxy_LoadbalancerNodesNetworksList) validateResolveParameters(_con
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksList) validateSetInternalValueParameters(val interface{}) error {
-	return nil
-}
-
 func (j *jsiiProxy_LoadbalancerNodesNetworksList) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

@@ -93,37 +93,6 @@ func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateInterpolati
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validatePutIpAddressesParameters(value interface{}) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	switch value.(type) {
-	case cdktf.IResolvable:
-		// ok
-	case *[]*LoadbalancerNodesNetworksIpAddresses:
-		value := value.(*[]*LoadbalancerNodesNetworksIpAddresses)
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	case []*LoadbalancerNodesNetworksIpAddresses:
-		value_ := value.([]*LoadbalancerNodesNetworksIpAddresses)
-		value := &value_
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	default:
-		if !_jsii_.IsAnonymousProxy(value) {
-			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LoadbalancerNodesNetworksIpAddresses; received %#v (a %T)", value, value)
-		}
-	}
-
-	return nil
-}
-
 func (l *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
@@ -197,25 +166,9 @@ func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateSetComplexO
 	return nil
 }
 
-func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateSetInternalValueParameters(val interface{}) error {
-	switch val.(type) {
-	case cdktf.IResolvable:
-		// ok
-	case *LoadbalancerNodesNetworks:
-		val := val.(*LoadbalancerNodesNetworks)
-		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-			return err
-		}
-	case LoadbalancerNodesNetworks:
-		val_ := val.(LoadbalancerNodesNetworks)
-		val := &val_
-		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-			return err
-		}
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *LoadbalancerNodesNetworks; received %#v (a %T)", val, val)
-		}
+func (j *jsiiProxy_LoadbalancerNodesNetworksOutputReference) validateSetInternalValueParameters(val *LoadbalancerNodesNetworks) error {
+	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+		return err
 	}
 
 	return nil
