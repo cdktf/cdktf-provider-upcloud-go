@@ -87,6 +87,10 @@ func (m *jsiiProxy_ManagedDatabaseUser) validatePutRedisAccessControlParameters(
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseUser) validatePutValkeyAccessControlParameters(value *ManagedDatabaseUserValkeyAccessControl) error {
+	return nil
+}
+
 func validateManagedDatabaseUser_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

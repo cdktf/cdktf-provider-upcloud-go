@@ -16,6 +16,12 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	AutomaticUtilityNetworkIpFilter() interface{}
 	SetAutomaticUtilityNetworkIpFilter(val interface{})
 	AutomaticUtilityNetworkIpFilterInput() interface{}
+	BackupHour() *float64
+	SetBackupHour(val *float64)
+	BackupHourInput() *float64
+	BackupMinute() *float64
+	SetBackupMinute(val *float64)
+	BackupMinuteInput() *float64
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -116,6 +122,8 @@ type ManagedDatabaseRedisPropertiesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMigration(value *ManagedDatabaseRedisPropertiesMigration)
 	ResetAutomaticUtilityNetworkIpFilter()
+	ResetBackupHour()
+	ResetBackupMinute()
 	ResetIpFilter()
 	ResetMigration()
 	ResetPublicAccess()
@@ -162,6 +170,46 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) AutomaticUtili
 	_jsii_.Get(
 		j,
 		"automaticUtilityNetworkIpFilterInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) BackupHour() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"backupHour",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) BackupHourInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"backupHourInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) BackupMinute() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"backupMinute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) BackupMinuteInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"backupMinuteInput",
 		&returns,
 	)
 	return returns
@@ -596,6 +644,28 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetAutomaticUti
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetBackupHour(val *float64) {
+	if err := j.validateSetBackupHourParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"backupHour",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetBackupMinute(val *float64) {
+	if err := j.validateSetBackupMinuteParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"backupMinute",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
@@ -1017,6 +1087,22 @@ func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetAutomatic
 	_jsii_.InvokeVoid(
 		m,
 		"resetAutomaticUtilityNetworkIpFilter",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetBackupHour() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetBackupHour",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) ResetBackupMinute() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetBackupMinute",
 		nil, // no parameters
 	)
 }

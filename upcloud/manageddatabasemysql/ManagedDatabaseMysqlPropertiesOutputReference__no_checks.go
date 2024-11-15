@@ -167,6 +167,10 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetIpF
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetLogOutputParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateSetLongQueryTimeParameters(val *float64) error {
 	return nil
 }

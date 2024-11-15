@@ -35,6 +35,9 @@ type ServerNetworkInterfaceOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	Index() *float64
+	SetIndex(val *float64)
+	IndexInput() *float64
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	IpAddress() *string
@@ -89,6 +92,7 @@ type ServerNetworkInterfaceOutputReference interface {
 	PutAdditionalIpAddress(value interface{})
 	ResetAdditionalIpAddress()
 	ResetBootable()
+	ResetIndex()
 	ResetIpAddress()
 	ResetIpAddressFamily()
 	ResetNetwork()
@@ -183,6 +187,26 @@ func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) Fqn() *string {
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) Index() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"index",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) IndexInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"indexInput",
 		&returns,
 	)
 	return returns
@@ -395,6 +419,17 @@ func (j *jsiiProxy_ServerNetworkInterfaceOutputReference)SetComplexObjectIsFromS
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServerNetworkInterfaceOutputReference)SetIndex(val *float64) {
+	if err := j.validateSetIndexParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"index",
 		val,
 	)
 }
@@ -696,6 +731,14 @@ func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) ResetBootable() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetBootable",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerNetworkInterfaceOutputReference) ResetIndex() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetIndex",
 		nil, // no parameters
 	)
 }

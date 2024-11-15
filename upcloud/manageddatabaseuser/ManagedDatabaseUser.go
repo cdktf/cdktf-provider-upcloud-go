@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.14.0/docs/resources/managed_database_user upcloud_managed_database_user}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_user upcloud_managed_database_user}.
 type ManagedDatabaseUser interface {
 	cdktf.TerraformResource
 	Authentication() *string
@@ -83,6 +83,8 @@ type ManagedDatabaseUser interface {
 	Username() *string
 	SetUsername(val *string)
 	UsernameInput() *string
+	ValkeyAccessControl() ManagedDatabaseUserValkeyAccessControlOutputReference
+	ValkeyAccessControlInput() *ManagedDatabaseUserValkeyAccessControl
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -129,6 +131,7 @@ type ManagedDatabaseUser interface {
 	PutOpensearchAccessControl(value *ManagedDatabaseUserOpensearchAccessControl)
 	PutPgAccessControl(value *ManagedDatabaseUserPgAccessControl)
 	PutRedisAccessControl(value *ManagedDatabaseUserRedisAccessControl)
+	PutValkeyAccessControl(value *ManagedDatabaseUserValkeyAccessControl)
 	ResetAuthentication()
 	ResetId()
 	ResetOpensearchAccessControl()
@@ -138,6 +141,7 @@ type ManagedDatabaseUser interface {
 	ResetPassword()
 	ResetPgAccessControl()
 	ResetRedisAccessControl()
+	ResetValkeyAccessControl()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -486,8 +490,28 @@ func (j *jsiiProxy_ManagedDatabaseUser) UsernameInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseUser) ValkeyAccessControl() ManagedDatabaseUserValkeyAccessControlOutputReference {
+	var returns ManagedDatabaseUserValkeyAccessControlOutputReference
+	_jsii_.Get(
+		j,
+		"valkeyAccessControl",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.14.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+func (j *jsiiProxy_ManagedDatabaseUser) ValkeyAccessControlInput() *ManagedDatabaseUserValkeyAccessControl {
+	var returns *ManagedDatabaseUserValkeyAccessControl
+	_jsii_.Get(
+		j,
+		"valkeyAccessControlInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) ManagedDatabaseUser {
 	_init_.Initialize()
 
@@ -505,7 +529,7 @@ func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *Mana
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.14.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser_Override(m ManagedDatabaseUser, scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) {
 	_init_.Initialize()
 
@@ -1025,6 +1049,17 @@ func (m *jsiiProxy_ManagedDatabaseUser) PutRedisAccessControl(value *ManagedData
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseUser) PutValkeyAccessControl(value *ManagedDatabaseUserValkeyAccessControl) {
+	if err := m.validatePutValkeyAccessControlParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putValkeyAccessControl",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseUser) ResetAuthentication() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1077,6 +1112,14 @@ func (m *jsiiProxy_ManagedDatabaseUser) ResetRedisAccessControl() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetRedisAccessControl",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseUser) ResetValkeyAccessControl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetValkeyAccessControl",
 		nil, // no parameters
 	)
 }

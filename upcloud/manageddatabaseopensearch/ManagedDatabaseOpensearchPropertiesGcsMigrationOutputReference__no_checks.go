@@ -79,7 +79,19 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReferenc
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) validateSetIncludeAliasesParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) validateSetIndicesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) validateSetInternalValueParameters(val *ManagedDatabaseOpensearchPropertiesGcsMigration) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) validateSetRestoreGlobalStateParameters(val interface{}) error {
 	return nil
 }
 

@@ -83,11 +83,23 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputRefere
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) validateSetIncludeAliasesParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) validateSetIndicesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) validateSetInternalValueParameters(val *ManagedDatabaseOpensearchPropertiesAzureMigration) error {
 	return nil
 }
 
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) validateSetKeyParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) validateSetRestoreGlobalStateParameters(val interface{}) error {
 	return nil
 }
 

@@ -83,6 +83,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSearchBackpressureParameters(value *ManagedDatabaseOpensearchPropertiesSearchBackpressure) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutShardIndexingPressureParameters(value *ManagedDatabaseOpensearchPropertiesShardIndexingPressure) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

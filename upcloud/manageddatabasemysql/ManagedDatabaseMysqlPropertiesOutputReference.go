@@ -107,6 +107,9 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	IpFilter() *[]*string
 	SetIpFilter(val *[]*string)
 	IpFilterInput() *[]*string
+	LogOutput() *string
+	SetLogOutput(val *string)
+	LogOutputInput() *string
 	LongQueryTime() *float64
 	SetLongQueryTime(val *float64)
 	LongQueryTimeInput() *float64
@@ -212,6 +215,7 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	ResetInteractiveTimeout()
 	ResetInternalTmpMemStorageEngine()
 	ResetIpFilter()
+	ResetLogOutput()
 	ResetLongQueryTime()
 	ResetMaxAllowedPacket()
 	ResetMaxHeapTableSize()
@@ -788,6 +792,26 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) IpFilterInput(
 	_jsii_.Get(
 		j,
 		"ipFilterInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) LogOutput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"logOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) LogOutputInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"logOutputInput",
 		&returns,
 	)
 	return returns
@@ -1469,6 +1493,17 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetIpFilter(val
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetLogOutput(val *string) {
+	if err := j.validateSetLogOutputParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"logOutput",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference)SetLongQueryTime(val *float64) {
 	if err := j.validateSetLongQueryTimeParameters(val); err != nil {
 		panic(err)
@@ -2049,6 +2084,14 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetIpFilter(
 	_jsii_.InvokeVoid(
 		m,
 		"resetIpFilter",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetLogOutput() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetLogOutput",
 		nil, // no parameters
 	)
 }

@@ -48,11 +48,20 @@ type ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference interface 
 	EndpointSuffixInput() *string
 	// Experimental.
 	Fqn() *string
+	IncludeAliases() interface{}
+	SetIncludeAliases(val interface{})
+	IncludeAliasesInput() interface{}
+	Indices() *string
+	SetIndices(val *string)
+	IndicesInput() *string
 	InternalValue() *ManagedDatabaseOpensearchPropertiesAzureMigration
 	SetInternalValue(val *ManagedDatabaseOpensearchPropertiesAzureMigration)
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
+	RestoreGlobalState() interface{}
+	SetRestoreGlobalState(val interface{})
+	RestoreGlobalStateInput() interface{}
 	SasToken() *string
 	SetSasToken(val *string)
 	SasTokenInput() *string
@@ -97,7 +106,10 @@ type ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference interface 
 	ResetCompress()
 	ResetContainer()
 	ResetEndpointSuffix()
+	ResetIncludeAliases()
+	ResetIndices()
 	ResetKey()
+	ResetRestoreGlobalState()
 	ResetSasToken()
 	ResetSnapshotName()
 	// Produce the Token's value at resolution time.
@@ -275,6 +287,46 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputRefere
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) IncludeAliases() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"includeAliases",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) IncludeAliasesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"includeAliasesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) Indices() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"indices",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) IndicesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"indicesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) InternalValue() *ManagedDatabaseOpensearchPropertiesAzureMigration {
 	var returns *ManagedDatabaseOpensearchPropertiesAzureMigration
 	_jsii_.Get(
@@ -300,6 +352,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputRefere
 	_jsii_.Get(
 		j,
 		"keyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) RestoreGlobalState() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"restoreGlobalState",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) RestoreGlobalStateInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"restoreGlobalStateInput",
 		&returns,
 	)
 	return returns
@@ -481,6 +553,28 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputRefere
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference)SetIncludeAliases(val interface{}) {
+	if err := j.validateSetIncludeAliasesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"includeAliases",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference)SetIndices(val *string) {
+	if err := j.validateSetIndicesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"indices",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference)SetInternalValue(val *ManagedDatabaseOpensearchPropertiesAzureMigration) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -499,6 +593,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputRefere
 	_jsii_.Set(
 		j,
 		"key",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference)SetRestoreGlobalState(val interface{}) {
+	if err := j.validateSetRestoreGlobalStateParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"restoreGlobalState",
 		val,
 	)
 }
@@ -781,10 +886,34 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputRefere
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) ResetIncludeAliases() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIncludeAliases",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) ResetIndices() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIndices",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) ResetKey() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference) ResetRestoreGlobalState() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRestoreGlobalState",
 		nil, // no parameters
 	)
 }

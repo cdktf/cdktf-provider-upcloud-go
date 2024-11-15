@@ -59,6 +59,14 @@ func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetAut
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetBackupHourParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetBackupMinuteParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedisPropertiesOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

@@ -57,6 +57,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putOpensearchAccessControl", GoMethod: "PutOpensearchAccessControl"},
 			_jsii_.MemberMethod{JsiiMethod: "putPgAccessControl", GoMethod: "PutPgAccessControl"},
 			_jsii_.MemberMethod{JsiiMethod: "putRedisAccessControl", GoMethod: "PutRedisAccessControl"},
+			_jsii_.MemberMethod{JsiiMethod: "putValkeyAccessControl", GoMethod: "PutValkeyAccessControl"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberProperty{JsiiProperty: "redisAccessControl", GoGetter: "RedisAccessControl"},
 			_jsii_.MemberProperty{JsiiProperty: "redisAccessControlInput", GoGetter: "RedisAccessControlInput"},
@@ -67,6 +68,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetPassword", GoMethod: "ResetPassword"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPgAccessControl", GoMethod: "ResetPgAccessControl"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRedisAccessControl", GoMethod: "ResetRedisAccessControl"},
+			_jsii_.MemberMethod{JsiiMethod: "resetValkeyAccessControl", GoMethod: "ResetValkeyAccessControl"},
 			_jsii_.MemberProperty{JsiiProperty: "service", GoGetter: "Service"},
 			_jsii_.MemberProperty{JsiiProperty: "serviceInput", GoGetter: "ServiceInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
@@ -81,6 +83,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
 			_jsii_.MemberProperty{JsiiProperty: "username", GoGetter: "Username"},
 			_jsii_.MemberProperty{JsiiProperty: "usernameInput", GoGetter: "UsernameInput"},
+			_jsii_.MemberProperty{JsiiProperty: "valkeyAccessControl", GoGetter: "ValkeyAccessControl"},
+			_jsii_.MemberProperty{JsiiProperty: "valkeyAccessControlInput", GoGetter: "ValkeyAccessControlInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_ManagedDatabaseUser{}
@@ -276,6 +280,54 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_ManagedDatabaseUserRedisAccessControlOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-upcloud.managedDatabaseUser.ManagedDatabaseUserValkeyAccessControl",
+		reflect.TypeOf((*ManagedDatabaseUserValkeyAccessControl)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-upcloud.managedDatabaseUser.ManagedDatabaseUserValkeyAccessControlOutputReference",
+		reflect.TypeOf((*ManagedDatabaseUserValkeyAccessControlOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "categories", GoGetter: "Categories"},
+			_jsii_.MemberProperty{JsiiProperty: "categoriesInput", GoGetter: "CategoriesInput"},
+			_jsii_.MemberProperty{JsiiProperty: "channels", GoGetter: "Channels"},
+			_jsii_.MemberProperty{JsiiProperty: "channelsInput", GoGetter: "ChannelsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "commands", GoGetter: "Commands"},
+			_jsii_.MemberProperty{JsiiProperty: "commandsInput", GoGetter: "CommandsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "keys", GoGetter: "Keys"},
+			_jsii_.MemberProperty{JsiiProperty: "keysInput", GoGetter: "KeysInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCategories", GoMethod: "ResetCategories"},
+			_jsii_.MemberMethod{JsiiMethod: "resetChannels", GoMethod: "ResetChannels"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCommands", GoMethod: "ResetCommands"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKeys", GoMethod: "ResetKeys"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ManagedDatabaseUserValkeyAccessControlOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},

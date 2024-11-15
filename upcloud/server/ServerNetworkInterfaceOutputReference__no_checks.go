@@ -67,6 +67,10 @@ func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) validateSetComplexObje
 	return nil
 }
 
+func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) validateSetIndexParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ServerNetworkInterfaceOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

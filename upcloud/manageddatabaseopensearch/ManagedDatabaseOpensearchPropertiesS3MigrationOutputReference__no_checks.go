@@ -83,11 +83,23 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) validateSetIncludeAliasesParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) validateSetIndicesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) validateSetInternalValueParameters(val *ManagedDatabaseOpensearchPropertiesS3Migration) error {
 	return nil
 }
 
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) validateSetRegionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) validateSetRestoreGlobalStateParameters(val interface{}) error {
 	return nil
 }
 

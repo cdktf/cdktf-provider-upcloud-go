@@ -45,8 +45,17 @@ type ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference interface {
 	CredentialsInput() *string
 	// Experimental.
 	Fqn() *string
+	IncludeAliases() interface{}
+	SetIncludeAliases(val interface{})
+	IncludeAliasesInput() interface{}
+	Indices() *string
+	SetIndices(val *string)
+	IndicesInput() *string
 	InternalValue() *ManagedDatabaseOpensearchPropertiesGcsMigration
 	SetInternalValue(val *ManagedDatabaseOpensearchPropertiesGcsMigration)
+	RestoreGlobalState() interface{}
+	SetRestoreGlobalState(val interface{})
+	RestoreGlobalStateInput() interface{}
 	SnapshotName() *string
 	SetSnapshotName(val *string)
 	SnapshotNameInput() *string
@@ -87,6 +96,9 @@ type ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference interface {
 	ResetChunkSize()
 	ResetCompress()
 	ResetCredentials()
+	ResetIncludeAliases()
+	ResetIndices()
+	ResetRestoreGlobalState()
 	ResetSnapshotName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -243,11 +255,71 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReferenc
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) IncludeAliases() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"includeAliases",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) IncludeAliasesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"includeAliasesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) Indices() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"indices",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) IndicesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"indicesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) InternalValue() *ManagedDatabaseOpensearchPropertiesGcsMigration {
 	var returns *ManagedDatabaseOpensearchPropertiesGcsMigration
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) RestoreGlobalState() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"restoreGlobalState",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) RestoreGlobalStateInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"restoreGlobalStateInput",
 		&returns,
 	)
 	return returns
@@ -398,6 +470,28 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReferenc
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference)SetIncludeAliases(val interface{}) {
+	if err := j.validateSetIncludeAliasesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"includeAliases",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference)SetIndices(val *string) {
+	if err := j.validateSetIndicesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"indices",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference)SetInternalValue(val *ManagedDatabaseOpensearchPropertiesGcsMigration) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -405,6 +499,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReferenc
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference)SetRestoreGlobalState(val interface{}) {
+	if err := j.validateSetRestoreGlobalStateParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"restoreGlobalState",
 		val,
 	)
 }
@@ -664,6 +769,30 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReferenc
 	_jsii_.InvokeVoid(
 		m,
 		"resetCredentials",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) ResetIncludeAliases() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIncludeAliases",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) ResetIndices() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIndices",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference) ResetRestoreGlobalState() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRestoreGlobalState",
 		nil, // no parameters
 	)
 }

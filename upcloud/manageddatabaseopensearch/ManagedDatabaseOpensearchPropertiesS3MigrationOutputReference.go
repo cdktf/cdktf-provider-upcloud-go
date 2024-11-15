@@ -48,11 +48,20 @@ type ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference interface {
 	EndpointInput() *string
 	// Experimental.
 	Fqn() *string
+	IncludeAliases() interface{}
+	SetIncludeAliases(val interface{})
+	IncludeAliasesInput() interface{}
+	Indices() *string
+	SetIndices(val *string)
+	IndicesInput() *string
 	InternalValue() *ManagedDatabaseOpensearchPropertiesS3Migration
 	SetInternalValue(val *ManagedDatabaseOpensearchPropertiesS3Migration)
 	Region() *string
 	SetRegion(val *string)
 	RegionInput() *string
+	RestoreGlobalState() interface{}
+	SetRestoreGlobalState(val interface{})
+	RestoreGlobalStateInput() interface{}
 	SecretKey() *string
 	SetSecretKey(val *string)
 	SecretKeyInput() *string
@@ -100,7 +109,10 @@ type ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference interface {
 	ResetChunkSize()
 	ResetCompress()
 	ResetEndpoint()
+	ResetIncludeAliases()
+	ResetIndices()
 	ResetRegion()
+	ResetRestoreGlobalState()
 	ResetSecretKey()
 	ResetServerSideEncryption()
 	ResetSnapshotName()
@@ -279,6 +291,46 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) IncludeAliases() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"includeAliases",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) IncludeAliasesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"includeAliasesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) Indices() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"indices",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) IndicesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"indicesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) InternalValue() *ManagedDatabaseOpensearchPropertiesS3Migration {
 	var returns *ManagedDatabaseOpensearchPropertiesS3Migration
 	_jsii_.Get(
@@ -304,6 +356,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
 	_jsii_.Get(
 		j,
 		"regionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) RestoreGlobalState() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"restoreGlobalState",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) RestoreGlobalStateInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"restoreGlobalStateInput",
 		&returns,
 	)
 	return returns
@@ -505,6 +577,28 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference)SetIncludeAliases(val interface{}) {
+	if err := j.validateSetIncludeAliasesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"includeAliases",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference)SetIndices(val *string) {
+	if err := j.validateSetIndicesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"indices",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference)SetInternalValue(val *ManagedDatabaseOpensearchPropertiesS3Migration) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -523,6 +617,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
 	_jsii_.Set(
 		j,
 		"region",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference)SetRestoreGlobalState(val interface{}) {
+	if err := j.validateSetRestoreGlobalStateParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"restoreGlobalState",
 		val,
 	)
 }
@@ -816,10 +921,34 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) ResetIncludeAliases() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIncludeAliases",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) ResetIndices() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIndices",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) ResetRegion() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetRegion",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference) ResetRestoreGlobalState() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRestoreGlobalState",
 		nil, // no parameters
 	)
 }

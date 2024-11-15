@@ -161,12 +161,16 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ScriptMaxCompilationsRate() *string
 	SetScriptMaxCompilationsRate(val *string)
 	ScriptMaxCompilationsRateInput() *string
+	SearchBackpressure() ManagedDatabaseOpensearchPropertiesSearchBackpressureOutputReference
+	SearchBackpressureInput() *ManagedDatabaseOpensearchPropertiesSearchBackpressure
 	SearchMaxBuckets() *float64
 	SetSearchMaxBuckets(val *float64)
 	SearchMaxBucketsInput() *float64
 	ServiceLog() interface{}
 	SetServiceLog(val interface{})
 	ServiceLogInput() interface{}
+	ShardIndexingPressure() ManagedDatabaseOpensearchPropertiesShardIndexingPressureOutputReference
+	ShardIndexingPressureInput() *ManagedDatabaseOpensearchPropertiesShardIndexingPressure
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -244,6 +248,8 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	PutOpensearchDashboards(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards)
 	PutS3Migration(value *ManagedDatabaseOpensearchPropertiesS3Migration)
 	PutSaml(value *ManagedDatabaseOpensearchPropertiesSaml)
+	PutSearchBackpressure(value *ManagedDatabaseOpensearchPropertiesSearchBackpressure)
+	PutShardIndexingPressure(value *ManagedDatabaseOpensearchPropertiesShardIndexingPressure)
 	ResetActionAutoCreateIndexEnabled()
 	ResetActionDestructiveRequiresName()
 	ResetAuthFailureListeners()
@@ -290,8 +296,10 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetS3Migration()
 	ResetSaml()
 	ResetScriptMaxCompilationsRate()
+	ResetSearchBackpressure()
 	ResetSearchMaxBuckets()
 	ResetServiceLog()
+	ResetShardIndexingPressure()
 	ResetThreadPoolAnalyzeQueueSize()
 	ResetThreadPoolAnalyzeSize()
 	ResetThreadPoolForceMergeSize()
@@ -1289,6 +1297,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ScriptMax
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchBackpressure() ManagedDatabaseOpensearchPropertiesSearchBackpressureOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesSearchBackpressureOutputReference
+	_jsii_.Get(
+		j,
+		"searchBackpressure",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchBackpressureInput() *ManagedDatabaseOpensearchPropertiesSearchBackpressure {
+	var returns *ManagedDatabaseOpensearchPropertiesSearchBackpressure
+	_jsii_.Get(
+		j,
+		"searchBackpressureInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchMaxBuckets() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -1324,6 +1352,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ServiceLo
 	_jsii_.Get(
 		j,
 		"serviceLogInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ShardIndexingPressure() ManagedDatabaseOpensearchPropertiesShardIndexingPressureOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesShardIndexingPressureOutputReference
+	_jsii_.Get(
+		j,
+		"shardIndexingPressure",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ShardIndexingPressureInput() *ManagedDatabaseOpensearchPropertiesShardIndexingPressure {
+	var returns *ManagedDatabaseOpensearchPropertiesShardIndexingPressure
+	_jsii_.Get(
+		j,
+		"shardIndexingPressureInput",
 		&returns,
 	)
 	return returns
@@ -2518,6 +2566,28 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutSaml(v
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutSearchBackpressure(value *ManagedDatabaseOpensearchPropertiesSearchBackpressure) {
+	if err := m.validatePutSearchBackpressureParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putSearchBackpressure",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutShardIndexingPressure(value *ManagedDatabaseOpensearchPropertiesShardIndexingPressure) {
+	if err := m.validatePutShardIndexingPressureParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putShardIndexingPressure",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetActionAutoCreateIndexEnabled() {
 	_jsii_.InvokeVoid(
 		m,
@@ -2886,6 +2956,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetScri
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetSearchBackpressure() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSearchBackpressure",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetSearchMaxBuckets() {
 	_jsii_.InvokeVoid(
 		m,
@@ -2898,6 +2976,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetServ
 	_jsii_.InvokeVoid(
 		m,
 		"resetServiceLog",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetShardIndexingPressure() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetShardIndexingPressure",
 		nil, // no parameters
 	)
 }
