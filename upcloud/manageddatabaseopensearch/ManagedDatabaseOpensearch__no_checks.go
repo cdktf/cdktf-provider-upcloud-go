@@ -151,6 +151,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetProvisionersParameters(
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetTerminationProtectionParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetTitleParameters(val *string) error {
 	return nil
 }

@@ -143,6 +143,10 @@ func (j *jsiiProxy_ManagedDatabaseRedis) validateSetProvisionersParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetTerminationProtectionParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedis) validateSetTitleParameters(val *string) error {
 	return nil
 }

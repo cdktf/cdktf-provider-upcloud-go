@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey}.
 type ManagedDatabaseValkey interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -89,6 +89,9 @@ type ManagedDatabaseValkey interface {
 	ServiceUri() *string
 	ServiceUsername() *string
 	State() *string
+	TerminationProtection() interface{}
+	SetTerminationProtection(val interface{})
+	TerminationProtectionInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -157,6 +160,7 @@ type ManagedDatabaseValkey interface {
 	ResetOverrideLogicalId()
 	ResetPowered()
 	ResetProperties()
+	ResetTerminationProtection()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -575,6 +579,26 @@ func (j *jsiiProxy_ManagedDatabaseValkey) State() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseValkey) TerminationProtection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terminationProtection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkey) TerminationProtectionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terminationProtectionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseValkey) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -656,7 +680,7 @@ func (j *jsiiProxy_ManagedDatabaseValkey) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
 func NewManagedDatabaseValkey(scope constructs.Construct, id *string, config *ManagedDatabaseValkeyConfig) ManagedDatabaseValkey {
 	_init_.Initialize()
 
@@ -674,7 +698,7 @@ func NewManagedDatabaseValkey(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
 func NewManagedDatabaseValkey_Override(m ManagedDatabaseValkey, scope constructs.Construct, id *string, config *ManagedDatabaseValkeyConfig) {
 	_init_.Initialize()
 
@@ -826,6 +850,17 @@ func (j *jsiiProxy_ManagedDatabaseValkey)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkey)SetTerminationProtection(val interface{}) {
+	if err := j.validateSetTerminationProtectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"terminationProtection",
 		val,
 	)
 }
@@ -1287,6 +1322,14 @@ func (m *jsiiProxy_ManagedDatabaseValkey) ResetProperties() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetProperties",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseValkey) ResetTerminationProtection() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetTerminationProtection",
 		nil, // no parameters
 	)
 }

@@ -143,6 +143,10 @@ func (j *jsiiProxy_ManagedDatabaseMysql) validateSetProvisionersParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysql) validateSetTerminationProtectionParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysql) validateSetTitleParameters(val *string) error {
 	return nil
 }

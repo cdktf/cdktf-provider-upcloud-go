@@ -143,6 +143,10 @@ func (j *jsiiProxy_ManagedDatabaseValkey) validateSetProvisionersParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseValkey) validateSetTerminationProtectionParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseValkey) validateSetTitleParameters(val *string) error {
 	return nil
 }

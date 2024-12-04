@@ -143,6 +143,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetProvisionersParameters(
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetTerminationProtectionParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetTitleParameters(val *string) error {
 	return nil
 }

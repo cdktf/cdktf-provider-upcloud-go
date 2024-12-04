@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
 type ManagedDatabaseMysql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -89,6 +89,9 @@ type ManagedDatabaseMysql interface {
 	ServiceUri() *string
 	ServiceUsername() *string
 	State() *string
+	TerminationProtection() interface{}
+	SetTerminationProtection(val interface{})
+	TerminationProtectionInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -157,6 +160,7 @@ type ManagedDatabaseMysql interface {
 	ResetOverrideLogicalId()
 	ResetPowered()
 	ResetProperties()
+	ResetTerminationProtection()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -575,6 +579,26 @@ func (j *jsiiProxy_ManagedDatabaseMysql) State() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysql) TerminationProtection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terminationProtection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql) TerminationProtectionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terminationProtectionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysql) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -656,7 +680,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) ManagedDatabaseMysql {
 	_init_.Initialize()
 
@@ -674,7 +698,7 @@ func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql_Override(m ManagedDatabaseMysql, scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) {
 	_init_.Initialize()
 
@@ -826,6 +850,17 @@ func (j *jsiiProxy_ManagedDatabaseMysql)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql)SetTerminationProtection(val interface{}) {
+	if err := j.validateSetTerminationProtectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"terminationProtection",
 		val,
 	)
 }
@@ -1287,6 +1322,14 @@ func (m *jsiiProxy_ManagedDatabaseMysql) ResetProperties() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetProperties",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysql) ResetTerminationProtection() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetTerminationProtection",
 		nil, // no parameters
 	)
 }

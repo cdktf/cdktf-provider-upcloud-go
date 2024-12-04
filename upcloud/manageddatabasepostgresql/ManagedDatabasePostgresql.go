@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
 type ManagedDatabasePostgresql interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -90,6 +90,9 @@ type ManagedDatabasePostgresql interface {
 	ServiceUsername() *string
 	Sslmode() *string
 	State() *string
+	TerminationProtection() interface{}
+	SetTerminationProtection(val interface{})
+	TerminationProtectionInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -158,6 +161,7 @@ type ManagedDatabasePostgresql interface {
 	ResetOverrideLogicalId()
 	ResetPowered()
 	ResetProperties()
+	ResetTerminationProtection()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -586,6 +590,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) State() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresql) TerminationProtection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terminationProtection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql) TerminationProtectionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terminationProtectionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresql) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -667,7 +691,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) ManagedDatabasePostgresql {
 	_init_.Initialize()
 
@@ -685,7 +709,7 @@ func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) {
 	_init_.Initialize()
 
@@ -837,6 +861,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresql)SetProvisioners(val *[]interface{})
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetTerminationProtection(val interface{}) {
+	if err := j.validateSetTerminationProtectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"terminationProtection",
 		val,
 	)
 }
@@ -1298,6 +1333,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) ResetProperties() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetProperties",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresql) ResetTerminationProtection() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetTerminationProtection",
 		nil, // no parameters
 	)
 }

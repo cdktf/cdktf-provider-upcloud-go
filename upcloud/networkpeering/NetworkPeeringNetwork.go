@@ -7,7 +7,7 @@ package networkpeering
 type NetworkPeeringNetwork struct {
 	// The UUID of the network.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.15.0/docs/resources/network_peering#uuid NetworkPeering#uuid}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/network_peering#uuid NetworkPeering#uuid}
 	Uuid *string `field:"required" json:"uuid" yaml:"uuid"`
 }
 
