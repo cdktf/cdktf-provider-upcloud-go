@@ -71,6 +71,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutput
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference) validateSetMultipleDataSourceEnabledParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference) validateSetOpensearchRequestTimeoutParameters(val *float64) error {
 	return nil
 }

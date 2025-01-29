@@ -24,19 +24,19 @@ type LoadbalancerBackendConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// UUID of the load balancer to which the backend is connected.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/loadbalancer_backend#loadbalancer LoadbalancerBackend#loadbalancer}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/resources/loadbalancer_backend#loadbalancer LoadbalancerBackend#loadbalancer}
 	Loadbalancer *string `field:"required" json:"loadbalancer" yaml:"loadbalancer"`
 	// The name of the backend. Must be unique within the load balancer service.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/loadbalancer_backend#name LoadbalancerBackend#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/resources/loadbalancer_backend#name LoadbalancerBackend#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// properties block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/loadbalancer_backend#properties LoadbalancerBackend#properties}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/resources/loadbalancer_backend#properties LoadbalancerBackend#properties}
 	Properties interface{} `field:"optional" json:"properties" yaml:"properties"`
 	// Domain name resolver used with dynamic type members.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/loadbalancer_backend#resolver_name LoadbalancerBackend#resolver_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/resources/loadbalancer_backend#resolver_name LoadbalancerBackend#resolver_name}
 	ResolverName *string `field:"optional" json:"resolverName" yaml:"resolverName"`
 }
 

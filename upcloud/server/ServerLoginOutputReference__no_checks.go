@@ -63,7 +63,7 @@ func (j *jsiiProxy_ServerLoginOutputReference) validateSetCreatePasswordParamete
 	return nil
 }
 
-func (j *jsiiProxy_ServerLoginOutputReference) validateSetInternalValueParameters(val *ServerLogin) error {
+func (j *jsiiProxy_ServerLoginOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -87,7 +87,7 @@ func (j *jsiiProxy_ServerLoginOutputReference) validateSetUserParameters(val *st
 	return nil
 }
 
-func validateNewServerLoginOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewServerLoginOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

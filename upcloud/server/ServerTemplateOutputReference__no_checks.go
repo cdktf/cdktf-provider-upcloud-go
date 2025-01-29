@@ -47,7 +47,7 @@ func (s *jsiiProxy_ServerTemplateOutputReference) validateInterpolationForAttrib
 	return nil
 }
 
-func (s *jsiiProxy_ServerTemplateOutputReference) validatePutBackupRuleParameters(value *ServerTemplateBackupRule) error {
+func (s *jsiiProxy_ServerTemplateOutputReference) validatePutBackupRuleParameters(value interface{}) error {
 	return nil
 }
 
@@ -83,7 +83,7 @@ func (j *jsiiProxy_ServerTemplateOutputReference) validateSetFilesystemAutoresiz
 	return nil
 }
 
-func (j *jsiiProxy_ServerTemplateOutputReference) validateSetInternalValueParameters(val *ServerTemplate) error {
+func (j *jsiiProxy_ServerTemplateOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -103,11 +103,15 @@ func (j *jsiiProxy_ServerTemplateOutputReference) validateSetTerraformResourcePa
 	return nil
 }
 
+func (j *jsiiProxy_ServerTemplateOutputReference) validateSetTierParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ServerTemplateOutputReference) validateSetTitleParameters(val *string) error {
 	return nil
 }
 
-func validateNewServerTemplateOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewServerTemplateOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

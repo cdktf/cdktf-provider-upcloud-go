@@ -24,14 +24,17 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	AutomaticUtilityNetworkIpFilter() interface{}
 	SetAutomaticUtilityNetworkIpFilter(val interface{})
 	AutomaticUtilityNetworkIpFilterInput() interface{}
-	AzureMigration() ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference
-	AzureMigrationInput() *ManagedDatabaseOpensearchPropertiesAzureMigration
 	ClusterMaxShardsPerNode() *float64
 	SetClusterMaxShardsPerNode(val *float64)
 	ClusterMaxShardsPerNodeInput() *float64
+	ClusterRoutingAllocationBalancePreferPrimary() interface{}
+	SetClusterRoutingAllocationBalancePreferPrimary(val interface{})
+	ClusterRoutingAllocationBalancePreferPrimaryInput() interface{}
 	ClusterRoutingAllocationNodeConcurrentRecoveries() *float64
 	SetClusterRoutingAllocationNodeConcurrentRecoveries(val *float64)
 	ClusterRoutingAllocationNodeConcurrentRecoveriesInput() *float64
+	ClusterSearchRequestSlowlog() ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogOutputReference
+	ClusterSearchRequestSlowlogInput() *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -50,6 +53,9 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	CustomDomain() *string
 	SetCustomDomain(val *string)
 	CustomDomainInput() *string
+	ElasticsearchVersion() *string
+	SetElasticsearchVersion(val *string)
+	ElasticsearchVersionInput() *string
 	EmailSenderName() *string
 	SetEmailSenderName(val *string)
 	EmailSenderNameInput() *string
@@ -59,13 +65,14 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	EmailSenderUsername() *string
 	SetEmailSenderUsername(val *string)
 	EmailSenderUsernameInput() *string
+	EnableRemoteBackedStorage() interface{}
+	SetEnableRemoteBackedStorage(val interface{})
+	EnableRemoteBackedStorageInput() interface{}
 	EnableSecurityAudit() interface{}
 	SetEnableSecurityAudit(val interface{})
 	EnableSecurityAuditInput() interface{}
 	// Experimental.
 	Fqn() *string
-	GcsMigration() ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference
-	GcsMigrationInput() *ManagedDatabaseOpensearchPropertiesGcsMigration
 	HttpMaxContentLength() *float64
 	SetHttpMaxContentLength(val *float64)
 	HttpMaxContentLengthInput() *float64
@@ -154,8 +161,6 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ReindexRemoteWhitelist() *[]*string
 	SetReindexRemoteWhitelist(val *[]*string)
 	ReindexRemoteWhitelistInput() *[]*string
-	S3Migration() ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
-	S3MigrationInput() *ManagedDatabaseOpensearchPropertiesS3Migration
 	Saml() ManagedDatabaseOpensearchPropertiesSamlOutputReference
 	SamlInput() *ManagedDatabaseOpensearchPropertiesSaml
 	ScriptMaxCompilationsRate() *string
@@ -163,9 +168,13 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ScriptMaxCompilationsRateInput() *string
 	SearchBackpressure() ManagedDatabaseOpensearchPropertiesSearchBackpressureOutputReference
 	SearchBackpressureInput() *ManagedDatabaseOpensearchPropertiesSearchBackpressure
+	SearchInsightsTopQueries() ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOutputReference
+	SearchInsightsTopQueriesInput() *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries
 	SearchMaxBuckets() *float64
 	SetSearchMaxBuckets(val *float64)
 	SearchMaxBucketsInput() *float64
+	Segrep() ManagedDatabaseOpensearchPropertiesSegrepOutputReference
+	SegrepInput() *ManagedDatabaseOpensearchPropertiesSegrep
 	ServiceLog() interface{}
 	SetServiceLog(val interface{})
 	ServiceLogInput() interface{}
@@ -240,29 +249,31 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuthFailureListeners(value *ManagedDatabaseOpensearchPropertiesAuthFailureListeners)
-	PutAzureMigration(value *ManagedDatabaseOpensearchPropertiesAzureMigration)
-	PutGcsMigration(value *ManagedDatabaseOpensearchPropertiesGcsMigration)
+	PutClusterSearchRequestSlowlog(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog)
 	PutIndexRollup(value *ManagedDatabaseOpensearchPropertiesIndexRollup)
 	PutIndexTemplate(value *ManagedDatabaseOpensearchPropertiesIndexTemplate)
 	PutOpenid(value *ManagedDatabaseOpensearchPropertiesOpenid)
 	PutOpensearchDashboards(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards)
-	PutS3Migration(value *ManagedDatabaseOpensearchPropertiesS3Migration)
 	PutSaml(value *ManagedDatabaseOpensearchPropertiesSaml)
 	PutSearchBackpressure(value *ManagedDatabaseOpensearchPropertiesSearchBackpressure)
+	PutSearchInsightsTopQueries(value *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries)
+	PutSegrep(value *ManagedDatabaseOpensearchPropertiesSegrep)
 	PutShardIndexingPressure(value *ManagedDatabaseOpensearchPropertiesShardIndexingPressure)
 	ResetActionAutoCreateIndexEnabled()
 	ResetActionDestructiveRequiresName()
 	ResetAuthFailureListeners()
 	ResetAutomaticUtilityNetworkIpFilter()
-	ResetAzureMigration()
 	ResetClusterMaxShardsPerNode()
+	ResetClusterRoutingAllocationBalancePreferPrimary()
 	ResetClusterRoutingAllocationNodeConcurrentRecoveries()
+	ResetClusterSearchRequestSlowlog()
 	ResetCustomDomain()
+	ResetElasticsearchVersion()
 	ResetEmailSenderName()
 	ResetEmailSenderPassword()
 	ResetEmailSenderUsername()
+	ResetEnableRemoteBackedStorage()
 	ResetEnableSecurityAudit()
-	ResetGcsMigration()
 	ResetHttpMaxContentLength()
 	ResetHttpMaxHeaderSize()
 	ResetHttpMaxInitialLineLength()
@@ -293,11 +304,12 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetPluginsAlertingFilterByBackendRoles()
 	ResetPublicAccess()
 	ResetReindexRemoteWhitelist()
-	ResetS3Migration()
 	ResetSaml()
 	ResetScriptMaxCompilationsRate()
 	ResetSearchBackpressure()
+	ResetSearchInsightsTopQueries()
 	ResetSearchMaxBuckets()
+	ResetSegrep()
 	ResetServiceLog()
 	ResetShardIndexingPressure()
 	ResetThreadPoolAnalyzeQueueSize()
@@ -407,26 +419,6 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Automatic
 	return returns
 }
 
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) AzureMigration() ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference {
-	var returns ManagedDatabaseOpensearchPropertiesAzureMigrationOutputReference
-	_jsii_.Get(
-		j,
-		"azureMigration",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) AzureMigrationInput() *ManagedDatabaseOpensearchPropertiesAzureMigration {
-	var returns *ManagedDatabaseOpensearchPropertiesAzureMigration
-	_jsii_.Get(
-		j,
-		"azureMigrationInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterMaxShardsPerNode() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -447,6 +439,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterMa
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterRoutingAllocationBalancePreferPrimary() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clusterRoutingAllocationBalancePreferPrimary",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterRoutingAllocationBalancePreferPrimaryInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clusterRoutingAllocationBalancePreferPrimaryInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterRoutingAllocationNodeConcurrentRecoveries() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -462,6 +474,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterRo
 	_jsii_.Get(
 		j,
 		"clusterRoutingAllocationNodeConcurrentRecoveriesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterSearchRequestSlowlog() ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogOutputReference
+	_jsii_.Get(
+		j,
+		"clusterSearchRequestSlowlog",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterSearchRequestSlowlogInput() *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog {
+	var returns *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog
+	_jsii_.Get(
+		j,
+		"clusterSearchRequestSlowlogInput",
 		&returns,
 	)
 	return returns
@@ -512,6 +544,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) CustomDom
 	_jsii_.Get(
 		j,
 		"customDomainInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ElasticsearchVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"elasticsearchVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ElasticsearchVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"elasticsearchVersionInput",
 		&returns,
 	)
 	return returns
@@ -577,6 +629,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EmailSend
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableRemoteBackedStorage() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableRemoteBackedStorage",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableRemoteBackedStorageInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableRemoteBackedStorageInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableSecurityAudit() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -602,26 +674,6 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Fqn() *st
 	_jsii_.Get(
 		j,
 		"fqn",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) GcsMigration() ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference {
-	var returns ManagedDatabaseOpensearchPropertiesGcsMigrationOutputReference
-	_jsii_.Get(
-		j,
-		"gcsMigration",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) GcsMigrationInput() *ManagedDatabaseOpensearchPropertiesGcsMigration {
-	var returns *ManagedDatabaseOpensearchPropertiesGcsMigration
-	_jsii_.Get(
-		j,
-		"gcsMigrationInput",
 		&returns,
 	)
 	return returns
@@ -1237,26 +1289,6 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ReindexRe
 	return returns
 }
 
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) S3Migration() ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference {
-	var returns ManagedDatabaseOpensearchPropertiesS3MigrationOutputReference
-	_jsii_.Get(
-		j,
-		"s3Migration",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) S3MigrationInput() *ManagedDatabaseOpensearchPropertiesS3Migration {
-	var returns *ManagedDatabaseOpensearchPropertiesS3Migration
-	_jsii_.Get(
-		j,
-		"s3MigrationInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Saml() ManagedDatabaseOpensearchPropertiesSamlOutputReference {
 	var returns ManagedDatabaseOpensearchPropertiesSamlOutputReference
 	_jsii_.Get(
@@ -1317,6 +1349,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchBac
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchInsightsTopQueries() ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOutputReference
+	_jsii_.Get(
+		j,
+		"searchInsightsTopQueries",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchInsightsTopQueriesInput() *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries {
+	var returns *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries
+	_jsii_.Get(
+		j,
+		"searchInsightsTopQueriesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchMaxBuckets() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -1332,6 +1384,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SearchMax
 	_jsii_.Get(
 		j,
 		"searchMaxBucketsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Segrep() ManagedDatabaseOpensearchPropertiesSegrepOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesSegrepOutputReference
+	_jsii_.Get(
+		j,
+		"segrep",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) SegrepInput() *ManagedDatabaseOpensearchPropertiesSegrep {
+	var returns *ManagedDatabaseOpensearchPropertiesSegrep
+	_jsii_.Get(
+		j,
+		"segrepInput",
 		&returns,
 	)
 	return returns
@@ -1709,6 +1781,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetCluster
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetClusterRoutingAllocationBalancePreferPrimary(val interface{}) {
+	if err := j.validateSetClusterRoutingAllocationBalancePreferPrimaryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clusterRoutingAllocationBalancePreferPrimary",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetClusterRoutingAllocationNodeConcurrentRecoveries(val *float64) {
 	if err := j.validateSetClusterRoutingAllocationNodeConcurrentRecoveriesParameters(val); err != nil {
 		panic(err)
@@ -1753,6 +1836,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetCustomD
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetElasticsearchVersion(val *string) {
+	if err := j.validateSetElasticsearchVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"elasticsearchVersion",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEmailSenderName(val *string) {
 	if err := j.validateSetEmailSenderNameParameters(val); err != nil {
 		panic(err)
@@ -1782,6 +1876,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEmailSe
 	_jsii_.Set(
 		j,
 		"emailSenderUsername",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEnableRemoteBackedStorage(val interface{}) {
+	if err := j.validateSetEnableRemoteBackedStorageParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableRemoteBackedStorage",
 		val,
 	)
 }
@@ -2478,24 +2583,13 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutAuthFa
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutAzureMigration(value *ManagedDatabaseOpensearchPropertiesAzureMigration) {
-	if err := m.validatePutAzureMigrationParameters(value); err != nil {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutClusterSearchRequestSlowlog(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog) {
+	if err := m.validatePutClusterSearchRequestSlowlogParameters(value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
 		m,
-		"putAzureMigration",
-		[]interface{}{value},
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutGcsMigration(value *ManagedDatabaseOpensearchPropertiesGcsMigration) {
-	if err := m.validatePutGcsMigrationParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"putGcsMigration",
+		"putClusterSearchRequestSlowlog",
 		[]interface{}{value},
 	)
 }
@@ -2544,17 +2638,6 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutOpense
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutS3Migration(value *ManagedDatabaseOpensearchPropertiesS3Migration) {
-	if err := m.validatePutS3MigrationParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"putS3Migration",
-		[]interface{}{value},
-	)
-}
-
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutSaml(value *ManagedDatabaseOpensearchPropertiesSaml) {
 	if err := m.validatePutSamlParameters(value); err != nil {
 		panic(err)
@@ -2573,6 +2656,28 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutSearch
 	_jsii_.InvokeVoid(
 		m,
 		"putSearchBackpressure",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutSearchInsightsTopQueries(value *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries) {
+	if err := m.validatePutSearchInsightsTopQueriesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putSearchInsightsTopQueries",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutSegrep(value *ManagedDatabaseOpensearchPropertiesSegrep) {
+	if err := m.validatePutSegrepParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putSegrep",
 		[]interface{}{value},
 	)
 }
@@ -2620,18 +2725,18 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetAuto
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetAzureMigration() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetAzureMigration",
-		nil, // no parameters
-	)
-}
-
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetClusterMaxShardsPerNode() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetClusterMaxShardsPerNode",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetClusterRoutingAllocationBalancePreferPrimary() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetClusterRoutingAllocationBalancePreferPrimary",
 		nil, // no parameters
 	)
 }
@@ -2644,10 +2749,26 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetClus
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetClusterSearchRequestSlowlog() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetClusterSearchRequestSlowlog",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetCustomDomain() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetCustomDomain",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetElasticsearchVersion() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetElasticsearchVersion",
 		nil, // no parameters
 	)
 }
@@ -2676,18 +2797,18 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEmai
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEnableSecurityAudit() {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEnableRemoteBackedStorage() {
 	_jsii_.InvokeVoid(
 		m,
-		"resetEnableSecurityAudit",
+		"resetEnableRemoteBackedStorage",
 		nil, // no parameters
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetGcsMigration() {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEnableSecurityAudit() {
 	_jsii_.InvokeVoid(
 		m,
-		"resetGcsMigration",
+		"resetEnableSecurityAudit",
 		nil, // no parameters
 	)
 }
@@ -2932,14 +3053,6 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetRein
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetS3Migration() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetS3Migration",
-		nil, // no parameters
-	)
-}
-
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetSaml() {
 	_jsii_.InvokeVoid(
 		m,
@@ -2964,10 +3077,26 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetSear
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetSearchInsightsTopQueries() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSearchInsightsTopQueries",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetSearchMaxBuckets() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetSearchMaxBuckets",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetSegrep() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSegrep",
 		nil, // no parameters
 	)
 }

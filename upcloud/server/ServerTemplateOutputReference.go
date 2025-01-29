@@ -19,8 +19,8 @@ type ServerTemplateOutputReference interface {
 	AddressPosition() *string
 	SetAddressPosition(val *string)
 	AddressPositionInput() *string
-	BackupRule() ServerTemplateBackupRuleOutputReference
-	BackupRuleInput() *ServerTemplateBackupRule
+	BackupRule() ServerTemplateBackupRuleList
+	BackupRuleInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -48,8 +48,8 @@ type ServerTemplateOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	Id() *string
-	InternalValue() *ServerTemplate
-	SetInternalValue(val *ServerTemplate)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Size() *float64
 	SetSize(val *float64)
 	SizeInput() *float64
@@ -65,6 +65,8 @@ type ServerTemplateOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Tier() *string
+	SetTier(val *string)
+	TierInput() *string
 	Title() *string
 	SetTitle(val *string)
 	TitleInput() *string
@@ -92,7 +94,7 @@ type ServerTemplateOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	PutBackupRule(value *ServerTemplateBackupRule)
+	PutBackupRule(value interface{})
 	ResetAddress()
 	ResetAddressPosition()
 	ResetBackupRule()
@@ -100,6 +102,8 @@ type ServerTemplateOutputReference interface {
 	ResetEncrypt()
 	ResetFilesystemAutoresize()
 	ResetSize()
+	ResetStorage()
+	ResetTier()
 	ResetTitle()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -156,8 +160,8 @@ func (j *jsiiProxy_ServerTemplateOutputReference) AddressPositionInput() *string
 	return returns
 }
 
-func (j *jsiiProxy_ServerTemplateOutputReference) BackupRule() ServerTemplateBackupRuleOutputReference {
-	var returns ServerTemplateBackupRuleOutputReference
+func (j *jsiiProxy_ServerTemplateOutputReference) BackupRule() ServerTemplateBackupRuleList {
+	var returns ServerTemplateBackupRuleList
 	_jsii_.Get(
 		j,
 		"backupRule",
@@ -166,8 +170,8 @@ func (j *jsiiProxy_ServerTemplateOutputReference) BackupRule() ServerTemplateBac
 	return returns
 }
 
-func (j *jsiiProxy_ServerTemplateOutputReference) BackupRuleInput() *ServerTemplateBackupRule {
-	var returns *ServerTemplateBackupRule
+func (j *jsiiProxy_ServerTemplateOutputReference) BackupRuleInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"backupRuleInput",
@@ -286,8 +290,8 @@ func (j *jsiiProxy_ServerTemplateOutputReference) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ServerTemplateOutputReference) InternalValue() *ServerTemplate {
-	var returns *ServerTemplate
+func (j *jsiiProxy_ServerTemplateOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -366,6 +370,16 @@ func (j *jsiiProxy_ServerTemplateOutputReference) Tier() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ServerTemplateOutputReference) TierInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tierInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ServerTemplateOutputReference) Title() *string {
 	var returns *string
 	_jsii_.Get(
@@ -387,29 +401,29 @@ func (j *jsiiProxy_ServerTemplateOutputReference) TitleInput() *string {
 }
 
 
-func NewServerTemplateOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ServerTemplateOutputReference {
+func NewServerTemplateOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ServerTemplateOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewServerTemplateOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewServerTemplateOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_ServerTemplateOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerTemplateOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewServerTemplateOutputReference_Override(s ServerTemplateOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewServerTemplateOutputReference_Override(s ServerTemplateOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerTemplateOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -491,7 +505,7 @@ func (j *jsiiProxy_ServerTemplateOutputReference)SetFilesystemAutoresize(val int
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateOutputReference)SetInternalValue(val *ServerTemplate) {
+func (j *jsiiProxy_ServerTemplateOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -542,6 +556,17 @@ func (j *jsiiProxy_ServerTemplateOutputReference)SetTerraformResource(val cdktf.
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServerTemplateOutputReference)SetTier(val *string) {
+	if err := j.validateSetTierParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tier",
 		val,
 	)
 }
@@ -743,7 +768,7 @@ func (s *jsiiProxy_ServerTemplateOutputReference) InterpolationForAttribute(prop
 	return returns
 }
 
-func (s *jsiiProxy_ServerTemplateOutputReference) PutBackupRule(value *ServerTemplateBackupRule) {
+func (s *jsiiProxy_ServerTemplateOutputReference) PutBackupRule(value interface{}) {
 	if err := s.validatePutBackupRuleParameters(value); err != nil {
 		panic(err)
 	}
@@ -806,6 +831,22 @@ func (s *jsiiProxy_ServerTemplateOutputReference) ResetSize() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetSize",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerTemplateOutputReference) ResetStorage() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorage",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerTemplateOutputReference) ResetTier() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTier",
 		nil, // no parameters
 	)
 }

@@ -30,8 +30,8 @@ type ServerSimpleBackupOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ServerSimpleBackup
-	SetInternalValue(val *ServerSimpleBackup)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Plan() *string
 	SetPlan(val *string)
 	PlanInput() *string
@@ -70,6 +70,8 @@ type ServerSimpleBackupOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPlan()
+	ResetTime()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -125,8 +127,8 @@ func (j *jsiiProxy_ServerSimpleBackupOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ServerSimpleBackupOutputReference) InternalValue() *ServerSimpleBackup {
-	var returns *ServerSimpleBackup
+func (j *jsiiProxy_ServerSimpleBackupOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -196,29 +198,29 @@ func (j *jsiiProxy_ServerSimpleBackupOutputReference) TimeInput() *string {
 }
 
 
-func NewServerSimpleBackupOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ServerSimpleBackupOutputReference {
+func NewServerSimpleBackupOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ServerSimpleBackupOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewServerSimpleBackupOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewServerSimpleBackupOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_ServerSimpleBackupOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerSimpleBackupOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewServerSimpleBackupOutputReference_Override(s ServerSimpleBackupOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewServerSimpleBackupOutputReference_Override(s ServerSimpleBackupOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerSimpleBackupOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -245,7 +247,7 @@ func (j *jsiiProxy_ServerSimpleBackupOutputReference)SetComplexObjectIsFromSet(v
 	)
 }
 
-func (j *jsiiProxy_ServerSimpleBackupOutputReference)SetInternalValue(val *ServerSimpleBackup) {
+func (j *jsiiProxy_ServerSimpleBackupOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -484,6 +486,22 @@ func (s *jsiiProxy_ServerSimpleBackupOutputReference) InterpolationForAttribute(
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_ServerSimpleBackupOutputReference) ResetPlan() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetPlan",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerSimpleBackupOutputReference) ResetTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTime",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_ServerSimpleBackupOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

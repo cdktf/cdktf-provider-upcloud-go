@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/server upcloud_server}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/resources/server upcloud_server}.
 type Server interface {
 	cdktf.TerraformResource
 	BootOrder() *string
@@ -55,8 +55,6 @@ type Server interface {
 	SetHostname(val *string)
 	HostnameInput() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Labels() *map[string]*string
 	SetLabels(val *map[string]*string)
 	LabelsInput() *map[string]*string
@@ -64,8 +62,8 @@ type Server interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	Login() ServerLoginOutputReference
-	LoginInput() *ServerLogin
+	Login() ServerLoginList
+	LoginInput() interface{}
 	Mem() *float64
 	SetMem(val *float64)
 	MemInput() *float64
@@ -95,15 +93,15 @@ type Server interface {
 	ServerGroup() *string
 	SetServerGroup(val *string)
 	ServerGroupInput() *string
-	SimpleBackup() ServerSimpleBackupOutputReference
-	SimpleBackupInput() *ServerSimpleBackup
+	SimpleBackup() ServerSimpleBackupList
+	SimpleBackupInput() interface{}
 	StorageDevices() ServerStorageDevicesList
 	StorageDevicesInput() interface{}
 	Tags() *[]*string
 	SetTags(val *[]*string)
 	TagsInput() *[]*string
-	Template() ServerTemplateOutputReference
-	TemplateInput() *ServerTemplate
+	Template() ServerTemplateList
+	TemplateInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -168,20 +166,20 @@ type Server interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutLogin(value *ServerLogin)
+	PutLogin(value interface{})
 	PutNetworkInterface(value interface{})
-	PutSimpleBackup(value *ServerSimpleBackup)
+	PutSimpleBackup(value interface{})
 	PutStorageDevices(value interface{})
-	PutTemplate(value *ServerTemplate)
+	PutTemplate(value interface{})
 	ResetBootOrder()
 	ResetCpu()
 	ResetFirewall()
 	ResetHost()
-	ResetId()
 	ResetLabels()
 	ResetLogin()
 	ResetMem()
 	ResetMetadata()
+	ResetNetworkInterface()
 	ResetNicModel()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -404,16 +402,6 @@ func (j *jsiiProxy_Server) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Server) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Server) Labels() *map[string]*string {
 	var returns *map[string]*string
 	_jsii_.Get(
@@ -444,8 +432,8 @@ func (j *jsiiProxy_Server) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
-func (j *jsiiProxy_Server) Login() ServerLoginOutputReference {
-	var returns ServerLoginOutputReference
+func (j *jsiiProxy_Server) Login() ServerLoginList {
+	var returns ServerLoginList
 	_jsii_.Get(
 		j,
 		"login",
@@ -454,8 +442,8 @@ func (j *jsiiProxy_Server) Login() ServerLoginOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_Server) LoginInput() *ServerLogin {
-	var returns *ServerLogin
+func (j *jsiiProxy_Server) LoginInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"loginInput",
@@ -624,8 +612,8 @@ func (j *jsiiProxy_Server) ServerGroupInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Server) SimpleBackup() ServerSimpleBackupOutputReference {
-	var returns ServerSimpleBackupOutputReference
+func (j *jsiiProxy_Server) SimpleBackup() ServerSimpleBackupList {
+	var returns ServerSimpleBackupList
 	_jsii_.Get(
 		j,
 		"simpleBackup",
@@ -634,8 +622,8 @@ func (j *jsiiProxy_Server) SimpleBackup() ServerSimpleBackupOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_Server) SimpleBackupInput() *ServerSimpleBackup {
-	var returns *ServerSimpleBackup
+func (j *jsiiProxy_Server) SimpleBackupInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"simpleBackupInput",
@@ -684,8 +672,8 @@ func (j *jsiiProxy_Server) TagsInput() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Server) Template() ServerTemplateOutputReference {
-	var returns ServerTemplateOutputReference
+func (j *jsiiProxy_Server) Template() ServerTemplateList {
+	var returns ServerTemplateList
 	_jsii_.Get(
 		j,
 		"template",
@@ -694,8 +682,8 @@ func (j *jsiiProxy_Server) Template() ServerTemplateOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_Server) TemplateInput() *ServerTemplate {
-	var returns *ServerTemplate
+func (j *jsiiProxy_Server) TemplateInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"templateInput",
@@ -835,7 +823,7 @@ func (j *jsiiProxy_Server) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/resources/server upcloud_server} Resource.
 func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Server {
 	_init_.Initialize()
 
@@ -853,7 +841,7 @@ func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Ser
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.16.0/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/resources/server upcloud_server} Resource.
 func NewServer_Override(s Server, scope constructs.Construct, id *string, config *ServerConfig) {
 	_init_.Initialize()
 
@@ -953,17 +941,6 @@ func (j *jsiiProxy_Server)SetHostname(val *string) {
 	_jsii_.Set(
 		j,
 		"hostname",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Server)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1483,7 +1460,7 @@ func (s *jsiiProxy_Server) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (s *jsiiProxy_Server) PutLogin(value *ServerLogin) {
+func (s *jsiiProxy_Server) PutLogin(value interface{}) {
 	if err := s.validatePutLoginParameters(value); err != nil {
 		panic(err)
 	}
@@ -1505,7 +1482,7 @@ func (s *jsiiProxy_Server) PutNetworkInterface(value interface{}) {
 	)
 }
 
-func (s *jsiiProxy_Server) PutSimpleBackup(value *ServerSimpleBackup) {
+func (s *jsiiProxy_Server) PutSimpleBackup(value interface{}) {
 	if err := s.validatePutSimpleBackupParameters(value); err != nil {
 		panic(err)
 	}
@@ -1527,7 +1504,7 @@ func (s *jsiiProxy_Server) PutStorageDevices(value interface{}) {
 	)
 }
 
-func (s *jsiiProxy_Server) PutTemplate(value *ServerTemplate) {
+func (s *jsiiProxy_Server) PutTemplate(value interface{}) {
 	if err := s.validatePutTemplateParameters(value); err != nil {
 		panic(err)
 	}
@@ -1570,14 +1547,6 @@ func (s *jsiiProxy_Server) ResetHost() {
 	)
 }
 
-func (s *jsiiProxy_Server) ResetId() {
-	_jsii_.InvokeVoid(
-		s,
-		"resetId",
-		nil, // no parameters
-	)
-}
-
 func (s *jsiiProxy_Server) ResetLabels() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1606,6 +1575,14 @@ func (s *jsiiProxy_Server) ResetMetadata() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetMetadata",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Server) ResetNetworkInterface() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetNetworkInterface",
 		nil, // no parameters
 	)
 }

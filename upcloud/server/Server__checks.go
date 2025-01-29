@@ -207,12 +207,32 @@ func (s *jsiiProxy_Server) validateOverrideLogicalIdParameters(newLogicalId *str
 	return nil
 }
 
-func (s *jsiiProxy_Server) validatePutLoginParameters(value *ServerLogin) error {
+func (s *jsiiProxy_Server) validatePutLoginParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*ServerLogin:
+		value := value.(*[]*ServerLogin)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*ServerLogin:
+		value_ := value.([]*ServerLogin)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*ServerLogin; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -249,12 +269,32 @@ func (s *jsiiProxy_Server) validatePutNetworkInterfaceParameters(value interface
 	return nil
 }
 
-func (s *jsiiProxy_Server) validatePutSimpleBackupParameters(value *ServerSimpleBackup) error {
+func (s *jsiiProxy_Server) validatePutSimpleBackupParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*ServerSimpleBackup:
+		value := value.(*[]*ServerSimpleBackup)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*ServerSimpleBackup:
+		value_ := value.([]*ServerSimpleBackup)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*ServerSimpleBackup; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -291,12 +331,32 @@ func (s *jsiiProxy_Server) validatePutStorageDevicesParameters(value interface{}
 	return nil
 }
 
-func (s *jsiiProxy_Server) validatePutTemplateParameters(value *ServerTemplate) error {
+func (s *jsiiProxy_Server) validatePutTemplateParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*ServerTemplate:
+		value := value.(*[]*ServerTemplate)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*ServerTemplate:
+		value_ := value.([]*ServerTemplate)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*ServerTemplate; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -477,14 +537,6 @@ func (j *jsiiProxy_Server) validateSetHostParameters(val *float64) error {
 }
 
 func (j *jsiiProxy_Server) validateSetHostnameParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_Server) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

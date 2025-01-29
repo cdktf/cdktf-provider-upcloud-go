@@ -104,18 +104,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutAzureMigrationParameters(value *ManagedDatabaseOpensearchPropertiesAzureMigration) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutGcsMigrationParameters(value *ManagedDatabaseOpensearchPropertiesGcsMigration) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutClusterSearchRequestSlowlogParameters(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -170,17 +159,6 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutS3MigrationParameters(value *ManagedDatabaseOpensearchPropertiesS3Migration) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
-	}
-
-	return nil
-}
-
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSamlParameters(value *ManagedDatabaseOpensearchPropertiesSaml) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -193,6 +171,28 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 }
 
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSearchBackpressureParameters(value *ManagedDatabaseOpensearchPropertiesSearchBackpressure) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSearchInsightsTopQueriesParameters(value *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSegrepParameters(value *ManagedDatabaseOpensearchPropertiesSegrep) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -290,6 +290,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetClusterRoutingAllocationBalancePreferPrimaryParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetClusterRoutingAllocationNodeConcurrentRecoveriesParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -371,6 +391,14 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetElasticsearchVersionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEmailSenderNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -390,6 +418,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEmailSenderUsernameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEnableRemoteBackedStorageParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -30,8 +30,8 @@ type ServerTemplateBackupRuleOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ServerTemplateBackupRule
-	SetInternalValue(val *ServerTemplateBackupRule)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Interval() *string
 	SetInterval(val *string)
 	IntervalInput() *string
@@ -128,8 +128,8 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) InternalValue() *ServerTemplateBackupRule {
-	var returns *ServerTemplateBackupRule
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,29 +219,29 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) TimeInput() *string 
 }
 
 
-func NewServerTemplateBackupRuleOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ServerTemplateBackupRuleOutputReference {
+func NewServerTemplateBackupRuleOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ServerTemplateBackupRuleOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewServerTemplateBackupRuleOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewServerTemplateBackupRuleOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_ServerTemplateBackupRuleOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerTemplateBackupRuleOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewServerTemplateBackupRuleOutputReference_Override(s ServerTemplateBackupRuleOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewServerTemplateBackupRuleOutputReference_Override(s ServerTemplateBackupRuleOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerTemplateBackupRuleOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -268,7 +268,7 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetComplexObjectIsFro
 	)
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetInternalValue(val *ServerTemplateBackupRule) {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -75,7 +75,7 @@ func (s *jsiiProxy_Server) validateOverrideLogicalIdParameters(newLogicalId *str
 	return nil
 }
 
-func (s *jsiiProxy_Server) validatePutLoginParameters(value *ServerLogin) error {
+func (s *jsiiProxy_Server) validatePutLoginParameters(value interface{}) error {
 	return nil
 }
 
@@ -83,7 +83,7 @@ func (s *jsiiProxy_Server) validatePutNetworkInterfaceParameters(value interface
 	return nil
 }
 
-func (s *jsiiProxy_Server) validatePutSimpleBackupParameters(value *ServerSimpleBackup) error {
+func (s *jsiiProxy_Server) validatePutSimpleBackupParameters(value interface{}) error {
 	return nil
 }
 
@@ -91,7 +91,7 @@ func (s *jsiiProxy_Server) validatePutStorageDevicesParameters(value interface{}
 	return nil
 }
 
-func (s *jsiiProxy_Server) validatePutTemplateParameters(value *ServerTemplate) error {
+func (s *jsiiProxy_Server) validatePutTemplateParameters(value interface{}) error {
 	return nil
 }
 
@@ -136,10 +136,6 @@ func (j *jsiiProxy_Server) validateSetHostParameters(val *float64) error {
 }
 
 func (j *jsiiProxy_Server) validateSetHostnameParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_Server) validateSetIdParameters(val *string) error {
 	return nil
 }
 

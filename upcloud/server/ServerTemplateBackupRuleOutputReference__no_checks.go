@@ -59,7 +59,7 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) validateSetComplexOb
 	return nil
 }
 
-func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) validateSetInternalValueParameters(val *ServerTemplateBackupRule) error {
+func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -83,7 +83,7 @@ func (j *jsiiProxy_ServerTemplateBackupRuleOutputReference) validateSetTimeParam
 	return nil
 }
 
-func validateNewServerTemplateBackupRuleOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewServerTemplateBackupRuleOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

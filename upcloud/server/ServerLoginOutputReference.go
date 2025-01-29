@@ -33,8 +33,8 @@ type ServerLoginOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ServerLogin
-	SetInternalValue(val *ServerLogin)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Keys() *[]*string
 	SetKeys(val *[]*string)
 	KeysInput() *[]*string
@@ -155,8 +155,8 @@ func (j *jsiiProxy_ServerLoginOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ServerLoginOutputReference) InternalValue() *ServerLogin {
-	var returns *ServerLogin
+func (j *jsiiProxy_ServerLoginOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -246,29 +246,29 @@ func (j *jsiiProxy_ServerLoginOutputReference) UserInput() *string {
 }
 
 
-func NewServerLoginOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ServerLoginOutputReference {
+func NewServerLoginOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ServerLoginOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewServerLoginOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewServerLoginOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_ServerLoginOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerLoginOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewServerLoginOutputReference_Override(s ServerLoginOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewServerLoginOutputReference_Override(s ServerLoginOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-upcloud.server.ServerLoginOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -306,7 +306,7 @@ func (j *jsiiProxy_ServerLoginOutputReference)SetCreatePassword(val interface{})
 	)
 }
 
-func (j *jsiiProxy_ServerLoginOutputReference)SetInternalValue(val *ServerLogin) {
+func (j *jsiiProxy_ServerLoginOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

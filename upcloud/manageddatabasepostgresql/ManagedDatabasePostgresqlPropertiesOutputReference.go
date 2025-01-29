@@ -160,6 +160,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	MaxWorkerProcessesInput() *float64
 	Migration() ManagedDatabasePostgresqlPropertiesMigrationOutputReference
 	MigrationInput() *ManagedDatabasePostgresqlPropertiesMigration
+	PasswordEncryption() *string
+	SetPasswordEncryption(val *string)
+	PasswordEncryptionInput() *string
 	Pgbouncer() ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference
 	PgbouncerInput() *ManagedDatabasePostgresqlPropertiesPgbouncer
 	Pglookout() ManagedDatabasePostgresqlPropertiesPglookoutOutputReference
@@ -308,6 +311,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetMaxWalSenders()
 	ResetMaxWorkerProcesses()
 	ResetMigration()
+	ResetPasswordEncryption()
 	ResetPgbouncer()
 	ResetPglookout()
 	ResetPgPartmanBgwInterval()
@@ -1252,6 +1256,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Migration
 	_jsii_.Get(
 		j,
 		"migrationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PasswordEncryption() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"passwordEncryption",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PasswordEncryptionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"passwordEncryptionInput",
 		&returns,
 	)
 	return returns
@@ -2280,6 +2304,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxWork
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPasswordEncryption(val *string) {
+	if err := j.validateSetPasswordEncryptionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"passwordEncryption",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetPgPartmanBgwInterval(val *float64) {
 	if err := j.validateSetPgPartmanBgwIntervalParameters(val); err != nil {
 		panic(err)
@@ -3103,6 +3138,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMigr
 	_jsii_.InvokeVoid(
 		m,
 		"resetMigration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPasswordEncryption() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPasswordEncryption",
 		nil, // no parameters
 	)
 }

@@ -51,11 +51,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutAzureMigrationParameters(value *ManagedDatabaseOpensearchPropertiesAzureMigration) error {
-	return nil
-}
-
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutGcsMigrationParameters(value *ManagedDatabaseOpensearchPropertiesGcsMigration) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutClusterSearchRequestSlowlogParameters(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog) error {
 	return nil
 }
 
@@ -75,15 +71,19 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutS3MigrationParameters(value *ManagedDatabaseOpensearchPropertiesS3Migration) error {
-	return nil
-}
-
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSamlParameters(value *ManagedDatabaseOpensearchPropertiesSaml) error {
 	return nil
 }
 
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSearchBackpressureParameters(value *ManagedDatabaseOpensearchPropertiesSearchBackpressure) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSearchInsightsTopQueriesParameters(value *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutSegrepParameters(value *ManagedDatabaseOpensearchPropertiesSegrep) error {
 	return nil
 }
 
@@ -111,6 +111,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetClusterRoutingAllocationBalancePreferPrimaryParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetClusterRoutingAllocationNodeConcurrentRecoveriesParameters(val *float64) error {
 	return nil
 }
@@ -127,6 +131,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetElasticsearchVersionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEmailSenderNameParameters(val *string) error {
 	return nil
 }
@@ -136,6 +144,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEmailSenderUsernameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEnableRemoteBackedStorageParameters(val interface{}) error {
 	return nil
 }
 

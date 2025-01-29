@@ -78,6 +78,7 @@ type ServerStorageDevicesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAddress()
 	ResetAddressPosition()
+	ResetStorage()
 	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -569,6 +570,14 @@ func (s *jsiiProxy_ServerStorageDevicesOutputReference) ResetAddressPosition() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetAddressPosition",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServerStorageDevicesOutputReference) ResetStorage() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorage",
 		nil, // no parameters
 	)
 }

@@ -59,7 +59,7 @@ func (j *jsiiProxy_ServerSimpleBackupOutputReference) validateSetComplexObjectIs
 	return nil
 }
 
-func (j *jsiiProxy_ServerSimpleBackupOutputReference) validateSetInternalValueParameters(val *ServerSimpleBackup) error {
+func (j *jsiiProxy_ServerSimpleBackupOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -79,7 +79,7 @@ func (j *jsiiProxy_ServerSimpleBackupOutputReference) validateSetTimeParameters(
 	return nil
 }
 
-func validateNewServerSimpleBackupOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewServerSimpleBackupOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 

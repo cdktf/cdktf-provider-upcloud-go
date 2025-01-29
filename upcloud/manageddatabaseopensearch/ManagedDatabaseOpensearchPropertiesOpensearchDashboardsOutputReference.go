@@ -38,6 +38,9 @@ type ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference inte
 	MaxOldSpaceSize() *float64
 	SetMaxOldSpaceSize(val *float64)
 	MaxOldSpaceSizeInput() *float64
+	MultipleDataSourceEnabled() interface{}
+	SetMultipleDataSourceEnabled(val interface{})
+	MultipleDataSourceEnabledInput() interface{}
 	OpensearchRequestTimeout() *float64
 	SetOpensearchRequestTimeout(val *float64)
 	OpensearchRequestTimeoutInput() *float64
@@ -75,6 +78,7 @@ type ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference inte
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetEnabled()
 	ResetMaxOldSpaceSize()
+	ResetMultipleDataSourceEnabled()
 	ResetOpensearchRequestTimeout()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -176,6 +180,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutput
 	_jsii_.Get(
 		j,
 		"maxOldSpaceSizeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference) MultipleDataSourceEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"multipleDataSourceEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference) MultipleDataSourceEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"multipleDataSourceEnabledInput",
 		&returns,
 	)
 	return returns
@@ -300,6 +324,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutput
 	_jsii_.Set(
 		j,
 		"maxOldSpaceSize",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference)SetMultipleDataSourceEnabled(val interface{}) {
+	if err := j.validateSetMultipleDataSourceEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"multipleDataSourceEnabled",
 		val,
 	)
 }
@@ -535,6 +570,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutput
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaxOldSpaceSize",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference) ResetMultipleDataSourceEnabled() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMultipleDataSourceEnabled",
 		nil, // no parameters
 	)
 }
