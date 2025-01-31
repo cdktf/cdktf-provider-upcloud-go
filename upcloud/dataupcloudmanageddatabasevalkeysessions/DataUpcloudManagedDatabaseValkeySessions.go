@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/data-sources/managed_database_valkey_sessions upcloud_managed_database_valkey_sessions}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.18.0/docs/data-sources/managed_database_valkey_sessions upcloud_managed_database_valkey_sessions}.
 type DataUpcloudManagedDatabaseValkeySessions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -384,7 +384,7 @@ func (j *jsiiProxy_DataUpcloudManagedDatabaseValkeySessions) TerraformResourceTy
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/data-sources/managed_database_valkey_sessions upcloud_managed_database_valkey_sessions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.18.0/docs/data-sources/managed_database_valkey_sessions upcloud_managed_database_valkey_sessions} Data Source.
 func NewDataUpcloudManagedDatabaseValkeySessions(scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseValkeySessionsConfig) DataUpcloudManagedDatabaseValkeySessions {
 	_init_.Initialize()
 
@@ -402,7 +402,7 @@ func NewDataUpcloudManagedDatabaseValkeySessions(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.17.0/docs/data-sources/managed_database_valkey_sessions upcloud_managed_database_valkey_sessions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.18.0/docs/data-sources/managed_database_valkey_sessions upcloud_managed_database_valkey_sessions} Data Source.
 func NewDataUpcloudManagedDatabaseValkeySessions_Override(d DataUpcloudManagedDatabaseValkeySessions, scope constructs.Construct, id *string, config *DataUpcloudManagedDatabaseValkeySessionsConfig) {
 	_init_.Initialize()
 
