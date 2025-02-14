@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.18.0/docs/resources/server_group upcloud_server_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.19.0/docs/resources/server_group upcloud_server_group}.
 type ServerGroup interface {
 	cdktf.TerraformResource
 	AntiAffinityPolicy() *string
@@ -416,7 +416,7 @@ func (j *jsiiProxy_ServerGroup) TrackMembersInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.18.0/docs/resources/server_group upcloud_server_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.19.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupConfig) ServerGroup {
 	_init_.Initialize()
 
@@ -434,7 +434,7 @@ func NewServerGroup(scope constructs.Construct, id *string, config *ServerGroupC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.18.0/docs/resources/server_group upcloud_server_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.19.0/docs/resources/server_group upcloud_server_group} Resource.
 func NewServerGroup_Override(s ServerGroup, scope constructs.Construct, id *string, config *ServerGroupConfig) {
 	_init_.Initialize()
 

@@ -71,6 +71,10 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) v
 	return nil
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) validateSetStatusParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

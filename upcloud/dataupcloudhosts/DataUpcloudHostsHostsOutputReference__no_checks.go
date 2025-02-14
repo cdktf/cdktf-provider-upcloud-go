@@ -47,6 +47,10 @@ func (d *jsiiProxy_DataUpcloudHostsHostsOutputReference) validateInterpolationFo
 	return nil
 }
 
+func (d *jsiiProxy_DataUpcloudHostsHostsOutputReference) validatePutStatisticsParameters(value interface{}) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataUpcloudHostsHostsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

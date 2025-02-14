@@ -34,6 +34,8 @@ type DataUpcloudHostsHostsOutputReference interface {
 	HostId() *float64
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Statistics() DataUpcloudHostsHostsStatisticsList
+	StatisticsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -42,6 +44,7 @@ type DataUpcloudHostsHostsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	WindowsEnabled() cdktf.IResolvable
 	Zone() *string
 	// Experimental.
 	ComputeFqn() *string
@@ -67,6 +70,8 @@ type DataUpcloudHostsHostsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutStatistics(value interface{})
+	ResetStatistics()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -152,6 +157,26 @@ func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) InternalValue() interfa
 	return returns
 }
 
+func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) Statistics() DataUpcloudHostsHostsStatisticsList {
+	var returns DataUpcloudHostsHostsStatisticsList
+	_jsii_.Get(
+		j,
+		"statistics",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) StatisticsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"statisticsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -167,6 +192,16 @@ func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) TerraformResource() cdk
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataUpcloudHostsHostsOutputReference) WindowsEnabled() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"windowsEnabled",
 		&returns,
 	)
 	return returns
@@ -449,6 +484,25 @@ func (d *jsiiProxy_DataUpcloudHostsHostsOutputReference) InterpolationForAttribu
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DataUpcloudHostsHostsOutputReference) PutStatistics(value interface{}) {
+	if err := d.validatePutStatisticsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putStatistics",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DataUpcloudHostsHostsOutputReference) ResetStatistics() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStatistics",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DataUpcloudHostsHostsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

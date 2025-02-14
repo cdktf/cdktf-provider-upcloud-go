@@ -38,6 +38,9 @@ type LoadbalancerFrontendRuleActionsHttpRedirectOutputReference interface {
 	Scheme() *string
 	SetScheme(val *string)
 	SchemeInput() *string
+	Status() *float64
+	SetStatus(val *float64)
+	StatusInput() *float64
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -72,6 +75,7 @@ type LoadbalancerFrontendRuleActionsHttpRedirectOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetLocation()
 	ResetScheme()
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -177,6 +181,26 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) S
 	return returns
 }
 
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) Status() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) StatusInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"statusInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -276,6 +300,17 @@ func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference)Se
 	_jsii_.Set(
 		j,
 		"scheme",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference)SetStatus(val *float64) {
+	if err := j.validateSetStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"status",
 		val,
 	)
 }
@@ -500,6 +535,14 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) R
 	_jsii_.InvokeVoid(
 		l,
 		"resetScheme",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetStatus",
 		nil, // no parameters
 	)
 }
