@@ -369,60 +369,6 @@ func init() {
 			return &j
 		},
 	)
-	_jsii_.RegisterStruct(
-		"@cdktf/provider-upcloud.managedDatabaseOpensearch.ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting",
-		reflect.TypeOf((*ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting)(nil)).Elem(),
-	)
-	_jsii_.RegisterClass(
-		"@cdktf/provider-upcloud.managedDatabaseOpensearch.ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimitingOutputReference",
-		reflect.TypeOf((*ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimitingOutputReference)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "allowedTries", GoGetter: "AllowedTries"},
-			_jsii_.MemberProperty{JsiiProperty: "allowedTriesInput", GoGetter: "AllowedTriesInput"},
-			_jsii_.MemberProperty{JsiiProperty: "blockExpirySeconds", GoGetter: "BlockExpirySeconds"},
-			_jsii_.MemberProperty{JsiiProperty: "blockExpirySecondsInput", GoGetter: "BlockExpirySecondsInput"},
-			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
-			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
-			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
-			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
-			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
-			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
-			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
-			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
-			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
-			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
-			_jsii_.MemberProperty{JsiiProperty: "maxBlockedClients", GoGetter: "MaxBlockedClients"},
-			_jsii_.MemberProperty{JsiiProperty: "maxBlockedClientsInput", GoGetter: "MaxBlockedClientsInput"},
-			_jsii_.MemberProperty{JsiiProperty: "maxTrackedClients", GoGetter: "MaxTrackedClients"},
-			_jsii_.MemberProperty{JsiiProperty: "maxTrackedClientsInput", GoGetter: "MaxTrackedClientsInput"},
-			_jsii_.MemberMethod{JsiiMethod: "resetAllowedTries", GoMethod: "ResetAllowedTries"},
-			_jsii_.MemberMethod{JsiiMethod: "resetBlockExpirySeconds", GoMethod: "ResetBlockExpirySeconds"},
-			_jsii_.MemberMethod{JsiiMethod: "resetMaxBlockedClients", GoMethod: "ResetMaxBlockedClients"},
-			_jsii_.MemberMethod{JsiiMethod: "resetMaxTrackedClients", GoMethod: "ResetMaxTrackedClients"},
-			_jsii_.MemberMethod{JsiiMethod: "resetTimeWindowSeconds", GoMethod: "ResetTimeWindowSeconds"},
-			_jsii_.MemberMethod{JsiiMethod: "resetType", GoMethod: "ResetType"},
-			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
-			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
-			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
-			_jsii_.MemberProperty{JsiiProperty: "timeWindowSeconds", GoGetter: "TimeWindowSeconds"},
-			_jsii_.MemberProperty{JsiiProperty: "timeWindowSecondsInput", GoGetter: "TimeWindowSecondsInput"},
-			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
-			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
-			_jsii_.MemberProperty{JsiiProperty: "typeInput", GoGetter: "TypeInput"},
-		},
-		func() interface{} {
-			j := jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimitingOutputReference{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
-			return &j
-		},
-	)
 	_jsii_.RegisterClass(
 		"@cdktf/provider-upcloud.managedDatabaseOpensearch.ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference",
 		reflect.TypeOf((*ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference)(nil)).Elem(),
@@ -446,12 +392,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
-			_jsii_.MemberProperty{JsiiProperty: "ipRateLimiting", GoGetter: "IpRateLimiting"},
-			_jsii_.MemberProperty{JsiiProperty: "ipRateLimitingInput", GoGetter: "IpRateLimitingInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putInternalAuthenticationBackendLimiting", GoMethod: "PutInternalAuthenticationBackendLimiting"},
-			_jsii_.MemberMethod{JsiiMethod: "putIpRateLimiting", GoMethod: "PutIpRateLimiting"},
 			_jsii_.MemberMethod{JsiiMethod: "resetInternalAuthenticationBackendLimiting", GoMethod: "ResetInternalAuthenticationBackendLimiting"},
-			_jsii_.MemberMethod{JsiiMethod: "resetIpRateLimiting", GoMethod: "ResetIpRateLimiting"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},

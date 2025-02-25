@@ -75,6 +75,10 @@ func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) validateSetCo
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) validateSetFrequentSnapshotsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) validateSetInternalValueParameters(val *ManagedDatabaseValkeyProperties) error {
 	return nil
 }
@@ -100,6 +104,10 @@ func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) validateSetTe
 }
 
 func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) validateSetValkeyAclChannelsDefaultParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) validateSetValkeyActiveExpireEffortParameters(val *float64) error {
 	return nil
 }
 

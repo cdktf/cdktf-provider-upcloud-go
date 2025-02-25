@@ -51,10 +51,6 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutput
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) validatePutIpRateLimitingParameters(value *ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting) error {
-	return nil
-}
-
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

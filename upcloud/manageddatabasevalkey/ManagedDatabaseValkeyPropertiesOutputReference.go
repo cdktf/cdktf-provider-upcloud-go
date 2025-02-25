@@ -39,6 +39,9 @@ type ManagedDatabaseValkeyPropertiesOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	FrequentSnapshots() interface{}
+	SetFrequentSnapshots(val interface{})
+	FrequentSnapshotsInput() interface{}
 	InternalValue() *ManagedDatabaseValkeyProperties
 	SetInternalValue(val *ManagedDatabaseValkeyProperties)
 	IpFilter() *[]*string
@@ -63,6 +66,9 @@ type ManagedDatabaseValkeyPropertiesOutputReference interface {
 	ValkeyAclChannelsDefault() *string
 	SetValkeyAclChannelsDefault(val *string)
 	ValkeyAclChannelsDefaultInput() *string
+	ValkeyActiveExpireEffort() *float64
+	SetValkeyActiveExpireEffort(val *float64)
+	ValkeyActiveExpireEffortInput() *float64
 	ValkeyIoThreads() *float64
 	SetValkeyIoThreads(val *float64)
 	ValkeyIoThreadsInput() *float64
@@ -121,11 +127,13 @@ type ManagedDatabaseValkeyPropertiesOutputReference interface {
 	ResetAutomaticUtilityNetworkIpFilter()
 	ResetBackupHour()
 	ResetBackupMinute()
+	ResetFrequentSnapshots()
 	ResetIpFilter()
 	ResetMigration()
 	ResetPublicAccess()
 	ResetServiceLog()
 	ResetValkeyAclChannelsDefault()
+	ResetValkeyActiveExpireEffort()
 	ResetValkeyIoThreads()
 	ResetValkeyLfuDecayTime()
 	ResetValkeyLfuLogFactor()
@@ -246,6 +254,26 @@ func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) Fqn() *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) FrequentSnapshots() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"frequentSnapshots",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) FrequentSnapshotsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"frequentSnapshotsInput",
 		&returns,
 	)
 	return returns
@@ -376,6 +404,26 @@ func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ValkeyAclChan
 	_jsii_.Get(
 		j,
 		"valkeyAclChannelsDefaultInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ValkeyActiveExpireEffort() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"valkeyActiveExpireEffort",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ValkeyActiveExpireEffortInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"valkeyActiveExpireEffortInput",
 		&returns,
 	)
 	return returns
@@ -664,6 +712,17 @@ func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference)SetComplexObje
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference)SetFrequentSnapshots(val interface{}) {
+	if err := j.validateSetFrequentSnapshotsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"frequentSnapshots",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference)SetInternalValue(val *ManagedDatabaseValkeyProperties) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -737,6 +796,17 @@ func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference)SetValkeyAclCh
 	_jsii_.Set(
 		j,
 		"valkeyAclChannelsDefault",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference)SetValkeyActiveExpireEffort(val *float64) {
+	if err := j.validateSetValkeyActiveExpireEffortParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"valkeyActiveExpireEffort",
 		val,
 	)
 }
@@ -1072,6 +1142,14 @@ func (m *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ResetBackupMi
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ResetFrequentSnapshots() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetFrequentSnapshots",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ResetIpFilter() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1108,6 +1186,14 @@ func (m *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ResetValkeyAc
 	_jsii_.InvokeVoid(
 		m,
 		"resetValkeyAclChannelsDefault",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseValkeyPropertiesOutputReference) ResetValkeyActiveExpireEffort() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetValkeyActiveExpireEffort",
 		nil, // no parameters
 	)
 }

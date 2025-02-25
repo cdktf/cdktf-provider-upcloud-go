@@ -34,8 +34,6 @@ type ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference inte
 	InternalAuthenticationBackendLimitingInput() *ManagedDatabaseOpensearchPropertiesAuthFailureListenersInternalAuthenticationBackendLimiting
 	InternalValue() *ManagedDatabaseOpensearchPropertiesAuthFailureListeners
 	SetInternalValue(val *ManagedDatabaseOpensearchPropertiesAuthFailureListeners)
-	IpRateLimiting() ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimitingOutputReference
-	IpRateLimitingInput() *ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -69,9 +67,7 @@ type ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference inte
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutInternalAuthenticationBackendLimiting(value *ManagedDatabaseOpensearchPropertiesAuthFailureListenersInternalAuthenticationBackendLimiting)
-	PutIpRateLimiting(value *ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting)
 	ResetInternalAuthenticationBackendLimiting()
-	ResetIpRateLimiting()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -152,26 +148,6 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutput
 	_jsii_.Get(
 		j,
 		"internalValue",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) IpRateLimiting() ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimitingOutputReference {
-	var returns ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimitingOutputReference
-	_jsii_.Get(
-		j,
-		"ipRateLimiting",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) IpRateLimitingInput() *ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting {
-	var returns *ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting
-	_jsii_.Get(
-		j,
-		"ipRateLimitingInput",
 		&returns,
 	)
 	return returns
@@ -477,29 +453,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutput
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) PutIpRateLimiting(value *ManagedDatabaseOpensearchPropertiesAuthFailureListenersIpRateLimiting) {
-	if err := m.validatePutIpRateLimitingParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"putIpRateLimiting",
-		[]interface{}{value},
-	)
-}
-
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) ResetInternalAuthenticationBackendLimiting() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetInternalAuthenticationBackendLimiting",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) ResetIpRateLimiting() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetIpRateLimiting",
 		nil, // no parameters
 	)
 }

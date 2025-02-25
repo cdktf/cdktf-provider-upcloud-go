@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.19.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel}.
 type GatewayConnectionTunnel interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -471,7 +471,7 @@ func (j *jsiiProxy_GatewayConnectionTunnel) Uuid() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.19.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
 func NewGatewayConnectionTunnel(scope constructs.Construct, id *string, config *GatewayConnectionTunnelConfig) GatewayConnectionTunnel {
 	_init_.Initialize()
 
@@ -489,7 +489,7 @@ func NewGatewayConnectionTunnel(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.19.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/gateway_connection_tunnel upcloud_gateway_connection_tunnel} Resource.
 func NewGatewayConnectionTunnel_Override(g GatewayConnectionTunnel, scope constructs.Construct, id *string, config *GatewayConnectionTunnelConfig) {
 	_init_.Initialize()
 
