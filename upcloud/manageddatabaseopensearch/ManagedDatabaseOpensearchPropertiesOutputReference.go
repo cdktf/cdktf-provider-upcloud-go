@@ -53,6 +53,8 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	CustomDomain() *string
 	SetCustomDomain(val *string)
 	CustomDomainInput() *string
+	DiskWatermarks() ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference
+	DiskWatermarksInput() *ManagedDatabaseOpensearchPropertiesDiskWatermarks
 	ElasticsearchVersion() *string
 	SetElasticsearchVersion(val *string)
 	ElasticsearchVersionInput() *string
@@ -250,6 +252,7 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuthFailureListeners(value *ManagedDatabaseOpensearchPropertiesAuthFailureListeners)
 	PutClusterSearchRequestSlowlog(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog)
+	PutDiskWatermarks(value *ManagedDatabaseOpensearchPropertiesDiskWatermarks)
 	PutIndexRollup(value *ManagedDatabaseOpensearchPropertiesIndexRollup)
 	PutIndexTemplate(value *ManagedDatabaseOpensearchPropertiesIndexTemplate)
 	PutOpenid(value *ManagedDatabaseOpensearchPropertiesOpenid)
@@ -268,6 +271,7 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetClusterRoutingAllocationNodeConcurrentRecoveries()
 	ResetClusterSearchRequestSlowlog()
 	ResetCustomDomain()
+	ResetDiskWatermarks()
 	ResetElasticsearchVersion()
 	ResetEmailSenderName()
 	ResetEmailSenderPassword()
@@ -544,6 +548,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) CustomDom
 	_jsii_.Get(
 		j,
 		"customDomainInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) DiskWatermarks() ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference
+	_jsii_.Get(
+		j,
+		"diskWatermarks",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) DiskWatermarksInput() *ManagedDatabaseOpensearchPropertiesDiskWatermarks {
+	var returns *ManagedDatabaseOpensearchPropertiesDiskWatermarks
+	_jsii_.Get(
+		j,
+		"diskWatermarksInput",
 		&returns,
 	)
 	return returns
@@ -2594,6 +2618,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutCluste
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutDiskWatermarks(value *ManagedDatabaseOpensearchPropertiesDiskWatermarks) {
+	if err := m.validatePutDiskWatermarksParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putDiskWatermarks",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutIndexRollup(value *ManagedDatabaseOpensearchPropertiesIndexRollup) {
 	if err := m.validatePutIndexRollupParameters(value); err != nil {
 		panic(err)
@@ -2761,6 +2796,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetCust
 	_jsii_.InvokeVoid(
 		m,
 		"resetCustomDomain",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetDiskWatermarks() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetDiskWatermarks",
 		nil, // no parameters
 	)
 }

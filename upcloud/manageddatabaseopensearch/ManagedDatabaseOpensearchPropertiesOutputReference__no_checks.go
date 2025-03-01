@@ -55,6 +55,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutDiskWatermarksParameters(value *ManagedDatabaseOpensearchPropertiesDiskWatermarks) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutIndexRollupParameters(value *ManagedDatabaseOpensearchPropertiesIndexRollup) error {
 	return nil
 }

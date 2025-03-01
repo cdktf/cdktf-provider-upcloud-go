@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/managed_object_storage upcloud_managed_object_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/resources/managed_object_storage upcloud_managed_object_storage}.
 type ManagedObjectStorage interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -471,7 +471,7 @@ func (j *jsiiProxy_ManagedObjectStorage) UpdatedAt() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
 func NewManagedObjectStorage(scope constructs.Construct, id *string, config *ManagedObjectStorageConfig) ManagedObjectStorage {
 	_init_.Initialize()
 
@@ -489,7 +489,7 @@ func NewManagedObjectStorage(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/resources/managed_object_storage upcloud_managed_object_storage} Resource.
 func NewManagedObjectStorage_Override(m ManagedObjectStorage, scope constructs.Construct, id *string, config *ManagedObjectStorageConfig) {
 	_init_.Initialize()
 

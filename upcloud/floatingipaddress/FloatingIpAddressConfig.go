@@ -24,19 +24,19 @@ type FloatingIpAddressConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Network access for the floating IP address. Supported value: `public`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/floating_ip_address#access FloatingIpAddress#access}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/resources/floating_ip_address#access FloatingIpAddress#access}
 	Access *string `field:"optional" json:"access" yaml:"access"`
 	// The address family of the floating IP address.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/floating_ip_address#family FloatingIpAddress#family}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/resources/floating_ip_address#family FloatingIpAddress#family}
 	Family *string `field:"optional" json:"family" yaml:"family"`
 	// MAC address of a server interface to assign address to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/floating_ip_address#mac_address FloatingIpAddress#mac_address}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/resources/floating_ip_address#mac_address FloatingIpAddress#mac_address}
 	MacAddress *string `field:"optional" json:"macAddress" yaml:"macAddress"`
 	// Zone of the address, e.g. `de-fra1`. Required when assigning a detached floating IP address. You can list available zones with `upctl zone list`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.0/docs/resources/floating_ip_address#zone FloatingIpAddress#zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/resources/floating_ip_address#zone FloatingIpAddress#zone}
 	Zone *string `field:"optional" json:"zone" yaml:"zone"`
 }
 

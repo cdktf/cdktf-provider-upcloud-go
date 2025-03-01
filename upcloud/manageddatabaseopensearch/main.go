@@ -497,6 +497,51 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
+		"@cdktf/provider-upcloud.managedDatabaseOpensearch.ManagedDatabaseOpensearchPropertiesDiskWatermarks",
+		reflect.TypeOf((*ManagedDatabaseOpensearchPropertiesDiskWatermarks)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-upcloud.managedDatabaseOpensearch.ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference",
+		reflect.TypeOf((*ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "floodStage", GoGetter: "FloodStage"},
+			_jsii_.MemberProperty{JsiiProperty: "floodStageInput", GoGetter: "FloodStageInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "high", GoGetter: "High"},
+			_jsii_.MemberProperty{JsiiProperty: "highInput", GoGetter: "HighInput"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "low", GoGetter: "Low"},
+			_jsii_.MemberProperty{JsiiProperty: "lowInput", GoGetter: "LowInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetFloodStage", GoMethod: "ResetFloodStage"},
+			_jsii_.MemberMethod{JsiiMethod: "resetHigh", GoMethod: "ResetHigh"},
+			_jsii_.MemberMethod{JsiiMethod: "resetLow", GoMethod: "ResetLow"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
 		"@cdktf/provider-upcloud.managedDatabaseOpensearch.ManagedDatabaseOpensearchPropertiesIndexRollup",
 		reflect.TypeOf((*ManagedDatabaseOpensearchPropertiesIndexRollup)(nil)).Elem(),
 	)
@@ -738,6 +783,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "customDomain", GoGetter: "CustomDomain"},
 			_jsii_.MemberProperty{JsiiProperty: "customDomainInput", GoGetter: "CustomDomainInput"},
+			_jsii_.MemberProperty{JsiiProperty: "diskWatermarks", GoGetter: "DiskWatermarks"},
+			_jsii_.MemberProperty{JsiiProperty: "diskWatermarksInput", GoGetter: "DiskWatermarksInput"},
 			_jsii_.MemberProperty{JsiiProperty: "elasticsearchVersion", GoGetter: "ElasticsearchVersion"},
 			_jsii_.MemberProperty{JsiiProperty: "elasticsearchVersionInput", GoGetter: "ElasticsearchVersionInput"},
 			_jsii_.MemberProperty{JsiiProperty: "emailSenderName", GoGetter: "EmailSenderName"},
@@ -823,6 +870,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "publicAccessInput", GoGetter: "PublicAccessInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putAuthFailureListeners", GoMethod: "PutAuthFailureListeners"},
 			_jsii_.MemberMethod{JsiiMethod: "putClusterSearchRequestSlowlog", GoMethod: "PutClusterSearchRequestSlowlog"},
+			_jsii_.MemberMethod{JsiiMethod: "putDiskWatermarks", GoMethod: "PutDiskWatermarks"},
 			_jsii_.MemberMethod{JsiiMethod: "putIndexRollup", GoMethod: "PutIndexRollup"},
 			_jsii_.MemberMethod{JsiiMethod: "putIndexTemplate", GoMethod: "PutIndexTemplate"},
 			_jsii_.MemberMethod{JsiiMethod: "putOpenid", GoMethod: "PutOpenid"},
@@ -843,6 +891,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetClusterRoutingAllocationNodeConcurrentRecoveries", GoMethod: "ResetClusterRoutingAllocationNodeConcurrentRecoveries"},
 			_jsii_.MemberMethod{JsiiMethod: "resetClusterSearchRequestSlowlog", GoMethod: "ResetClusterSearchRequestSlowlog"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCustomDomain", GoMethod: "ResetCustomDomain"},
+			_jsii_.MemberMethod{JsiiMethod: "resetDiskWatermarks", GoMethod: "ResetDiskWatermarks"},
 			_jsii_.MemberMethod{JsiiMethod: "resetElasticsearchVersion", GoMethod: "ResetElasticsearchVersion"},
 			_jsii_.MemberMethod{JsiiMethod: "resetEmailSenderName", GoMethod: "ResetEmailSenderName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetEmailSenderPassword", GoMethod: "ResetEmailSenderPassword"},
