@@ -24,11 +24,11 @@ type DataUpcloudStorageConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The access type of the storage, `public` or `private`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#access_type DataUpcloudStorage#access_type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#access_type DataUpcloudStorage#access_type}
 	AccessType *string `field:"optional" json:"accessType" yaml:"accessType"`
 	// UUID of the storage.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#id DataUpcloudStorage#id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#id DataUpcloudStorage#id}
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,27 +37,27 @@ type DataUpcloudStorageConfig struct {
 	//
 	// This is only useful with private storages. Public storages might give unpredictable results.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#most_recent DataUpcloudStorage#most_recent}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#most_recent DataUpcloudStorage#most_recent}
 	MostRecent interface{} `field:"optional" json:"mostRecent" yaml:"mostRecent"`
 	// Exact name of the storage (same as title). Deprecated, use `title` instead.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#name DataUpcloudStorage#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#name DataUpcloudStorage#name}
 	Name *string `field:"optional" json:"name" yaml:"name"`
 	// Use regular expression to match storage name. Deprecated, use exact title or UUID instead.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#name_regex DataUpcloudStorage#name_regex}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#name_regex DataUpcloudStorage#name_regex}
 	NameRegex *string `field:"optional" json:"nameRegex" yaml:"nameRegex"`
 	// The title of the storage.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#title DataUpcloudStorage#title}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#title DataUpcloudStorage#title}
 	Title *string `field:"optional" json:"title" yaml:"title"`
 	// The type of the storage.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#type DataUpcloudStorage#type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#type DataUpcloudStorage#type}
 	Type *string `field:"optional" json:"type" yaml:"type"`
 	// The zone the storage is in, e.g. `de-fra1`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.1/docs/data-sources/storage#zone DataUpcloudStorage#zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/data-sources/storage#zone DataUpcloudStorage#zone}
 	Zone *string `field:"optional" json:"zone" yaml:"zone"`
 }
 
