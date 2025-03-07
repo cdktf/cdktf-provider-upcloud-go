@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver}.
 type LoadbalancerResolver interface {
 	cdktf.TerraformResource
 	CacheInvalid() *float64
@@ -481,7 +481,7 @@ func (j *jsiiProxy_LoadbalancerResolver) TimeoutRetryInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
 func NewLoadbalancerResolver(scope constructs.Construct, id *string, config *LoadbalancerResolverConfig) LoadbalancerResolver {
 	_init_.Initialize()
 
@@ -499,7 +499,7 @@ func NewLoadbalancerResolver(scope constructs.Construct, id *string, config *Loa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/loadbalancer_resolver upcloud_loadbalancer_resolver} Resource.
 func NewLoadbalancerResolver_Override(l LoadbalancerResolver, scope constructs.Construct, id *string, config *LoadbalancerResolverConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/resources/managed_object_storage_bucket upcloud_managed_object_storage_bucket}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/managed_object_storage_bucket upcloud_managed_object_storage_bucket}.
 type ManagedObjectStorageBucket interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -365,7 +365,7 @@ func (j *jsiiProxy_ManagedObjectStorageBucket) TotalSizeBytes() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/resources/managed_object_storage_bucket upcloud_managed_object_storage_bucket} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/managed_object_storage_bucket upcloud_managed_object_storage_bucket} Resource.
 func NewManagedObjectStorageBucket(scope constructs.Construct, id *string, config *ManagedObjectStorageBucketConfig) ManagedObjectStorageBucket {
 	_init_.Initialize()
 
@@ -383,7 +383,7 @@ func NewManagedObjectStorageBucket(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.2/docs/resources/managed_object_storage_bucket upcloud_managed_object_storage_bucket} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/managed_object_storage_bucket upcloud_managed_object_storage_bucket} Resource.
 func NewManagedObjectStorageBucket_Override(m ManagedObjectStorageBucket, scope constructs.Construct, id *string, config *ManagedObjectStorageBucketConfig) {
 	_init_.Initialize()
 
