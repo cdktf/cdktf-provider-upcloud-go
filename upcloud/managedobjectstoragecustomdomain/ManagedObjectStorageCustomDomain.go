@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/managed_object_storage_custom_domain upcloud_managed_object_storage_custom_domain}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/managed_object_storage_custom_domain upcloud_managed_object_storage_custom_domain}.
 type ManagedObjectStorageCustomDomain interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -367,7 +367,7 @@ func (j *jsiiProxy_ManagedObjectStorageCustomDomain) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/managed_object_storage_custom_domain upcloud_managed_object_storage_custom_domain} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/managed_object_storage_custom_domain upcloud_managed_object_storage_custom_domain} Resource.
 func NewManagedObjectStorageCustomDomain(scope constructs.Construct, id *string, config *ManagedObjectStorageCustomDomainConfig) ManagedObjectStorageCustomDomain {
 	_init_.Initialize()
 
@@ -385,7 +385,7 @@ func NewManagedObjectStorageCustomDomain(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.3/docs/resources/managed_object_storage_custom_domain upcloud_managed_object_storage_custom_domain} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/managed_object_storage_custom_domain upcloud_managed_object_storage_custom_domain} Resource.
 func NewManagedObjectStorageCustomDomain_Override(m ManagedObjectStorageCustomDomain, scope constructs.Construct, id *string, config *ManagedObjectStorageCustomDomainConfig) {
 	_init_.Initialize()
 
