@@ -24,17 +24,17 @@ type ManagedObjectStorageUserPolicyConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Policy name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/managed_object_storage_user_policy#name ManagedObjectStorageUserPolicy#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/managed_object_storage_user_policy#name ManagedObjectStorageUserPolicy#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Managed Object Storage service UUID.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/managed_object_storage_user_policy#service_uuid ManagedObjectStorageUserPolicy#service_uuid}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/managed_object_storage_user_policy#service_uuid ManagedObjectStorageUserPolicy#service_uuid}
 	ServiceUuid *string `field:"required" json:"serviceUuid" yaml:"serviceUuid"`
 	// Username.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/managed_object_storage_user_policy#username ManagedObjectStorageUserPolicy#username}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/managed_object_storage_user_policy#username ManagedObjectStorageUserPolicy#username}
 	Username *string `field:"required" json:"username" yaml:"username"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/managed_object_storage_user_policy#id ManagedObjectStorageUserPolicy#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/managed_object_storage_user_policy#id ManagedObjectStorageUserPolicy#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

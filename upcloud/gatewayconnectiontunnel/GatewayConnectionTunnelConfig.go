@@ -24,32 +24,32 @@ type GatewayConnectionTunnelConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// ID of the upcloud_gateway_connection resource to which the tunnel belongs.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/gateway_connection_tunnel#connection_id GatewayConnectionTunnel#connection_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/gateway_connection_tunnel#connection_id GatewayConnectionTunnel#connection_id}
 	ConnectionId *string `field:"required" json:"connectionId" yaml:"connectionId"`
 	// ipsec_auth_psk block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/gateway_connection_tunnel#ipsec_auth_psk GatewayConnectionTunnel#ipsec_auth_psk}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/gateway_connection_tunnel#ipsec_auth_psk GatewayConnectionTunnel#ipsec_auth_psk}
 	IpsecAuthPsk *GatewayConnectionTunnelIpsecAuthPsk `field:"required" json:"ipsecAuthPsk" yaml:"ipsecAuthPsk"`
 	// Public (UpCloud) endpoint address of this tunnel.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/gateway_connection_tunnel#local_address_name GatewayConnectionTunnel#local_address_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/gateway_connection_tunnel#local_address_name GatewayConnectionTunnel#local_address_name}
 	LocalAddressName *string `field:"required" json:"localAddressName" yaml:"localAddressName"`
 	// The name of the tunnel, should be unique within the connection.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/gateway_connection_tunnel#name GatewayConnectionTunnel#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/gateway_connection_tunnel#name GatewayConnectionTunnel#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Remote public IP address of the tunnel.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/gateway_connection_tunnel#remote_address GatewayConnectionTunnel#remote_address}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/gateway_connection_tunnel#remote_address GatewayConnectionTunnel#remote_address}
 	RemoteAddress *string `field:"required" json:"remoteAddress" yaml:"remoteAddress"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/gateway_connection_tunnel#id GatewayConnectionTunnel#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/gateway_connection_tunnel#id GatewayConnectionTunnel#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// ipsec_properties block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/gateway_connection_tunnel#ipsec_properties GatewayConnectionTunnel#ipsec_properties}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/gateway_connection_tunnel#ipsec_properties GatewayConnectionTunnel#ipsec_properties}
 	IpsecProperties *GatewayConnectionTunnelIpsecProperties `field:"optional" json:"ipsecProperties" yaml:"ipsecProperties"`
 }
 

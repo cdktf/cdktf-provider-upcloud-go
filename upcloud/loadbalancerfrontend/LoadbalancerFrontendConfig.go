@@ -28,33 +28,33 @@ type LoadbalancerFrontendConfig struct {
 	//
 	// 	Note that the frontend resource depends on the default backend resource. Use the `name` field of a backend resource as the value for this field (like in the example above) or the `depends_on` meta argument to ensure the resources are created and destroyed in the correct order.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/loadbalancer_frontend#default_backend_name LoadbalancerFrontend#default_backend_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/loadbalancer_frontend#default_backend_name LoadbalancerFrontend#default_backend_name}
 	DefaultBackendName *string `field:"required" json:"defaultBackendName" yaml:"defaultBackendName"`
 	// UUID of the load balancer to which the frontend is connected.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/loadbalancer_frontend#loadbalancer LoadbalancerFrontend#loadbalancer}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/loadbalancer_frontend#loadbalancer LoadbalancerFrontend#loadbalancer}
 	Loadbalancer *string `field:"required" json:"loadbalancer" yaml:"loadbalancer"`
 	// When load balancer operating in `tcp` mode it acts as a layer 4 proxy.
 	//
 	// In `http` mode it acts as a layer 7 proxy.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/loadbalancer_frontend#mode LoadbalancerFrontend#mode}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/loadbalancer_frontend#mode LoadbalancerFrontend#mode}
 	Mode *string `field:"required" json:"mode" yaml:"mode"`
 	// The name of the frontend. Must be unique within the load balancer service.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/loadbalancer_frontend#name LoadbalancerFrontend#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/loadbalancer_frontend#name LoadbalancerFrontend#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Port to listen for incoming requests.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/loadbalancer_frontend#port LoadbalancerFrontend#port}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/loadbalancer_frontend#port LoadbalancerFrontend#port}
 	Port *float64 `field:"required" json:"port" yaml:"port"`
 	// networks block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/loadbalancer_frontend#networks LoadbalancerFrontend#networks}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/loadbalancer_frontend#networks LoadbalancerFrontend#networks}
 	Networks interface{} `field:"optional" json:"networks" yaml:"networks"`
 	// properties block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/resources/loadbalancer_frontend#properties LoadbalancerFrontend#properties}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/loadbalancer_frontend#properties LoadbalancerFrontend#properties}
 	Properties interface{} `field:"optional" json:"properties" yaml:"properties"`
 }
 

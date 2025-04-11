@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster}.
 type DataUpcloudKubernetesCluster interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -330,7 +330,7 @@ func (j *jsiiProxy_DataUpcloudKubernetesCluster) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
 func NewDataUpcloudKubernetesCluster(scope constructs.Construct, id *string, config *DataUpcloudKubernetesClusterConfig) DataUpcloudKubernetesCluster {
 	_init_.Initialize()
 
@@ -348,7 +348,7 @@ func NewDataUpcloudKubernetesCluster(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.4/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/data-sources/kubernetes_cluster upcloud_kubernetes_cluster} Data Source.
 func NewDataUpcloudKubernetesCluster_Override(d DataUpcloudKubernetesCluster, scope constructs.Construct, id *string, config *DataUpcloudKubernetesClusterConfig) {
 	_init_.Initialize()
 

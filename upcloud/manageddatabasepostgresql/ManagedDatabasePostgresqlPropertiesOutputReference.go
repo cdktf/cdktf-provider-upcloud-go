@@ -163,6 +163,8 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	PasswordEncryption() *string
 	SetPasswordEncryption(val *string)
 	PasswordEncryptionInput() *string
+	Pgaudit() ManagedDatabasePostgresqlPropertiesPgauditOutputReference
+	PgauditInput() *ManagedDatabasePostgresqlPropertiesPgaudit
 	Pgbouncer() ManagedDatabasePostgresqlPropertiesPgbouncerOutputReference
 	PgbouncerInput() *ManagedDatabasePostgresqlPropertiesPgbouncer
 	Pglookout() ManagedDatabasePostgresqlPropertiesPglookoutOutputReference
@@ -265,6 +267,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMigration(value *ManagedDatabasePostgresqlPropertiesMigration)
+	PutPgaudit(value *ManagedDatabasePostgresqlPropertiesPgaudit)
 	PutPgbouncer(value *ManagedDatabasePostgresqlPropertiesPgbouncer)
 	PutPglookout(value *ManagedDatabasePostgresqlPropertiesPglookout)
 	PutTimescaledb(value *ManagedDatabasePostgresqlPropertiesTimescaledb)
@@ -312,6 +315,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetMaxWorkerProcesses()
 	ResetMigration()
 	ResetPasswordEncryption()
+	ResetPgaudit()
 	ResetPgbouncer()
 	ResetPglookout()
 	ResetPgPartmanBgwInterval()
@@ -1276,6 +1280,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PasswordE
 	_jsii_.Get(
 		j,
 		"passwordEncryptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Pgaudit() ManagedDatabasePostgresqlPropertiesPgauditOutputReference {
+	var returns ManagedDatabasePostgresqlPropertiesPgauditOutputReference
+	_jsii_.Get(
+		j,
+		"pgaudit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PgauditInput() *ManagedDatabasePostgresqlPropertiesPgaudit {
+	var returns *ManagedDatabasePostgresqlPropertiesPgaudit
+	_jsii_.Get(
+		j,
+		"pgauditInput",
 		&returns,
 	)
 	return returns
@@ -2765,6 +2789,17 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutMigrat
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutPgaudit(value *ManagedDatabasePostgresqlPropertiesPgaudit) {
+	if err := m.validatePutPgauditParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putPgaudit",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) PutPgbouncer(value *ManagedDatabasePostgresqlPropertiesPgbouncer) {
 	if err := m.validatePutPgbouncerParameters(value); err != nil {
 		panic(err)
@@ -3146,6 +3181,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPass
 	_jsii_.InvokeVoid(
 		m,
 		"resetPasswordEncryption",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetPgaudit() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPgaudit",
 		nil, // no parameters
 	)
 }
