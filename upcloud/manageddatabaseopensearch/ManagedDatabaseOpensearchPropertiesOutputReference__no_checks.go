@@ -155,6 +155,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEnableSearchableSnapshotsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEnableSecurityAuditParameters(val interface{}) error {
 	return nil
 }

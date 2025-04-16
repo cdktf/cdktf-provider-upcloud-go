@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/data-sources/ip_addresses upcloud_ip_addresses}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/data-sources/ip_addresses upcloud_ip_addresses}.
 type DataUpcloudIpAddresses interface {
 	cdktf.TerraformDataSource
 	Addresses() DataUpcloudIpAddressesAddressesList
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataUpcloudIpAddresses) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
 func NewDataUpcloudIpAddresses(scope constructs.Construct, id *string, config *DataUpcloudIpAddressesConfig) DataUpcloudIpAddresses {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewDataUpcloudIpAddresses(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/data-sources/ip_addresses upcloud_ip_addresses} Data Source.
 func NewDataUpcloudIpAddresses_Override(d DataUpcloudIpAddresses, scope constructs.Construct, id *string, config *DataUpcloudIpAddressesConfig) {
 	_init_.Initialize()
 

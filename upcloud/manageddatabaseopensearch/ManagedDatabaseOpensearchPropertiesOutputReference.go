@@ -70,6 +70,9 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	EnableRemoteBackedStorage() interface{}
 	SetEnableRemoteBackedStorage(val interface{})
 	EnableRemoteBackedStorageInput() interface{}
+	EnableSearchableSnapshots() interface{}
+	SetEnableSearchableSnapshots(val interface{})
+	EnableSearchableSnapshotsInput() interface{}
 	EnableSecurityAudit() interface{}
 	SetEnableSecurityAudit(val interface{})
 	EnableSecurityAuditInput() interface{}
@@ -277,6 +280,7 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetEmailSenderPassword()
 	ResetEmailSenderUsername()
 	ResetEnableRemoteBackedStorage()
+	ResetEnableSearchableSnapshots()
 	ResetEnableSecurityAudit()
 	ResetHttpMaxContentLength()
 	ResetHttpMaxHeaderSize()
@@ -668,6 +672,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableRem
 	_jsii_.Get(
 		j,
 		"enableRemoteBackedStorageInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableSearchableSnapshots() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSearchableSnapshots",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableSearchableSnapshotsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSearchableSnapshotsInput",
 		&returns,
 	)
 	return returns
@@ -1915,6 +1939,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEnableR
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEnableSearchableSnapshots(val interface{}) {
+	if err := j.validateSetEnableSearchableSnapshotsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableSearchableSnapshots",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEnableSecurityAudit(val interface{}) {
 	if err := j.validateSetEnableSecurityAuditParameters(val); err != nil {
 		panic(err)
@@ -2844,6 +2879,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEnab
 	_jsii_.InvokeVoid(
 		m,
 		"resetEnableRemoteBackedStorage",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEnableSearchableSnapshots() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEnableSearchableSnapshots",
 		nil, // no parameters
 	)
 }

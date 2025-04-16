@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/server upcloud_server}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/server upcloud_server}.
 type Server interface {
 	cdktf.TerraformResource
 	BootOrder() *string
@@ -54,6 +54,9 @@ type Server interface {
 	Hostname() *string
 	SetHostname(val *string)
 	HostnameInput() *string
+	HotResize() interface{}
+	SetHotResize(val interface{})
+	HotResizeInput() interface{}
 	Id() *string
 	Labels() *map[string]*string
 	SetLabels(val *map[string]*string)
@@ -175,6 +178,7 @@ type Server interface {
 	ResetCpu()
 	ResetFirewall()
 	ResetHost()
+	ResetHotResize()
 	ResetLabels()
 	ResetLogin()
 	ResetMem()
@@ -387,6 +391,26 @@ func (j *jsiiProxy_Server) HostnameInput() *string {
 	_jsii_.Get(
 		j,
 		"hostnameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) HotResize() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"hotResize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Server) HotResizeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"hotResizeInput",
 		&returns,
 	)
 	return returns
@@ -823,7 +847,7 @@ func (j *jsiiProxy_Server) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/server upcloud_server} Resource.
 func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Server {
 	_init_.Initialize()
 
@@ -841,7 +865,7 @@ func NewServer(scope constructs.Construct, id *string, config *ServerConfig) Ser
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.20.5/docs/resources/server upcloud_server} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/server upcloud_server} Resource.
 func NewServer_Override(s Server, scope constructs.Construct, id *string, config *ServerConfig) {
 	_init_.Initialize()
 
@@ -941,6 +965,17 @@ func (j *jsiiProxy_Server)SetHostname(val *string) {
 	_jsii_.Set(
 		j,
 		"hostname",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Server)SetHotResize(val interface{}) {
+	if err := j.validateSetHotResizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"hotResize",
 		val,
 	)
 }
@@ -1543,6 +1578,14 @@ func (s *jsiiProxy_Server) ResetHost() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Server) ResetHotResize() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetHotResize",
 		nil, // no parameters
 	)
 }
