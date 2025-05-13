@@ -459,6 +459,14 @@ func (j *jsiiProxy_KubernetesCluster) validateSetStorageEncryptionParameters(val
 	return nil
 }
 
+func (j *jsiiProxy_KubernetesCluster) validateSetUpgradeStrategyTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_KubernetesCluster) validateSetVersionParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

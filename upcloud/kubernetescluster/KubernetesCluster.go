@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster}.
 type KubernetesCluster interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -86,6 +86,9 @@ type KubernetesCluster interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UpgradeStrategyType() *string
+	SetUpgradeStrategyType(val *string)
+	UpgradeStrategyTypeInput() *string
 	Version() *string
 	SetVersion(val *string)
 	VersionInput() *string
@@ -142,6 +145,7 @@ type KubernetesCluster interface {
 	ResetPlan()
 	ResetPrivateNodeGroups()
 	ResetStorageEncryption()
+	ResetUpgradeStrategyType()
 	ResetVersion()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -501,6 +505,26 @@ func (j *jsiiProxy_KubernetesCluster) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_KubernetesCluster) UpgradeStrategyType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"upgradeStrategyType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesCluster) UpgradeStrategyTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"upgradeStrategyTypeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KubernetesCluster) Version() *string {
 	var returns *string
 	_jsii_.Get(
@@ -542,7 +566,7 @@ func (j *jsiiProxy_KubernetesCluster) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster(scope constructs.Construct, id *string, config *KubernetesClusterConfig) KubernetesCluster {
 	_init_.Initialize()
 
@@ -560,7 +584,7 @@ func NewKubernetesCluster(scope constructs.Construct, id *string, config *Kubern
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/kubernetes_cluster upcloud_kubernetes_cluster} Resource.
 func NewKubernetesCluster_Override(k KubernetesCluster, scope constructs.Construct, id *string, config *KubernetesClusterConfig) {
 	_init_.Initialize()
 
@@ -712,6 +736,17 @@ func (j *jsiiProxy_KubernetesCluster)SetStorageEncryption(val *string) {
 	_jsii_.Set(
 		j,
 		"storageEncryption",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KubernetesCluster)SetUpgradeStrategyType(val *string) {
+	if err := j.validateSetUpgradeStrategyTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"upgradeStrategyType",
 		val,
 	)
 }
@@ -1127,6 +1162,14 @@ func (k *jsiiProxy_KubernetesCluster) ResetStorageEncryption() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetStorageEncryption",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesCluster) ResetUpgradeStrategyType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetUpgradeStrategyType",
 		nil, // no parameters
 	)
 }

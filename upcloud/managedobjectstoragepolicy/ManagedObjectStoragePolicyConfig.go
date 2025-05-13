@@ -26,19 +26,19 @@ type ManagedObjectStoragePolicyConfig struct {
 	//
 	// Extra whitespace and escapes are ignored when determining if the document has changed.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/managed_object_storage_policy#document ManagedObjectStoragePolicy#document}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/managed_object_storage_policy#document ManagedObjectStoragePolicy#document}
 	Document *string `field:"required" json:"document" yaml:"document"`
 	// Policy name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/managed_object_storage_policy#name ManagedObjectStoragePolicy#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/managed_object_storage_policy#name ManagedObjectStoragePolicy#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Managed Object Storage service UUID.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/managed_object_storage_policy#service_uuid ManagedObjectStoragePolicy#service_uuid}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/managed_object_storage_policy#service_uuid ManagedObjectStoragePolicy#service_uuid}
 	ServiceUuid *string `field:"required" json:"serviceUuid" yaml:"serviceUuid"`
 	// Description of the policy.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/resources/managed_object_storage_policy#description ManagedObjectStoragePolicy#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/managed_object_storage_policy#description ManagedObjectStoragePolicy#description}
 	Description *string `field:"optional" json:"description" yaml:"description"`
 }
 

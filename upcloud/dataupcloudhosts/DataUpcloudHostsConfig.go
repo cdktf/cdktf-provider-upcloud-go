@@ -24,7 +24,7 @@ type DataUpcloudHostsConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// hosts block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.21.0/docs/data-sources/hosts#hosts DataUpcloudHosts#hosts}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/data-sources/hosts#hosts DataUpcloudHosts#hosts}
 	Hosts interface{} `field:"optional" json:"hosts" yaml:"hosts"`
 }
 
