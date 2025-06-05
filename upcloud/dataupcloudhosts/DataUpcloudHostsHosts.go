@@ -7,7 +7,7 @@ package dataupcloudhosts
 type DataUpcloudHostsHosts struct {
 	// statistics block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/data-sources/hosts#statistics DataUpcloudHosts#statistics}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/data-sources/hosts#statistics DataUpcloudHosts#statistics}
 	Statistics interface{} `field:"optional" json:"statistics" yaml:"statistics"`
 }
 

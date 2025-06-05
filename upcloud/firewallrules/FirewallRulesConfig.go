@@ -22,18 +22,13 @@ type FirewallRulesConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
+	// The UUID of the server to be protected with the firewall rules.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/firewall_rules#server_id FirewallRules#server_id}
+	ServerId *string `field:"required" json:"serverId" yaml:"serverId"`
 	// firewall_rule block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/firewall_rules#firewall_rule FirewallRules#firewall_rule}
-	FirewallRule interface{} `field:"required" json:"firewallRule" yaml:"firewallRule"`
-	// The unique id of the server to be protected the firewall rules.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/firewall_rules#server_id FirewallRules#server_id}
-	ServerId *string `field:"required" json:"serverId" yaml:"serverId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/firewall_rules#id FirewallRules#id}.
-	//
-	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-	Id *string `field:"optional" json:"id" yaml:"id"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/firewall_rules#firewall_rule FirewallRules#firewall_rule}
+	FirewallRule interface{} `field:"optional" json:"firewallRule" yaml:"firewallRule"`
 }
 

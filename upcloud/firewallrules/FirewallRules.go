@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/firewall_rules upcloud_firewall_rules}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/firewall_rules upcloud_firewall_rules}.
 type FirewallRules interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -42,8 +42,6 @@ type FirewallRules interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -113,7 +111,7 @@ type FirewallRules interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutFirewallRule(value interface{})
-	ResetId()
+	ResetFirewallRule()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -245,16 +243,6 @@ func (j *jsiiProxy_FirewallRules) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_FirewallRules) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_FirewallRules) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -356,7 +344,7 @@ func (j *jsiiProxy_FirewallRules) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
 func NewFirewallRules(scope constructs.Construct, id *string, config *FirewallRulesConfig) FirewallRules {
 	_init_.Initialize()
 
@@ -374,7 +362,7 @@ func NewFirewallRules(scope constructs.Construct, id *string, config *FirewallRu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.0/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/firewall_rules upcloud_firewall_rules} Resource.
 func NewFirewallRules_Override(f FirewallRules, scope constructs.Construct, id *string, config *FirewallRulesConfig) {
 	_init_.Initialize()
 
@@ -419,17 +407,6 @@ func (j *jsiiProxy_FirewallRules)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_FirewallRules)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -839,10 +816,10 @@ func (f *jsiiProxy_FirewallRules) PutFirewallRule(value interface{}) {
 	)
 }
 
-func (f *jsiiProxy_FirewallRules) ResetId() {
+func (f *jsiiProxy_FirewallRules) ResetFirewallRule() {
 	_jsii_.InvokeVoid(
 		f,
-		"resetId",
+		"resetFirewallRule",
 		nil, // no parameters
 	)
 }
