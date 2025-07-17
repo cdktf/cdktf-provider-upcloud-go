@@ -51,6 +51,10 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validatePutMig
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validatePutMysqlIncrementalBackupParameters(value *ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

@@ -116,6 +116,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	LogTempFiles() *float64
 	SetLogTempFiles(val *float64)
 	LogTempFilesInput() *float64
+	MaxConnections() *float64
+	SetMaxConnections(val *float64)
+	MaxConnectionsInput() *float64
 	MaxFilesPerProcess() *float64
 	SetMaxFilesPerProcess(val *float64)
 	MaxFilesPerProcessInput() *float64
@@ -152,6 +155,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	MaxStandbyStreamingDelay() *float64
 	SetMaxStandbyStreamingDelay(val *float64)
 	MaxStandbyStreamingDelayInput() *float64
+	MaxSyncWorkersPerSubscription() *float64
+	SetMaxSyncWorkersPerSubscription(val *float64)
+	MaxSyncWorkersPerSubscriptionInput() *float64
 	MaxWalSenders() *float64
 	SetMaxWalSenders(val *float64)
 	MaxWalSendersInput() *float64
@@ -299,6 +305,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetLogLinePrefix()
 	ResetLogMinDurationStatement()
 	ResetLogTempFiles()
+	ResetMaxConnections()
 	ResetMaxFilesPerProcess()
 	ResetMaxLocksPerTransaction()
 	ResetMaxLogicalReplicationWorkers()
@@ -311,6 +318,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetMaxStackDepth()
 	ResetMaxStandbyArchiveDelay()
 	ResetMaxStandbyStreamingDelay()
+	ResetMaxSyncWorkersPerSubscription()
 	ResetMaxWalSenders()
 	ResetMaxWorkerProcesses()
 	ResetMigration()
@@ -965,6 +973,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) LogTempFi
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxConnections() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxConnections",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxConnectionsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxConnectionsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxFilesPerProcess() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -1200,6 +1228,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxStandb
 	_jsii_.Get(
 		j,
 		"maxStandbyStreamingDelayInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxSyncWorkersPerSubscription() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSyncWorkersPerSubscription",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) MaxSyncWorkersPerSubscriptionInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSyncWorkersPerSubscriptionInput",
 		&returns,
 	)
 	return returns
@@ -2174,6 +2222,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetLogTemp
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxConnections(val *float64) {
+	if err := j.validateSetMaxConnectionsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxConnections",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxFilesPerProcess(val *float64) {
 	if err := j.validateSetMaxFilesPerProcessParameters(val); err != nil {
 		panic(err)
@@ -2302,6 +2361,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxStan
 	_jsii_.Set(
 		j,
 		"maxStandbyStreamingDelay",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxSyncWorkersPerSubscription(val *float64) {
+	if err := j.validateSetMaxSyncWorkersPerSubscriptionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxSyncWorkersPerSubscription",
 		val,
 	)
 }
@@ -3057,6 +3127,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetLogT
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMaxConnections() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxConnections",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMaxFilesPerProcess() {
 	_jsii_.InvokeVoid(
 		m,
@@ -3149,6 +3227,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMaxS
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaxStandbyStreamingDelay",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMaxSyncWorkersPerSubscription() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxSyncWorkersPerSubscription",
 		nil, // no parameters
 	)
 }

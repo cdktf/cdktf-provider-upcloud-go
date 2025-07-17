@@ -477,6 +477,14 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxConnectionsParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxFilesPerProcessParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -566,6 +574,14 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxStandbyStreamingDelayParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxSyncWorkersPerSubscriptionParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

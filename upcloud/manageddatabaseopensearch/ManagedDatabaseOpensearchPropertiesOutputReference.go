@@ -24,9 +24,14 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	AutomaticUtilityNetworkIpFilter() interface{}
 	SetAutomaticUtilityNetworkIpFilter(val interface{})
 	AutomaticUtilityNetworkIpFilterInput() interface{}
+	ClusterFilecacheRemoteDataRatio() *float64
+	SetClusterFilecacheRemoteDataRatio(val *float64)
+	ClusterFilecacheRemoteDataRatioInput() *float64
 	ClusterMaxShardsPerNode() *float64
 	SetClusterMaxShardsPerNode(val *float64)
 	ClusterMaxShardsPerNodeInput() *float64
+	ClusterRemoteStore() ManagedDatabaseOpensearchPropertiesClusterRemoteStoreOutputReference
+	ClusterRemoteStoreInput() *ManagedDatabaseOpensearchPropertiesClusterRemoteStore
 	ClusterRoutingAllocationBalancePreferPrimary() interface{}
 	SetClusterRoutingAllocationBalancePreferPrimary(val interface{})
 	ClusterRoutingAllocationBalancePreferPrimaryInput() interface{}
@@ -76,6 +81,9 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	EnableSecurityAudit() interface{}
 	SetEnableSecurityAudit(val interface{})
 	EnableSecurityAuditInput() interface{}
+	EnableSnapshotApi() interface{}
+	SetEnableSnapshotApi(val interface{})
+	EnableSnapshotApiInput() interface{}
 	// Experimental.
 	Fqn() *string
 	HttpMaxContentLength() *float64
@@ -150,6 +158,9 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	KnnMemoryCircuitBreakerLimit() *float64
 	SetKnnMemoryCircuitBreakerLimit(val *float64)
 	KnnMemoryCircuitBreakerLimitInput() *float64
+	NodeSearchCacheSize() *string
+	SetNodeSearchCacheSize(val *string)
+	NodeSearchCacheSizeInput() *string
 	Openid() ManagedDatabaseOpensearchPropertiesOpenidOutputReference
 	OpenidInput() *ManagedDatabaseOpensearchPropertiesOpenid
 	OpensearchDashboards() ManagedDatabaseOpensearchPropertiesOpensearchDashboardsOutputReference
@@ -166,6 +177,8 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ReindexRemoteWhitelist() *[]*string
 	SetReindexRemoteWhitelist(val *[]*string)
 	ReindexRemoteWhitelistInput() *[]*string
+	RemoteStore() ManagedDatabaseOpensearchPropertiesRemoteStoreOutputReference
+	RemoteStoreInput() *ManagedDatabaseOpensearchPropertiesRemoteStore
 	Saml() ManagedDatabaseOpensearchPropertiesSamlOutputReference
 	SamlInput() *ManagedDatabaseOpensearchPropertiesSaml
 	ScriptMaxCompilationsRate() *string
@@ -254,12 +267,14 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuthFailureListeners(value *ManagedDatabaseOpensearchPropertiesAuthFailureListeners)
+	PutClusterRemoteStore(value *ManagedDatabaseOpensearchPropertiesClusterRemoteStore)
 	PutClusterSearchRequestSlowlog(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog)
 	PutDiskWatermarks(value *ManagedDatabaseOpensearchPropertiesDiskWatermarks)
 	PutIndexRollup(value *ManagedDatabaseOpensearchPropertiesIndexRollup)
 	PutIndexTemplate(value *ManagedDatabaseOpensearchPropertiesIndexTemplate)
 	PutOpenid(value *ManagedDatabaseOpensearchPropertiesOpenid)
 	PutOpensearchDashboards(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards)
+	PutRemoteStore(value *ManagedDatabaseOpensearchPropertiesRemoteStore)
 	PutSaml(value *ManagedDatabaseOpensearchPropertiesSaml)
 	PutSearchBackpressure(value *ManagedDatabaseOpensearchPropertiesSearchBackpressure)
 	PutSearchInsightsTopQueries(value *ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueries)
@@ -269,7 +284,9 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetActionDestructiveRequiresName()
 	ResetAuthFailureListeners()
 	ResetAutomaticUtilityNetworkIpFilter()
+	ResetClusterFilecacheRemoteDataRatio()
 	ResetClusterMaxShardsPerNode()
+	ResetClusterRemoteStore()
 	ResetClusterRoutingAllocationBalancePreferPrimary()
 	ResetClusterRoutingAllocationNodeConcurrentRecoveries()
 	ResetClusterSearchRequestSlowlog()
@@ -282,6 +299,7 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetEnableRemoteBackedStorage()
 	ResetEnableSearchableSnapshots()
 	ResetEnableSecurityAudit()
+	ResetEnableSnapshotApi()
 	ResetHttpMaxContentLength()
 	ResetHttpMaxHeaderSize()
 	ResetHttpMaxInitialLineLength()
@@ -306,12 +324,14 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetKeepIndexRefreshInterval()
 	ResetKnnMemoryCircuitBreakerEnabled()
 	ResetKnnMemoryCircuitBreakerLimit()
+	ResetNodeSearchCacheSize()
 	ResetOpenid()
 	ResetOpensearchDashboards()
 	ResetOverrideMainResponseVersion()
 	ResetPluginsAlertingFilterByBackendRoles()
 	ResetPublicAccess()
 	ResetReindexRemoteWhitelist()
+	ResetRemoteStore()
 	ResetSaml()
 	ResetScriptMaxCompilationsRate()
 	ResetSearchBackpressure()
@@ -427,6 +447,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Automatic
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterFilecacheRemoteDataRatio() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"clusterFilecacheRemoteDataRatio",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterFilecacheRemoteDataRatioInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"clusterFilecacheRemoteDataRatioInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterMaxShardsPerNode() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -442,6 +482,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterMa
 	_jsii_.Get(
 		j,
 		"clusterMaxShardsPerNodeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterRemoteStore() ManagedDatabaseOpensearchPropertiesClusterRemoteStoreOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesClusterRemoteStoreOutputReference
+	_jsii_.Get(
+		j,
+		"clusterRemoteStore",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ClusterRemoteStoreInput() *ManagedDatabaseOpensearchPropertiesClusterRemoteStore {
+	var returns *ManagedDatabaseOpensearchPropertiesClusterRemoteStore
+	_jsii_.Get(
+		j,
+		"clusterRemoteStoreInput",
 		&returns,
 	)
 	return returns
@@ -712,6 +772,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableSec
 	_jsii_.Get(
 		j,
 		"enableSecurityAuditInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableSnapshotApi() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSnapshotApi",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) EnableSnapshotApiInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSnapshotApiInput",
 		&returns,
 	)
 	return returns
@@ -1217,6 +1297,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) KnnMemory
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) NodeSearchCacheSize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"nodeSearchCacheSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) NodeSearchCacheSizeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"nodeSearchCacheSizeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Openid() ManagedDatabaseOpensearchPropertiesOpenidOutputReference {
 	var returns ManagedDatabaseOpensearchPropertiesOpenidOutputReference
 	_jsii_.Get(
@@ -1332,6 +1432,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ReindexRe
 	_jsii_.Get(
 		j,
 		"reindexRemoteWhitelistInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) RemoteStore() ManagedDatabaseOpensearchPropertiesRemoteStoreOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesRemoteStoreOutputReference
+	_jsii_.Get(
+		j,
+		"remoteStore",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) RemoteStoreInput() *ManagedDatabaseOpensearchPropertiesRemoteStore {
+	var returns *ManagedDatabaseOpensearchPropertiesRemoteStore
+	_jsii_.Get(
+		j,
+		"remoteStoreInput",
 		&returns,
 	)
 	return returns
@@ -1818,6 +1938,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetAutomat
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetClusterFilecacheRemoteDataRatio(val *float64) {
+	if err := j.validateSetClusterFilecacheRemoteDataRatioParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clusterFilecacheRemoteDataRatio",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetClusterMaxShardsPerNode(val *float64) {
 	if err := j.validateSetClusterMaxShardsPerNodeParameters(val); err != nil {
 		panic(err)
@@ -1957,6 +2088,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEnableS
 	_jsii_.Set(
 		j,
 		"enableSecurityAudit",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetEnableSnapshotApi(val interface{}) {
+	if err := j.validateSetEnableSnapshotApiParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableSnapshotApi",
 		val,
 	)
 }
@@ -2210,6 +2352,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetKnnMemo
 	_jsii_.Set(
 		j,
 		"knnMemoryCircuitBreakerLimit",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetNodeSearchCacheSize(val *string) {
+	if err := j.validateSetNodeSearchCacheSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"nodeSearchCacheSize",
 		val,
 	)
 }
@@ -2642,6 +2795,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutAuthFa
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutClusterRemoteStore(value *ManagedDatabaseOpensearchPropertiesClusterRemoteStore) {
+	if err := m.validatePutClusterRemoteStoreParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putClusterRemoteStore",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutClusterSearchRequestSlowlog(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog) {
 	if err := m.validatePutClusterSearchRequestSlowlogParameters(value); err != nil {
 		panic(err)
@@ -2704,6 +2868,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutOpense
 	_jsii_.InvokeVoid(
 		m,
 		"putOpensearchDashboards",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutRemoteStore(value *ManagedDatabaseOpensearchPropertiesRemoteStore) {
+	if err := m.validatePutRemoteStoreParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putRemoteStore",
 		[]interface{}{value},
 	)
 }
@@ -2795,10 +2970,26 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetAuto
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetClusterFilecacheRemoteDataRatio() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetClusterFilecacheRemoteDataRatio",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetClusterMaxShardsPerNode() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetClusterMaxShardsPerNode",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetClusterRemoteStore() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetClusterRemoteStore",
 		nil, // no parameters
 	)
 }
@@ -2895,6 +3086,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEnab
 	_jsii_.InvokeVoid(
 		m,
 		"resetEnableSecurityAudit",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetEnableSnapshotApi() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEnableSnapshotApi",
 		nil, // no parameters
 	)
 }
@@ -3091,6 +3290,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetKnnM
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetNodeSearchCacheSize() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNodeSearchCacheSize",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetOpenid() {
 	_jsii_.InvokeVoid(
 		m,
@@ -3135,6 +3342,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetRein
 	_jsii_.InvokeVoid(
 		m,
 		"resetReindexRemoteWhitelist",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetRemoteStore() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRemoteStore",
 		nil, // no parameters
 	)
 }

@@ -51,6 +51,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutClusterRemoteStoreParameters(value *ManagedDatabaseOpensearchPropertiesClusterRemoteStore) error {
+	return nil
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutClusterSearchRequestSlowlogParameters(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog) error {
 	return nil
 }
@@ -72,6 +76,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 }
 
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutOpensearchDashboardsParameters(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutRemoteStoreParameters(value *ManagedDatabaseOpensearchPropertiesRemoteStore) error {
 	return nil
 }
 
@@ -108,6 +116,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetAutomaticUtilityNetworkIpFilterParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetClusterFilecacheRemoteDataRatioParameters(val *float64) error {
 	return nil
 }
 
@@ -160,6 +172,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEnableSecurityAuditParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetEnableSnapshotApiParameters(val interface{}) error {
 	return nil
 }
 
@@ -252,6 +268,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetKnnMemoryCircuitBreakerLimitParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateSetNodeSearchCacheSizeParameters(val *string) error {
 	return nil
 }
 

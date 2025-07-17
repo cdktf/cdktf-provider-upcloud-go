@@ -7,11 +7,11 @@ package manageddatabaseopensearch
 type ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog struct {
 	// Log level.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/managed_database_opensearch#level ManagedDatabaseOpensearch#level}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.0/docs/resources/managed_database_opensearch#level ManagedDatabaseOpensearch#level}
 	Level *string `field:"optional" json:"level" yaml:"level"`
 	// threshold block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/managed_database_opensearch#threshold ManagedDatabaseOpensearch#threshold}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.0/docs/resources/managed_database_opensearch#threshold ManagedDatabaseOpensearch#threshold}
 	Threshold *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogThreshold `field:"optional" json:"threshold" yaml:"threshold"`
 }
 

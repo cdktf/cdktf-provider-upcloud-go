@@ -121,6 +121,8 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	MaxHeapTableSizeInput() *float64
 	Migration() ManagedDatabaseMysqlPropertiesMigrationOutputReference
 	MigrationInput() *ManagedDatabaseMysqlPropertiesMigration
+	MysqlIncrementalBackup() ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference
+	MysqlIncrementalBackupInput() *ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup
 	NetBufferLength() *float64
 	SetNetBufferLength(val *float64)
 	NetBufferLengthInput() *float64
@@ -190,6 +192,7 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMigration(value *ManagedDatabaseMysqlPropertiesMigration)
+	PutMysqlIncrementalBackup(value *ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup)
 	ResetAdminPassword()
 	ResetAdminUsername()
 	ResetAutomaticUtilityNetworkIpFilter()
@@ -220,6 +223,7 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	ResetMaxAllowedPacket()
 	ResetMaxHeapTableSize()
 	ResetMigration()
+	ResetMysqlIncrementalBackup()
 	ResetNetBufferLength()
 	ResetNetReadTimeout()
 	ResetNetWriteTimeout()
@@ -892,6 +896,26 @@ func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) MigrationInput
 	_jsii_.Get(
 		j,
 		"migrationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) MysqlIncrementalBackup() ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference {
+	var returns ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference
+	_jsii_.Get(
+		j,
+		"mysqlIncrementalBackup",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) MysqlIncrementalBackupInput() *ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup {
+	var returns *ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup
+	_jsii_.Get(
+		j,
+		"mysqlIncrementalBackupInput",
 		&returns,
 	)
 	return returns
@@ -1888,6 +1912,17 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) PutMigration(v
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) PutMysqlIncrementalBackup(value *ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup) {
+	if err := m.validatePutMysqlIncrementalBackupParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putMysqlIncrementalBackup",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetAdminPassword() {
 	_jsii_.InvokeVoid(
 		m,
@@ -2124,6 +2159,14 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetMigration
 	_jsii_.InvokeVoid(
 		m,
 		"resetMigration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetMysqlIncrementalBackup() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMysqlIncrementalBackup",
 		nil, // no parameters
 	)
 }

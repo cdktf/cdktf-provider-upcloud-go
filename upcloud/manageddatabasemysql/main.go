@@ -365,6 +365,48 @@ func init() {
 			return &j
 		},
 	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-upcloud.managedDatabaseMysql.ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup",
+		reflect.TypeOf((*ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-upcloud.managedDatabaseMysql.ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference",
+		reflect.TypeOf((*ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "enabled", GoGetter: "Enabled"},
+			_jsii_.MemberProperty{JsiiProperty: "enabledInput", GoGetter: "EnabledInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberProperty{JsiiProperty: "fullBackupWeekSchedule", GoGetter: "FullBackupWeekSchedule"},
+			_jsii_.MemberProperty{JsiiProperty: "fullBackupWeekScheduleInput", GoGetter: "FullBackupWeekScheduleInput"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEnabled", GoMethod: "ResetEnabled"},
+			_jsii_.MemberMethod{JsiiMethod: "resetFullBackupWeekSchedule", GoMethod: "ResetFullBackupWeekSchedule"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
 	_jsii_.RegisterClass(
 		"@cdktf/provider-upcloud.managedDatabaseMysql.ManagedDatabaseMysqlPropertiesOutputReference",
 		reflect.TypeOf((*ManagedDatabaseMysqlPropertiesOutputReference)(nil)).Elem(),
@@ -446,6 +488,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "maxHeapTableSizeInput", GoGetter: "MaxHeapTableSizeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "migration", GoGetter: "Migration"},
 			_jsii_.MemberProperty{JsiiProperty: "migrationInput", GoGetter: "MigrationInput"},
+			_jsii_.MemberProperty{JsiiProperty: "mysqlIncrementalBackup", GoGetter: "MysqlIncrementalBackup"},
+			_jsii_.MemberProperty{JsiiProperty: "mysqlIncrementalBackupInput", GoGetter: "MysqlIncrementalBackupInput"},
 			_jsii_.MemberProperty{JsiiProperty: "netBufferLength", GoGetter: "NetBufferLength"},
 			_jsii_.MemberProperty{JsiiProperty: "netBufferLengthInput", GoGetter: "NetBufferLengthInput"},
 			_jsii_.MemberProperty{JsiiProperty: "netReadTimeout", GoGetter: "NetReadTimeout"},
@@ -455,6 +499,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "publicAccess", GoGetter: "PublicAccess"},
 			_jsii_.MemberProperty{JsiiProperty: "publicAccessInput", GoGetter: "PublicAccessInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putMigration", GoMethod: "PutMigration"},
+			_jsii_.MemberMethod{JsiiMethod: "putMysqlIncrementalBackup", GoMethod: "PutMysqlIncrementalBackup"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAdminPassword", GoMethod: "ResetAdminPassword"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAdminUsername", GoMethod: "ResetAdminUsername"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAutomaticUtilityNetworkIpFilter", GoMethod: "ResetAutomaticUtilityNetworkIpFilter"},
@@ -485,6 +530,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetMaxAllowedPacket", GoMethod: "ResetMaxAllowedPacket"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMaxHeapTableSize", GoMethod: "ResetMaxHeapTableSize"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMigration", GoMethod: "ResetMigration"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMysqlIncrementalBackup", GoMethod: "ResetMysqlIncrementalBackup"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNetBufferLength", GoMethod: "ResetNetBufferLength"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNetReadTimeout", GoMethod: "ResetNetReadTimeout"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNetWriteTimeout", GoMethod: "ResetNetWriteTimeout"},

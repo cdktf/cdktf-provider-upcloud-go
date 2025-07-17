@@ -195,6 +195,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxConnectionsParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxFilesPerProcessParameters(val *float64) error {
 	return nil
 }
@@ -240,6 +244,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxStandbyStreamingDelayParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxSyncWorkersPerSubscriptionParameters(val *float64) error {
 	return nil
 }
 

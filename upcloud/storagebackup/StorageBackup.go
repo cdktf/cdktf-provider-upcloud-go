@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/storage_backup upcloud_storage_backup}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.0/docs/resources/storage_backup upcloud_storage_backup}.
 type StorageBackup interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -444,7 +444,7 @@ func (j *jsiiProxy_StorageBackup) Zone() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/storage_backup upcloud_storage_backup} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.0/docs/resources/storage_backup upcloud_storage_backup} Resource.
 func NewStorageBackup(scope constructs.Construct, id *string, config *StorageBackupConfig) StorageBackup {
 	_init_.Initialize()
 
@@ -462,7 +462,7 @@ func NewStorageBackup(scope constructs.Construct, id *string, config *StorageBac
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.22.1/docs/resources/storage_backup upcloud_storage_backup} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.0/docs/resources/storage_backup upcloud_storage_backup} Resource.
 func NewStorageBackup_Override(s StorageBackup, scope constructs.Construct, id *string, config *StorageBackupConfig) {
 	_init_.Initialize()
 
