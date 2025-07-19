@@ -9,7 +9,7 @@ type GatewayConnectionTunnelIpsecAuthPsk struct {
 	//
 	// This value is only used during resource creation and is not returned in the state. It is not possible to update this value. If you need to update it, delete the connection and create a new one.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.0/docs/resources/gateway_connection_tunnel#psk GatewayConnectionTunnel#psk}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.1/docs/resources/gateway_connection_tunnel#psk GatewayConnectionTunnel#psk}
 	Psk *string `field:"required" json:"psk" yaml:"psk"`
 }
 
