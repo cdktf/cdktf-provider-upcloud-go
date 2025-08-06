@@ -24,11 +24,11 @@ type FirewallRulesConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The UUID of the server to be protected with the firewall rules.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.2/docs/resources/firewall_rules#server_id FirewallRules#server_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.3/docs/resources/firewall_rules#server_id FirewallRules#server_id}
 	ServerId *string `field:"required" json:"serverId" yaml:"serverId"`
 	// firewall_rule block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.2/docs/resources/firewall_rules#firewall_rule FirewallRules#firewall_rule}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.3/docs/resources/firewall_rules#firewall_rule FirewallRules#firewall_rule}
 	FirewallRule interface{} `field:"optional" json:"firewallRule" yaml:"firewallRule"`
 }
 

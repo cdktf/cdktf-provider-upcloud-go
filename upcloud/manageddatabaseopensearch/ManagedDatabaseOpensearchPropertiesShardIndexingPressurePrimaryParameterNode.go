@@ -11,7 +11,7 @@ type ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterNod
 	//                             threshold that acts as a soft indicator for strain on a node.
 	//                             Default is 0.7.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.2/docs/resources/managed_database_opensearch#soft_limit ManagedDatabaseOpensearch#soft_limit}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.3/docs/resources/managed_database_opensearch#soft_limit ManagedDatabaseOpensearch#soft_limit}
 	SoftLimit *float64 `field:"optional" json:"softLimit" yaml:"softLimit"`
 }
 

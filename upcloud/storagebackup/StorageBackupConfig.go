@@ -24,15 +24,15 @@ type StorageBackupConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The UUID of the storage to back up.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.2/docs/resources/storage_backup#source_storage StorageBackup#source_storage}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.3/docs/resources/storage_backup#source_storage StorageBackup#source_storage}
 	SourceStorage *string `field:"required" json:"sourceStorage" yaml:"sourceStorage"`
 	// Title of the backup.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.2/docs/resources/storage_backup#title StorageBackup#title}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.3/docs/resources/storage_backup#title StorageBackup#title}
 	Title *string `field:"required" json:"title" yaml:"title"`
 	// User defined key-value pairs to classify the storage.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.2/docs/resources/storage_backup#labels StorageBackup#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.3/docs/resources/storage_backup#labels StorageBackup#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 }
 
