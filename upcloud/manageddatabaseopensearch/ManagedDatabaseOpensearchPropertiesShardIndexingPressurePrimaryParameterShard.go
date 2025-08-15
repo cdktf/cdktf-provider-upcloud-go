@@ -11,7 +11,7 @@ type ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterSha
 	//                             Shard indexing backpressure increases or decreases this allocated quota based on the inflow of traffic for the shard.
 	//                             Default is 0.001.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.4/docs/resources/managed_database_opensearch#min_limit ManagedDatabaseOpensearch#min_limit}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/managed_database_opensearch#min_limit ManagedDatabaseOpensearch#min_limit}
 	MinLimit *float64 `field:"optional" json:"minLimit" yaml:"minLimit"`
 }
 

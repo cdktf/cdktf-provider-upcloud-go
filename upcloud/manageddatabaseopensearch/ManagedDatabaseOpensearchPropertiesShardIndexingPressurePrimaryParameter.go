@@ -7,11 +7,11 @@ package manageddatabaseopensearch
 type ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameter struct {
 	// node block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.4/docs/resources/managed_database_opensearch#node ManagedDatabaseOpensearch#node}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/managed_database_opensearch#node ManagedDatabaseOpensearch#node}
 	NodeAttribute *ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterNode `field:"optional" json:"nodeAttribute" yaml:"nodeAttribute"`
 	// shard block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.4/docs/resources/managed_database_opensearch#shard ManagedDatabaseOpensearch#shard}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/managed_database_opensearch#shard ManagedDatabaseOpensearch#shard}
 	Shard *ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterShard `field:"optional" json:"shard" yaml:"shard"`
 }
 

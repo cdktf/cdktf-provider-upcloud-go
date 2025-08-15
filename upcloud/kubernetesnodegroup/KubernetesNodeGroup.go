@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.4/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group}.
 type KubernetesNodeGroup interface {
 	cdktf.TerraformResource
 	AntiAffinity() interface{}
@@ -20,6 +20,8 @@ type KubernetesNodeGroup interface {
 	AntiAffinityInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CloudNativePlan() KubernetesNodeGroupCloudNativePlanList
+	CloudNativePlanInput() interface{}
 	Cluster() *string
 	SetCluster(val *string)
 	ClusterInput() *string
@@ -47,6 +49,8 @@ type KubernetesNodeGroup interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	GpuPlan() KubernetesNodeGroupGpuPlanList
+	GpuPlanInput() interface{}
 	Id() *string
 	KubeletArgs() KubernetesNodeGroupKubeletArgsList
 	KubeletArgsInput() interface{}
@@ -138,11 +142,15 @@ type KubernetesNodeGroup interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutCloudNativePlan(value interface{})
 	PutCustomPlan(value interface{})
+	PutGpuPlan(value interface{})
 	PutKubeletArgs(value interface{})
 	PutTaint(value interface{})
 	ResetAntiAffinity()
+	ResetCloudNativePlan()
 	ResetCustomPlan()
+	ResetGpuPlan()
 	ResetKubeletArgs()
 	ResetLabels()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -195,6 +203,26 @@ func (j *jsiiProxy_KubernetesNodeGroup) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) CloudNativePlan() KubernetesNodeGroupCloudNativePlanList {
+	var returns KubernetesNodeGroupCloudNativePlanList
+	_jsii_.Get(
+		j,
+		"cloudNativePlan",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) CloudNativePlanInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"cloudNativePlanInput",
 		&returns,
 	)
 	return returns
@@ -305,6 +333,26 @@ func (j *jsiiProxy_KubernetesNodeGroup) FriendlyUniqueId() *string {
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) GpuPlan() KubernetesNodeGroupGpuPlanList {
+	var returns KubernetesNodeGroupGpuPlanList
+	_jsii_.Get(
+		j,
+		"gpuPlan",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KubernetesNodeGroup) GpuPlanInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"gpuPlanInput",
 		&returns,
 	)
 	return returns
@@ -581,7 +629,7 @@ func (j *jsiiProxy_KubernetesNodeGroup) UtilityNetworkAccessInput() interface{} 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.4/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) KubernetesNodeGroup {
 	_init_.Initialize()
 
@@ -599,7 +647,7 @@ func NewKubernetesNodeGroup(scope constructs.Construct, id *string, config *Kube
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.23.4/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/kubernetes_node_group upcloud_kubernetes_node_group} Resource.
 func NewKubernetesNodeGroup_Override(k KubernetesNodeGroup, scope constructs.Construct, id *string, config *KubernetesNodeGroupConfig) {
 	_init_.Initialize()
 
@@ -1130,6 +1178,17 @@ func (k *jsiiProxy_KubernetesNodeGroup) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
+func (k *jsiiProxy_KubernetesNodeGroup) PutCloudNativePlan(value interface{}) {
+	if err := k.validatePutCloudNativePlanParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putCloudNativePlan",
+		[]interface{}{value},
+	)
+}
+
 func (k *jsiiProxy_KubernetesNodeGroup) PutCustomPlan(value interface{}) {
 	if err := k.validatePutCustomPlanParameters(value); err != nil {
 		panic(err)
@@ -1137,6 +1196,17 @@ func (k *jsiiProxy_KubernetesNodeGroup) PutCustomPlan(value interface{}) {
 	_jsii_.InvokeVoid(
 		k,
 		"putCustomPlan",
+		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) PutGpuPlan(value interface{}) {
+	if err := k.validatePutGpuPlanParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putGpuPlan",
 		[]interface{}{value},
 	)
 }
@@ -1171,10 +1241,26 @@ func (k *jsiiProxy_KubernetesNodeGroup) ResetAntiAffinity() {
 	)
 }
 
+func (k *jsiiProxy_KubernetesNodeGroup) ResetCloudNativePlan() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetCloudNativePlan",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KubernetesNodeGroup) ResetCustomPlan() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetCustomPlan",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) ResetGpuPlan() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetGpuPlan",
 		nil, // no parameters
 	)
 }

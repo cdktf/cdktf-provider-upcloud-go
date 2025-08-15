@@ -207,6 +207,37 @@ func (k *jsiiProxy_KubernetesNodeGroup) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutCloudNativePlanParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*KubernetesNodeGroupCloudNativePlan:
+		value := value.(*[]*KubernetesNodeGroupCloudNativePlan)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*KubernetesNodeGroupCloudNativePlan:
+		value_ := value.([]*KubernetesNodeGroupCloudNativePlan)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*KubernetesNodeGroupCloudNativePlan; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (k *jsiiProxy_KubernetesNodeGroup) validatePutCustomPlanParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -232,6 +263,37 @@ func (k *jsiiProxy_KubernetesNodeGroup) validatePutCustomPlanParameters(value in
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*KubernetesNodeGroupCustomPlan; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutGpuPlanParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*KubernetesNodeGroupGpuPlan:
+		value := value.(*[]*KubernetesNodeGroupGpuPlan)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*KubernetesNodeGroupGpuPlan:
+		value_ := value.([]*KubernetesNodeGroupGpuPlan)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*KubernetesNodeGroupGpuPlan; received %#v (a %T)", value, value)
 		}
 	}
 

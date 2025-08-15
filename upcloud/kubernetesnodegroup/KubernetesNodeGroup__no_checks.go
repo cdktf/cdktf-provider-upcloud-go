@@ -75,7 +75,15 @@ func (k *jsiiProxy_KubernetesNodeGroup) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutCloudNativePlanParameters(value interface{}) error {
+	return nil
+}
+
 func (k *jsiiProxy_KubernetesNodeGroup) validatePutCustomPlanParameters(value interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesNodeGroup) validatePutGpuPlanParameters(value interface{}) error {
 	return nil
 }
 
