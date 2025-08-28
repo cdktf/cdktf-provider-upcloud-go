@@ -24,23 +24,23 @@ type NetworkPeeringConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the network peering.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/network_peering#name NetworkPeering#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/network_peering#name NetworkPeering#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Configured status of the network peering.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/network_peering#configured_status NetworkPeering#configured_status}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/network_peering#configured_status NetworkPeering#configured_status}
 	ConfiguredStatus *string `field:"optional" json:"configuredStatus" yaml:"configuredStatus"`
 	// User defined key-value pairs to classify the network peering.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/network_peering#labels NetworkPeering#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/network_peering#labels NetworkPeering#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 	// network block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/network_peering#network NetworkPeering#network}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/network_peering#network NetworkPeering#network}
 	Network interface{} `field:"optional" json:"network" yaml:"network"`
 	// peer_network block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/network_peering#peer_network NetworkPeering#peer_network}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/network_peering#peer_network NetworkPeering#peer_network}
 	PeerNetwork interface{} `field:"optional" json:"peerNetwork" yaml:"peerNetwork"`
 }
 

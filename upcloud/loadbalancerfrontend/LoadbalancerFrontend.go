@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend}.
 type LoadbalancerFrontend interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -482,7 +482,7 @@ func (j *jsiiProxy_LoadbalancerFrontend) TlsConfigs() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
 func NewLoadbalancerFrontend(scope constructs.Construct, id *string, config *LoadbalancerFrontendConfig) LoadbalancerFrontend {
 	_init_.Initialize()
 
@@ -500,7 +500,7 @@ func NewLoadbalancerFrontend(scope constructs.Construct, id *string, config *Loa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/loadbalancer_frontend upcloud_loadbalancer_frontend} Resource.
 func NewLoadbalancerFrontend_Override(l LoadbalancerFrontend, scope constructs.Construct, id *string, config *LoadbalancerFrontendConfig) {
 	_init_.Initialize()
 

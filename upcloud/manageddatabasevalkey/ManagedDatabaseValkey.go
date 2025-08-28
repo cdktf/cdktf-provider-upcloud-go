@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/managed_database_valkey upcloud_managed_database_valkey}.
 type ManagedDatabaseValkey interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -680,7 +680,7 @@ func (j *jsiiProxy_ManagedDatabaseValkey) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
 func NewManagedDatabaseValkey(scope constructs.Construct, id *string, config *ManagedDatabaseValkeyConfig) ManagedDatabaseValkey {
 	_init_.Initialize()
 
@@ -698,7 +698,7 @@ func NewManagedDatabaseValkey(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
 func NewManagedDatabaseValkey_Override(m ManagedDatabaseValkey, scope constructs.Construct, id *string, config *ManagedDatabaseValkeyConfig) {
 	_init_.Initialize()
 
