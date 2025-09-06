@@ -24,7 +24,7 @@ type DataUpcloudZonesConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Filter zones by type. Possible values are "all", "public" and "private". Default is "public".
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.1/docs/data-sources/zones#filter_type DataUpcloudZones#filter_type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/data-sources/zones#filter_type DataUpcloudZones#filter_type}
 	FilterType *string `field:"optional" json:"filterType" yaml:"filterType"`
 }
 
