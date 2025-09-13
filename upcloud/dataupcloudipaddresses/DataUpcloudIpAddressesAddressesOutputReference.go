@@ -39,6 +39,7 @@ type DataUpcloudIpAddressesAddressesOutputReference interface {
 	Mac() *string
 	PartOfPlan() cdktf.IResolvable
 	PtrRecord() *string
+	ReleasePolicy() *string
 	Server() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -203,6 +204,16 @@ func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) PtrRecord() *
 	_jsii_.Get(
 		j,
 		"ptrRecord",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataUpcloudIpAddressesAddressesOutputReference) ReleasePolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"releasePolicy",
 		&returns,
 	)
 	return returns

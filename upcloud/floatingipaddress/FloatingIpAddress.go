@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/floating_ip_address upcloud_floating_ip_address}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/floating_ip_address upcloud_floating_ip_address}.
 type FloatingIpAddress interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -66,6 +66,9 @@ type FloatingIpAddress interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ReleasePolicy() *string
+	SetReleasePolicy(val *string)
+	ReleasePolicyInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -124,6 +127,7 @@ type FloatingIpAddress interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetReleasePolicy()
 	ResetZone()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -353,6 +357,26 @@ func (j *jsiiProxy_FloatingIpAddress) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_FloatingIpAddress) ReleasePolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"releasePolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FloatingIpAddress) ReleasePolicyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"releasePolicyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FloatingIpAddress) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -404,7 +428,7 @@ func (j *jsiiProxy_FloatingIpAddress) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress(scope constructs.Construct, id *string, config *FloatingIpAddressConfig) FloatingIpAddress {
 	_init_.Initialize()
 
@@ -422,7 +446,7 @@ func NewFloatingIpAddress(scope constructs.Construct, id *string, config *Floati
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/floating_ip_address upcloud_floating_ip_address} Resource.
 func NewFloatingIpAddress_Override(f FloatingIpAddress, scope constructs.Construct, id *string, config *FloatingIpAddressConfig) {
 	_init_.Initialize()
 
@@ -530,6 +554,17 @@ func (j *jsiiProxy_FloatingIpAddress)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_FloatingIpAddress)SetReleasePolicy(val *string) {
+	if err := j.validateSetReleasePolicyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"releasePolicy",
 		val,
 	)
 }
@@ -926,6 +961,14 @@ func (f *jsiiProxy_FloatingIpAddress) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FloatingIpAddress) ResetReleasePolicy() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetReleasePolicy",
 		nil, // no parameters
 	)
 }

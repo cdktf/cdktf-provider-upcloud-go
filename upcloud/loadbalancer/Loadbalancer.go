@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/loadbalancer upcloud_loadbalancer}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/loadbalancer upcloud_loadbalancer}.
 type Loadbalancer interface {
 	cdktf.TerraformResource
 	Backends() *[]*string
@@ -46,6 +46,8 @@ type Loadbalancer interface {
 	FriendlyUniqueId() *string
 	Frontends() *[]*string
 	Id() *string
+	IpAddresses() LoadbalancerIpAddressesList
+	IpAddressesInput() interface{}
 	Labels() *map[string]*string
 	SetLabels(val *map[string]*string)
 	LabelsInput() *map[string]*string
@@ -137,8 +139,10 @@ type Loadbalancer interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutIpAddresses(value interface{})
 	PutNetworks(value interface{})
 	ResetConfiguredStatus()
+	ResetIpAddresses()
 	ResetLabels()
 	ResetMaintenanceDow()
 	ResetMaintenanceTime()
@@ -300,6 +304,26 @@ func (j *jsiiProxy_Loadbalancer) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) IpAddresses() LoadbalancerIpAddressesList {
+	var returns LoadbalancerIpAddressesList
+	_jsii_.Get(
+		j,
+		"ipAddresses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Loadbalancer) IpAddressesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ipAddressesInput",
 		&returns,
 	)
 	return returns
@@ -576,7 +600,7 @@ func (j *jsiiProxy_Loadbalancer) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer(scope constructs.Construct, id *string, config *LoadbalancerConfig) Loadbalancer {
 	_init_.Initialize()
 
@@ -594,7 +618,7 @@ func NewLoadbalancer(scope constructs.Construct, id *string, config *Loadbalance
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/loadbalancer upcloud_loadbalancer} Resource.
 func NewLoadbalancer_Override(l Loadbalancer, scope constructs.Construct, id *string, config *LoadbalancerConfig) {
 	_init_.Initialize()
 
@@ -1114,6 +1138,17 @@ func (l *jsiiProxy_Loadbalancer) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (l *jsiiProxy_Loadbalancer) PutIpAddresses(value interface{}) {
+	if err := l.validatePutIpAddressesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putIpAddresses",
+		[]interface{}{value},
+	)
+}
+
 func (l *jsiiProxy_Loadbalancer) PutNetworks(value interface{}) {
 	if err := l.validatePutNetworksParameters(value); err != nil {
 		panic(err)
@@ -1129,6 +1164,14 @@ func (l *jsiiProxy_Loadbalancer) ResetConfiguredStatus() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetConfiguredStatus",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_Loadbalancer) ResetIpAddresses() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetIpAddresses",
 		nil, // no parameters
 	)
 }

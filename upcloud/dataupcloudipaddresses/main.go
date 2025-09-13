@@ -113,6 +113,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "mac", GoGetter: "Mac"},
 			_jsii_.MemberProperty{JsiiProperty: "partOfPlan", GoGetter: "PartOfPlan"},
 			_jsii_.MemberProperty{JsiiProperty: "ptrRecord", GoGetter: "PtrRecord"},
+			_jsii_.MemberProperty{JsiiProperty: "releasePolicy", GoGetter: "ReleasePolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "server", GoGetter: "Server"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},

@@ -12,7 +12,7 @@ type ManagedDatabaseOpensearchPropertiesShardIndexingPressureOperatingFactor str
 	//                     shard indexing backpressure decreases the current allocated memory for that shard.
 	//                     Default is 0.75.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/managed_database_opensearch#lower ManagedDatabaseOpensearch#lower}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/managed_database_opensearch#lower ManagedDatabaseOpensearch#lower}
 	Lower *float64 `field:"optional" json:"lower" yaml:"lower"`
 	// Optimal occupancy of the allocated quota of memory for the shard.
 	//
@@ -21,7 +21,7 @@ type ManagedDatabaseOpensearchPropertiesShardIndexingPressureOperatingFactor str
 	//                     shard indexing backpressure doesn’t change the current allocated memory for that shard.
 	//                     Default is 0.85.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/managed_database_opensearch#optimal ManagedDatabaseOpensearch#optimal}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/managed_database_opensearch#optimal ManagedDatabaseOpensearch#optimal}
 	Optimal *float64 `field:"optional" json:"optimal" yaml:"optimal"`
 	// Upper occupancy limit of the allocated quota of memory for the shard.
 	//
@@ -30,7 +30,7 @@ type ManagedDatabaseOpensearchPropertiesShardIndexingPressureOperatingFactor str
 	//                     shard indexing backpressure increases the current allocated memory for that shard.
 	//                     Default is 0.95.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.24.2/docs/resources/managed_database_opensearch#upper ManagedDatabaseOpensearch#upper}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/managed_database_opensearch#upper ManagedDatabaseOpensearch#upper}
 	Upper *float64 `field:"optional" json:"upper" yaml:"upper"`
 }
 

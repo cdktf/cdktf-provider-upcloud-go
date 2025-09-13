@@ -119,6 +119,10 @@ func (j *jsiiProxy_FloatingIpAddress) validateSetProvisionersParameters(val *[]i
 	return nil
 }
 
+func (j *jsiiProxy_FloatingIpAddress) validateSetReleasePolicyParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_FloatingIpAddress) validateSetZoneParameters(val *string) error {
 	return nil
 }
