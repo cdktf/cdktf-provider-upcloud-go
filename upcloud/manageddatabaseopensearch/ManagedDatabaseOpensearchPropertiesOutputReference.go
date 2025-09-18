@@ -58,6 +58,12 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	CustomDomain() *string
 	SetCustomDomain(val *string)
 	CustomDomainInput() *string
+	CustomKeystores() *[]*string
+	SetCustomKeystores(val *[]*string)
+	CustomKeystoresInput() *[]*string
+	CustomRepos() *[]*string
+	SetCustomRepos(val *[]*string)
+	CustomReposInput() *[]*string
 	DiskWatermarks() ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference
 	DiskWatermarksInput() *ManagedDatabaseOpensearchPropertiesDiskWatermarks
 	ElasticsearchVersion() *string
@@ -291,6 +297,8 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetClusterRoutingAllocationNodeConcurrentRecoveries()
 	ResetClusterSearchRequestSlowlog()
 	ResetCustomDomain()
+	ResetCustomKeystores()
+	ResetCustomRepos()
 	ResetDiskWatermarks()
 	ResetElasticsearchVersion()
 	ResetEmailSenderName()
@@ -612,6 +620,46 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) CustomDom
 	_jsii_.Get(
 		j,
 		"customDomainInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) CustomKeystores() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"customKeystores",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) CustomKeystoresInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"customKeystoresInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) CustomRepos() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"customRepos",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) CustomReposInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"customReposInput",
 		&returns,
 	)
 	return returns
@@ -2015,6 +2063,28 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetCustomD
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetCustomKeystores(val *[]*string) {
+	if err := j.validateSetCustomKeystoresParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"customKeystores",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetCustomRepos(val *[]*string) {
+	if err := j.validateSetCustomReposParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"customRepos",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference)SetElasticsearchVersion(val *string) {
 	if err := j.validateSetElasticsearchVersionParameters(val); err != nil {
 		panic(err)
@@ -3022,6 +3092,22 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetCust
 	_jsii_.InvokeVoid(
 		m,
 		"resetCustomDomain",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetCustomKeystores() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetCustomKeystores",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetCustomRepos() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetCustomRepos",
 		nil, // no parameters
 	)
 }

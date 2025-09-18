@@ -86,6 +86,94 @@ func init() {
 		"@cdktf/provider-upcloud.network.NetworkIpNetwork",
 		reflect.TypeOf((*NetworkIpNetwork)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-upcloud.network.NetworkIpNetworkDhcpRoutesConfiguration",
+		reflect.TypeOf((*NetworkIpNetworkDhcpRoutesConfiguration)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-upcloud.network.NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulation",
+		reflect.TypeOf((*NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulation)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-upcloud.network.NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulationOutputReference",
+		reflect.TypeOf((*NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulationOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "enabled", GoGetter: "Enabled"},
+			_jsii_.MemberProperty{JsiiProperty: "enabledInput", GoGetter: "EnabledInput"},
+			_jsii_.MemberProperty{JsiiProperty: "excludeBySource", GoGetter: "ExcludeBySource"},
+			_jsii_.MemberProperty{JsiiProperty: "excludeBySourceInput", GoGetter: "ExcludeBySourceInput"},
+			_jsii_.MemberProperty{JsiiProperty: "filterByDestination", GoGetter: "FilterByDestination"},
+			_jsii_.MemberProperty{JsiiProperty: "filterByDestinationInput", GoGetter: "FilterByDestinationInput"},
+			_jsii_.MemberProperty{JsiiProperty: "filterByRouteType", GoGetter: "FilterByRouteType"},
+			_jsii_.MemberProperty{JsiiProperty: "filterByRouteTypeInput", GoGetter: "FilterByRouteTypeInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEnabled", GoMethod: "ResetEnabled"},
+			_jsii_.MemberMethod{JsiiMethod: "resetExcludeBySource", GoMethod: "ResetExcludeBySource"},
+			_jsii_.MemberMethod{JsiiMethod: "resetFilterByDestination", GoMethod: "ResetFilterByDestination"},
+			_jsii_.MemberMethod{JsiiMethod: "resetFilterByRouteType", GoMethod: "ResetFilterByRouteType"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulationOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-upcloud.network.NetworkIpNetworkDhcpRoutesConfigurationOutputReference",
+		reflect.TypeOf((*NetworkIpNetworkDhcpRoutesConfigurationOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "effectiveRoutesAutoPopulation", GoGetter: "EffectiveRoutesAutoPopulation"},
+			_jsii_.MemberProperty{JsiiProperty: "effectiveRoutesAutoPopulationInput", GoGetter: "EffectiveRoutesAutoPopulationInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "putEffectiveRoutesAutoPopulation", GoMethod: "PutEffectiveRoutesAutoPopulation"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEffectiveRoutesAutoPopulation", GoMethod: "ResetEffectiveRoutesAutoPopulation"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
 	_jsii_.RegisterClass(
 		"@cdktf/provider-upcloud.network.NetworkIpNetworkList",
 		reflect.TypeOf((*NetworkIpNetworkList)(nil)).Elem(),
@@ -125,6 +213,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "dhcpDnsInput", GoGetter: "DhcpDnsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "dhcpInput", GoGetter: "DhcpInput"},
 			_jsii_.MemberProperty{JsiiProperty: "dhcpRoutes", GoGetter: "DhcpRoutes"},
+			_jsii_.MemberProperty{JsiiProperty: "dhcpRoutesConfiguration", GoGetter: "DhcpRoutesConfiguration"},
+			_jsii_.MemberProperty{JsiiProperty: "dhcpRoutesConfigurationInput", GoGetter: "DhcpRoutesConfigurationInput"},
 			_jsii_.MemberProperty{JsiiProperty: "dhcpRoutesInput", GoGetter: "DhcpRoutesInput"},
 			_jsii_.MemberProperty{JsiiProperty: "family", GoGetter: "Family"},
 			_jsii_.MemberProperty{JsiiProperty: "familyInput", GoGetter: "FamilyInput"},
@@ -143,9 +233,11 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "putDhcpRoutesConfiguration", GoMethod: "PutDhcpRoutesConfiguration"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDhcpDefaultRoute", GoMethod: "ResetDhcpDefaultRoute"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDhcpDns", GoMethod: "ResetDhcpDns"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDhcpRoutes", GoMethod: "ResetDhcpRoutes"},
+			_jsii_.MemberMethod{JsiiMethod: "resetDhcpRoutesConfiguration", GoMethod: "ResetDhcpRoutesConfiguration"},
 			_jsii_.MemberMethod{JsiiMethod: "resetGateway", GoMethod: "ResetGateway"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},

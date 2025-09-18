@@ -7,7 +7,7 @@ package loadbalancerfrontendrule
 type LoadbalancerFrontendRuleActionsTcpReject struct {
 	// Indicates if the rule is active.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.25.0/docs/resources/loadbalancer_frontend_rule#active LoadbalancerFrontendRule#active}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.26.0/docs/resources/loadbalancer_frontend_rule#active LoadbalancerFrontendRule#active}
 	Active interface{} `field:"optional" json:"active" yaml:"active"`
 }
 

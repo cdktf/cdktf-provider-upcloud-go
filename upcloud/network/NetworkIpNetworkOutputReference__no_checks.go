@@ -47,6 +47,10 @@ func (n *jsiiProxy_NetworkIpNetworkOutputReference) validateInterpolationForAttr
 	return nil
 }
 
+func (n *jsiiProxy_NetworkIpNetworkOutputReference) validatePutDhcpRoutesConfigurationParameters(value *NetworkIpNetworkDhcpRoutesConfiguration) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkIpNetworkOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

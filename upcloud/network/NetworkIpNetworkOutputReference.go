@@ -42,6 +42,8 @@ type NetworkIpNetworkOutputReference interface {
 	DhcpInput() interface{}
 	DhcpRoutes() *[]*string
 	SetDhcpRoutes(val *[]*string)
+	DhcpRoutesConfiguration() NetworkIpNetworkDhcpRoutesConfigurationOutputReference
+	DhcpRoutesConfigurationInput() interface{}
 	DhcpRoutesInput() *[]*string
 	Family() *string
 	SetFamily(val *string)
@@ -85,9 +87,11 @@ type NetworkIpNetworkOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutDhcpRoutesConfiguration(value *NetworkIpNetworkDhcpRoutesConfiguration)
 	ResetDhcpDefaultRoute()
 	ResetDhcpDns()
 	ResetDhcpRoutes()
+	ResetDhcpRoutesConfiguration()
 	ResetGateway()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -219,6 +223,26 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpRoutes() *[]*string {
 	_jsii_.Get(
 		j,
 		"dhcpRoutes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpRoutesConfiguration() NetworkIpNetworkDhcpRoutesConfigurationOutputReference {
+	var returns NetworkIpNetworkDhcpRoutesConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"dhcpRoutesConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpRoutesConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"dhcpRoutesConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -660,6 +684,17 @@ func (n *jsiiProxy_NetworkIpNetworkOutputReference) InterpolationForAttribute(pr
 	return returns
 }
 
+func (n *jsiiProxy_NetworkIpNetworkOutputReference) PutDhcpRoutesConfiguration(value *NetworkIpNetworkDhcpRoutesConfiguration) {
+	if err := n.validatePutDhcpRoutesConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"putDhcpRoutesConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (n *jsiiProxy_NetworkIpNetworkOutputReference) ResetDhcpDefaultRoute() {
 	_jsii_.InvokeVoid(
 		n,
@@ -680,6 +715,14 @@ func (n *jsiiProxy_NetworkIpNetworkOutputReference) ResetDhcpRoutes() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetDhcpRoutes",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkIpNetworkOutputReference) ResetDhcpRoutesConfiguration() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetDhcpRoutesConfiguration",
 		nil, // no parameters
 	)
 }
