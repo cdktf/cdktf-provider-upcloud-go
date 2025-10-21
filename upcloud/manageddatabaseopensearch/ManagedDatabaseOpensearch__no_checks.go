@@ -103,6 +103,10 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetAccessControlParameters
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetAdditionalDiskSpaceGibParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

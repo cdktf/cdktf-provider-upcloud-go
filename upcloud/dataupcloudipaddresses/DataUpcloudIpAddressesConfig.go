@@ -24,7 +24,7 @@ type DataUpcloudIpAddressesConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// addresses block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/data-sources/ip_addresses#addresses DataUpcloudIpAddresses#addresses}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/data-sources/ip_addresses#addresses DataUpcloudIpAddresses#addresses}
 	Addresses interface{} `field:"optional" json:"addresses" yaml:"addresses"`
 }
 

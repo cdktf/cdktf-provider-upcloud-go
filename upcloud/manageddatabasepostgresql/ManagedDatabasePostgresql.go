@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql}.
 type ManagedDatabasePostgresql interface {
 	cdktf.TerraformResource
+	AdditionalDiskSpaceGib() *float64
+	SetAdditionalDiskSpaceGib(val *float64)
+	AdditionalDiskSpaceGibInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Components() ManagedDatabasePostgresqlComponentsList
@@ -151,6 +154,7 @@ type ManagedDatabasePostgresql interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabasePostgresqlProperties)
+	ResetAdditionalDiskSpaceGib()
 	ResetId()
 	ResetLabels()
 	ResetMaintenanceWindowDow()
@@ -178,6 +182,26 @@ type ManagedDatabasePostgresql interface {
 // The jsii proxy struct for ManagedDatabasePostgresql
 type jsiiProxy_ManagedDatabasePostgresql struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql) AdditionalDiskSpaceGib() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGib",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql) AdditionalDiskSpaceGibInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGibInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresql) CdktfStack() cdktf.TerraformStack {
@@ -691,7 +715,7 @@ func (j *jsiiProxy_ManagedDatabasePostgresql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) ManagedDatabasePostgresql {
 	_init_.Initialize()
 
@@ -709,7 +733,7 @@ func NewManagedDatabasePostgresql(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_postgresql upcloud_managed_database_postgresql} Resource.
 func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope constructs.Construct, id *string, config *ManagedDatabasePostgresqlConfig) {
 	_init_.Initialize()
 
@@ -717,6 +741,17 @@ func NewManagedDatabasePostgresql_Override(m ManagedDatabasePostgresql, scope co
 		"@cdktf/provider-upcloud.managedDatabasePostgresql.ManagedDatabasePostgresql",
 		[]interface{}{scope, id, config},
 		m,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresql)SetAdditionalDiskSpaceGib(val *float64) {
+	if err := j.validateSetAdditionalDiskSpaceGibParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalDiskSpaceGib",
+		val,
 	)
 }
 
@@ -1270,6 +1305,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresql) PutProperties(value *ManagedDataba
 		m,
 		"putProperties",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresql) ResetAdditionalDiskSpaceGib() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAdditionalDiskSpaceGib",
+		nil, // no parameters
 	)
 }
 

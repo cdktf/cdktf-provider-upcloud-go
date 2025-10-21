@@ -99,6 +99,10 @@ func validateManagedDatabaseValkey_IsTerraformResourceParameters(x interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseValkey) validateSetAdditionalDiskSpaceGibParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseValkey) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

@@ -12,12 +12,15 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch}.
 type ManagedDatabaseOpensearch interface {
 	cdktf.TerraformResource
 	AccessControl() interface{}
 	SetAccessControl(val interface{})
 	AccessControlInput() interface{}
+	AdditionalDiskSpaceGib() *float64
+	SetAdditionalDiskSpaceGib(val *float64)
+	AdditionalDiskSpaceGibInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Components() ManagedDatabaseOpensearchComponentsList
@@ -157,6 +160,7 @@ type ManagedDatabaseOpensearch interface {
 	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseOpensearchProperties)
 	ResetAccessControl()
+	ResetAdditionalDiskSpaceGib()
 	ResetExtendedAccessControl()
 	ResetId()
 	ResetLabels()
@@ -202,6 +206,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) AccessControlInput() interface{} {
 	_jsii_.Get(
 		j,
 		"accessControlInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch) AdditionalDiskSpaceGib() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGib",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch) AdditionalDiskSpaceGibInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGibInput",
 		&returns,
 	)
 	return returns
@@ -728,7 +752,7 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) ManagedDatabaseOpensearch {
 	_init_.Initialize()
 
@@ -746,7 +770,7 @@ func NewManagedDatabaseOpensearch(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_opensearch upcloud_managed_database_opensearch} Resource.
 func NewManagedDatabaseOpensearch_Override(m ManagedDatabaseOpensearch, scope constructs.Construct, id *string, config *ManagedDatabaseOpensearchConfig) {
 	_init_.Initialize()
 
@@ -764,6 +788,17 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch)SetAccessControl(val interface{}) {
 	_jsii_.Set(
 		j,
 		"accessControl",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearch)SetAdditionalDiskSpaceGib(val *float64) {
+	if err := j.validateSetAdditionalDiskSpaceGibParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalDiskSpaceGib",
 		val,
 	)
 }
@@ -1336,6 +1371,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearch) ResetAccessControl() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetAccessControl",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearch) ResetAdditionalDiskSpaceGib() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAdditionalDiskSpaceGib",
 		nil, // no parameters
 	)
 }

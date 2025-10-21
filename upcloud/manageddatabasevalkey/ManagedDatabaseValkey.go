@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey}.
 type ManagedDatabaseValkey interface {
 	cdktf.TerraformResource
+	AdditionalDiskSpaceGib() *float64
+	SetAdditionalDiskSpaceGib(val *float64)
+	AdditionalDiskSpaceGibInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Components() ManagedDatabaseValkeyComponentsList
@@ -150,6 +153,7 @@ type ManagedDatabaseValkey interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseValkeyProperties)
+	ResetAdditionalDiskSpaceGib()
 	ResetId()
 	ResetLabels()
 	ResetMaintenanceWindowDow()
@@ -177,6 +181,26 @@ type ManagedDatabaseValkey interface {
 // The jsii proxy struct for ManagedDatabaseValkey
 type jsiiProxy_ManagedDatabaseValkey struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkey) AdditionalDiskSpaceGib() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGib",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkey) AdditionalDiskSpaceGibInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGibInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabaseValkey) CdktfStack() cdktf.TerraformStack {
@@ -680,7 +704,7 @@ func (j *jsiiProxy_ManagedDatabaseValkey) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
 func NewManagedDatabaseValkey(scope constructs.Construct, id *string, config *ManagedDatabaseValkeyConfig) ManagedDatabaseValkey {
 	_init_.Initialize()
 
@@ -698,7 +722,7 @@ func NewManagedDatabaseValkey(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_valkey upcloud_managed_database_valkey} Resource.
 func NewManagedDatabaseValkey_Override(m ManagedDatabaseValkey, scope constructs.Construct, id *string, config *ManagedDatabaseValkeyConfig) {
 	_init_.Initialize()
 
@@ -706,6 +730,17 @@ func NewManagedDatabaseValkey_Override(m ManagedDatabaseValkey, scope constructs
 		"@cdktf/provider-upcloud.managedDatabaseValkey.ManagedDatabaseValkey",
 		[]interface{}{scope, id, config},
 		m,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseValkey)SetAdditionalDiskSpaceGib(val *float64) {
+	if err := j.validateSetAdditionalDiskSpaceGibParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalDiskSpaceGib",
+		val,
 	)
 }
 
@@ -1259,6 +1294,14 @@ func (m *jsiiProxy_ManagedDatabaseValkey) PutProperties(value *ManagedDatabaseVa
 		m,
 		"putProperties",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseValkey) ResetAdditionalDiskSpaceGib() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAdditionalDiskSpaceGib",
+		nil, // no parameters
 	)
 }
 

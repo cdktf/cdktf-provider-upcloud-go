@@ -309,6 +309,14 @@ func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetAccessControlParameters
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetAdditionalDiskSpaceGibParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseOpensearch) validateSetConnectionParameters(val interface{}) error {
 	switch val.(type) {
 	case *cdktf.SSHProvisionerConnection:

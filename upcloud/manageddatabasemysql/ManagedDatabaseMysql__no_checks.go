@@ -99,6 +99,10 @@ func validateManagedDatabaseMysql_IsTerraformResourceParameters(x interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseMysql) validateSetAdditionalDiskSpaceGibParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseMysql) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

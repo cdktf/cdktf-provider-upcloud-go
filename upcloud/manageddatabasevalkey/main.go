@@ -14,6 +14,8 @@ func init() {
 		"@cdktf/provider-upcloud.managedDatabaseValkey.ManagedDatabaseValkey",
 		reflect.TypeOf((*ManagedDatabaseValkey)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "additionalDiskSpaceGib", GoGetter: "AdditionalDiskSpaceGib"},
+			_jsii_.MemberProperty{JsiiProperty: "additionalDiskSpaceGibInput", GoGetter: "AdditionalDiskSpaceGibInput"},
 			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
@@ -68,6 +70,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putNetwork", GoMethod: "PutNetwork"},
 			_jsii_.MemberMethod{JsiiMethod: "putProperties", GoMethod: "PutProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAdditionalDiskSpaceGib", GoMethod: "ResetAdditionalDiskSpaceGib"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLabels", GoMethod: "ResetLabels"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMaintenanceWindowDow", GoMethod: "ResetMaintenanceWindowDow"},

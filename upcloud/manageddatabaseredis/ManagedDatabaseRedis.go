@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis upcloud_managed_database_redis}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis upcloud_managed_database_redis}.
 type ManagedDatabaseRedis interface {
 	cdktf.TerraformResource
+	AdditionalDiskSpaceGib() *float64
+	SetAdditionalDiskSpaceGib(val *float64)
+	AdditionalDiskSpaceGibInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Components() ManagedDatabaseRedisComponentsList
@@ -150,6 +153,7 @@ type ManagedDatabaseRedis interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseRedisProperties)
+	ResetAdditionalDiskSpaceGib()
 	ResetId()
 	ResetLabels()
 	ResetMaintenanceWindowDow()
@@ -177,6 +181,26 @@ type ManagedDatabaseRedis interface {
 // The jsii proxy struct for ManagedDatabaseRedis
 type jsiiProxy_ManagedDatabaseRedis struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) AdditionalDiskSpaceGib() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGib",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis) AdditionalDiskSpaceGibInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGibInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabaseRedis) CdktfStack() cdktf.TerraformStack {
@@ -680,7 +704,7 @@ func (j *jsiiProxy_ManagedDatabaseRedis) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
 func NewManagedDatabaseRedis(scope constructs.Construct, id *string, config *ManagedDatabaseRedisConfig) ManagedDatabaseRedis {
 	_init_.Initialize()
 
@@ -698,7 +722,7 @@ func NewManagedDatabaseRedis(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis upcloud_managed_database_redis} Resource.
 func NewManagedDatabaseRedis_Override(m ManagedDatabaseRedis, scope constructs.Construct, id *string, config *ManagedDatabaseRedisConfig) {
 	_init_.Initialize()
 
@@ -706,6 +730,17 @@ func NewManagedDatabaseRedis_Override(m ManagedDatabaseRedis, scope constructs.C
 		"@cdktf/provider-upcloud.managedDatabaseRedis.ManagedDatabaseRedis",
 		[]interface{}{scope, id, config},
 		m,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseRedis)SetAdditionalDiskSpaceGib(val *float64) {
+	if err := j.validateSetAdditionalDiskSpaceGibParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalDiskSpaceGib",
+		val,
 	)
 }
 
@@ -1259,6 +1294,14 @@ func (m *jsiiProxy_ManagedDatabaseRedis) PutProperties(value *ManagedDatabaseRed
 		m,
 		"putProperties",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseRedis) ResetAdditionalDiskSpaceGib() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAdditionalDiskSpaceGib",
+		nil, // no parameters
 	)
 }
 

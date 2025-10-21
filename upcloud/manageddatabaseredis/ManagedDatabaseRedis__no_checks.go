@@ -99,6 +99,10 @@ func validateManagedDatabaseRedis_IsTerraformResourceParameters(x interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabaseRedis) validateSetAdditionalDiskSpaceGibParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabaseRedis) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

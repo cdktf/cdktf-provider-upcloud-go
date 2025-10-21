@@ -26,54 +26,58 @@ type ManagedDatabaseRedisConfig struct {
 	//
 	// The name is used as a prefix for the logical hostname. Must be unique within an account
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#name ManagedDatabaseRedis#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#name ManagedDatabaseRedis#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Service plan to use.
 	//
-	// This determines how much resources the instance will have. You can list available plans with `upctl database plans <type>`.
+	// This determines how much resources the instance will have. You can list available plans with `upctl database plans redis`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#plan ManagedDatabaseRedis#plan}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#plan ManagedDatabaseRedis#plan}
 	Plan *string `field:"required" json:"plan" yaml:"plan"`
 	// Title of a managed database instance.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#title ManagedDatabaseRedis#title}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#title ManagedDatabaseRedis#title}
 	Title *string `field:"required" json:"title" yaml:"title"`
 	// Zone where the instance resides, e.g. `de-fra1`. You can list available zones with `upctl zone list`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#zone ManagedDatabaseRedis#zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#zone ManagedDatabaseRedis#zone}
 	Zone *string `field:"required" json:"zone" yaml:"zone"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#id ManagedDatabaseRedis#id}.
+	// Not supported for `redis` databases. Should be left unconfigured.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#additional_disk_space_gib ManagedDatabaseRedis#additional_disk_space_gib}
+	AdditionalDiskSpaceGib *float64 `field:"optional" json:"additionalDiskSpaceGib" yaml:"additionalDiskSpaceGib"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#id ManagedDatabaseRedis#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// User defined key-value pairs to classify the managed database.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#labels ManagedDatabaseRedis#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#labels ManagedDatabaseRedis#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 	// Maintenance window day of week. Lower case weekday name (monday, tuesday, ...).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#maintenance_window_dow ManagedDatabaseRedis#maintenance_window_dow}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#maintenance_window_dow ManagedDatabaseRedis#maintenance_window_dow}
 	MaintenanceWindowDow *string `field:"optional" json:"maintenanceWindowDow" yaml:"maintenanceWindowDow"`
 	// Maintenance window UTC time in hh:mm:ss format.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#maintenance_window_time ManagedDatabaseRedis#maintenance_window_time}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#maintenance_window_time ManagedDatabaseRedis#maintenance_window_time}
 	MaintenanceWindowTime *string `field:"optional" json:"maintenanceWindowTime" yaml:"maintenanceWindowTime"`
 	// network block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#network ManagedDatabaseRedis#network}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#network ManagedDatabaseRedis#network}
 	Network interface{} `field:"optional" json:"network" yaml:"network"`
 	// The administrative power state of the service.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#powered ManagedDatabaseRedis#powered}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#powered ManagedDatabaseRedis#powered}
 	Powered interface{} `field:"optional" json:"powered" yaml:"powered"`
 	// properties block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#properties ManagedDatabaseRedis#properties}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#properties ManagedDatabaseRedis#properties}
 	Properties *ManagedDatabaseRedisProperties `field:"optional" json:"properties" yaml:"properties"`
 	// If set to true, prevents the managed service from being powered off, or deleted.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_redis#termination_protection ManagedDatabaseRedis#termination_protection}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_redis#termination_protection ManagedDatabaseRedis#termination_protection}
 	TerminationProtection interface{} `field:"optional" json:"terminationProtection" yaml:"terminationProtection"`
 }
 

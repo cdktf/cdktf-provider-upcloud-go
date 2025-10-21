@@ -99,6 +99,10 @@ func validateManagedDatabasePostgresql_IsTerraformResourceParameters(x interface
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetAdditionalDiskSpaceGibParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresql) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

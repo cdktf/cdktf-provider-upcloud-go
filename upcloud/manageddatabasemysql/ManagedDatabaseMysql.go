@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql}.
 type ManagedDatabaseMysql interface {
 	cdktf.TerraformResource
+	AdditionalDiskSpaceGib() *float64
+	SetAdditionalDiskSpaceGib(val *float64)
+	AdditionalDiskSpaceGibInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Components() ManagedDatabaseMysqlComponentsList
@@ -150,6 +153,7 @@ type ManagedDatabaseMysql interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutNetwork(value interface{})
 	PutProperties(value *ManagedDatabaseMysqlProperties)
+	ResetAdditionalDiskSpaceGib()
 	ResetId()
 	ResetLabels()
 	ResetMaintenanceWindowDow()
@@ -177,6 +181,26 @@ type ManagedDatabaseMysql interface {
 // The jsii proxy struct for ManagedDatabaseMysql
 type jsiiProxy_ManagedDatabaseMysql struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql) AdditionalDiskSpaceGib() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGib",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql) AdditionalDiskSpaceGibInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"additionalDiskSpaceGibInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ManagedDatabaseMysql) CdktfStack() cdktf.TerraformStack {
@@ -680,7 +704,7 @@ func (j *jsiiProxy_ManagedDatabaseMysql) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) ManagedDatabaseMysql {
 	_init_.Initialize()
 
@@ -698,7 +722,7 @@ func NewManagedDatabaseMysql(scope constructs.Construct, id *string, config *Man
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_mysql upcloud_managed_database_mysql} Resource.
 func NewManagedDatabaseMysql_Override(m ManagedDatabaseMysql, scope constructs.Construct, id *string, config *ManagedDatabaseMysqlConfig) {
 	_init_.Initialize()
 
@@ -706,6 +730,17 @@ func NewManagedDatabaseMysql_Override(m ManagedDatabaseMysql, scope constructs.C
 		"@cdktf/provider-upcloud.managedDatabaseMysql.ManagedDatabaseMysql",
 		[]interface{}{scope, id, config},
 		m,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabaseMysql)SetAdditionalDiskSpaceGib(val *float64) {
+	if err := j.validateSetAdditionalDiskSpaceGibParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalDiskSpaceGib",
+		val,
 	)
 }
 
@@ -1259,6 +1294,14 @@ func (m *jsiiProxy_ManagedDatabaseMysql) PutProperties(value *ManagedDatabaseMys
 		m,
 		"putProperties",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseMysql) ResetAdditionalDiskSpaceGib() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAdditionalDiskSpaceGib",
+		nil, // no parameters
 	)
 }
 

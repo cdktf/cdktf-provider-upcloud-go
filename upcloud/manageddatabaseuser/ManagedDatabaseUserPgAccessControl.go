@@ -7,7 +7,7 @@ package manageddatabaseuser
 type ManagedDatabaseUserPgAccessControl struct {
 	// Grant replication privilege.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.28.0/docs/resources/managed_database_user#allow_replication ManagedDatabaseUser#allow_replication}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.0/docs/resources/managed_database_user#allow_replication ManagedDatabaseUser#allow_replication}
 	AllowReplication interface{} `field:"optional" json:"allowReplication" yaml:"allowReplication"`
 }
 
