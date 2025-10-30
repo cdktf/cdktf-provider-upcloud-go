@@ -24,27 +24,27 @@ type LoadbalancerFrontendRuleConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// ID of the load balancer frontend to which the frontend rule is connected.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.1/docs/resources/loadbalancer_frontend_rule#frontend LoadbalancerFrontendRule#frontend}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/loadbalancer_frontend_rule#frontend LoadbalancerFrontendRule#frontend}
 	Frontend *string `field:"required" json:"frontend" yaml:"frontend"`
 	// The name of the frontend rule. Must be unique within the frontend.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.1/docs/resources/loadbalancer_frontend_rule#name LoadbalancerFrontendRule#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/loadbalancer_frontend_rule#name LoadbalancerFrontendRule#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Rule with the higher priority goes first. Rules with the same priority processed in alphabetical order.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.1/docs/resources/loadbalancer_frontend_rule#priority LoadbalancerFrontendRule#priority}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/loadbalancer_frontend_rule#priority LoadbalancerFrontendRule#priority}
 	Priority *float64 `field:"required" json:"priority" yaml:"priority"`
 	// actions block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.1/docs/resources/loadbalancer_frontend_rule#actions LoadbalancerFrontendRule#actions}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/loadbalancer_frontend_rule#actions LoadbalancerFrontendRule#actions}
 	Actions interface{} `field:"optional" json:"actions" yaml:"actions"`
 	// matchers block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.1/docs/resources/loadbalancer_frontend_rule#matchers LoadbalancerFrontendRule#matchers}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/loadbalancer_frontend_rule#matchers LoadbalancerFrontendRule#matchers}
 	Matchers interface{} `field:"optional" json:"matchers" yaml:"matchers"`
 	// Defines boolean operator used to combine multiple matchers. Defaults to `and`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.29.1/docs/resources/loadbalancer_frontend_rule#matching_condition LoadbalancerFrontendRule#matching_condition}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/loadbalancer_frontend_rule#matching_condition LoadbalancerFrontendRule#matching_condition}
 	MatchingCondition *string `field:"optional" json:"matchingCondition" yaml:"matchingCondition"`
 }
 
