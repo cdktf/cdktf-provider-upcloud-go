@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsList) validat
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

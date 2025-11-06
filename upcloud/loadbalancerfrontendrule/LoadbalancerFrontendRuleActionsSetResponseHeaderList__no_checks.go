@@ -15,7 +15,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsSetResponseHeaderList) validat
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleActionsSetResponseHeaderList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsSetResponseHeaderList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

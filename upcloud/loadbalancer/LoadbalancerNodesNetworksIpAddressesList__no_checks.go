@@ -15,7 +15,7 @@ func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesList) validateGetParamete
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

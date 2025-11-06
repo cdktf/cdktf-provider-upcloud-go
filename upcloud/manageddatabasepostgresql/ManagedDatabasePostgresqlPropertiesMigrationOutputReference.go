@@ -90,7 +90,7 @@ type ManagedDatabasePostgresqlPropertiesMigrationOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
 	ResetDbname()
 	ResetHost()
 	ResetIgnoreDbs()
@@ -102,7 +102,7 @@ type ManagedDatabasePostgresqlPropertiesMigrationOutputReference interface {
 	ResetUsername()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -717,8 +717,8 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	return returns
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -726,7 +726,7 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	_jsii_.Invoke(
 		m,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
@@ -805,8 +805,8 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := m.validateResolveParameters(_context); err != nil {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -814,7 +814,7 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesMigrationOutputReference) 
 	_jsii_.Invoke(
 		m,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

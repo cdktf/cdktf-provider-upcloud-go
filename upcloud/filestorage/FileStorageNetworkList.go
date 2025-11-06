@@ -41,7 +41,7 @@ type FileStorageNetworkList interface {
 	Get(index *float64) FileStorageNetworkOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -231,8 +231,8 @@ func (f *jsiiProxy_FileStorageNetworkList) Get(index *float64) FileStorageNetwor
 	return returns
 }
 
-func (f *jsiiProxy_FileStorageNetworkList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := f.validateResolveParameters(_context); err != nil {
+func (f *jsiiProxy_FileStorageNetworkList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := f.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -240,7 +240,7 @@ func (f *jsiiProxy_FileStorageNetworkList) Resolve(_context cdktf.IResolveContex
 	_jsii_.Invoke(
 		f,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

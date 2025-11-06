@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseUserValkeyAccessControlOutputReference) valida
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUserValkeyAccessControlOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseUserValkeyAccessControlOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUserValkeyAccessControlOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseUserValkeyAccessControlOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

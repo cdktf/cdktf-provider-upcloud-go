@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesLa
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesLatencyOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesLatencyOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesLatencyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesLatencyOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

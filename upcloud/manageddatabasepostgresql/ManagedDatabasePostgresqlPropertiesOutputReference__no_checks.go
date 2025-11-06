@@ -43,7 +43,7 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateG
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -67,7 +67,7 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 
@@ -167,6 +167,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoCombineLimitParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoMaxCombineLimitParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoMaxConcurrencyParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoMethodParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoWorkersParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIpFilterParameters(val *[]*string) error {
 	return nil
 }
@@ -256,6 +276,10 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxWorkerProcessesParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetNodeCountParameters(val *float64) error {
 	return nil
 }
 

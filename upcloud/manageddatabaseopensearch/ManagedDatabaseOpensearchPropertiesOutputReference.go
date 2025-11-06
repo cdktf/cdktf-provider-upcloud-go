@@ -155,6 +155,8 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	IsmHistoryRolloverRetentionPeriod() *float64
 	SetIsmHistoryRolloverRetentionPeriod(val *float64)
 	IsmHistoryRolloverRetentionPeriodInput() *float64
+	Jwt() ManagedDatabaseOpensearchPropertiesJwtOutputReference
+	JwtInput() *ManagedDatabaseOpensearchPropertiesJwt
 	KeepIndexRefreshInterval() interface{}
 	SetKeepIndexRefreshInterval(val interface{})
 	KeepIndexRefreshIntervalInput() interface{}
@@ -271,13 +273,14 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
 	PutAuthFailureListeners(value *ManagedDatabaseOpensearchPropertiesAuthFailureListeners)
 	PutClusterRemoteStore(value *ManagedDatabaseOpensearchPropertiesClusterRemoteStore)
 	PutClusterSearchRequestSlowlog(value *ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlog)
 	PutDiskWatermarks(value *ManagedDatabaseOpensearchPropertiesDiskWatermarks)
 	PutIndexRollup(value *ManagedDatabaseOpensearchPropertiesIndexRollup)
 	PutIndexTemplate(value *ManagedDatabaseOpensearchPropertiesIndexTemplate)
+	PutJwt(value *ManagedDatabaseOpensearchPropertiesJwt)
 	PutOpenid(value *ManagedDatabaseOpensearchPropertiesOpenid)
 	PutOpensearchDashboards(value *ManagedDatabaseOpensearchPropertiesOpensearchDashboards)
 	PutRemoteStore(value *ManagedDatabaseOpensearchPropertiesRemoteStore)
@@ -329,6 +332,7 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetIsmHistoryMaxDocs()
 	ResetIsmHistoryRolloverCheckPeriod()
 	ResetIsmHistoryRolloverRetentionPeriod()
+	ResetJwt()
 	ResetKeepIndexRefreshInterval()
 	ResetKnnMemoryCircuitBreakerEnabled()
 	ResetKnnMemoryCircuitBreakerLimit()
@@ -362,7 +366,7 @@ type ManagedDatabaseOpensearchPropertiesOutputReference interface {
 	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -1280,6 +1284,26 @@ func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) IsmHistor
 	_jsii_.Get(
 		j,
 		"ismHistoryRolloverRetentionPeriodInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Jwt() ManagedDatabaseOpensearchPropertiesJwtOutputReference {
+	var returns ManagedDatabaseOpensearchPropertiesJwtOutputReference
+	_jsii_.Get(
+		j,
+		"jwt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) JwtInput() *ManagedDatabaseOpensearchPropertiesJwt {
+	var returns *ManagedDatabaseOpensearchPropertiesJwt
+	_jsii_.Get(
+		j,
+		"jwtInput",
 		&returns,
 	)
 	return returns
@@ -2838,8 +2862,8 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Interpola
 	return returns
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -2847,7 +2871,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Interpola
 	_jsii_.Invoke(
 		m,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
@@ -2916,6 +2940,17 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutIndexT
 	_jsii_.InvokeVoid(
 		m,
 		"putIndexTemplate",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) PutJwt(value *ManagedDatabaseOpensearchPropertiesJwt) {
+	if err := m.validatePutJwtParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putJwt",
 		[]interface{}{value},
 	)
 }
@@ -3352,6 +3387,14 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetIsmH
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetJwt() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetJwt",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetKeepIndexRefreshInterval() {
 	_jsii_.InvokeVoid(
 		m,
@@ -3600,8 +3643,8 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) ResetVers
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := m.validateResolveParameters(_context); err != nil {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -3609,7 +3652,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) Resolve(_
 	_jsii_.Invoke(
 		m,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

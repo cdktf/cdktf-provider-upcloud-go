@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputRefere
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesDiskWatermarksOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

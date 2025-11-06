@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) validateGetParamete
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudNetworksNetworksIpNetworkList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (g *jsiiProxy_GatewayConnectionTunnelIpsecPropertiesOutputReference) valida
 	return nil
 }
 
-func (g *jsiiProxy_GatewayConnectionTunnelIpsecPropertiesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (g *jsiiProxy_GatewayConnectionTunnelIpsecPropertiesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (g *jsiiProxy_GatewayConnectionTunnelIpsecPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GatewayConnectionTunnelIpsecPropertiesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

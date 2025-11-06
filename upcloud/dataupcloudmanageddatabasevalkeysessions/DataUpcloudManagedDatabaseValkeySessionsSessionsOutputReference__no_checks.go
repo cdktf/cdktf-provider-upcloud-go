@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsOutputReferen
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudManagedDatabaseValkeySessionsSessionsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

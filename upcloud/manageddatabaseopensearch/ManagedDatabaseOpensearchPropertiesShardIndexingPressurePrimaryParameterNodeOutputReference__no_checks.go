@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrima
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterNodeOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterNodeOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterNodeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesShardIndexingPressurePrimaryParameterNodeOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseValkeyComponentsOutputReference) validateGetSt
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseValkeyComponentsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseValkeyComponentsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseValkeyComponentsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseValkeyComponentsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,7 +43,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateGetS
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -119,7 +119,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validatePutU
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -29,9 +29,9 @@ func (k *jsiiProxy_KubernetesNodeGroupTaintList) validateGetParameters(index *fl
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupTaintList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (k *jsiiProxy_KubernetesNodeGroupTaintList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

@@ -15,7 +15,7 @@ func (g *jsiiProxy_GatewayConnectionRemoteRouteList) validateGetParameters(index
 	return nil
 }
 
-func (g *jsiiProxy_GatewayConnectionRemoteRouteList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GatewayConnectionRemoteRouteList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

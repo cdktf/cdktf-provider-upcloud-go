@@ -15,7 +15,7 @@ func (l *jsiiProxy_LoadbalancerFrontendPropertiesList) validateGetParameters(ind
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendPropertiesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendPropertiesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

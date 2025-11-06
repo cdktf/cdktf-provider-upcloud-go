@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/managed_database_user upcloud_managed_database_user}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/managed_database_user upcloud_managed_database_user}.
 type ManagedDatabaseUser interface {
 	cdktf.TerraformResource
 	Authentication() *string
@@ -68,8 +68,6 @@ type ManagedDatabaseUser interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	RedisAccessControl() ManagedDatabaseUserRedisAccessControlOutputReference
-	RedisAccessControlInput() *ManagedDatabaseUserRedisAccessControl
 	Service() *string
 	SetService(val *string)
 	ServiceInput() *string
@@ -130,7 +128,6 @@ type ManagedDatabaseUser interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutOpensearchAccessControl(value *ManagedDatabaseUserOpensearchAccessControl)
 	PutPgAccessControl(value *ManagedDatabaseUserPgAccessControl)
-	PutRedisAccessControl(value *ManagedDatabaseUserRedisAccessControl)
 	PutValkeyAccessControl(value *ManagedDatabaseUserValkeyAccessControl)
 	ResetAuthentication()
 	ResetId()
@@ -140,7 +137,6 @@ type ManagedDatabaseUser interface {
 	ResetOverrideLogicalId()
 	ResetPassword()
 	ResetPgAccessControl()
-	ResetRedisAccessControl()
 	ResetValkeyAccessControl()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -390,26 +386,6 @@ func (j *jsiiProxy_ManagedDatabaseUser) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_ManagedDatabaseUser) RedisAccessControl() ManagedDatabaseUserRedisAccessControlOutputReference {
-	var returns ManagedDatabaseUserRedisAccessControlOutputReference
-	_jsii_.Get(
-		j,
-		"redisAccessControl",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ManagedDatabaseUser) RedisAccessControlInput() *ManagedDatabaseUserRedisAccessControl {
-	var returns *ManagedDatabaseUserRedisAccessControl
-	_jsii_.Get(
-		j,
-		"redisAccessControlInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ManagedDatabaseUser) Service() *string {
 	var returns *string
 	_jsii_.Get(
@@ -511,7 +487,7 @@ func (j *jsiiProxy_ManagedDatabaseUser) ValkeyAccessControlInput() *ManagedDatab
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) ManagedDatabaseUser {
 	_init_.Initialize()
 
@@ -529,7 +505,7 @@ func NewManagedDatabaseUser(scope constructs.Construct, id *string, config *Mana
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/managed_database_user upcloud_managed_database_user} Resource.
 func NewManagedDatabaseUser_Override(m ManagedDatabaseUser, scope constructs.Construct, id *string, config *ManagedDatabaseUserConfig) {
 	_init_.Initialize()
 
@@ -1038,17 +1014,6 @@ func (m *jsiiProxy_ManagedDatabaseUser) PutPgAccessControl(value *ManagedDatabas
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) PutRedisAccessControl(value *ManagedDatabaseUserRedisAccessControl) {
-	if err := m.validatePutRedisAccessControlParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"putRedisAccessControl",
-		[]interface{}{value},
-	)
-}
-
 func (m *jsiiProxy_ManagedDatabaseUser) PutValkeyAccessControl(value *ManagedDatabaseUserValkeyAccessControl) {
 	if err := m.validatePutValkeyAccessControlParameters(value); err != nil {
 		panic(err)
@@ -1104,14 +1069,6 @@ func (m *jsiiProxy_ManagedDatabaseUser) ResetPgAccessControl() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetPgAccessControl",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_ManagedDatabaseUser) ResetRedisAccessControl() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetRedisAccessControl",
 		nil, // no parameters
 	)
 }

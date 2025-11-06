@@ -43,11 +43,11 @@ func (n *jsiiProxy_NetworkPeeringPeerNetworkOutputReference) validateGetStringMa
 	return nil
 }
 
-func (n *jsiiProxy_NetworkPeeringPeerNetworkOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (n *jsiiProxy_NetworkPeeringPeerNetworkOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (n *jsiiProxy_NetworkPeeringPeerNetworkOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (n *jsiiProxy_NetworkPeeringPeerNetworkOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

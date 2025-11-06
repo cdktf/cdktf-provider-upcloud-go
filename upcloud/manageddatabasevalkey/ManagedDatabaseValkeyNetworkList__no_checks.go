@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabaseValkeyNetworkList) validateGetParameters(index
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseValkeyNetworkList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseValkeyNetworkList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

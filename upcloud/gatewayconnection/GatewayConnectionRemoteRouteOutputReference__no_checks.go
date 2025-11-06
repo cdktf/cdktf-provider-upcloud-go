@@ -43,11 +43,11 @@ func (g *jsiiProxy_GatewayConnectionRemoteRouteOutputReference) validateGetStrin
 	return nil
 }
 
-func (g *jsiiProxy_GatewayConnectionRemoteRouteOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (g *jsiiProxy_GatewayConnectionRemoteRouteOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (g *jsiiProxy_GatewayConnectionRemoteRouteOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GatewayConnectionRemoteRouteOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

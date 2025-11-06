@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) validateG
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

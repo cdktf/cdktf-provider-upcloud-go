@@ -43,7 +43,7 @@ func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationOutputReference) valid
 	return nil
 }
 
-func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -51,7 +51,7 @@ func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationOutputReference) valid
 	return nil
 }
 
-func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

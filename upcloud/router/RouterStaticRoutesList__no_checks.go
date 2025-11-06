@@ -15,7 +15,7 @@ func (r *jsiiProxy_RouterStaticRoutesList) validateGetParameters(index *float64)
 	return nil
 }
 
-func (r *jsiiProxy_RouterStaticRoutesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (r *jsiiProxy_RouterStaticRoutesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,7 +43,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutput
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -51,7 +51,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutput
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesAuthFailureListenersOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

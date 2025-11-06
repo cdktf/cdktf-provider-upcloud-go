@@ -15,7 +15,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeList) validateGetPara
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersBodySizeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

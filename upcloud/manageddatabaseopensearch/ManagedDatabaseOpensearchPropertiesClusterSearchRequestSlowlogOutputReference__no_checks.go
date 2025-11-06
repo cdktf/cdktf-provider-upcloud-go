@@ -43,7 +43,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlo
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -51,7 +51,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlo
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesClusterSearchRequestSlowlogOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,7 +43,7 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateGetStr
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -55,7 +55,7 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validatePutMys
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

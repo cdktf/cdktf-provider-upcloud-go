@@ -15,7 +15,7 @@ func (g *jsiiProxy_GatewayAddressesList) validateGetParameters(index *float64) e
 	return nil
 }
 
-func (g *jsiiProxy_GatewayAddressesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GatewayAddressesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

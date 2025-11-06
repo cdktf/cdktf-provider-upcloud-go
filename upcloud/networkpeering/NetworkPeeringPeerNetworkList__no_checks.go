@@ -15,7 +15,7 @@ func (n *jsiiProxy_NetworkPeeringPeerNetworkList) validateGetParameters(index *f
 	return nil
 }
 
-func (n *jsiiProxy_NetworkPeeringPeerNetworkList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (n *jsiiProxy_NetworkPeeringPeerNetworkList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

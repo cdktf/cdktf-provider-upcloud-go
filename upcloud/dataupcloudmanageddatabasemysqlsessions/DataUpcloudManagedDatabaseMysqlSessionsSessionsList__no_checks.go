@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataUpcloudManagedDatabaseMysqlSessionsSessionsList) validate
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedDatabaseMysqlSessionsSessionsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudManagedDatabaseMysqlSessionsSessionsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

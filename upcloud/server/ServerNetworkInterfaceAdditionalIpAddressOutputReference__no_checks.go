@@ -43,11 +43,11 @@ func (s *jsiiProxy_ServerNetworkInterfaceAdditionalIpAddressOutputReference) val
 	return nil
 }
 
-func (s *jsiiProxy_ServerNetworkInterfaceAdditionalIpAddressOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServerNetworkInterfaceAdditionalIpAddressOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ServerNetworkInterfaceAdditionalIpAddressOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServerNetworkInterfaceAdditionalIpAddressOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

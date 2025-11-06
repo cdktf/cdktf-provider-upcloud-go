@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataUpcloudNetworksNetworksServersOutputReference) validateGe
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudNetworksNetworksServersOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataUpcloudNetworksNetworksServersOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudNetworksNetworksServersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudNetworksNetworksServersOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

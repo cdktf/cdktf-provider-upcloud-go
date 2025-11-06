@@ -7,11 +7,11 @@ package filestorage
 type FileStorageShareAcl struct {
 	// Access level: 'ro' or 'rw'.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/file_storage#permission FileStorage#permission}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/file_storage#permission FileStorage#permission}
 	Permission *string `field:"required" json:"permission" yaml:"permission"`
 	// Target IP/CIDR or '*'.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.30.0/docs/resources/file_storage#target FileStorage#target}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/file_storage#target FileStorage#target}
 	Target *string `field:"required" json:"target" yaml:"target"`
 }
 

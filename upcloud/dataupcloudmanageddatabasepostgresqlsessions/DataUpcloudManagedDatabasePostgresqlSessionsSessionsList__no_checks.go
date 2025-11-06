@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataUpcloudManagedDatabasePostgresqlSessionsSessionsList) val
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedDatabasePostgresqlSessionsSessionsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudManagedDatabasePostgresqlSessionsSessionsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

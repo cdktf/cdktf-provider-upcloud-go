@@ -95,6 +95,21 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	IdleInTransactionSessionTimeoutInput() *float64
 	InternalValue() *ManagedDatabasePostgresqlProperties
 	SetInternalValue(val *ManagedDatabasePostgresqlProperties)
+	IoCombineLimit() *float64
+	SetIoCombineLimit(val *float64)
+	IoCombineLimitInput() *float64
+	IoMaxCombineLimit() *float64
+	SetIoMaxCombineLimit(val *float64)
+	IoMaxCombineLimitInput() *float64
+	IoMaxConcurrency() *float64
+	SetIoMaxConcurrency(val *float64)
+	IoMaxConcurrencyInput() *float64
+	IoMethod() *string
+	SetIoMethod(val *string)
+	IoMethodInput() *string
+	IoWorkers() *float64
+	SetIoWorkers(val *float64)
+	IoWorkersInput() *float64
 	IpFilter() *[]*string
 	SetIpFilter(val *[]*string)
 	IpFilterInput() *[]*string
@@ -166,6 +181,9 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	MaxWorkerProcessesInput() *float64
 	Migration() ManagedDatabasePostgresqlPropertiesMigrationOutputReference
 	MigrationInput() *ManagedDatabasePostgresqlPropertiesMigration
+	NodeCount() *float64
+	SetNodeCount(val *float64)
+	NodeCountInput() *float64
 	PasswordEncryption() *string
 	SetPasswordEncryption(val *string)
 	PasswordEncryptionInput() *string
@@ -271,7 +289,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
 	PutMigration(value *ManagedDatabasePostgresqlPropertiesMigration)
 	PutPgaudit(value *ManagedDatabasePostgresqlPropertiesPgaudit)
 	PutPgbouncer(value *ManagedDatabasePostgresqlPropertiesPgbouncer)
@@ -298,6 +316,11 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetDeadlockTimeout()
 	ResetDefaultToastCompression()
 	ResetIdleInTransactionSessionTimeout()
+	ResetIoCombineLimit()
+	ResetIoMaxCombineLimit()
+	ResetIoMaxConcurrency()
+	ResetIoMethod()
+	ResetIoWorkers()
 	ResetIpFilter()
 	ResetJit()
 	ResetLogAutovacuumMinDuration()
@@ -322,6 +345,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetMaxWalSenders()
 	ResetMaxWorkerProcesses()
 	ResetMigration()
+	ResetNodeCount()
 	ResetPasswordEncryption()
 	ResetPgaudit()
 	ResetPgbouncer()
@@ -350,7 +374,7 @@ type ManagedDatabasePostgresqlPropertiesOutputReference interface {
 	ResetWorkMem()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -833,6 +857,106 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) InternalV
 	return returns
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoCombineLimit() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioCombineLimit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoCombineLimitInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioCombineLimitInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoMaxCombineLimit() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioMaxCombineLimit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoMaxCombineLimitInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioMaxCombineLimitInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoMaxConcurrency() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioMaxConcurrency",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoMaxConcurrencyInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioMaxConcurrencyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoMethod() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ioMethod",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoMethodInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ioMethodInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoWorkers() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioWorkers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IoWorkersInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ioWorkersInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) IpFilter() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -1308,6 +1432,26 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Migration
 	_jsii_.Get(
 		j,
 		"migrationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) NodeCount() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"nodeCount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) NodeCountInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"nodeCountInput",
 		&returns,
 	)
 	return returns
@@ -2145,6 +2289,61 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetInterna
 	)
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIoCombineLimit(val *float64) {
+	if err := j.validateSetIoCombineLimitParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ioCombineLimit",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIoMaxCombineLimit(val *float64) {
+	if err := j.validateSetIoMaxCombineLimitParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ioMaxCombineLimit",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIoMaxConcurrency(val *float64) {
+	if err := j.validateSetIoMaxConcurrencyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ioMaxConcurrency",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIoMethod(val *string) {
+	if err := j.validateSetIoMethodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ioMethod",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIoWorkers(val *float64) {
+	if err := j.validateSetIoWorkersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ioWorkers",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetIpFilter(val *[]*string) {
 	if err := j.validateSetIpFilterParameters(val); err != nil {
 		panic(err)
@@ -2394,6 +2593,17 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetMaxWork
 	_jsii_.Set(
 		j,
 		"maxWorkerProcesses",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference)SetNodeCount(val *float64) {
+	if err := j.validateSetNodeCountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"nodeCount",
 		val,
 	)
 }
@@ -2832,8 +3042,8 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Interpola
 	return returns
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -2841,7 +3051,7 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Interpola
 	_jsii_.Invoke(
 		m,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
@@ -3071,6 +3281,46 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIdle
 	)
 }
 
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIoCombineLimit() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIoCombineLimit",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIoMaxCombineLimit() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIoMaxCombineLimit",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIoMaxConcurrency() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIoMaxConcurrency",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIoMethod() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIoMethod",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIoWorkers() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIoWorkers",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetIpFilter() {
 	_jsii_.InvokeVoid(
 		m,
@@ -3259,6 +3509,14 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetMigr
 	_jsii_.InvokeVoid(
 		m,
 		"resetMigration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetNodeCount() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNodeCount",
 		nil, // no parameters
 	)
 }
@@ -3471,8 +3729,8 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) ResetWork
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := m.validateResolveParameters(_context); err != nil {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -3480,7 +3738,7 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) Resolve(_
 	_jsii_.Invoke(
 		m,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

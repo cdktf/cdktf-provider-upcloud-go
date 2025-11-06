@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesList) validateGetParameter
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabasePostgresqlNodeStatesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

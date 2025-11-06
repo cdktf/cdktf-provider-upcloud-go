@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabaseValkeyComponentsList) validateGetParameters(in
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseValkeyComponentsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseValkeyComponentsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

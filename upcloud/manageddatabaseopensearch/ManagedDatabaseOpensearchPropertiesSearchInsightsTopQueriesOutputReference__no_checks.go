@@ -43,7 +43,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOu
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -59,7 +59,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOu
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesSearchInsightsTopQueriesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

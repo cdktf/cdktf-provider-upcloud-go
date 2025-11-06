@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference)
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudManagedObjectStorageRegionsRegionsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

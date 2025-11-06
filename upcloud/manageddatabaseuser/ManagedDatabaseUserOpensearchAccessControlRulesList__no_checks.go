@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesList) validate
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

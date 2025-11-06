@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataUpcloudHostsHostsStatisticsOutputReference) validateGetSt
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudHostsHostsStatisticsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataUpcloudHostsHostsStatisticsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudHostsHostsStatisticsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudHostsHostsStatisticsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanOutputReference) validateGe
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

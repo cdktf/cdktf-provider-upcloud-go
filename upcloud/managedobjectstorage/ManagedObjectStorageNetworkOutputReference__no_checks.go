@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedObjectStorageNetworkOutputReference) validateGetString
 	return nil
 }
 
-func (m *jsiiProxy_ManagedObjectStorageNetworkOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedObjectStorageNetworkOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedObjectStorageNetworkOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedObjectStorageNetworkOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

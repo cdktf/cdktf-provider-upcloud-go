@@ -15,7 +15,7 @@ func (k *jsiiProxy_KubernetesNodeGroupTaintList) validateGetParameters(index *fl
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupTaintList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (k *jsiiProxy_KubernetesNodeGroupTaintList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

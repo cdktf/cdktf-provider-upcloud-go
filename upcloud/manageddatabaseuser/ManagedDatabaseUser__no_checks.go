@@ -83,10 +83,6 @@ func (m *jsiiProxy_ManagedDatabaseUser) validatePutPgAccessControlParameters(val
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUser) validatePutRedisAccessControlParameters(value *ManagedDatabaseUserRedisAccessControl) error {
-	return nil
-}
-
 func (m *jsiiProxy_ManagedDatabaseUser) validatePutValkeyAccessControlParameters(value *ManagedDatabaseUserValkeyAccessControl) error {
 	return nil
 }

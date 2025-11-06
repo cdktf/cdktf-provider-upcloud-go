@@ -75,11 +75,11 @@ type FileStorageNetworkOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
 	ResetIpAddress()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -539,8 +539,8 @@ func (f *jsiiProxy_FileStorageNetworkOutputReference) InterpolationAsList() cdkt
 	return returns
 }
 
-func (f *jsiiProxy_FileStorageNetworkOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := f.validateInterpolationForAttributeParameters(property); err != nil {
+func (f *jsiiProxy_FileStorageNetworkOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := f.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -548,7 +548,7 @@ func (f *jsiiProxy_FileStorageNetworkOutputReference) InterpolationForAttribute(
 	_jsii_.Invoke(
 		f,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
@@ -563,8 +563,8 @@ func (f *jsiiProxy_FileStorageNetworkOutputReference) ResetIpAddress() {
 	)
 }
 
-func (f *jsiiProxy_FileStorageNetworkOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := f.validateResolveParameters(_context); err != nil {
+func (f *jsiiProxy_FileStorageNetworkOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := f.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -572,7 +572,7 @@ func (f *jsiiProxy_FileStorageNetworkOutputReference) Resolve(_context cdktf.IRe
 	_jsii_.Invoke(
 		f,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

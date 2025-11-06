@@ -85,9 +85,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateG
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
-	if property == nil {
-		return fmt.Errorf("parameter property is required, but nil was provided")
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	if terraformAttribute == nil {
+		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
 
 	return nil
@@ -148,9 +148,9 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil
@@ -409,6 +409,46 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 	return nil
 }
 
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoCombineLimitParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoMaxCombineLimitParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoMaxConcurrencyParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoMethodParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIoWorkersParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetIpFilterParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -598,6 +638,14 @@ func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateS
 }
 
 func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetMaxWorkerProcessesParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ManagedDatabasePostgresqlPropertiesOutputReference) validateSetNodeCountParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

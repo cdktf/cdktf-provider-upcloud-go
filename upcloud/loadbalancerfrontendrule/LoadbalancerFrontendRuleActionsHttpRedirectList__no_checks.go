@@ -15,7 +15,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) validateGetP
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsHttpRedirectList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (g *jsiiProxy_GatewayAddressOutputReference) validateGetStringMapAttributeP
 	return nil
 }
 
-func (g *jsiiProxy_GatewayAddressOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (g *jsiiProxy_GatewayAddressOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (g *jsiiProxy_GatewayAddressOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GatewayAddressOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

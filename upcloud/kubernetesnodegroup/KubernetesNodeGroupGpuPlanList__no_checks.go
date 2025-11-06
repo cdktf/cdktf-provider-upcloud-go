@@ -15,7 +15,7 @@ func (k *jsiiProxy_KubernetesNodeGroupGpuPlanList) validateGetParameters(index *
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupGpuPlanList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (k *jsiiProxy_KubernetesNodeGroupGpuPlanList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

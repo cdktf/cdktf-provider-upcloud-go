@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServerNetworkInterfaceList) validateGetParameters(index *floa
 	return nil
 }
 
-func (s *jsiiProxy_ServerNetworkInterfaceList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServerNetworkInterfaceList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

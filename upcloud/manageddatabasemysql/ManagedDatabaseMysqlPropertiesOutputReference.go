@@ -190,7 +190,7 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
 	PutMigration(value *ManagedDatabaseMysqlPropertiesMigration)
 	PutMysqlIncrementalBackup(value *ManagedDatabaseMysqlPropertiesMysqlIncrementalBackup)
 	ResetAdminPassword()
@@ -238,7 +238,7 @@ type ManagedDatabaseMysqlPropertiesOutputReference interface {
 	ResetWaitTimeout()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -1885,8 +1885,8 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InterpolationA
 	return returns
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -1894,7 +1894,7 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) InterpolationF
 	_jsii_.Invoke(
 		m,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
@@ -2267,8 +2267,8 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) ResetWaitTimeo
 	)
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := m.validateResolveParameters(_context); err != nil {
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -2276,7 +2276,7 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesOutputReference) Resolve(_conte
 	_jsii_.Invoke(
 		m,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

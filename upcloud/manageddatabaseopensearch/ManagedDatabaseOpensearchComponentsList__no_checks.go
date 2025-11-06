@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchComponentsList) validateGetParameter
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchComponentsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchComponentsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

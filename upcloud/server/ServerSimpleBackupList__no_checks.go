@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServerSimpleBackupList) validateGetParameters(index *float64)
 	return nil
 }
 
-func (s *jsiiProxy_ServerSimpleBackupList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServerSimpleBackupList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

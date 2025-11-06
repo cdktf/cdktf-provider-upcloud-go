@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataUpcloudManagedObjectStoragePoliciesPoliciesList) validate
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedObjectStoragePoliciesPoliciesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudManagedObjectStoragePoliciesPoliciesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanList) validateGetParameters
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (k *jsiiProxy_KubernetesNodeGroupCloudNativePlanList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

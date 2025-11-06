@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesOutputReferenc
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseUserOpensearchAccessControlRulesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

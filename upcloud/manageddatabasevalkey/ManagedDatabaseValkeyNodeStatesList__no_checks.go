@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabaseValkeyNodeStatesList) validateGetParameters(in
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseValkeyNodeStatesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseValkeyNodeStatesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

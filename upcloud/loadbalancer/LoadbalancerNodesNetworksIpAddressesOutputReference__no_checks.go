@@ -43,11 +43,11 @@ func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validate
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerNodesNetworksIpAddressesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

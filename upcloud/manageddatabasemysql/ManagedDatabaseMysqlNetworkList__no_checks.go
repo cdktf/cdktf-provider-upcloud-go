@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabaseMysqlNetworkList) validateGetParameters(index 
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlNetworkList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlNetworkList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

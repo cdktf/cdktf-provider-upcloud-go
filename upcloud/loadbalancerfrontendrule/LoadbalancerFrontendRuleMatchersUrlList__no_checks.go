@@ -15,7 +15,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlList) validateGetParameter
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleMatchersUrlList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

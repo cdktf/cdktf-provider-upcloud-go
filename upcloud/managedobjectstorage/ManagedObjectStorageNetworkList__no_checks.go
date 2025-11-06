@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedObjectStorageNetworkList) validateGetParameters(index 
 	return nil
 }
 
-func (m *jsiiProxy_ManagedObjectStorageNetworkList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedObjectStorageNetworkList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

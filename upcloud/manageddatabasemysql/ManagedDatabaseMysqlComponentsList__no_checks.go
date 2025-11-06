@@ -15,7 +15,7 @@ func (m *jsiiProxy_ManagedDatabaseMysqlComponentsList) validateGetParameters(ind
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlComponentsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlComponentsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

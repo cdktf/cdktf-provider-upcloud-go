@@ -43,11 +43,11 @@ func (k *jsiiProxy_KubernetesNodeGroupGpuPlanOutputReference) validateGetStringM
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupGpuPlanOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (k *jsiiProxy_KubernetesNodeGroupGpuPlanOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupGpuPlanOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (k *jsiiProxy_KubernetesNodeGroupGpuPlanOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesTimescaledbOutputReference
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesTimescaledbOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesTimescaledbOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesTimescaledbOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabasePostgresqlPropertiesTimescaledbOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

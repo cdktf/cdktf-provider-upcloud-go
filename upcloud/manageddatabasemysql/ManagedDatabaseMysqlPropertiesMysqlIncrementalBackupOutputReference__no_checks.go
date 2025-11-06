@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputRef
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlPropertiesMysqlIncrementalBackupOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

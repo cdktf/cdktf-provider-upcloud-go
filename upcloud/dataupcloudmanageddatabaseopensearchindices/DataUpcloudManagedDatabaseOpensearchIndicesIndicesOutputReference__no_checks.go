@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataUpcloudManagedDatabaseOpensearchIndicesIndicesOutputRefer
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedDatabaseOpensearchIndicesIndicesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataUpcloudManagedDatabaseOpensearchIndicesIndicesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataUpcloudManagedDatabaseOpensearchIndicesIndicesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataUpcloudManagedDatabaseOpensearchIndicesIndicesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

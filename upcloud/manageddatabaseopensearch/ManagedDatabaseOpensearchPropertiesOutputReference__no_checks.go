@@ -43,7 +43,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateG
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -68,6 +68,10 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 }
 
 func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutIndexTemplateParameters(value *ManagedDatabaseOpensearchPropertiesIndexTemplate) error {
+	return nil
+}
+
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validatePutJwtParameters(value *ManagedDatabaseOpensearchPropertiesJwt) error {
 	return nil
 }
 
@@ -103,7 +107,7 @@ func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseOpensearchPropertiesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

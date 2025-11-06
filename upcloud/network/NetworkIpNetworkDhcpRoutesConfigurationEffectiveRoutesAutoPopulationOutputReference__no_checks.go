@@ -43,11 +43,11 @@ func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPop
 	return nil
 }
 
-func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulationOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (n *jsiiProxy_NetworkIpNetworkDhcpRoutesConfigurationEffectiveRoutesAutoPopulationOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -41,7 +41,7 @@ type KubernetesNodeGroupTaintList interface {
 	Get(index *float64) KubernetesNodeGroupTaintOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -231,8 +231,8 @@ func (k *jsiiProxy_KubernetesNodeGroupTaintList) Get(index *float64) KubernetesN
 	return returns
 }
 
-func (k *jsiiProxy_KubernetesNodeGroupTaintList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := k.validateResolveParameters(_context); err != nil {
+func (k *jsiiProxy_KubernetesNodeGroupTaintList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := k.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -240,7 +240,7 @@ func (k *jsiiProxy_KubernetesNodeGroupTaintList) Resolve(_context cdktf.IResolve
 	_jsii_.Invoke(
 		k,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

@@ -43,7 +43,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateGetSt
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -75,7 +75,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validatePutUs
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

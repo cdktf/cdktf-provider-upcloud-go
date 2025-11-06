@@ -15,7 +15,7 @@ func (l *jsiiProxy_LoadbalancerFrontendRuleActionsUseBackendList) validateGetPar
 	return nil
 }
 
-func (l *jsiiProxy_LoadbalancerFrontendRuleActionsUseBackendList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LoadbalancerFrontendRuleActionsUseBackendList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

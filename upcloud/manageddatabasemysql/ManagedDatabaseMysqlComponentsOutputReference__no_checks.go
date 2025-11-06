@@ -43,11 +43,11 @@ func (m *jsiiProxy_ManagedDatabaseMysqlComponentsOutputReference) validateGetStr
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlComponentsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlComponentsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_ManagedDatabaseMysqlComponentsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_ManagedDatabaseMysqlComponentsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 
