@@ -24,15 +24,15 @@ type RouterConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the router.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/router#name Router#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/router#name Router#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// User defined key-value pairs to classify the router.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/router#labels Router#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/router#labels Router#labels}
 	Labels *map[string]*string `field:"optional" json:"labels" yaml:"labels"`
 	// static_route block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/router#static_route Router#static_route}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/router#static_route Router#static_route}
 	StaticRoute interface{} `field:"optional" json:"staticRoute" yaml:"staticRoute"`
 }
 

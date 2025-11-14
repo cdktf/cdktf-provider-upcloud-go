@@ -75,10 +75,6 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) validateSetCountPara
 	return nil
 }
 
-func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

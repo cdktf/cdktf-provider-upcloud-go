@@ -99,10 +99,6 @@ func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetCountParameters
 	return nil
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUserAccessKey) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

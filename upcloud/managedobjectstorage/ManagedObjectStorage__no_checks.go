@@ -107,10 +107,6 @@ func (j *jsiiProxy_ManagedObjectStorage) validateSetCountParameters(val interfac
 	return nil
 }
 
-func (j *jsiiProxy_ManagedObjectStorage) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ManagedObjectStorage) validateSetLabelsParameters(val *map[string]*string) error {
 	return nil
 }

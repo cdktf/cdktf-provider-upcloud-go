@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/data-sources/managed_object_storage_policies upcloud_managed_object_storage_policies}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/data-sources/managed_object_storage_policies upcloud_managed_object_storage_policies}.
 type DataUpcloudManagedObjectStoragePolicies interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -36,8 +36,6 @@ type DataUpcloudManagedObjectStoragePolicies interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -85,7 +83,6 @@ type DataUpcloudManagedObjectStoragePolicies interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -183,16 +180,6 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -299,7 +286,7 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/data-sources/managed_object_storage_policies upcloud_managed_object_storage_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/data-sources/managed_object_storage_policies upcloud_managed_object_storage_policies} Data Source.
 func NewDataUpcloudManagedObjectStoragePolicies(scope constructs.Construct, id *string, config *DataUpcloudManagedObjectStoragePoliciesConfig) DataUpcloudManagedObjectStoragePolicies {
 	_init_.Initialize()
 
@@ -317,7 +304,7 @@ func NewDataUpcloudManagedObjectStoragePolicies(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/data-sources/managed_object_storage_policies upcloud_managed_object_storage_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/data-sources/managed_object_storage_policies upcloud_managed_object_storage_policies} Data Source.
 func NewDataUpcloudManagedObjectStoragePolicies_Override(d DataUpcloudManagedObjectStoragePolicies, scope constructs.Construct, id *string, config *DataUpcloudManagedObjectStoragePoliciesConfig) {
 	_init_.Initialize()
 
@@ -351,17 +338,6 @@ func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies)SetForEach(val cdktf.
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataUpcloudManagedObjectStoragePolicies)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -678,14 +654,6 @@ func (d *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) OverrideLogicalId(ne
 		d,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (d *jsiiProxy_DataUpcloudManagedObjectStoragePolicies) ResetId() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

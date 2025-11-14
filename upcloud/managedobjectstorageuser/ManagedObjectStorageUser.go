@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/managed_object_storage_user upcloud_managed_object_storage_user}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/managed_object_storage_user upcloud_managed_object_storage_user}.
 type ManagedObjectStorageUser interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -42,8 +42,6 @@ type ManagedObjectStorageUser interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -115,7 +113,6 @@ type ManagedObjectStorageUser interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -247,16 +244,6 @@ func (j *jsiiProxy_ManagedObjectStorageUser) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ManagedObjectStorageUser) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ManagedObjectStorageUser) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -378,7 +365,7 @@ func (j *jsiiProxy_ManagedObjectStorageUser) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/managed_object_storage_user upcloud_managed_object_storage_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/managed_object_storage_user upcloud_managed_object_storage_user} Resource.
 func NewManagedObjectStorageUser(scope constructs.Construct, id *string, config *ManagedObjectStorageUserConfig) ManagedObjectStorageUser {
 	_init_.Initialize()
 
@@ -396,7 +383,7 @@ func NewManagedObjectStorageUser(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/managed_object_storage_user upcloud_managed_object_storage_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/managed_object_storage_user upcloud_managed_object_storage_user} Resource.
 func NewManagedObjectStorageUser_Override(m ManagedObjectStorageUser, scope constructs.Construct, id *string, config *ManagedObjectStorageUserConfig) {
 	_init_.Initialize()
 
@@ -441,17 +428,6 @@ func (j *jsiiProxy_ManagedObjectStorageUser)SetForEach(val cdktf.ITerraformItera
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ManagedObjectStorageUser)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -858,14 +834,6 @@ func (m *jsiiProxy_ManagedObjectStorageUser) OverrideLogicalId(newLogicalId *str
 		m,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (m *jsiiProxy_ManagedObjectStorageUser) ResetId() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

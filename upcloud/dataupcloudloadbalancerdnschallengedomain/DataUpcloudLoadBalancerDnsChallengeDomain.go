@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/data-sources/load_balancer_dns_challenge_domain upcloud_load_balancer_dns_challenge_domain}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/data-sources/load_balancer_dns_challenge_domain upcloud_load_balancer_dns_challenge_domain}.
 type DataUpcloudLoadBalancerDnsChallengeDomain interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -263,7 +263,7 @@ func (j *jsiiProxy_DataUpcloudLoadBalancerDnsChallengeDomain) TerraformResourceT
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/data-sources/load_balancer_dns_challenge_domain upcloud_load_balancer_dns_challenge_domain} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/data-sources/load_balancer_dns_challenge_domain upcloud_load_balancer_dns_challenge_domain} Data Source.
 func NewDataUpcloudLoadBalancerDnsChallengeDomain(scope constructs.Construct, id *string, config *DataUpcloudLoadBalancerDnsChallengeDomainConfig) DataUpcloudLoadBalancerDnsChallengeDomain {
 	_init_.Initialize()
 
@@ -281,7 +281,7 @@ func NewDataUpcloudLoadBalancerDnsChallengeDomain(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/data-sources/load_balancer_dns_challenge_domain upcloud_load_balancer_dns_challenge_domain} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/data-sources/load_balancer_dns_challenge_domain upcloud_load_balancer_dns_challenge_domain} Data Source.
 func NewDataUpcloudLoadBalancerDnsChallengeDomain_Override(d DataUpcloudLoadBalancerDnsChallengeDomain, scope constructs.Construct, id *string, config *DataUpcloudLoadBalancerDnsChallengeDomainConfig) {
 	_init_.Initialize()
 

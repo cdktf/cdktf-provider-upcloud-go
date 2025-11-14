@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/file_storage upcloud_file_storage}.
+// Represents a {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/file_storage upcloud_file_storage}.
 type FileStorage interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -461,7 +461,7 @@ func (j *jsiiProxy_FileStorage) ZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/file_storage upcloud_file_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/file_storage upcloud_file_storage} Resource.
 func NewFileStorage(scope constructs.Construct, id *string, config *FileStorageConfig) FileStorage {
 	_init_.Initialize()
 
@@ -479,7 +479,7 @@ func NewFileStorage(scope constructs.Construct, id *string, config *FileStorageC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.0/docs/resources/file_storage upcloud_file_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/file_storage upcloud_file_storage} Resource.
 func NewFileStorage_Override(f FileStorage, scope constructs.Construct, id *string, config *FileStorageConfig) {
 	_init_.Initialize()
 
