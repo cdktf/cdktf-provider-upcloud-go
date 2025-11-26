@@ -39,6 +39,7 @@ type NetworkIpNetworkOutputReference interface {
 	DhcpDns() *[]*string
 	SetDhcpDns(val *[]*string)
 	DhcpDnsInput() *[]*string
+	DhcpEffectiveRoutes() NetworkIpNetworkDhcpEffectiveRoutesList
 	DhcpInput() interface{}
 	DhcpRoutes() *[]*string
 	SetDhcpRoutes(val *[]*string)
@@ -203,6 +204,16 @@ func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpDnsInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"dhcpDnsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkIpNetworkOutputReference) DhcpEffectiveRoutes() NetworkIpNetworkDhcpEffectiveRoutesList {
+	var returns NetworkIpNetworkDhcpEffectiveRoutesList
+	_jsii_.Get(
+		j,
+		"dhcpEffectiveRoutes",
 		&returns,
 	)
 	return returns

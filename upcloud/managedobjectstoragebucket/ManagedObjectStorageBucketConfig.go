@@ -24,11 +24,11 @@ type ManagedObjectStorageBucketConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the bucket.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/managed_object_storage_bucket#name ManagedObjectStorageBucket#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.32.0/docs/resources/managed_object_storage_bucket#name ManagedObjectStorageBucket#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Managed Object Storage service UUID.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.31.1/docs/resources/managed_object_storage_bucket#service_uuid ManagedObjectStorageBucket#service_uuid}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/upcloudltd/upcloud/5.32.0/docs/resources/managed_object_storage_bucket#service_uuid ManagedObjectStorageBucket#service_uuid}
 	ServiceUuid *string `field:"required" json:"serviceUuid" yaml:"serviceUuid"`
 }
 
